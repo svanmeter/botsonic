@@ -1,0 +1,58 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Sage 50 Accounting Integration</title>
+    </head>
+    <body>
+        <h1>Sage 50 Accounting Integration <a href="http://por.force.com/uLearn/s/article/Sage-50-Accounting-Integration-690690225" target="_blank">[Sage 50 Accounting Integration]</a></h1>
+        <h1><span style="color: #2980b9;">Sage 50 Accounting Integration</span></h1>
+
+<p>This accounting integration allows for the interactive upload of accounting information from Point of Rental to Sage 50. This integration is only available for Elite systems.</p>
+
+<p>Required setup:</p>
+
+<ul><li>Configurations&gt;Accounting Configurations&gt;Account Numbers&gt;Accounting Export set to “API - Sage 50 UK”</li><li>Account Numbers&gt;Settings&gt;Export Mode set to “Transaction” <img alt="Sage 50 Accounting Configuration_686x459" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGxR"></img></li><li>Create a single “generic” Cash customer record in Elite and populate the customer number on the API configuration screen(Settings)<img alt="Sage 50 Accounting Configuration1_560x458" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGxS"></img></li><li>Account numbers mapped to Sage chart of accounts</li><li>Tax codes mapped to Sage VAT codes. Configurations&gt;Accounting Configurations&gt;Tax Tables<img alt="sage 50 Accounting Configuration3_807x542" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGxT"></img><img alt="Sage 50 Accounting Configuration4_732x498" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGzB"></img></li><li>Configurations&gt;Accounting Configurations&gt;Multi-currency Currency codes mapped to Sage currency codes<img alt="sage 50 Accounting Configuration5_399x337" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGzC"></img><img alt="sage 50 Accounting Configuration6" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGzD"></img></li><li>Closed accrual accounting</li><li>Adjustments must be turned on for Save Closed Account &amp; Cash Modifications System Configurations&gt;Parameters&gt;Accounting Tab</li></ul>
+
+<p> </p>
+
+<p>Functionality specific to “Transaction” Mode</p>
+
+<p>Counter System</p>
+
+<ul><li>When a contract is closed on an account customer, it will be exported to Sage as a Sales Invoice (SI) on that same customer’s account.</li><li>If any amount of the contract was paid prior to closing, the Sales Invoice created in Sage will be credited for that amount.</li><li>If payment is made on the contract at the time of closing in Elite, that payment will be exported as a separate payment and applied to the contract.</li><li>When the first contract for a customer is exported to Sage, the customer will also be exported.</li><li>When a contract is closed on a cash customer, it will be exported to Sage as a Sales Invoice on the internal Cash Customer account.</li><li>This customer is the one whose customer number is configured on the API Setup screen.</li></ul>
+
+<p> </p>
+
+<p>Account Payments</p>
+
+<p><img alt="sage 50 Accounting Configuration7" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGzE"></img></p>
+
+<ul><li>Payments and credits can be applied to open contracts.</li><li>Payments and credits cannot be applied to completed contracts</li><li>Credits created from account payments will be exported to Sage as customer credits.</li></ul>
+
+<p style="text-align: left;"> </p>
+
+<p>Payments and Credits entered in Sage</p>
+
+<ul><li>When an Elite sourced credit is allocated to an invoice in Sage, the allocation will be imported back into Elite. Both the source credit contract and the account contract will be updated accordingly.</li><li>When a customer payment is entered in Sage and allocated to an Elite sourced Sales Invoice, the allocation will be imported into Elite and applied to the source contract.</li></ul>
+
+<p> </p>
+
+<p>Import Tool</p>
+
+<p>Transactions and journal entries are imported into Sage using the Import Tool. Sage 50 cannot be open when an import is happening.</p>
+
+<p>Make sure the appropriate company is selected if you have more than one. A list of tasks waiting to be imported will be visible. They will need to be processed one at a time</p>
+
+<p><img alt="sage 50 Accounting Configuration8_672x527" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGzF"></img></p>
+
+<p>Select your task and choose ‘Run’. You will be prompted to log in.</p>
+
+<p><img alt="sage 50 Accounting Configuration9_651x515" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGzG"></img></p>
+
+<p>Once imported, you will see a log of what occurred.</p>
+
+<p><img alt="sage 50 Accounting Configuration10_645x477" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGzH"></img></p>
+    </body>
+    </html>
+    

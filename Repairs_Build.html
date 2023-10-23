@@ -1,0 +1,52 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Repairs Build</title>
+    </head>
+    <body>
+        <h1>Repairs Build <a href="http://por.force.com/uLearn/s/article/Repairs-Build-336222523" target="_blank">[Repairs Build]</a></h1>
+        <p><span style="font-size: 24px;"><b><span style="color: rgb(70, 130, 180);">Repairs Build</span></b></span></p>
+
+<p><br> </p>
+
+<p><span class="span_1" style="font-weight: bold;">Repairs Build:</span><span class="apple-converted-space_1"> </span><span class="apple-converted-space_1"> Allows you to track additional costs only on serialized sales items. Trade ins to be sold and sales items often require parts to get them ready for sale. This process allows you to record those costs against the sales item. Any additional costs are now added under the “extra” field under the purchases tab. Create a new customer with the key as “Repairs-build”. Add the item that needs parts or labor first then add any additional parts or labor.</span></p>
+
+<p> </p>
+
+<p><b>Repair Customer </b></p>
+
+<p>Create your repair customer with the key of Repairs-Build. Make sure that customer is marked non-taxable.</p>
+
+<p> </p>
+
+<p><b>Repair Item</b></p>
+
+<p>You should also have an item with a key or REP-BUILD similar to REP-SERVICE or REP-MAINT. This is a item that keeps the repairs contract open until it is ready to be closed and will automatically added to the contract</p>
+
+<p> </p>
+
+<p>Go into the counter system, open a new repair contract. Choose Repairs-build, add your sales items that you are going to improve. The REP-BUILD item will auto add to the contract on line 2. The item on line 1 will showed pulled but is not pulled from inventory Add your parts and labor to the contract.</p>
+
+<p> </p>
+
+<p><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8t&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000002pET8"></img></p>
+
+<p>*Note: Any labor costs will be zeroed out when added to the contract as it is non-standard to capitalize these against an item. If the labor item is not zeroing out, there is a purchase price on the item that will need to be removed. (You would never have a purchase price associated with a labor item).</p>
+
+<p><br> </p>
+
+<p>You will receive a notification about the cost of the repairs being added to the item.</p>
+
+<p><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8t&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000002pETN" style="width: 457px;height: 165px;"></img></p>
+
+<p><br><br>When the work is completed, you will close the Repairs-Build contract and Point of Rental will add the cost of the labor and repairs to the extra cost field in the purchase line.</p>
+
+<p><img alt="Repairs Build Allows you to_2_624x173" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8t&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGw2"></img></p>
+
+<p><b>GL Entries Associated With Repairs-Build</b></p>
+
+<ul><li>Decrease COG for the Part</li><li>Increase COG for the new item (under extra charges)</li><li>Net zero change in inventory value.</li><li>When you sell the new item, you will get COG for the Extra Charges.</li><li>*Note: If you override the zeroing out of the labor, you will get no cost of goods sold entry since labor has no cost associated. To make your G/Ls correct you would need to make a manual entry to decrease your Salary Expense Account. You will not get the offsetting entry until the item is sold and the COG for the extra charges is generated.</li></ul>
+    </body>
+    </html>
+    

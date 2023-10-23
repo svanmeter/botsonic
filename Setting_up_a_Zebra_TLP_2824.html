@@ -1,0 +1,82 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Setting up a Zebra TLP 2824</title>
+    </head>
+    <body>
+        <h1>Setting up a Zebra TLP 2824 <a href="http://por.force.com/uLearn/s/article/Setting-up-a-Zebra-TLP-2824-1667309541" target="_blank">[Setting up a Zebra TLP 2824]</a></h1>
+        <h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Setting up a Zebra TLP 2824 </span></span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">To print out the network settings page: turn on the power and wait until the button on the top is solid green.  Next, hold down the button on the top until it flashes once and then releases. </span></p>
+
+<p style="background: white;"><span style="color: #333333;">Resetting the printer to factory defaults.  Hold down the green button on the top until it blinks 4 times and then release.  It will then turn red.  As soon as it turns red, hold the green button until it blinks once and then release.  There should be a new IP address. </span></p>
+
+<p style="background: white;"><span style="color: #333333;">****You can remote into the Zebra’s LAN IPA and set it’s IP address.  You’ll be prompted for a username and password.  They are as follows:  </span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Username:  admin</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Password:  1234 </span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><i><span style="color: #333333;">Click on Print Server Settings -&gt; Print Server -&gt; TCP/IP Configuration = change or set the IP address to a static IP address of the Zebra printer</span></i></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">1.   Download the Zebra Setup Utility to the server. The setup utility can be found on the FTP site under /installable Software\Zebra TLP2824 Setup Utility.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">2.   Double click on the folder and then double click on the Setup.exe install program contained in the folder</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">3.   A setup wizard will appear.  Run the setup wizard.  Be sure to install this application for the current user (preferably poradmin or administrator) only.  At the end of the wizard, be sure the Check Box “Run Zebra Setup Utilities now” is checked and press finish</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">4.   The Zebra Setup Utilities will automatically open once the Finish button is pressed.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">5.   Attach the Zebra Printer with a USB cable to the server.  An Ethernet cable will need to be connected to their network and the printer as well.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">6.   Click on the Configure Printer Connectivity button in the utility.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">7.   Ensure the “Wired” option is selected and press the Next button.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">8.   Select the “Internal Print Server (Print server is inside the printer)” option and press the Next button.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">9.   Choose the “Static” option.  This will display the IP settings.  Find an available IP address on their network and enter it into the IP Address field.  Then fill out the Subnet mask and Default gateway with the correct network settings for their network.  Press the Next button.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">10.  Press the Next button again</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">11.  When the Utility ask you if you would like to “Send connectivity configuration commands to the printer or save it to a file” choose printer and press the Finish button.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">12.  Once the printer is done updating, turn off the printer, and then turn it back on.  Wait until the red light on the green button on the top turns to a solid green light to indicate it is ready for interaction.  Hold the green button until it flashes and then release it.  This will print out the Printer’s settings.  Ensure the network settings match to what was entered on the Zebra Network Utility</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">13.  Remove the USB cable from the server and the Zebra Printer.  Leave the Ethernet cable plugged into the printer and the customer’s network.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">14.  Configure the printer on the server as normal.  You want to use the ZDesigner TLP 2824 Driver and create a TCP / IP port pointing at the LAN address of the Zebra as the print port</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">15.  Once the printer is configured, the settings will need to be changed in the Printer Properties</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">16.  In the printer properties, click on the Advanced Tab and then click on the button labeled Printing Defaults</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">17.  Click on the Advanced Setup Tab.  Click on the Check Box that says Top of form backup.  Enter .13 inches where it says Gap/Mark Height, and then press the Apply button.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">18.  Next click on the Stocks Tab.  Create a new Stock entry by pressing the New button</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">19.  Name the Stock 2.00 x 1.00.  Everything can stay defaulted except where it says Right under the Unprintable Area.  Set Right to .04 and then press the OK button</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">20.  Go to the General Tab\Printing Preferences and do everything you did for the Advanced tab again on the General Tab</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>
+    </body>
+    </html>
+    
