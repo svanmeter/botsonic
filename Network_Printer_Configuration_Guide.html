@@ -1,0 +1,86 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Network Printer Configuration Guide</title>
+    </head>
+    <body>
+        <h1>Network Printer Configuration Guide <a href="http://por.force.com/uLearn/s/article/Network-Printer-Configuration-Guide-397800833" target="_blank">[Network Printer Configuration Guide]</a></h1>
+        <h1><span style="font-size: 16pt;">Network Printer Configuration Guide</span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="font-size: 12pt;color: #333333;">Printer Requirements:</span></b></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• Laser Printer</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• Network Capable</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Your printer must meet these printer requirements before following this guide.  These instructions assume you have already physically setup the printer, i.e. unbox the printer, power it on and ran a network cable from the printer to your network.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">**NOTE</span></b><span style="color: #333333;">: Windows Session or Redirected Printing: While it is possible to print using this method, it is not recommended and is NOT supported by Point of Rental</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">1.  Obtain the IP Address of the Network Printer</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">When a network printer is attached to a network it should automatically receive an IP address.  Each printer has a different way of printing the IP address.  Some you press a button on the printer while others you have an LCD menu you can cycle through to print the IP address.  For example, the Dell 2350dn laser printers have an LCD screen where you use the left and right arrow buttons on the printer to browse to Menu &gt; Network Ports &gt; Network Menu &gt; Network Setup &gt; Reports &gt; Print Setup Page. </span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">2.  Set the IP Address to a Static IP Address</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">By default, the IP address automatically assigned to the network printer will expire and it will change thus printing will stop.  You must first find an unused un-used local IP address.  Check with your network administrator if you need help.  To assign the printer a static address open Internet Explorer and insert the IP address you printed out in the address bar and press enter.  You will be taken to the web page of your network printer.  You have to edit the IP Address (TCP/IP) settings to have a static IP address and specify which one to use.  Make sure to save your settings.  Test by entering in the new static IP address you just assigned the printer into Internet Explorer and making sure the network printer web page comes up.  If not repeat the configuration by browsing back to the original IP address.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">3.  Log in the Point of Rental Server as an Administrative Account</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">You must log into the Point-of-Rental server as an administrative account in order to install or re-configure printers.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">4.  Install the Network Printer on the Point-of-Rental Server</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">This section covers Windows 7, Windows 8, Windows 2008 R2 Server and Windows 2012 Server machines. </span></p>
+
+<p style="background: white;"><span style="color: #333333;">Open Control Panel &gt; Devices and Printers.  Click the ‘Add a printer’ button at the top of the window.  You will create a new local printer and specify the TCP/IP address of the new printer.  The printer install wizard will attempt to find the correct printer driver to install.  If it does not find the appropriate driver you can click the Windows Update button to see if it downloads it.  If not you will need to go to the printer manufacturer’s website and download the appropriate printer driver and install it.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">When the driver is installed you can *name the printer and test print.    </span></p>
+
+<p style="background: white;"><span style="color: #333333;">            *Naming Rules:</span></p>
+
+<p style="background: white;margin-left: 108pt;text-indent: -18.75pt;"><span style="color: #333333;">• All printer must have unique names and cannot be what another printers name starts with. (incorrect: <b>Counter1</b> and <b>Counter1Back</b> – correct <b>Counter1Front</b> and <b>Counter1Back</b>)</span></p>
+
+<p style="background: white;margin-left: 108pt;text-indent: -18.75pt;"><span style="color: #333333;">• If you include the word <b>External</b> in a printer name the program will push the print job out to an external process allowing the user to continue working – eliminating the need to wait for the program to finish printing before the user can move on. There are some limitation and parts of the program that cannot use the External print feature.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">5.  Configure Multiple Printer Trays</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">If the printer has more than one tray and a mix of plain and contract paper will be used then each printer tray should be configured as a separate printer set to print to the appropriate tray.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Keep the printer names short and meaningful, i.e. “Store 1 Dell 2360dn Tray 1”</span></p>
+
+<p style="background: white;"><span style="color: #333333;">After creating the printers open their properties and set each one to print to the appropriate tray, i.e. Tray 1, Tray 2, etc.  Once the printer Properties is open you can browse to Advanced &gt; Printing Defaults to do this.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Once the Printers are created, you select the appropriate listing for the different POR print jobs. This is done in Counter system using the “tools-&gt;print setup” menu in the upper left. You select the printer tray name that you created above (<i>nnnn tray 1 or nnnn Tray 2)</i></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">6.  Update the Point of Rental Printer Selections for Each User</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">Open Point of Rental and then open Counter System.  Click Tools in the upper-left-hand corner of the screen and click Print Setup.  Assign the new printer to the appropriate print type, i.e. Laser Contract Printer, Report Printer, etc.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>
+    </body>
+    </html>
+    
