@@ -1,0 +1,46 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Connecting a Tablet, from within your network, to the Remote Desktop Server Where the Point of Rental Software is Installed</title>
+    </head>
+    <body>
+        <h1>Connecting a Tablet, from within your network, to the Remote Desktop Server Where the Point of Rental Software is Installed <a href="http://por.force.com/uLearn/s/article/Connecting-a-Tablet-from-within-your-network-to-the-Remote-Desktop-Server-Where-the-Point-of-Rental-Software-is-Installed" target="_blank">[Connecting a Tablet, from within your network, to the Remote Desktop Server Where the Point of Rental Software is Installed]</a></h1>
+        <p><span style="font-size: 18px;"><b><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Connecting a Tablet, from within your network, to the Remote Desktop Server Where the Point of Rental Software is Installed</span></span></b></span></p>
+
+<p style="background: white;margin-top: 5.75pt;"><br><br><br><b><i><span style="color: #7bbe43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Overview</span></span></span></i></b><br> </p>
+
+<p style="margin-bottom: 36pt;background: white;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article covers the remote connection of a tablet from either the store where the Remote Desktop Server resides or from a remote store securely connected to the main store’s network. Tablets can be an effective mobile option for accessing your Point of Rental software regardless of where you are located. Security is of utmost importance because your server can have private customer and cardholder data stored on it.<br><br><br>Topics included in this article:</span></span></span></p>
+
+<ul><li style="margin-bottom: 11pt;background: white;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Need-to-Know</span></span></span></li><li style="margin-bottom: 11pt;background: white;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Procedures</span></span></span></li></ul>
+<br><br><u><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Need-to-Know</span></span></span></u><br><br><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri,sans-serif;"><span style="font-size: 12.0pt;"><span style="font-family: &quot;Times New Roman&quot;,serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">A secure wireless access point at your store must be installed in order to connect a tablet. If you choose to deploy a wireless network infrastructure to support communications between deployed systems, or you connect a wireless network to the environment supporting the Point of Rental Software Enterprise application, you must do so in a manner compliant with the current PCI DSS standards. The secure deployment of a wireless network is solely your responsibility. In order for you to achieve PCI DSS compliance, the following guidelines must be followed for the deployment of a wireless network:</span></span></span></span></span></span></span></span><br> 
+<ul><li><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">Wireless encryption keys must be changed from default at installation, and must be changed anytime anyone with knowledge of the keys leaves the company or changes positions.</span></span></span></span></li></ul>
+ 
+
+<ul><li><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">Default SNMP community strings on wireless devices must be changed.</span></span></span></span></li></ul>
+ 
+
+<ul><li><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">Default passwords/passphrases on access points must be changed.</span></span></span></span></li></ul>
+ 
+
+<ul><li><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">Firmware on wireless devices must be updated to support strong encryption for authentication and transmission over wireless networks.</span></span></span></span></li></ul>
+ 
+
+<ul><li><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">Other security-related wireless vendor defaults must be changed, if applicable.</span></span></span></span></li></ul>
+ 
+
+<ul><li><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">Wireless networks transmitting cardholder data or connected to the cardholder environment must use industry best practices to implement strong encryption for authentication and transmission.</span></span></span></span></li></ul>
+<br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">If you have a wireless network deployed within your environment and it is not part of your cardholder network, a firewall is required between any wireless networks and the cardholder data environment. The firewall must be configured to deny or control any traffic from the wireless environment into the cardholder data environment.</span></span></span></span><br><br><br><u><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Procedures</span></span></span></u>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">The tablet should have access to an “App Store” where it can download applications. </span></span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">1. Find and download a remote desktop connection application. Search for “remote desktop” to get several options to choose from.<br><br>2. Download and install one.<br><br>3. Fill out the three primary fields to connect to the remote desktop: the server address, username, and password. </span></span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">At this point, it is no different than connecting a counter PC to the Remote Desktop Server to use the Point of Rental software. </span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">4. Use the server’s LAN IP address or hostname and a valid username and password for the Remote Desktop Server.</span></span></span></span><br><br> </p>
+
+<p><br><b><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></span></span></b><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Adjusting-the-Resolution-for-Your-Point-of-Rental-System" target="_blank">Adjusting the Resolution for Your Remote Desktop Session</a><br><a href="/articles/en_US/Knowledge/How-to-Configure-a-Remote-Desktop-Connection-Client" target="_blank">How to Configure a Remote Desktop (RDP) Connection Client</a> </span></span><br><br> </p>
+    </body>
+    </html>
+    

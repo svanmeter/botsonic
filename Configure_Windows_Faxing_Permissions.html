@@ -1,0 +1,46 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Configure Windows Faxing Permissions</title>
+    </head>
+    <body>
+        <h1>Configure Windows Faxing Permissions <a href="http://por.force.com/uLearn/s/article/Configure-Windows-Faxing-Permissions" target="_blank">[Configure Windows Faxing Permissions]</a></h1>
+        <h1><span style="color: #3b3e41;"><b><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configure Windows Faxing Permissions</span></span></b></span></h1>
+
+<p style="background: white;"><br><br><br><i><b><span style="color: #7bb43e;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Overview</span></span></span></b></i><br> </p>
+
+<p style="background: white;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">For Windows 2008 Server, Windows 2008 Server R2, Windows 2012 Server, and Windows 2012 Server R2</span></span></span></p>
+
+<p style="background: white;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">When configuring Windows faxing you must configure permissions to allow users to fax or they will get a suppressed error and the faxes will not work.  This article details where to configure these faxing permissions.<br><br><b>Here&#39;s how to get there:</b><br><i>Settings &gt; Bluetooth &amp; Devices &gt; Printers &amp; Scanners &gt; Fax</i></span></span></span></p>
+
+<p style="background: white;"><br> </p>
+
+<p style="background: white;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1.  Open Printers &gt; Fax &gt; Printer Properties and Add Domain Users to the Security tab. Give them rights to “Manage Documents.”</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 49.5pt;text-indent: -18pt;"><span style="color: #333333;">   <img alt="image001_024_506x377" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3D&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGA5"></img></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2.  Add “Domain Users” to the properties of C:\Program Data\Microsoft\Windows NT\MSFax in the Security tab and give the right to modify.</span></span></span></p>
+
+<p style="background: white;margin-left: 49.5pt;text-indent: -18pt;"><br><span style="color: #333333;">   <br><img alt="image002_015_607x345" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3D&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGA6"></img></span><br><br> </p>
+
+<p style="background: white;text-indent: -18pt;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3.  Give Fax Users and Domain Users groups rights to fax.</span></span></span><br> </p>
+
+<p style="background: white;text-indent: -18pt;margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a.  Open Printers &gt; RC Fax &gt; Select Configuration Tab &gt; Click “Fax Service Manager &gt; RC “Fax (Local) and click Properties &gt; Select the Security tab &gt; Click the Advanced button &gt; Select Fax Users group and click Edit &gt; Check-box all boxes under “Allow&quot; &gt; Click OK all the way out.</span></span></span></p>
+
+<p style="background: white;margin-left: 108pt;text-indent: -9pt;"> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -9pt;"><span style="color: #333333;"> <img alt="image003_017" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3D&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGA7"></img></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p><br><span style="color: #3b3e41;"><b><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></span></b></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Mass-Fax-Email-1024524680" target="_blank">Mass/Fax/Email</a><br><a href="/articles/en_US/Knowledge/Mass-Fax-Email-Intro" target="_blank">Mass Fax/Email - Intro</a> </span></span><br><br><br> </p>
+    </body>
+    </html>
+    
