@@ -1,0 +1,118 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>System Security</title>
+    </head>
+    <body>
+        <h1>System Security <a href="http://por.force.com/uLearn/s/article/System-Security-1872182020" target="_blank">[System Security]</a></h1>
+        <p style="background: white;margin-top: 5pt;"> </p>
+
+<p class="p_7"><b style="font-size: 16pt;color: #4682b4;">System Security</b></p>
+
+<p class="p_7"> </p>
+
+<p><b style="font-size: 14pt;font-weight: normal;">Overrides</b></p>
+
+<p><img alt="System Security1_534x393" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIIP&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FH8H"></img></p>
+
+<p><b>Allow Process Anyway</b> – This parameter sets the minimum level of password needed to allow you to process a transaction when this message prompts on screen. This includes selling items you don’t own when sending out a reservation.</p>
+
+<p><b>Allow Other Store’s Sale Items</b> – This parameter sets the minimum level of password needed to sell a sales item that belongs to another store. This option is only valid in multi-store systems.</p>
+
+<p><b>Allow Other Store’s Rental Items</b> – This parameter sets the minimum level of password needed to rent a rental item that belongs to another store. This option is only valid in multi-store systems</p>
+
+<p><b>Allow Inactive Items</b>– This parameter sets the minimum level of password needed to allow Inactive Items on a contract.</p>
+
+<p><b>Account past 30 days password</b> - This parameter determines which level of password is required to override an account 30 days overdue.</p>
+
+<p><b>Account past 60 days password–</b> This parameter determines which level of password is required to override an account 60 days overdue.</p>
+
+<p><b>Account past 90 days password</b> – This parameter determines which level of password is required to override an account 90 days overdue.</p>
+
+<p><b>Modify closed contracts</b> – This parameter determines which level of password is required to modify a closed contract. A setting of “No Password” allows closed contracts to be modified at any time.</p>
+
+<p>* Note: This will not apply to Finance Charges.</p>
+
+<p><b>Modify completed contracts</b> – This parameter determines which level of password is required to modify a completed contract. A setting of “No Password” allows completed contracts to be modified at any time.</p>
+
+<p><b>Modify a locked contract</b> – This parameter determines which level of password is required to modify a locked contract. A Setting of “No Password” allows locked contracts to be modified at any time.</p>
+
+<p><b>Re-Open Closed Contract</b> – This parameter determines which level of password is required to modify and re-open a closed contract.</p>
+
+<p><b>Change Contract to Reservation</b> – This parameter determines which level of password is required to allow changing an Open contract into a Reservation contract.</p>
+
+<p><b>Close Item No Overtime</b> – This parameter determines which level of password is required to allow closing contracts without charging any overtime. The setting of “No Password” allows this selection without any passwords. Note: This option is available without a password for delivery/pickup contracts.</p>
+
+<p><b>Set Special Pricing</b> – This parameter determines which level of password is required to allow setting special pricing. A setting of “No Password” allows setting special rates without any password.</p>
+
+<p><b>Set Stop date before today</b> – This parameter determines which level of password is required for allowing you to back date a rental item when it is placed On Hold.</p>
+
+<p><b>Allow overbooking–</b> This parameter determines which level of password is required to allow overbooking an item. A setting of “No Password” allows overbooking to be done at any time.</p>
+
+<p><b>Allow Write offs–</b> This parameter determines which level of password is required to allow writing off contracts. A setting of “No Password” allows settings to be written off without any password.</p>
+
+<p><b>Allow over credit limit-</b> This parameter determines which level of password is required to allow renting to a customer who is over their credit limit. A setting of “No Password” allows renting to all customers over their credit limit without any password.</p>
+
+<p><b>Change Customer</b> – This parameter determines which level of password is required to allow changing a customer on an existing contract. A setting of “No Password” allows changing a customer without any password.</p>
+
+<p><b>Allow Credit Hold Customer</b> – This parameter determines which level of password is required to allow renting to a customer who is marked as Credit Hold.</p>
+
+<p><b>Refund to Different CC-</b> Allows a user to refund to a card other than what was originally taken. Also, allows a user to refund more than the amount originally charged.</p>
+
+<p><b>Modify Quick Button</b> - This parameter determines which level of password is required to modify Quick Buttons.</p>
+
+<p><b>Add Time Clock Entries</b> – This parameter determines which level of password is required to modify time clock entries. A setting of “No Password” allows changing entries without any password.</p>
+
+<p><b>Edit Call Log Modifications</b> - This parameter determines which level of password is required to edit call logs. A setting of “No Password” allows changing entries without any password.</p>
+
+<p><b>Override Deliveries per day</b> - This parameter determines which level of password is required to override deliveries per day. A setting of “No Password” allows changing entries without any password.</p>
+
+<p> </p>
+
+<p><b style="font-size: 12pt;font-weight: normal;"><span style="font-size: 14pt;">Notes about special rates and proper use:</span></b></p>
+
+<p><b>Setting Special Rates</b> - If you have set your parameter to require a password for price change AND you have set your parameter to NOT require a password for Special Pricing, then any time you try to change a price, you will be given the Special Rate option (exception: if double clicking the Price Each field in a contract you can manually set the price with the correct password level). If you set your parameter to require a password for price change AND you have set your parameter to require a password for Special Rate, then you will be prompted for the password to change the price.</p>
+
+<p><b>Purpose:</b> To prevent users from creating situations where the program must recalculate the rate of a line item and cannot due to a manual price override. In this case, the program will default to use the rate structure defined in the item record. This becomes a problem when the quantity is changed, an item is returned early or late, a continuation bill is generated, or any other circumstance that would cause an item to be re-rated. This is also important if you are doing any rate analysis and need to know the rate structure used to calculate the final rate.</p>
+
+<p><b>Recommended Setup:</b> Set the Price Override Tracking to level 1 and Set Special Pricing to None. This provides the greatest level of protection from inaccurate rates.</p>
+
+<p> </p>
+
+<p><b style="font-size: 14pt;font-weight: normal;">Tracking</b></p>
+
+<p>The selections for the Security tab are as follows:</p>
+
+<p><img alt="System Security 2_760x561" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIIP&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FH8I"></img></p>
+
+<p>The selections for the Security tab are as follows:</p>
+
+<p><b>Hours Override Tracking</b> - This parameter determines when override tracking for modifying item hours is recorded on the daily transaction summary. The second section determines the minimum password level that is required to make the change. This setting also affects rain hour tracking/security. The selections are 1. Owner’s level password, 2. Regional Manager, 3. Store Manager, 4. Assistant Manager, or 5. Key counter’s password.</p>
+
+<p><b>Due Back Override code</b> - This parameter determines when override tracking for modifying the item due back date and time is recorded on the daily transaction summary. The second section determines the minimum password level that is required to make the change.</p>
+
+<p><b>Time Out Override code</b> - This parameter determines when override tracking for modifying contract date and time out is recorded on the daily transaction summary. The second section determines the minimum password level that is required to make the change.</p>
+
+<p><b>Discount Override code</b> - This parameter determines when override tracking for modifying contract discount percentage is recorded on the daily transaction summary. The second section determines the minimum password level that is required to make the change.</p>
+
+<p><b>Price Override code</b> - This parameter determines when override tracking for modifying item price is recorded on the daily transaction summary. The second section determines the minimum password level that is required to make the change. <span style="font-size: 10pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #404040;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The password section applies to price changes in Expert.  For Elite users, this is grayed out, as they have access to the ad hoc pricing feature.</span></span></span></span></span></span></p>
+
+<p><b>Max Price Change</b> – These options allows you to set the maximum price change that is allowed with each password level. If you put $5.00 under No Password, then a counter person would be able to change a line item price on a contract from 0.01 up to 5.00 without entering any password. If the counter person tried to change a line item by $6.00, then they would have to enter a password. If the password level allowed at least $6.00 price change then it would be allowed. If it was under $6.00, the request would be denied.</p>
+
+<p><b>Require Operator Id for Overrides</b> - This parameter determines which level of password is required to allow an override when a sales item has insufficient quantity for the current sale.</p>
+
+<p> </p>
+
+<p><b style="font-size: 14pt;font-weight: normal;">Security Defaults</b></p>
+
+<p>Allows you to set security defaults at different levels (Company, Employee, Group) displaying the area, action, type and access allowed to the different areas.</p>
+
+<p><img alt="System Security 3_770x568" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIIP&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FH8J"></img></p>
+
+<p>Employees are at the top of this hierarchy. If there is no employee setting, it will fall to the employee group and if there is no employee group, to the company setting. If an employee setting has been invoked and then the user would like to set it back to the group or company setting, the user can right click on ‘Employee’ in the ‘Type’ column and revert it to either ‘Employee Group’ or ‘Company’.</p>
+
+<p> </p>
+    </body>
+    </html>
+    
