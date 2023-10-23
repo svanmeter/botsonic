@@ -1,0 +1,114 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>2015 Mid-Summer Release Notes</title>
+    </head>
+    <body>
+        <h1>2015 Mid-Summer Release Notes <a href="http://por.force.com/uLearn/s/article/2015-Mid-Summer-Release-Notes-6067114" target="_blank">[2015 Mid-Summer Release Notes]</a></h1>
+        <h1><span style="font-size: 16pt;">2015 Mid-Summer Release Notes</span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="font-size: 12pt;font-family: &#39;&quot;times new roman&quot;, serif&#39;;color: #333333;">Enterprise Software 2015 Mid-Summer Release Notes</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">The excitement has been building. The latest update of your favorite rental management software has been released. As always, the bulk of the updates have come through suggestion from users like you. You will find a listing of many of the changes that were done. There are plenty more changes that are either under the hood or just streamlined an not in this document. We know you are anxious to see whether the idea you submitted made it in, so get reading.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="font-size: 11pt;color: #333333;">Quick Summary</span></b></p>
+
+<p style="background: white;"><br><span style="color: #333333;"><b>Transfers :</b>   The transfer process has been greatly enhanced.  When an item is overbooked, you can right click on the item in Contract Processing and you will have an option for Create Transfer.  Once clicked, you will be asked what store you want to transfer from.  It will then automatically create a transfer ticket from that store to your store. The dates of the transfer will be one day before and one day after the overbooked contract.  If you have a Transaction Operation of “Pending Approval”, the newly created transfer will have that operation automatically set.  In addition, it will mark the transfer ticket in the Contract Link field for the contract and the regular contract will be in the Contract Link field of the transfer contract.  When you Send Out the transfer ticket, you will be asked if you want to return these items back to your store.  If you answer Yes, a return transfer ticket will be created for the day after the contract end date.  These features require that your transfer customers have a key of XFER-xx where xx is your store number you are transferring to.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">DAG Transfers:</span></b><span style="color: #333333;"> There are two new tabs added to the Day at a Glance screen: Transfers In and Transfers Out. These tabs will list all of the transfers that each store has either coming in to them or going out from them.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Multi-store Availability:</span></b><span style="color: #333333;">   Now when you are looking at the weekly availability for a header item (i.e. right click on an item and select Item Availability), you can select All Stores from the store dropdown menu.  This option will display a line for each of your stores and list the availability for each store.  This allows you to quickly see what store has the items in stock you need.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Item Availability:</span></b><span style="color: #333333;">   Now when you click on the All Stores button within Item Availability, you will get a listing of each store’s quantity owned along with the quantity available each day for a week.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Internal Maintenance Order:</span></b><span style="color: #333333;">   If you set your maintenance to be created with every rental for audit purposes, the system will now fill in the Contract Link field with the original contract number in the IMO or IRO.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Transaction Lookup:</span></b><span style="color: #333333;">   Several new columns have been added to the Transaction Lookup screen: Closed Date, Billed Date, Completed Date, and Aging.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Called Off Rent :</span></b><span style="color: #333333;">  If you create a new Call Log Type of “Called Off Rent” or “Called Off Rent Log”, each time you do a call off, that call log type will automatically be selected. This allows you to run reports showing all Called Off’s and also setup System Notifications to immediately notify the Dispatcher if a contract is called off.  In addition if you create the call log type as “Called Off Rent Log”, it will automatically add the following text to the line item comments of each item called off:  “Called Off #xxxx On MM/DD/YYYY for MM/DD/YYYY”.  This information will print on the contract and can be viewed later.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Customer Item History Report:</span></b><span style="color: #333333;">   In a customer’s record under the History drop down menu, there is a new report for Item History.  This report will show all of the items that this customer has rented in the past.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">AR Dashboard:</span></b><span style="color: #333333;">   A new interface has been added to the help process your Accounts Receivable.  Under the Accounts Receivable menu, select Accounts Receivable Dashboard.  The Dashboard will show each customer’s total amount owed broken out by aged date.  You can select the Age breakout which allows you to show 0-30, 31-60, 61-90, 91-120, and &gt; 120 or 0-45, 46-90, 91-135, etc.  You can drill down to get a listing of all the contracts for this customer or double click on the line to be taken directly to the Customer Dashboard where you can add notes, payments, and adjustments.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Continuation Billing: </span></b><span style="color: #333333;">  The Auto Continuation Billing is a great feature, but there are certain contracts like the one written to the boss for that item he never remembers to bring back that you don’t ever want to continue.  This meant you had to manually select each contract that you wanted to Select or Reject.  Well now you can set a “Do Not Continue” operation.  You can have it automatically select this operation if you create a Transaction Operation called “Do Not Continue”, but you can also manually set it to any existing operation you have.  If you have the “Do Not Continue” operation created, when you Reject a contract from the Auto Continuation routine, you will be asked if you want to exclude this contract from all future auto continuation.  If you answer, Yes, it will mark that contract with the operation and not ask you the next month on that contract.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Credit Card Multi-threading:</span></b><span style="color: #333333;">   It is wonderful to get paid by credit card; however, it is not always wonderful for the process.  When the Internet connection is good and the processor is up to speed, the credit card authorization process only takes a couple of seconds, but when either of those are having a problem, it seems like an eternity.  Well believe it or not, some users are not the most patient as they are waiting for their processor to respond.  So what do you do to speed up the process?  Start clicking wildly on the screen of course.  Windows then says, “Hey I see you are tired of waiting.  Do you want me to kill off that program?” The person then responds with Yes and they are left in a sad place when they go to balance their credit cards.  To help the impatient person, we have added multi-threading to the credit card processing screen which means that it will talk to the processor in the background. On the screen, it will count down how long is remaining until we give up on the processor as well.  This should have a big improvement on the happiness of the person closing for the end of day.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Quotes:</span></b><span style="color: #333333;">   If you do a Quick Quote from Item Availability, you get all the prices with taxes, damage waiver, etc.  But if the customer decides they want to go ahead and rent it, you have several steps to open a new contract.  Not anymore. Simply click on Open Quote button and you will be asked for dates and customer for this item.  You can then add any additional items or change the status to Reservation or Open.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Show Unavailable Serialized Items: </span></b><span style="color: #333333;">  You have 100 serialized items and you are sending out a reservation.  Out of the 100 items you own, you have great utilization and only 5 of them are in stock.  Since the screen shows all 100 units, it takes you awhile scrolling through to find the desired item for send out.  Now there is a check box at the bottom of the screen for “Show Unavailable Items”.  With this box unchecked, only the 5 items that are in stock will be displayed.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Sell Price:</span></b><span style="color: #333333;">   Let’s say you add a new item through Purchase Orders, but you forgot to enter a sales price. Worst case someone puts it on a contract for $0!  To insure that forgetting doesn’t cost you money, Purchase Orders will now prompt you when you receive the item to enter the sales price when the current sell price is $0.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Select All Lines:</span></b><span style="color: #333333;">   In Version 2015 we added the option to hit Ctrl-A while in a contract to select all of the lines, then when you right click on the line you can update all of the Sort Fields, Due Back Date, Sub-status, etc.  Well no one seemed to know that Ctrl-A would do that.  To make it more intuitive, an option has been added to the right click menu for Select All Items.  Of course, you can continue to use the keyboard shortcut of Ctrl-A.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Column Selection Defaults: </span></b><span style="color: #333333;"> You have always been able to save the columns, their widths, and the order for your personal pleasure on several lookup screens.  Now you can also save those defaults to your store or your company.  This allows you to customize the look that you want for your store or company without having to manually change every employee’s settings.  Simply right click the grid header and on the Column Selection screen select Individual, Store, or Company, then click Save.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Save Checkbox Defaults:</span></b><span style="color: #333333;">   You can now save the default checkboxes for Item Lookup, Customer Lookup, and Transaction Lookup.  Once you have the checkboxes how you want them, right click on the grid header, and then click Save on the Column Selection screen.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Contract Info:</span></b><span style="color: #333333;">   When automatically creating Service Tickets the original contract’s Contract Info will be copied over to the service.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Item Warranty:</span></b><span style="color: #333333;">   When manually creating a Service Ticket for an item, the system will check whether the item is still under warranty.  If so, you will be given notice of the warranty info.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Overbooked Items: </span></b><span style="color: #333333;">  Several enhancements have been made to the Show All Overbooked Items screen. Instead of waiting until all items have been searched, the screen will display each overbooked item as it finds them. You will also be able to hit the Esc key while it is running to stop it.  This is handy if you wanted to change the store to display or the dates to search so you don’t have to wait for it to give you all the info you didn’t want.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Maintenance Frequency:</span></b><span style="color: #333333;">   You have 50 skid steers and you want to change your maintenance schedules. Go get yourself a cup a coffee because you are going to be there awhile.  But there is good news if you don’t like coffee.  Now you can update the Maintenance Frequency on the Header item and it will automatically update the Maintenance Frequency of all of the serialized items.  You can still get that cup of coffee and just act like you have been slaving away for hours changing all of the maintenance records.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Missed Rentals Notification:</span></b><span style="color: #333333;">   A new System Notification has been added for Missed Rentals.  With this notification, you can set the system to automatically email/text you anytime an employee adds a new Missed Rental.  If it is a big enough rental you could immediately tell the employee that you would purchase or subrent the item.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Bill Customer Damage:</span></b><span style="color: #333333;">   When you bill a customer for the damage through the IRO ticket, a link will now be added to the customer billing back to the IRO that the repairs were done to. This allows you to click the Contract Link column to go directly to the IRO.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Day at a Glance Letters:</span></b><span style="color: #333333;">   You can now send letters from Day at a Glance on the Went Out and Came Back tabs. This allows you to send follow up emails to the customers who just rented something today or who brought the items back today.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Ordered By Lookup:</span></b><span style="color: #333333;">   You can now lookup a transaction by searching for the person’s name that placed the order.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Contract Fulfillment:</span></b><span style="color: #333333;">   You can now use a barcode scanner to select items for check out or check in. This allows for keyless entry, faster entry, and more accurate entry.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Jobsite Service Calls Report:</span></b><span style="color: #333333;">   Ever wondered how many times you went out to a jobsite to service items. While you could sift through all the contracts, that is very time consuming.  Now you can go to the Job Site/Venue and select Reports; Service Calls to see a listing of every service call that you did to that jobsite.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Duplicate Serial Number:</span></b><span style="color: #333333;">   If you add a new item and the serial number you enter matches another item already in your database, you will be given a warning of such.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Mobile WorkForce Serialization:</span></b><span style="color: #333333;">   You can now select the serialized unit for a particular contract directly from Mobile WorkForce.  This allows the loader to enter the specific unit he is sending out.  In addition, if the item is an hour metered item, the loader will be prompted to enter the reading.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Mobile WorkForce Called Off Rent</span></b><span style="color: #333333;">:   Your service guy or sales guy can call an item off rent using their cell phone with Mobile WorkForce.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Repair Detail History:</span></b><span style="color: #333333;">   A new report has been added to the Item record that will show the details of all repairs done to the item.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Statement Web Pay:</span></b><span style="color: #333333;">   Just like you have the option to send an online payment link to a customer to pay a particular contract, you can now send a link for the customer to pay their entire statement balance.  This decreases A/R calls and late payments.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 324pt;text-indent: 36pt;"><b><span style="font-size: 11pt;color: #333333;">Data Management Module Enhancements</span></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Update Salesman: </span></b><span style="color: #333333;">  The Data Management Module continues to get new enhancements for easier ways to mass update your database.  The Update Salesman tool allows you to update Customers or Job Sites to a new salesman en masse.  This can either be changing out an existing salesman for a new salesman or this can be changing every customer or job site that is in a particular zip code.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Map Tax Code to Zip Code:</span></b><span style="color: #333333;">   As taxes keeping getting more complicated, it is nice to have an ability to decrease the complexity at the counter. With this new feature in the Data Management Module, you can update all the Zip codes in a particular state to have a specific Tax Code. This means that when someone enters that Zip in a delivery address, the contract will automatically be set to that state’s tax amount.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Text Field Cleanup:</span></b><span style="color: #333333;">   Through the years you probably find that your employees call different things differently which can lead to confusion and some ugly visual displays. The Text Field Cleanup in the Data Management Module allows you to change the fields to match across all your Item or Customer records.  For example, you might have items that have the following in the manufacturer field: Ditch Witch, Dicth Witch, Ditch Wicth, Ditch Ex Wife.  Using this tool you can easily set all of them to match so the spelling and capitalization all matches.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Data Management Module:</span></b><span style="color: #333333;">   The DMM also allows for mass change of Damage Waiver Percentage, Item Percentage, Item Markup, Sell Price, change CapiTaliZation, merge Item Categories, and other nice features.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Vendor Import:</span></b><span style="color: #333333;">   Do you have all your vendors nicely entered into your Accounts Payable system?  You can now import your Vendors from a comma delimited file.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Tax Jurisdiction Import:</span></b><span style="color: #333333;">   You can now import your Sales Tax Jurisdictions from a comma delimited file. This file is usually provided by your state, but there are companies such as </span><a href="http://www.taxrates.com/" target="_self"><span style="color: blue;">www.taxrates.com</span></a><span style="color: #333333;">that provides the import files.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">CSV Export:</span></b><span style="color: #333333;">   The Item and Customer Lookup screens now have a CSV export option.  This allows for you to easily import changes to your inventory or customers.  For example, you would list all the customers you want to change in the Customer Lookup screen.  Then right click on the grid and select Export to CSV.  The exported file will be opened in Excel or Open Office for you to modify the fields you want.  Exit and save the file.  Then in the Data Management Module, select the file you just saved the changes for import</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>
+    </body>
+    </html>
+    
