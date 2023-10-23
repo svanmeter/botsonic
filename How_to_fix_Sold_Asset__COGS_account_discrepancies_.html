@@ -1,0 +1,50 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>How to fix Sold Asset & COGS account discrepancies caused by quantity adjustments</title>
+    </head>
+    <body>
+        <h1>How to fix Sold Asset & COGS account discrepancies caused by quantity adjustments <a href="http://por.force.com/uLearn/s/article/How-to-fix-Sold-Asset-COGS-account-discrepancies-caused-by-quantity-adjustments" target="_blank">[How to fix Sold Asset & COGS account discrepancies caused by quantity adjustments]</a></h1>
+        <h2><span style="color: #2980b9;">STEPS TO CORRECT THE SOLD ASSET ACCOUNT</span></h2>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal">In the example below, the item quantity field was modified to 0 and increased back to 1.<span style="mso-spacerun: yes;">  </span>When this happens the purchase line detail updates this item as sold and an adjustment is made in the sold asset report. <span style="mso-spacerun: yes;">  </span>The user’s attempt to correct the quantity adjustment does not solve the problem as it only creates a new purchase line for $0.00 and the sold asset report remains the same.<span style="mso-spacerun: yes;">  </span></p>
+<img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3A"></img><br><br><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3F"></img><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3K"></img>
+<p class="MsoNormal" style="text-indent: .5in;">The following steps will balance the adjustment in the Sold Asset report:</p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">1.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>Increase the quantity to 2</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">2.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>Double-click the price column to update the Sold = Qty for all purchase lines except the top one</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in;mso-add-space: auto;">(the user will need to have an owner level password to modify this field)</p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">3.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>In the top purchase line, set the adjusted amount in the price column as a negative value as seen below</p>
+<img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3P"></img>
+<p class="MsoListParagraph" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">4.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>Decrease the quantity back to 1</p>
+<img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3e"></img><br><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3j"></img>
+<p class="MsoListParagraph" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">5.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>All purchase lines will show as sold, so they will need to be zeroed out as seen below</p>
+<img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3o"></img>
+<h2>STEPS TO CORRECT THE COGS ACCOUNT</h2>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal">In the example below, the item quantity field was decreased by 3 and an adjustment for $90 is made in the COGS account (History&gt;Cost of Goods Sold).<span style="mso-spacerun: yes;">   </span></p>
+<img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3t"></img><br><br><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t3y"></img><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t43"></img>
+<p class="MsoNormal">The following steps will balance the adjustment for the COGS account:</p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">1.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>Increase the quantity by 1</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">2.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>Double-click the price column to update the Sold = Qty for all purchase lines except the top one</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: .75in;mso-add-space: auto;">(the user will need to have an owner level password to modify this field)</p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">3.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>In the top purchase line, set the adjusted amount in the price column as a negative value as seen below</p>
+<img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t4D"></img><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t4I"></img>
+<p class="MsoListParagraph" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">4.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>Decrease the quantity by 1</p>
+<img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t4N"></img><br><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t4X"></img>
+<p class="MsoListParagraph" style="margin-left: .75in;mso-add-space: auto;text-indent: -.25in;mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri;mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">5.<span style="font: 7.0pt &quot;Times New Roman&quot;;">      </span></span></span>The purchase lines will show all quantities as sold, so they will need to be corrected to be consistent with the quantity on hand<br><br><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9A&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h0000003t2r"></img></p>
+    </body>
+    </html>
+    

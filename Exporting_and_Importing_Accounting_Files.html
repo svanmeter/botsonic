@@ -1,0 +1,194 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Exporting and Importing Accounting Files</title>
+    </head>
+    <body>
+        <h1>Exporting and Importing Accounting Files <a href="http://por.force.com/uLearn/s/article/Exporting-and-Importing-Accounting-Files" target="_blank">[Exporting and Importing Accounting Files]</a></h1>
+        <span style="font-size: 36px;"><b><span style="font-family: Arial,Helvetica,sans-serif;">Exporting and Importing Accounting Files</span></b></span><br><br><br><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article will explain how to export and import files for both purchase orders and the general ledger, as well as how to set up the file formats for accounting integrations. </span></span><br><br><br><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics included in this article</span></span><br> 
+<ul><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Exporting General Ledger</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Exporting/Importing Purchase Orders as Invoices</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Getting Help with Accounting Export/Import</span></span></li></ul>
+ 
+
+<h1><span style="font-size: 22px;"><span style="color: #7bb34e;"><span style="font-family: Arial,Helvetica,sans-serif;">Exporting General Ledger</span></span></span><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #333333;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The Point of Rental system can create an import file that contains all the debits and credits for the day&#39;s transactions to be imported into a third-party accounting system.</span></span></span></span><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;"> This file is not a 1:1 listing of transactions, but a summary of balance entries that will be entered as adjustments (Journal Entries) to the accounts in the destination account software.</span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"> </h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The activity in Point of Rental will show as - </span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"> </h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Credit Acct 1001 $100</span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Debit Acct 5005 $100</span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Credit Acct 1001 $200</span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Debit Acct 5009 $200  </span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"> </h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The IIF file (which can be opened as a text file) will show as -</span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"> </h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Credit Acct 1001 $300</span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Debit Acct 5005 $100</span></span></span></span></span></span></span></h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Debit Acct 5009 $200</span></span></span></span></span></span></span></h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Miscellaneous section of the Account Numbers screen allows you to set up your General Ledger export format and settings. This section can be used by users who have an API integration with their accounting software or users who upload General Ledger files manually into their accounting software.<br><br><br>To get there, go to <i>Configuration &gt; Accounting Configurations &gt; Account Numbers</i>.<br><br><img alt="Accounting Import 4.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHic&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000005Z0D9" style="width: 491px;height: 155px;"></img></span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Point of Rental system can create an import file that contains all the debits and credits for the day&#39;s transactions to be imported into a third-party accounting system. The file name is in the format PRyymmdd, where yy -year, mm - month, dd - the day for daily imports, and PR yymmMONTHLYONLY for monthly imports.<br><br><b>Export Format </b>- This option allows the selection of the export file format.<br><br><b>IIF QuickBooks </b>- The IIF format is a format that is used by QuickBooks.<br><br><b>CSV Peachtree </b>- The CSV (comma delimited) format is used by Peachtree and others.<br><br><b>TXT Account Mate </b>- This is a tab-delimited format used by Account Mate.<br><br><b>CSV Business Works</b> - This format is a comma-separated file used by Business Works.<br><br><b>CSV Sage Accpac </b>- The CSV (comma delimited) format is used by Sage Accpac and others.<br><br><b>TXT ComputerEase</b> - This is a tab-delimited format used by ComputerEase.<br><br><b>CSV Tech Systems </b>- The CSV (comma delimited) format is used by Tech Systems and others.<br><br><b>CSV Microsoft Dynamics</b> - The CSV (comma delimited) format is used by Microsoft.<br><br><b>CSV MAS 90/200 </b>- The CSV (comma delimited) is used by MAS 90/200 and others.<br><br><b>TXT Simply Accounting </b>- The TXT (tab-delimited) format is used by Simply Accounting and others.</span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Export Location </b>- Under the Export Location field, you can define where the import files are created. The default account is C:\POR\QB\.</span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>File Extension </b>- This option controls the extension used when creating the file (IIF, CSV).</span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Email </b>- This allows you to enter an email address to have a copy of the GL entry files automatically emailed at the end of each day.</span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Export Frequency </b>- This option controls the frequency with which export files are created: daily, monthly, or never.</span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>QB Class</b> - This field is used in QuickBooks to define separate profit centers (usually each store has its own class).</span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Tax Item </b>- This field is only used when Xero is selected as the export format.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><i><b>Note: </b>QB Online export format has been added to the Export options. It requires a 3rd party add-in such as Transaction Pro Importer to load the Excel spreadsheet into QBO. This is in a CSV file. In Transaction Pro Importer you cannot use &quot;account numbers&quot; in the account number fields, it must be the &quot;account description or name&quot; in the account number fields. When mapping the Export file to Transaction Pro you must use DOCNUM as the Row Key. Additionally, you can NOT name your accounts receivable account in QuickBooks &quot;Accounts Receivable.&quot; We recommend using POR A/R as the name of the account.</i></span></span><br> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Account Numbers Store 1</strong> <b>(Expert)</b> - Checking this box allows you to use the account numbers you assigned from your Store 1 location. This will include Store and Store Class.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><i><b>Note:</b> In Elite, users of API integrations will not see Email, Export Frequency, and Tax Item in this UI as they do not apply to those integrations.</i></span></span></h1>
+
+<h1><br> </h1>
+
+<h1><span style="color: #7bb34e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Exporting/Importing Purchase Orders as Invoices</span></span></span></h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Point of Rental software has the ability to take finalized purchase orders and export them to a file in a format that can be imported into an accounts payable system as invoices to be paid. This eliminates having to manually create the invoices in Point of Rental and your accounting system. Currently, Point of Rental can interface with QuickBooks as IIF files and AccPac as CSV files. This does require some data preparation to work correctly.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. The vendor records in Point of Rental will have to be configured so that the name data matches exactly the name data in the accounts payable package for the vendor. That is to say the case, spacing, and punctuation must be the same in both systems or there is a field in the vendor record for A/P link where you can put the vendor’s number from your accounts payable system and it will use that rather than the customer name for the export data. The default payment method should be set as well with “account” usually being chosen for those vendors who bill you for your purchases.</span></span></h1>
+
+<h1 style="margin-left: 40px;"> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Within Purchase Orders, using General Ledger accounts, you will have to create the various expense accounts and assign the General Ledger account number from your accounting system. There are default accounts set up which can be modified or added to as needed. Deactivate the ones not needed to avoid incorrect entries.<br>You can get here by going to Purchase Orders&gt; Tools&gt; Exit Dashboard to Menu&gt; General Ledger Accounts.<br><br>If you do not want to set individual accounts see Step #4 below.</span></span></h1>
+
+<h1 style="margin-left: 40px;"><br><img alt="Export and Import 6.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHic&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006V813"></img></h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Under Accounting Configurations<u>,</u> you will need to go into PO Payment Methods and tell the system which payment methods will “post” as invoices. The “Account” method is normally set to “Post” while “Check” and “Credit Card” are not.</span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You can get here by going to:</span></span></h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite: Gear icon &gt; Configuration &gt; Accounting Configuration &gt; PO Payment Methods<br>Expert: Configuration &gt; App Configurations &gt; Accounting Configurations &gt; PO Payment Methods </span></span></h1>
+
+<h1> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="Accounting Import 1.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHic&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000005Yzts" style="width: 287px;height: 199px;"></img></span></span></h1>
+
+<h1 style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Under Accounting Configurations, you will need to enter in the expense account name or the number for Shipping, Tax, Miscellaneous. If there are no specific expense account numbers set the Default expense account number.</span></span><br><br><br><img alt="Export and Import 7.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHic&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006V81D"></img></h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. Once the data and configuration have been set, the purchase orders must have the correct data set to be exported. By selecting the vendor with the correct name, you are tying the purchase order to the correct vendor account. Also, as you write your purchase orders the system asks which General Ledger account to expense this purchase to. One has to be selected before the import can take place unless there is a default expense account set (the default account number will be used if one is not specified for an item). You can do this at open or after receiving the items but it must be done before import. You can use different accounts on the same purchase order as the account number is assigned by line item.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. If there are shipping charges, miscellaneous charges, or taxes, they should be entered as well.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Important:</b> There is a field for the invoice number and it should be set to the invoice number from your vendor. Do not set the invoice number in the PO until you have received the final invoice and have made all the necessary adjustments to the PO. The quantities, pricing, account numbers, shipping costs, etc. should match the vendor&#39;s invoice before entering the invoice number in the PO. When exporting there is a field you can select to only include PO’s that have an invoice number.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. Once the purchase order agrees with the vendor’s invoice it is ready to import. Under Purchase Orders, you have the option to Export POs to AP. <br><br><br><img alt="Accounting Import 2.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHic&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000005Z04v" style="width: 305px;height: 157px;"></img><br><br><br>8. This will bring up a window where you can select the date range of purchase orders to be exported. You will select the export format, “AccPac” or “QuickBooks.” You will put a check in the box “Only include PO’s with invoice numbers” as they are ready to import. You can import POs without invoices but the data would likely be incomplete or incorrect.<br><br><br><img alt="Accounting Import 3.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHic&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000005Z05o" style="width: 349px;height: 319px;"></img></span></span></h1>
+
+<h1 style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">There is a “Preview” button that you can select and it will display the purchase orders being exported so you can check the data. It will only display closed purchase orders in the date range requested and where an invoice number has been entered (it will not display a PO that has been previously exported). If the data is correct you are ready to export. If not, make the necessary corrections and “Preview” again.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">9. When satisfied that everything is correct, click on the “Export” button and a file will be created in the POR\QB folder with the file name ” AP[year][month][date].IIF (AP20100713.IIF) for QuickBooks  or AP[year][month][date].CSV (AP20100713.CSV) for AccPac.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">10. Now that the file exists you are ready to import the file into QuickBooks or AccPac. This is done exactly like you would import your daily or monthly General Ledger entries.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">In QuickBooks, go to File, at the top of the window, go down to Import, select the type of file to import (.IIF), and select the file location where the AP.20100713.IIF file is located. If you double-click on the file it will import into QuickBooks and you will get a message that data has been imported. If some aspect of the data is not set correctly it will not import.</span></span><br> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">In AccPac follow their instructions for importing a .CSV file.</span></span><br><br><br> </h1>
+
+<h1><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #7bb34e;">Getting Help with Accounting Import/Export</span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>What We Support:</b></span></span><br> </h1>
+
+<ul style="margin-left: 80px;"><li style="list-style-type: disc;">
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">We can verify that the data between Point of Rental and the IIF is complete and correct. </span></span></span></span></span></span></span></h1>
+
+	<ul><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">If Point of Rental shows $100 in acct. 1001 credits then the IIF should as well.  </span></span></span></span></span></span></span></h1>
+		</li><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The individual transactions will not match 1:1, but the balance of the credits and debits made to those accounts for the dates the IIF file was run for vs. the data in Point of Rental must match.  </span></span></span></span></span></span></span></h1>
+		</li><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">We can also check that all credits and debits balance ($300 in credits and $300 in debits; credits and debits should always balance).  </span></span></span></span></span></span></span></h1>
+		</li></ul>
+	</li><li style="list-style-type: disc;">
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Troubleshoot that Acct 1000 is mapped to Acct 1000 in QuickBooks/Intacct.</span></span></span></span></span></span></span></h1>
+
+	<ul><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Point of Rental account numbers will need to be mapped to the accounts in QuickBooks. You must use account names.</span></span></span></span></span></span></span></h1>
+		</li><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Be sure to fill in all relevant account names in the account numbers, item categories, and disbursement items.</span></span></span></span></span></span></span></h1>
+		</li><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Account names should not have any special characters (#,*, etc ) as these do not import correctly (see Account Numbers in Net Help).</span></span></span></span></span></span></span></h1>
+		</li></ul>
+	</li></ul>
+
+<h1 style="list-style-type: circle;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>What We Are Unable to Support:</b></span></span><br> </h1>
+
+<ul style="margin-left: 80px;"><li style="list-style-type: disc;">
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">We are unable to verify any data once in accounting software.  </span></span></span></span></span></span></span></h1>
+
+	<ul><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Example: If an entry from the file is uploaded into the accounting software it can be deleted, edited, etc. and there is no record of that or means to troubleshoot.</span></span></span></span></span></span></span></h1>
+		</li><li style="list-style-type: circle;">
+		<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Additional data can be added to accounting software that will affect balances and make troubleshooting by comparing balances between your accounting software and Point of Rental impossible for us to determine without knowledge of all your transactions.</span></span></span></span></span></span></span></h1>
+		</li></ul>
+	</li><li style="list-style-type: disc;">
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Once the data is imported into the accounting integration destination software we recommend reaching out to the accounting integration software support team.  </span></span></span></span></span></span></span></h1>
+	</li><li style="list-style-type: disc;">
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="color: #222222;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">We are limited to verifying that the Point of Rental and IIF file’s balances match for the date range in question.</span></span></span></span></span></span></span><br>	<br>	 </h1>
+	</li></ul>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Please note:</span></span></h1>
+
+<h1> </h1>
+
+<ul style="margin-left: 80px;"><li>
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The IIF can also combine several days’ worth of transactions into a single file based on when it is run.</span></span></h1>
+	</li><li>
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The IIF file is generated when End of Day is run.  You can rerun the creation of an IIF file by going to “Reprint GL Entries” under Accounting Reports.</span></span></h1>
+	</li><li>
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The IIF file is located under the Export Location on your Accounts. </span></span></h1>
+	</li><li style="list-style-type: disc;">
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><i>Program Menu &gt; Configurations &gt; Accounting Configurations &gt; Account Numbers</i></span></span></h1>
+	</li></ul>
+
+<h1 style="list-style-type: disc;"> </h1>
+
+<div style="list-style-type: disc;margin-left: 40px;">
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Getting Started with Point of Rental Support</b></span></span><br> </h1>
+
+<h1 style="line-height: 1.38;background-color: rgb(255, 255, 255);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">To best serve you please have the answers to these questions:</span></span></h1>
+
+<h1> </h1>
+
+<ol><li>
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Are you setting up an accounting integration for the first time or have you been using it for a while?</span></span></h1>
+	</li><li>
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Have any changes been made to your accounting setup? (New accounts, name changes, etc.?)</span></span></h1>
+	</li><li>
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Do you know the date range of transactions you need to review?  </span></span></h1>
+	</li><li>
+	<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Do you have the IIF/CSV files that correspond to those days?</span></span></h1>
+	</li></ol>
+
+<h1> </h1>
+
+<h1><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Please email a reply to an existing email if you have an open Support Case or email <a href="mailto:Support@PointofRental.com" target="_blank">Support@PointofRental.com</a> to open a case with the answers to the questions above.</span></span><br><br><br><br> </h1>
+
+<h1><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Related articles</b></span></span></h1>
+</div>
+
+<h1 style="list-style-type: disc;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Account-Numbers-1854120324" target="_blank">Account Numbers - Chart of Accounts</a><br><a href="/articles/en_US/Knowledge/Export-Purchase-Orders-to-AP-196704565" target="_blank">Export Purchase Orders to AP</a></span></span><br><br><br> </h1>
+
+<h1> </h1>
+
+<h1> </h1>
+    </body>
+    </html>
+    

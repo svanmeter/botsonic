@@ -1,0 +1,56 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Exporting /Importing Purchase Orders as Invoices</title>
+    </head>
+    <body>
+        <h1>Exporting /Importing Purchase Orders as Invoices <a href="http://por.force.com/uLearn/s/article/Exporting-Importing-Purchase-Orders-as-Invoices-1519826256" target="_blank">[Exporting /Importing Purchase Orders as Invoices]</a></h1>
+        <h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Exporting /Importing Purchase Orders as Invoices</span></span></h1>
+
+<p style="background: white;margin-top: 5.75pt;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Overview</span></b><span style="color: #333333;">:  The Point-of-Rental Software has the ability to take finalized purchase orders and export them to a file in a format that can be imported into an accounts payable system as invoices to be paid. This eliminates having to manually create the invoices in POR and your accounting system,  Currently, POR can interface with QuickBooks as IIF files and AccPac as CSV files. This does require some data preparation to work correctly.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">1. The Vendor records in POR will have to be configured so that the name data matches exactly the name data in the accounts payable package for the vendor. That is to say the case, spacing, punctuation must be the same in both systems. Or there is a field in the vendor record for A/P link where you can put the vendor’s number from your accounts payable system and it will use that rather than the customer name for the export data. The default payment method should be set as well with “account” usually being chosen for those vendors who bill you for your purchases.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">2. Within the #4 <u>Purchase Orders</u>, using <u>General ledger accounts</u>, you will have to create the various expense accounts and assign the general ledger account number from your accounting system. There are default accounts set up which can be modified or added to as needed. Inactivate the ones not needed to avoid incorrect entries. If you do not want to set individual accounts see #4 below.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">3. Under Accounting Configurations in #9 <u>Configuration,</u> you will need to go into <u>PO Payment</u>  <u>Methods </u>and tell the system which payment methods will “post” as invoices. The “Account” method is normally set to “post” while “Check” and “Credit Card” are not.</span></p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image001_248" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2x&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FFtN"></img></span></p>
+
+<p style="background: white;"><span style="color: #333333;">4. Under Accounting Configurations in #9 <u>Configuration</u>, you will need to enter in the expense account name or the number for Shipping, Tax, miscellaneous. If there are no specific expense account numbers set, the Default expense account number.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Once the data and configuration have been set, the purchase orders must have the correct data set to be exported. By selecting the vendor with the correct name, data you are tying the purchase order to the correct vendor account.  Also, as you write your purchase orders the system asks which general ledger account to expense this purchase too. One has to be selected before the import can take place unless there is a default expense account set (the default account number will be used if one is not specified for an item). You can do this at open or after receiving the items but it must be done before import. You can use different accounts on the same purchase order as the account number is assigned by line item.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">If there are shipping charges, miscellaneous charges, or taxes they should be entered as well.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Important:</span></b><span style="color: #333333;"> There is a field for the invoice number and should be set to the invoice number from your vendor. Do not set the invoice number in the PO until you have received the final invoice and have made all the necessary adjustments to the PO. The quantities, pricing, account numbers, shipping costs, etc should match the vendor&#39;s invoice before entering the invoice number in the PO. When exporting there is a field you can select to only include PO’s that have an invoice number.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Once the Purchase Order agrees with the Vendor’s invoice it is ready to import. Under #4 <u>Purchase Orders</u> you have the option to <u>Export POs to AP.</u> This will bring up a window where you can select the date range of purchase orders to be exported. You will select the export format, “AccPac” or “QuickBooks”. You will put a check in the box “only include PO’s with invoice numbers” as they are ready to import. You can import POs without invoices but the data would likely be incomplete or incorrect.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">There is a “Preview” button that you can select and it will display the Purchase Orders being exported so you can check the data. It will only display closed Purchase Orders in the date range requested and where an invoice number has been entered (it will not display a PO that has been previously exported). If the data is good you are ready to export. If not, make the necessary corrections and “Preview” again.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">When satisfied that everything is correct, click on the “Export” button and a file will be created in the POR\QB folder with the file name” AP[year][month][date].IIF (AP20100713.IIF) for QuickBooks  or AP[year][month][date].CSV (AP20100713.CSV) for AccPac.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Now that the file exists you are ready to import the file into QuickBooks or AccPac. This is done exactly like you would import your daily or monthly General ledger entries.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">In QuickBooks you go to “File”, at the top of the window, go down to “Import”, select the type of file to import (.IIF), and select the file location the AP.20100713.IIF file is located. If you double-click on the file it will import into QuickBooks and you will get a message that data has been imported. If some aspect of the data is not set correctly it won’t import.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">In AccPac follow their instructions for importing a .CSV file.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Now you pay the bills. We won’t help you with this, you’re on your own</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>
+    </body>
+    </html>
+    
