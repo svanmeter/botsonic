@@ -1,0 +1,350 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Internal | Email Basic Troubleshooting</title>
+    </head>
+    <body>
+        <h1>Internal | Email Basic Troubleshooting <a href="http://por.force.com/uLearn/s/article/Internal-Email-Basic-Troubleshooting" target="_blank">[Internal | Email Basic Troubleshooting]</a></h1>
+        <h1><strong><span style="font-size: 36px;"><span style="color: #e74c3c;">INTERNAL</span></span></strong><span style="font-size: 36px;"><span style="color: #e74c3c;"> </span><strong>| Email Basic Troubleshooting</strong></span></h1>
+
+<h1> </h1>
+
+<h1> </h1>
+
+<p><span style="font-size: 14px;font-family: sans-serif;">Email is something that we rely on every day. Here are some issues that we can correct easily in Point of Rental.</span><br> </p>
+
+<p><span style="font-size: 22px;"><span style="color: rgb(59, 62, 65);font-family: sans-serif;">Topics in this article include:</span></span></p>
+
+<p> </p>
+
+<ul><li><span style="font-size: 14px;font-family: sans-serif;">Location of email settings in Point of Rental</span></li><li><span style="font-size: 14px;font-family: sans-serif;">Are they using the right SMTP port and server?</span></li><li><span style="font-size: 14px;font-family: sans-serif;">Verify using EMAILIT.exe</span></li><li><span style="font-size: 14px;font-family: sans-serif;">MXTOOLBOX</span></li><li><span style="font-size: 14px;font-family: sans-serif;">Mass email delay</span></li><li><span style="font-size: 14px;font-family: sans-serif;">Gmail-specific settings to look for</span></li><li><span style="font-size: 14px;font-family: sans-serif;">Office 365 specific issues</span></li><li><span style="font-size: 14px;font-family: sans-serif;">Yahoo email specifics</span></li><li><span style="font-size: 14px;font-family: sans-serif;">Junk email </span></li></ul>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong><span style="color: #c0392b;"><span style="font-size: 22px;">Location of email settings in Point of Rental</span></span></strong></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">1. Expert</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Global Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> Program Menu &gt; Configuration &gt; Reports and Notification &gt; System Email Setup &gt; Global Default Setting &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Store Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> Program Menu &gt; Configuration &gt; Reports and Notification &gt; System Email Setup &gt; “Pick the Store that you are wanting” &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">System Notifications:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> Program Menu &gt; Configuration &gt; Reports and Notification &gt; System Email Setup &gt; System Notifications &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Mass Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> Program Menu &gt; Configuration &gt; Reports and Notification &gt; System Email Setup &gt; Mass Email Setting &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Internet Fax Setup:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> Program Menu &gt; Configuration &gt; Reports and Notification &gt; System Email Setup &gt; Internet Fax Setup</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Employee Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> Program Menu &gt; Security &gt; Employee Security &gt; Choose a user (Bret Crosby) &gt; Email Setup.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">2. Elite</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Global Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> ⚙️&gt; Legacy Options &gt; App Configuration &gt; Reports and Notification &gt; System Email Setup &gt; Global Default Setting &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Store Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> ⚙️&gt; Legacy Options &gt; App Configuration &gt; Reports and Notification &gt; System Email Setup &gt; “Pick the Store that you are wanting” &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">System Notifications:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> ⚙️&gt; Legacy Options &gt; App Configuration &gt; Reports and Notification &gt; System Email Setup &gt; System Notifications &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Mass Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> ⚙️&gt; Legacy Options &gt; App Configuration &gt; Reports and Notification &gt; System Email Setup &gt; Mass Email Setting &gt; Edit</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Internet Fax Setup:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> ⚙️&gt; Legacy Options &gt; App Configuration &gt; Reports and Notification &gt; System Email Setup &gt; Internet Fax Setup</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Employee Email:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> ⚙️&gt; Legacy Options &gt; Security &gt; Employee Security &gt; Choose a user (Bret Crosby) &gt; Email Setup.</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<h1><strong><span style="color: #c0392b;"><span style="font-size: 22px;">Are the customers using the correct SMTP port and server?</span></span></strong></h1>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">One of the common mistakes is that we are using a different server and port then what the mail providers would like. Here are some common servers and ports that you can look at.</span></p>
+
+<p> </p>
+
+<table class="ql-table-blob" style="color: rgb(62, 62, 60);white-space: pre-wrap;border: none;"><tbody><tr><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-width: 2px;border-style: solid;border-color: black;width: 125px;"> </td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: 2px solid black;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Microsoft 365</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: 2px solid black;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Gmail</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: 2px solid black;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Yahoo</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: 2px solid black;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">iCloud</span></span></span></td></tr><tr><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: 2px solid black;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">SMTP Server</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Smtp.office365.com</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Smtp.gmail.com</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Smtp.mail.yahoo.com</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Smtp.mail.me.com</span></span></span></td></tr><tr><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: 2px solid black;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">SMTP Port</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">587</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">587</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">587</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">587</span></span></span></td></tr><tr><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: 2px solid black;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">SSL</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Yes</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Yes</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Yes</span></span></span></td><td colspan="1" rowspan="1" valign="top" style="padding: 0in 7px;border-bottom: 2px solid black;width: 125px;border-top: none;border-right: 2px solid black;border-left: none;"><span style="font-size: 11pt;"><span style="line-height: normal;"><span style="font-family: Calibri, sans-serif;">Yes </span></span></span></td></tr></tbody></table>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Office 365: </span><a href="https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353" style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;" target="_blank">https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353</a></p>
+
+<p> </p>
+
+<p> </p>
+
+<h1><strong><span style="color: #c0392b;"><span style="font-size: 22px;">Troubleshooting emails within POR using EMAILIT.exe</span></span></strong></h1>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Emailit.exe is a very useful tool when troubleshooting email issues within Point of Rental. It can provide useful feedback as to what the issue might be.</span></p>
+
+<p><img alt="image001.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kle4" style="width: 631px;height: 368px;"></img></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Location: This can be found in &lt;DataDrive&gt;:\POR\Program</span></p>
+
+<p><img alt="image002.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kleY" style="width: 615px;height: 358px;"></img></p>
+
+<ul><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">In order to use this application, you will need the following:An email account that can authenticate to the host’s gateway</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The host’s SMTP Server</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Allowed ports for SMTP traffic on Host’s Server</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Whether or not the port used needs SSL</span></li></ul>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The information required above can be obtained from your email host’s website and or if you are running an exchange server please ask your network administrator for the above information.</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<h1><span style="color: #c0392b;"><strong><span style="font-size: 22px;">I don’t know who my email provider is (MXTOOLBOX)</span></strong></span></h1>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Mxtoolbox is all of your MX record, DNS, blacklist and SMTP diagnostics in one integrated tool. Input a domain name or IP Address or Host Name. Links in the results will guide you to other relevant tools and information and you&#39;ll have a chronological history of your results.</span></p>
+
+<h2><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Website: </span><a href="http://www.mxtoolbox.com" style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;" target="_blank">http://www.mxtoolbox.com</a></h2>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Common issues:</span></p>
+
+<p> </p>
+
+<p><i style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">“I don’t know who my email host is”</i></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Go to the website and type your email address in.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">For example:</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">I don’t know who the email host is for the following email address </span><a href="mailto:*****@point-of-rental.com" style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;" target="_blank">*****@point-of-rental.com</a></p>
+
+<p> </p>
+
+<p><img alt="image007.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klf2" style="width: 624px;height: 297px;"></img></p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">If you click “MX Lookup” you will get the following results:</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The results above show that the email host is “Rackspace” for this particular email account.</span></p>
+
+<p><img alt="image009.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klfH" style="width: 602px;height: 571px;"></img></p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">You can actually run the “SMTP Test” to see if the email server is having any issues. Results show that this particular server forbids sending spam, but also shows that it may not have any relaying issues at the moment.</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<h1><span style="color: #c0392b;"><span style="font-size: 22px;">Mass email delay</span></span></h1>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">When sending invoices some Email Providers will lock out the account if you are spamming the SMTP Server. What we recommend is that you set a Delay in the Mass\Fax\Email Settings.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">To get there:</span></p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Expert:</b><i style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> Program Menu &gt; Configuration &gt; Reports and Notification &gt; Mass Fax/Email Settings</i></p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Elite:</b><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;"> </span><i style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Header &gt; Configuration &gt; Core Options &gt; App Configuration &gt; Reports and Notification &gt; Mass Fax/Email Settings</i></p>
+
+<p><img alt="image011.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klfM" style="width: 665px;height: 289px;"></img></p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Set the Email Delay to at least 5 seconds or higher.</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<h1><strong><span style="color: #c0392b;"><span style="font-size: 22px;">Gmail-specific settings to look for</span></span></strong></h1>
+
+<p><u style="font-size: 14px;font-family: sans-serif;">Oauth2</u></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Common thing for Google Email Users is that you will need to turn on something called Less Secure Apps. This can actually leave the account Vulnerable to attach’s. We Recommend that they use OAUTH2 to enable to their Point of Rental Email Settings. Please Click here to get that information.</span></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;">Gmail Oauth2: 2021.03 and newer</span></p>
+
+<p> </p>
+
+<p><u style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Less Secure Apps</u></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">1. If you are on an older version then you may need Less Secure Apps Turned on Here is how to do that.Go to Myaccount.Google.com, and sign in.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">2. Click on Security and look for Less Secure Apps.</span></p>
+
+<p class="ql-indent-1"><img alt="image011.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klfq" style="width: 647px;height: 281px;"></img><br><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">3. Click the ‘Turn on Access’ and follow the prompts.</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<h2><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Enable it from Google Workspace (Formally G Suite) admin</span></h2>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">If that option is not available then you may need to enable it on the Google Workspace Admin. Please note that as of June 2020, Google is limiting the ability for Less Secure Apps (LSAs) to access Google Workspace Account Data. This means for Point of Rental Customer they should upgrade to POR 2021.03 or Later to get Oauth 2.0.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">1. Go to admin.google.com and sign in to your administrator account.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">2. Click on Security &gt; Less Secure Apps.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">3. Select Allow users to Manage their Access to less secure apps and then click save.</span></p>
+
+<p><img alt="image015.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klgA" style="width: 639px;height: 351px;"></img></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">4. Once you’ve set Allow users to manage their access to less secure apps to on, affected Google Workspace users within the selected group or Organizational Unit will be able to toggle access for less secure apps on or off themselves. It may take a minute or so for the setting to take effect. Follow the instructions above to turn on Less Secure Apps. </span></p>
+
+<p> </p>
+
+<p><u style="font-size: 14px;font-family: sans-serif;">2 Factor Authentication Enabled</u></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">If you are using 2 Factor Authentication and less secure apps here is how to create a Application Password.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">1. Go to Myaccount.Google.com, and sign in.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">2. Click on Security and look for App Passwords.</span></p>
+
+<p class="ql-indent-1"><img alt="image017.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klhD" style="width: 647px;height: 281px;"></img><br><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">3. Follow the prompts to Generate a password.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">4. Place it in Point of Rental.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<h1><strong><span style="color: #c0392b;"><span style="font-size: 22px;">Office 365-specific issues</span></span></strong></h1>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Office 365 (aka Microsoft 365) is a business email that has a lot of limitations to our program. Here are some of the limits.</span></p>
+
+<h2><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Note: This might change. Please refer to this article for more information </span><a href="https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits" style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;" target="_blank">https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits</a></h2>
+
+<p><u style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Sending Limits</u></p>
+
+<p> </p>
+
+<p><img alt="Sending Limits.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kliV"></img></p>
+
+<p style="text-align: center;"> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">If you hit this limit, your account will be locked and your Microsoft 365 admin will have to unlock it.</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p><u style="font-size: 14px;font-family: sans-serif;">Application Password</u></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;">If you have two-step verification turned on and an app isn&#39;t prompting you to enter a security code when you sign in, you may be able to sign in with an app password instead. An app password is a long, randomly generated password that you provide only once instead of your regular password when signing into an app or device that doesn&#39;t support two-step verification.</span></p>
+
+<p> </p>
+
+<p><i style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Reference: https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944</i></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">To create a new app password for an app or device, take the following steps. You can repeat these steps to create an app password for as many apps or devices as you need.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">1. Go to the Security basics page and sign in to your Microsoft account.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">2. Select More security options. </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">3. Under App passwords, select Create a new app password. A new app password is generated and appears on your screen.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">4. Enter this app password where you would enter your normal Microsoft account password in the application.</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<h1><span style="color: #c0392b;"><strong><span style="font-size: 22px;">Yahoo email specifics</span></strong></span></h1>
+
+<p><u style="font-size: 14px;font-family: sans-serif;">Application Password</u></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">Some older, third-party email apps (that do not use our Yahoo branded sign-in page) require you to enter a single password for login credentials. To access your Yahoo Mail account on these apps, you&#39;ll need to generate and use an app password. An app password is a long, randomly generated code that gives a non-Yahoo app permission to access your Yahoo account. You’ll only need to provide this code once to sign into your third-party email app.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">1. Sign into your Yahoo Account Security page.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">2. Click Generate app password or generate and manage app passwords.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">3. Enter your app&#39;s name in the text field.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">4. Click Generate password.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">5. Follow the instructions below the app password.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">6. Click Done.</span></p>
+
+<p><img alt="image019.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klhh" style="width: 618px;height: 436px;"></img></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<h1><strong><span style="color: #c0392b;"><span style="font-size: 22px;">Junk email</span></span></strong></h1>
+
+<p><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">We cannot prevent all junk emails. Here are some suggestions.</span></p>
+
+<p><img alt="image021.jpeg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5l&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004klhw" style="width: 603px;height: 349px;"></img></p>
+
+<ul><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The default message that POR says when sending a contract is, “Your invoice is attached”, and this can be flagged by other people’s email as spam. You can change this in your parameters.</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The recipient&#39;s email provider has filtered the mail as spam or junk mail based on the content or the senders (your) IP address</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The Junk Mail filter has identified one or more keywords that spammers repeatedly use in their messages</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The recipient has set up &#39;rules&#39; in their mail program that are too generic and therefore tagging your mail as spam.</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">The recipient has flagged the sender as someone that sends spam</span></li><li><span style="color: rgb(59, 62, 65);font-family: sans-serif;font-size: 14px;">You are sending an attachment with your message, and you have included wording that is SPAM.</span></li></ul>
+
+<p> </p>
+
+<div id="" style="left: 20px;top: 10147.7px;"> </div>
+    </body>
+    </html>
+    

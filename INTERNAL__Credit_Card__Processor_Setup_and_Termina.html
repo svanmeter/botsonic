@@ -1,0 +1,241 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>INTERNAL | Credit Card  Processor Setup and Terminal Information</title>
+    </head>
+    <body>
+        <h1>INTERNAL | Credit Card  Processor Setup and Terminal Information <a href="http://por.force.com/uLearn/s/article/INTERNAL-Credit-Card-Processor-Setup-and-Terminal-Information" target="_blank">[INTERNAL | Credit Card  Processor Setup and Terminal Information]</a></h1>
+        <p style="margin-top: 0pt;margin-bottom: 8pt;"><strong><span style="font-size: 36px;"><span style="color: #e74c3c;"><span style="font-family: Arial,Helvetica,sans-serif;">INTERNAL </span></span></span><span style="color: #3b3e41;"><span style="font-size: 36px;"><span style="font-family: Arial,Helvetica,sans-serif;">| Credit Card Processor Setup &amp; Terminal Information</span></span></span></strong><br><br><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article is going to show you how to set up or update your Cayan (GPI or TSYS) Credit Card Processor and Terminal information.<br> </span></span><br><br><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Important!</strong></span></span></span></p>
+
+<ul><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This process </span></span></span><strong><span style="color: #e74c3c;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">MUST</span></span></span></strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong> </strong>be performed <strong>after</strong> an End of Day has been completed.</span></span></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This process will <strong>require</strong> you to get <strong>a TeamViewer</strong> <strong>to the local computer</strong>, not the server.</span></span></span></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"> <br>  <br><br><span style="font-size: 20px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span><br> </p>
+
+<ul><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="font-size: 16px;"><a href="#T1"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Obtaining Terminal IP information</span></span></a></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="font-size: 16px;"><a href="#T2"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Adding a retrieved VeriFone terminal static IP to a new Cayan/GPI Verifone Terminal</span></span></a></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="font-size: 16px;"><a href="#T3"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Create VeriFone on-screen Terminal-for manually keyed CC transactions (if you do not have physical terminals)</span></span></a></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="font-size: 16px;"><a href="#T4"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring your Point of Rental Software for GPI/Cayan</span></span></a></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="font-size: 16px;"><a href="#TSYS-VARS"><span style="font-family: Arial,Helvetica,sans-serif;">TSYS VARS</span></a></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;"><span style="font-size: 16px;"><a href="#Troubleshooting"><span style="font-family: Arial,Helvetica,sans-serif;">Troubleshooting</span></a></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;"><a href="#training-video"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Training Video (5/26/2023)</span></span></a></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><br><br><br><br><a id="obtaining-terminal-ip-information" name="obtaining-terminal-ip-information"></a> <span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Obtaining Terminal IP information</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">You must have a TV connected to the <strong>LOCAL </strong>computer, not the server.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><br><span style="font-size: 18px;">IPv4</span></p>
+
+<div style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><strong>If the customer is going from Point to Cayan</strong> - use the same IP address that is assigned to the Point terminal.<br><br><strong>If this is an Initial Cayan Setup</strong>:</span></span></span><br> </p>
+
+<ol><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pick a number under 100 and change the last section of the IP address. For example, 192.168.1.XXX</span></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Ping the new IP address and verify that it is unreachable. We want to verify the IP address is not being used by another device.</span></span></li><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If the IP address is reachable, repeat steps 1 and 2.</span></span></li></ol>
+ 
+
+<div style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>SubNet </strong>- This will always be 255.255.255.000</span></span></span></div>
+
+<div style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><strong>Gateway </strong>-  You must have a TV connected to the <strong>LOCAL </strong>computer in order to follow the below steps. </span></span></span></p>
+
+<ol><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;">
+	<p><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Open Command Prompt on the Local computer.</span></span></span></p>
+	</li><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;">
+	<p><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Type IPCONFIG</span></span></span></p>
+	</li><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;">
+	<p><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Write down the Default Gate Way. </span></span></span></p>
+
+	<ol start="1" style="list-style-type: lower-alpha;"><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If the second to last segment of the CC Terminal IPv4 is different from the Default Gateway you are most likely not on the local computer.</span></span></span></p>
+		</li></ol>
+	</li></ol>
+
+<div style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="font-size: 14px;"><strong>DNS</strong></span></div>
+
+<ol><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="font-size: 14px;">8.8.8.8</span></li><li style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="font-size: 14px;">8.8.4.4</span></li></ol>
+
+<div style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><br> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><a id="T2" name="T2"></a><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Adding a VeriFone terminal static IP to a new Cayan/GPI Verifone Terminal</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">You must have a TV connected to the <strong>LOCAL </strong>computer, not the server.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configure the M400 terminals for POR Enterprise</span></span></span><br> </p>
+
+<ol><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Press the &#39;1,5,9&#39;</strong> <strong>at the same time </strong>on the CAYAN terminal.</span></span></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">“Com Control”</span></span></strong></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> “<strong>LAN</strong>”</span></span></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">“Configuration”</span></span></strong></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Enter the code &#39;200331&#39;.</span></span></strong></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Select &#39;IPV4</strong>&#39;.</span></span></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Select &#39;DHCP&#39; Set to “No”</strong>.</span></span></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Select the individual fields</strong> to <strong>correct/enter the static IP address settings</strong>.</span></span></span></li></ol>
+
+<ul style="list-style-type: circle;"><li style="margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Static IP address, Netmask, and Gateway can all be found by opening the command prompt and typing &quot;ipconfig&quot;</span></span></span></li><li style="margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">DNS1 for the M400 is 008.008.008.008 and DNS2 008.008.004.004</span></span></span></li></ul>
+
+<ol start="9"><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Select Back ONE Time</strong> and <strong>select Save and Apply</strong>. </span></span></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Confirm the test passes without issues.</span></span></span></li><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Select the red key</strong> on the CAYAN terminal to return to the main screen.</span></span></span></li></ol>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configure the MX915 terminals for POR Enterprise</span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. <strong>Use the command prompt and ping to find an unused static LAN</strong>; make sure it is not in DHCP range.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Press the ‘<strong>0</strong>’ key on the physical terminal and, when prompted to log in, use ‘</span></span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>9416557</strong></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">’ for the password. <strong>Press the ‘Enter</strong>’ or ‘<strong>Green’ key</strong>.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Navigate to Network &gt; <strong>Configuration</strong>.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Click ‘<strong>Mode</strong>’ and change to ‘<strong>StaticIP</strong>’ and <strong>click OK</strong>.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. <strong>Configure the static IP address, netmask, gateway, DNS1, and DNS2 addresses</strong>. Each field needs to be selected by touching it with your finger or the stylus.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6.<strong> DNS1</strong> and <strong>DNS2</strong> need to be<strong> set to ‘8.8.8.8’</strong> and <strong>‘4.2.2.2’ respectively</strong>.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. Click the <strong>Apply button</strong> in the upper right when the information has been entered.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">8. Click the ‘<strong>Test</strong>’ option and run the test. Make sure everything passes before moving on.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">9. If the internal test works, select ‘<strong>Done</strong>&#39; and then select the ‘<strong>Red</strong>’ button to get back to the Genius screen. Resolve any network issues before moving to the next phase of the setup.</span></span></span></div>
+
+<ol start="9"></ol>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><br><br><a id="T3" name="T3"></a><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Create VeriFone on-screen Terminal-for manually keyed CC transactions </span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">These stops are needed if the customer does not have physical terminals.</span></span><br> </p>
+
+<ol style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 28.06pt;line-height: normal;padding-left: 7.94pt;font-family: serif;">
+	<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">Browse to <em>Verifone Terminals</em> to create the CAYAN on-screen prompt.  </span></span></span></p>
+
+	<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">Elite: <em>Configuration Gear &gt; Core Options &gt; Security &gt; VeriFone Terminals</em></span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">Expert:<em> Program Menu &gt; Security &gt; VeriFone Terminals</em></span></span></span></p>
+		</li></ul>
+	</li></ol>
+
+<p style="margin-left: 29.6pt;padding-left: 6.4pt;"> </p>
+
+<ol start="2" style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 28.06pt;line-height: normal;padding-left: 7.94pt;font-family: serif;">
+	<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">Enter the following information</span></span></span></p>
+
+	<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><strong>Description:</strong> <em>CAYAN-STR[X]-ONSCREEN </em>where [X] is the store number.</span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><strong>IP Address:</strong> 1.1.1.1. all on-screen/soft terminals must have this address.</span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><strong>Integration:</strong> </span>Cayan US or CA. Please specify the country if there is an option to do so.</span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><strong>Site ID:</strong> [same Site ID of the store in question].</span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><strong>Merchant Key:</strong> [same Merchant Key as the store in question].</span></span></span></p>
+		</li></ul>
+	</li></ol>
+
+<p style="margin-left: 29.6pt;padding-left: 6.4pt;"> </p>
+
+<div style="margin-top: 0pt;margin-left: 18pt;margin-bottom: 8pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">If a workstation is assigned this “virtual terminal” or “soft terminal” device in their Point of Rental printer selection, then when they click Manual Entry on a CC transaction they’ll get a secure CC transaction screen pop-up for them to key in the CC transaction.</span></span></span></div>
+
+<p style="margin-top: 0pt;margin-left: 18pt;margin-bottom: 8pt;"><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><a id="T4" name="T4"></a><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring Point of Rental Software for GPI/Cayan</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up your new CAYAN system</span></span></span><br> </p>
+
+<ol style="margin: 0pt 0pt 0pt 40px;padding-left: 0pt;"><li style="margin-left: 28.06pt;padding-left: 7.94pt;font-family: serif;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Run a credit card inquiry for all stores. Before continuing, there must be a $0 credit card balance in both Point of Rental and CAYAN. If there is a balance, the store(s) must perform an End of Day before they can be set live on CAYAN.</span></span></span></p>
+
+	<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From Elite: <em>Left Menu &gt; End-of-Day &gt; Credit Card Inquire</em></span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From Expert: <em>Program Menu &gt; End of Day Processing &gt; Credit Card Inquire</em></span></span></span></p>
+
+		<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 28.03pt;padding-left: 7.97pt;">
+			<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Click on</strong> <strong>Submit</strong> to make sure there is a zero-dollar balance.</span></span></span><br>			 </p>
+			</li></ul>
+		</li></ul>
+	</li><li style="margin-left: 28.06pt;padding-left: 7.94pt;font-family: serif;">
+	<p><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Update the store’s parameters</span></span></span></p>
+
+	<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">From Elite: <em>Configurations &gt; Core Options &gt; App Configurations &gt; System Configurations &gt; Parameters &gt; Drawer</em></span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">From Expert: <em>Program Menu &gt; Configurations &gt; System Configurations &gt; Parameters &gt; Drawer</em></span></span></span></p>
+
+		<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 28.03pt;padding-left: 7.97pt;">
+			<p><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">The Merchantware Name goes into the ‘Merchant #’ field.</span></span></span></p>
+			</li><li style="margin-left: 28.03pt;padding-left: 7.97pt;">
+			<p><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">The word CAYAN goes into the Processor field.</span></span></span></p>
+			</li><li style="margin-left: 28.03pt;padding-left: 7.97pt;">
+			<p><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Check the box marked ‘Integrate Credit Card’ if you have not already done so.</span></span></span><br>			 </p>
+			</li></ul>
+		</li></ul>
+	</li></ol>
+
+<ul style="list-style-type: circle;"><li style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Click </strong>on the ‘<strong>Apply’</strong> button.</span></span></li></ul>
+
+<div style="margin-left: 80px;"> </div>
+
+<ul style="list-style-type: circle;"><li style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Close the Point of Rental software completely</strong>.</span></span></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;margin-left: 40px;"><br><br><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Add the VeriFone terminal(s) to your Point of Rental Software</span></span></span><br> </p>
+
+<ol style="margin: 0pt 0pt 0pt 40px;padding-left: 0pt;"><li style="margin-left: 28.06pt;line-height: normal;padding-left: 7.94pt;font-family: serif;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">To set up terminals </span></span></span></p>
+
+	<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite: <em>Configuration Gear &gt; Core Options &gt; Security &gt; VeriFone Terminals</em></span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert:<em> Program Menu &gt; Security &gt; VeriFone Terminals</em></span></span></span><br>		 </p>
+		</li></ul>
+	</li><li style="margin-left: 28.06pt;line-height: normal;padding-left: 7.94pt;font-family: serif;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Click the Add button</span></span></span></p>
+
+	<ul style="margin-right: 0pt;margin-left: 0pt;padding-left: 0pt;"><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The description should always be <em>CAYAN-[last 3-digits of device serial #]</em></span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Store</strong> - The store number that the device will be assigned to.</span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>IP Address</strong> - static LAN IP address you assigned the device. <em>Verify the IP is not already taken by another device. </em></span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Integration</strong> - CAYAN</span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Site ID</strong> - Part of the CAYAN Merchantware Creds CAYAN emails us and the customer</span></span></span></p>
+		</li><li style="margin-left: 29.6pt;padding-left: 6.4pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Merchant Key</strong> - Part of the CAYAN Merchantware Creds CAYAN emails us and the customer</span></span></span></p>
+		</li></ul>
+	</li></ol>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><br> </p>
+<a id="TSYS-VARS" name="TSYS-VARS"></a> <span style="color: #c0392b;"><span style="font-size: 12pt;"><span style="font-family: Calibri,sans-serif;"><span style="font-size: 18.0pt;"><span style="font-size: 22px;">TSYS VARS</span></span></span></span></span><span style="color: #7bbe43;"><span style="font-size: 12pt;"><span style="font-family: Calibri,sans-serif;"><span style="font-size: 18.0pt;"><span style="font-size: 22px;"> </span></span></span></span></span>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If Cayan informed the customer that they will need to get a new VAR from Elavon:</span></span></span><br> </p>
+
+<ol><li style="list-style-type: none;">
+	<ol><li class="Default">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> Inform the customer they will need to request a <b>TSYS SIARRA VARS </b>with a <b>TSYS front-end and an Elavon backend </b><i>(24/h turnaround).</i></span></span></span></p>
+		</li></ol>
+	</li></ol>
+
+<p class="Default"> </p>
+
+<ol><li style="list-style-type: none;">
+	<ol start="2"><li class="Default">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Once the customer has received the new VARS, they must submit it to Cayan. </span></span></span></p>
+		</li></ol>
+	</li></ol>
+
+<p class="Default"> </p>
+
+<ol><li style="list-style-type: none;">
+	<ol start="3"><li class="Default">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After Cayan has uploaded the document, the integration is clear to continue. </span></span></span></p>
+		</li></ol>
+	</li></ol>
+
+<p> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Confirm that Agent and Chain are 6 0’s and the bin number will be specific to the customer.</span></span></span><br> </p>
+
+<div style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIlD&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zQ2h"></img></div>
+<br><br><br><span style="font-family: Arial,Helvetica,sans-serif;"><a id="Troubleshooting" name="Troubleshooting"></a><span style="color: #c0392b;"> <span style="font-size: 12pt;"><span style="font-size: 18.0pt;"><span style="font-size: 22px;">Troubleshooting</span></span></span></span><span style="color: #7bbe43;"><span style="font-size: 12pt;"><span style="font-size: 18.0pt;"> </span></span></span><br><br><span style="font-size: 16px;"><span style="color: black;"><b>M400</b></span></span></span><br><br><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(59, 62, 65);">The customer states that Cayan informed them they have the wrong VAR OR if you find the terminal can process swipes but cannot complete a transaction with the chip or tap function.</span>
+
+<ul><li class="Default" style="margin-bottom: 3px;margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Customer will need to contact Elavon and request a <b>TSYS Sierra VARS sheet</b> from Elavon that has a <b>TSYS front end and an Elavon Back end</b>.</span></span></span></p>
+	</li><li class="Default" style="margin-bottom: 3px;margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Once Elavon has processed the new VARS sheet. Submit the new information to Cayan. </span></span></span></p>
+	</li><li class="Default" style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After Cayan receives the new VARS sheet and inputs it into their system both the Chip and Tap functionality should be available.</span></span></span><br>	 </p>
+	</li></ul>
+
+<p><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: black;"><b>Unable to see Terminal on the Network</b></span></span></span><br> </p>
+
+<ul><li style="margin-bottom: 13px;margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">Test Connection by using ‘PING’ in the Window Command Prompt (CMD)</span></span></span></span></p>
+	</li><li style="margin-bottom: 13px;margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">If you cannot see the terminal have the customer, check the cable. </span></span></span></span></p>
+	</li><li style="margin-bottom: 13px;margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: normal;">If you have determined the network was caused by a hardware issue. Create a case for CEX Tier 1.</span></span></span></span></p>
+	</li></ul>
+
+<p> </p>
+
+<p><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Unable to collect payment from terminals or other issues</strong></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If a customer sees this error, an existing connection was forcibly closed by the remote host. Open a web browser and try to navigate to transport.merchantware.net. It is possible the customer&#39;s network administrator has blocked this site. If so, they will need to reach out to their IT administrator or group for a resolution. </span></span></span></p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If the customer cannot come to a resolution after speaking to their IT team, the issue may be on the Cayan side. Have the customer troubleshoot with Cayan. </span></span></span><br><br><br><a id="training-video" name="training-video"></a> <span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #c0392b;"><span style="font-size: 12pt;"><span style="font-size: 18.0pt;"><span style="font-size: 22px;">Training Video</span></span></span></span></span><br><br><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">The below video is a recording of a training session led by IT on setting up and configuring new CAYAN/GPI/TSYS terminals (5/25/2023).</span></span></span></p>
+
+<p><iframe frameborder="1" scrolling="auto" allowfullscreen="" height="378" src="https://player.vimeo.com/video/830601481?h=a4a4c6c7b1&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" title="Training - Credit Card Setup &amp; Configuration" width="669"></iframe></p>
+
+<p style="margin-bottom: 13px;margin-left: 8px;"> </p>
+
+<p style="margin-bottom: 13px;margin-left: 8px;"> </p>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Internal Related articles</span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Credit-Card-Inquire-1308849725" target="_blank">Credit Card Inquire</a><br><a href="/articles/en_US/Knowledge/Credit-Cards-Processing-Fee" target="_blank">Credit Card Processing Fee</a><br><a href="/articles/en_US/Knowledge/Introduction-to-CAYAN-659928580" target="_blank">Introduction to CAYAN</a> <br><a href="/articles/en_US/Knowledge/INTERNAL-Support-Credit-Card-General-Information" target="_blank">INTERNAL: Support Credit Card General Information</a></span></span><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span><br><br><br> </p>
+    </body>
+    </html>
+    

@@ -1,0 +1,206 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>INTERNAL | End of Month/End of Year Common Issues</title>
+    </head>
+    <body>
+        <h1>INTERNAL | End of Month/End of Year Common Issues <a href="http://por.force.com/uLearn/s/article/End-of-Month-End-of-Year-Common-Issues" target="_blank">[INTERNAL | End of Month/End of Year Common Issues]</a></h1>
+        <p><strong><span style="font-size: 36px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #e74c3c;">INTERNAL</span> | End of Month/End of Year Common Issues</span></span></strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<h1> </h1>
+
+<p><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">This article discusses common issues for End of Month and End of Year in Point of Rental. During the End of Month and End of Year, Point of Rental does several things in the background that you might not be able to see. During the End of Month, one of the big things is that the software re-computes depreciation and how item income is determined. During the End of the Year, the software not only re-computes depreciation but also updates several records like the Customer File, Item File, and Vendor File to name a few. It is vital that you do not clear any locks during this time.</span></span></span><br><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics included in this article</span></span></span></p>
+
+<p> </p>
+
+<ul><li><a href="#What-happens-at-end-of-the-day-month-year"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">What happens at End of Day/Month/Year?</span></span></a></li><li><a href="#t1"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Reading the EOD Report</span></span></span></a></li><li><a href="#t2"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Close for a Day Prior</span></span></span></a></li><li><a href="#t3"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Stores that Close for EOM/EOY</span></span></span></a></li></ul>
+
+<p> </p>
+
+<p><br><br><a id="What-happens-at-end-of-the-day-month-year" name="What-happens-at-end-of-the-day-month-year"></a> <span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 22px;">What happens at End of Day/Month/Year?</span><br><br><span style="font-size: 14px;">If the customer is integrated with credit cards, the year-end process unencrypts and re-encrypts the credit card tokens that are in the Point of Rental system. This means that POR creates new tokens for credit cards in the system. It also prints the EOY Customer dollars to report. This is determined by the parameter setting in the Reports tab, displayed below. The customer should make sure that they have a dollar amount specified in the box.</span></span></span></p>
+
+<p><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Once the EOD starts printing, there&#39;s no way to stop this process.</span></span></span></p>
+
+<p> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TROg" style="width: 654px;height: 562px;"></img></p>
+
+<p><br> </p>
+
+<p><a id="t1" name="t1"></a><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Reading the EOD Report</span></span></span><br><br><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">For multi-store customers, stores not closing can be a common issue that arises for the End of Day process. The below image is a sample from the End of Day History Report. There are a couple of key pieces of information in this report that can be used when the customer is experiencing an issue with stores not closing, users being unable to access the Counter System, or accessing/creating new contracts.<br><br><strong>Here’s how to get there</strong></span><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert:</span></span></span><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Program Menu &gt; End of Day Processing &gt; End of Day History Report</i><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite:</span></span></span><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Right Menu &gt; End of Day History Report</i></p>
+
+<p> </p>
+
+<p class="ql-indent-0"><img alt="End of Month 2.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v1fS" style="width: 591px;height: 268px;"></img></p>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Here are the best ways to confirm if all stores have closed: </span></span></span></p>
+
+<p class="ql-indent-0"> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. <b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">By looking at the End of Day History Report &gt; Store column.</b> At the top of the report, stores that have closed will be listed in sequential order (see the above image). If a store or stores are not displaying, the missing store(s) needs to run or complete their end of day. </span></span></span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">ii. <b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">By looking at the End of Day History Report &gt; Batch and Active Batch number</b>. You can confirm this information by looking at the batch number located next to the store and the active batch displayed above the listed stores (see highlighted columns in the image above). </span></span></span></p>
+
+<p class="ql-indent-0"> </p>
+
+<p class="ql-indent-0" style="margin-left: 80px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">1. The active batch cannot be the same as the batch number of the store number. </span></p>
+
+<p class="ql-indent-0"> </p>
+
+<p class="ql-indent-0" style="margin-left: 120px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">a. If it is, then your next step is to look at the locks table from </span><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">within the report</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">. To do this press the I icon.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 120px;"><img alt="End of Month 3.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v1gV" style="width: 552px;height: 156px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 120px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">b. A list of locks will display. You may see a 1400 numbered lock (</span><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">DO NOT CLEAR LOCKS</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">). In most cases, the computer from Store 1 will need to log in to finish the end of day process. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 120px;"><img alt="End of Month 4.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v1gp"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">iii. </span><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">By looking at the Locks Table. </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">To get there from within Expert, go to <em>Security &gt; Database Locks</em>. From Elite, go to <em>Configuration Gear &gt; Security &gt; Database Locks</em>. You’ll be able to see the same information above in the report. However, it does display more information. </span><b style="color: rgb(255, 0, 0);font-size: 14px;font-family: sans-serif;">DO NOT CLEAR LOCKS. </b><span style="color: rgb(255, 0, 0);font-size: 14px;font-family: sans-serif;">Clearing End of Day locks </span><b style="color: rgb(255, 0, 0);font-size: 14px;font-family: sans-serif;">will</b><span style="color: rgb(255, 0, 0);font-size: 14px;font-family: sans-serif;"> cause miscellaneous entries with the accounting general ledger file. This can’t be corrected. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 80px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">1. It is also important to know the differences between manual and automatic closings. The End of Day report will display whether the closing was automatically or manually closed. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><img alt="End of Month 5.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v1j5"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">iv. </span><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Automatic Closings</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> - the Point of Rental system will close the store instead of a user. You can identify if the store was closed automatically by looking at the End of Day report and looking at the Employee column. This column will show the user who ran the End of the Day. An auto-closed store will display “Autoclose &#39;&#39; in red under the Employee column. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 80px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Autoclose can be initiated in 2 ways: </span></span></span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">a. </span><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">By the Point of Rental system.</b><span style="font-size: 14px;"> Within the report under the employee column, if there is an “ * ” before the word &quot;Autoclose&quot;, it means the Autoclose option has been enabled within the <em>Parameters &gt; Drawer tab</em> setting of that store.</span></span></span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">b. </span><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">By a User</b><span style="font-size: 14px;">. If Autoclose appears without the “ * ”, it means a user pressed the Autoclose button found in End of Day Processing or Store 1 has a Taskrunner set to Autoclose. </span></span></span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">ii. </span><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Manual Closings</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> - A user initiates the End of the Day process by pressing the Close Drawer for End of the Day button.</span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSq3" style="width: 387px;height: 367px;"></img></p>
+
+<p class="ql-indent-0"> </p>
+
+<p class="ql-indent-0" style="margin-left: 80px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">a. When working with Month End you want to make sure that the EOM shows yes. If not, then you should look at the EOM in Calendar Maintenance.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSzs" style="width: 328px;height: 487px;"></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><a id="t2" name="t2"></a><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Close for a Day Prior</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: sans-serif;"><span style="font-family: Arial,Helvetica,sans-serif;">During the last day of the month, if a store forgets to close their drawer for the day before, then they must use the ‘Close for Day’ tool in the Support Panel to close for the prior day. If this option does not work, then you will have to set back the server time to the night prior. This option will require all users to be out of the program.</span></span></span><br><br><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: sans-serif;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert</span></span></span></span><br><br><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong></span></span><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert:</span></span></span><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> <em>Program Menu &gt; double-click on the date &gt; type in the POR Admin Date Code</em></span></p>
+
+<p> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSWl" style="width: 580px;height: 347px;"></img></p>
+
+<p> </p>
+
+<p><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite</span></span></span><br><br><strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Here&#39;s how to get there</span></span></span></strong><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">Elite: <em>Right-click on the upper left-hand corner of the application.</em></span></span></span></p>
+
+<p> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSXF" style="width: 321px;height: 365px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">This will launch POR File Sync in Admin Mode.</span></span></span><br> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">1. Next, you will need to <strong>go to</strong> <em>Tools &gt; Support Panel</em> (Ctrl + S). </span></span></span><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">The Support Panel will give you the ability to perform other functions as well.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSXP" style="width: 416px;height: 273px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">2. <strong>Go to</strong> <em>Tools &gt; Close for Specific Day</em>.</span></span></span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSXo" style="width: 458px;height: 388px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. This will bring up a warning message “Do you want to initiate Close For Day for a Specific Date?&quot; <strong>Click Yes</strong>. </span></span></span><br> </p>
+
+<p class="ql-indent-0" style="margin-left: 80px;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> You will select the store next if multi-store.</span></span></span></em></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TRM7" style="width: 382px;height: 165px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Then <strong>enter the date</strong> that you want to close.<br><br>5. <strong>Click OK</strong>. Then it will ask you to confirm the date again.</span></span></span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSZp" style="width: 382px;height: 165px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Then it will ask if you are sure you want to close for that date. If you are multistore, then it will have you choose the store that you are wanting to close.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-0" style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSa4" style="width: 363px;height: 182px;"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">6. <strong>Choose the store</strong> and <strong>click Launch POR</strong>.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSYn" style="width: 470px;height: 215px;"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">7. <strong>Follow the EOD process</strong> from here.</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><a id="t3" name="t3"></a><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Stores that Close for EOM/EOY</span></span></span></p>
+
+<p><br><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">If a store has closed already for the End of Month or the End of Year, then we will not be able to close again till the next business day. You can see if they closed out the End of Month by going to the End of Day History Report.</span></p>
+
+<p> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHNQ&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TSZ6" style="width: 650px;height: 137px;"></img></p>
+
+<p><br> </p>
+
+<div id="" style="left: 20px;top: 9179.8px;"> </div>
+    </body>
+    </html>
+    

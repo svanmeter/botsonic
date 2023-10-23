@@ -1,0 +1,106 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>INTERNAL | Force log off a user’s Remote Desktop Session from the Server</title>
+    </head>
+    <body>
+        <h1>INTERNAL | Force log off a user’s Remote Desktop Session from the Server <a href="http://por.force.com/uLearn/s/article/Force-logoff-a-user-s-Remote-Desktop-Session-from-the-Server" target="_blank">[INTERNAL | Force log off a user’s Remote Desktop Session from the Server]</a></h1>
+        <strong style=""><span style="font-size: 28px;"><span style="color: #e74c3c;"><font face="Arial, Helvetica, sans-serif">INTERNAL</font></span><font color="#3b3e41" face="Arial, Helvetica, sans-serif"> | Force log off a user&#39;s Remote Desktop Session from the Server</font></span></strong><br><br><br><br><span style="font-family: Calibri, sans-serif;font-size: 15px;color: rgb(59, 62, 65);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article will provide the means to show support or allow the customer to self-service logging off a user using an Administrative login on the server.</span></span></span><br><br><br><span style="font-size: 18px;"><span style="font-family: Calibri, sans-serif;color: rgb(59, 62, 65);"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include:</span></span></span>
+<p> </p>
+
+<ul><li style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><a href="#Topic1"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Identifying your server (internal only)</span></span></a></li><li style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><a href="#Topic2"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Force log off a user&#39;s Remote Desktop Session</span></span></span></a></li><li style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><a href="#Topic3"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Method 1 to open Task Manager</span></span></span></a></li><li style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><a href="#Topic4"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Method 2 to open Task Manager</span></span></span></a></li></ul>
+
+<p style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><br><br><br> </p>
+
+<p><a id="Topic1" name="Topic1"></a> <span style="color: #000000;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Identifying your server (internal only)</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Verify on the Salesforce Software Info page if the customer has a POR-provided server, a user-supplied server or a POR Could server (Salesforce Account-&gt;Lowest Number Asset-&gt;Software Info).</span></span></span><br> </p>
+
+<p><span style="font-size: 18px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">POR CLOUD</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><strong>Note:</strong> If the customer is using a POR Cloud Server, send the ticket to IT Support.</em></span></span></span><br> </p>
+
+<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">IMPORTANT: POR Managed Azure Windows Virtual Desktop with Site-To-Site VPN</span></span></span><br> </p>
+
+<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong><img alt="Text  Description automatically generated" height="98" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006WBLg" width="663"></img></strong></span></span><br> </p>
+
+<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">Web Address to log in:</span> <a href="https://rdweb.wvd.microsoft.com/arm/webclient/index.html" target="_blank">https://rdweb.wvd.microsoft.com/arm/webclient/index.html</a> </span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You can also scroll down to the current hardware/operating system information and look at the domain and server name.</span></span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Domain/Server Name: </strong>PORCLOUD\669-WVD-0 (POR Cloud V1 will show the domain to have PORCLOUD and the Server Name will be in the form of CNUM-WVD-0. WVD means Microsoft Windows Virtual Desktop.)</span></span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">POR Provided - On-Premises</span></span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Domain/Server Name: RENTAL\ENTERPRISE1 (domain is <strong>RENTAL</strong> and the computer name is <strong>Enterprise</strong>, <strong>Enterprise1</strong>, or <strong>Enterprise2</strong>)</span></span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Server Origin:</strong> Most likely a POR provided Server. Verify contracts <strong>required</strong>.</span></span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Model: PowerEdge T620, T630, T640, T110 II, T130, T140 (<em>POR Provided server Models. PowerEdge means it is a Dell server.)</em></span></span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">User Supplied - On-Premises and user-supplied hosted</span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If POR Provided - On-Premises or POR CLOUD do not match up, then you are most likely dealing with a <strong>user supplied</strong> server. They may or may not have an IT department that assists. The rules are the same as a POR provided server, an administrative login is needed to get onto the server to be able to log off users.</span></span></span><br> </p>
+
+<p style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;border: none;text-align: left;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;line-height: 107%;"><strong>Important:</strong> Different versions of the operating system will present different methods to launch Task Manager. In the end, Start-&gt;Run TaskManager.exe is what needs to happen.</span></span></p>
+
+<p style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;border: none;text-align: left;"><img alt="image" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000071WgS"></img><br><br><a id="Topic2" name="Topic2"></a><span style="color: #000000;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Force log off a user&#39;s Remote Desktop Session</span></span></span><img alt="image" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000071WgX"></img><br> </p>
+
+<div style="margin-top: 0in;margin-right: 0in;margin-bottom: 8.0pt;margin-left: 0in;line-height: 107%;font-size: 15px;font-family: &quot;Calibri&quot;,sans-serif;">
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">1. Log in as Admin:</span></span></span></span><br> </p>
+</div>
+
+<p style="margin: 0in 0in 8pt 80px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">If the customer server was provided by POR, the customer should have access to an admin account.</span></span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">If the server is user supplied, ask the customer to request help from their IT department.</span></span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">If they do not have an IT department, have them log in as Admin and follow the steps below.</span></span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">If they do not have an Admin log-in, they will need to find one and call back. </span></span></span></span></p>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-indent: 0.5in;text-align: left;"> </p>
+
+<div style="margin-top: 0in;margin-right: 0in;margin-bottom: 8.0pt;margin-left: 0in;line-height: 107%;font-size: 15px;font-family: &quot;Calibri&quot;,sans-serif;">
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><span style="color: #3b3e41;"><span style="line-height: 107%;font-family: Tahoma, sans-serif;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Once logged into an admin account, <strong>open task manager.</strong></span></span></span></span></p>
+
+<div style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;">
+<div style="margin-top: 0in;margin-right: 0in;margin-bottom: 8.0pt;margin-left: 0in;line-height: 107%;font-size: 15px;font-family: &quot;Calibri&quot;,sans-serif;">
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><br><span style="color: #3b3e41;"><span style="line-height: 107%;font-family: Tahoma, sans-serif;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. After the Task Manager has opened, <strong>select the “Users” tab</strong>.</span></span></span></span><br> </p>
+</div>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004fQGQ" style="width: 364px;height: 148px;"></img><br> </p>
+
+<p style="margin: 0in 0in 8pt 80px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> If no tabs are available, click “More Details” on the bottom left of the window.</span></span></span></em><br> </p>
+
+<p style="margin: 0in 0in 8pt 80px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004fQG6" style="width: 201px;height: 129px;"></img></p>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><br><span style="color: #3b3e41;"><span style="line-height: 107%;font-family: Tahoma, sans-serif;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Under the user&#39;s tab,<strong> right-click the user</strong> you want to log off.<br><br>5. Select <strong>“Sign Off.”</strong></span></span></span></span><br> </p>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><img alt="Picture2.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006yBsZ"></img><br><br><span style="color: #3b3e41;"><span style="line-height: 107%;font-family: Tahoma, sans-serif;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. <strong>Repeat this step</strong> for all users you wish to have off the server.</span></span></span></span><br> </p>
+
+<p style="margin: 0in 0in 8pt 80px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;line-height: 107%;font-family: Tahoma, sans-serif;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note: </strong>Be mindful not to select the account you are logged in on.</span></span></span></em></p>
+ 
+
+<p> </p>
+</div>
+</div>
+
+<p style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><a id="Topic3" name="Topic3"></a><span style="color: #000000;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Method 1 to open Task Manager</span></span></span></p>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><br><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;line-height: 107%;">1. Right click the taskbar and select <strong>Task Manager</strong>.</span></span></span></p>
+
+<p style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><span style="font-size: 14px;line-height: 107%;font-family: &quot;Tahoma&quot;,sans-serif;"> </span></p>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004fQHn" style="width: 415px;height: 435px;"></img><br><br> </p>
+
+<p style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><a id="Topic4" name="Topic4"></a> <span style="color: #000000;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">Method 2 to open Task Manager</span></span></span></span></p>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">1. Open the start menu.</span></span></span><br><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;line-height: 107%;">2. <strong>Search for Task Manager</strong> from the start menu.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">3. Click <strong>Task Manager</strong>.</span></span></span></span></p>
+
+<div style="text-align: left;"> </div>
+
+<p style="margin: 0in 0in 8pt 40px;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGxm&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004fQGV" style="width: 505px;height: 415px;"></img></p>
+
+<p style="margin: 0in 0in 8pt;line-height: 107%;font-size: 15px;font-family: Calibri, sans-serif;text-align: left;"><span style="font-size: 14px;line-height: 107%;font-family: &quot;Tahoma&quot;,sans-serif;"> </span><br><br> </p>
+
+<div id="" style="left: 60px;top: 1962.48px;">
+<p> </p>
+</div>
+
+<div id="" style="left: 60px;top: 1391.36px;"><br> </div>
+    </body>
+    </html>
+    

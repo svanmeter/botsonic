@@ -1,0 +1,206 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>INTERNAL | Salesforce Integration Setup</title>
+    </head>
+    <body>
+        <h1>INTERNAL | Salesforce Integration Setup <a href="http://por.force.com/uLearn/s/article/INTERNAL-Salesforce-Integration-Setup" target="_blank">[INTERNAL | Salesforce Integration Setup]</a></h1>
+        <span style="font-size: 36px;"><strong><span style="font-family: &quot;Calibri Light&quot;,sans-serif;"><span style="letter-spacing: -0.5pt;"><span style="font-family: &quot;Arial&quot;,sans-serif;"><span style="color: #e74c3c;">INTERNAL</span> | Salesforce Integration Setup Guide</span></span></span></strong></span><br><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article goes over the Salesforce integration setup for Elite. To set up a Salesforce integration, you&#39;ll need to set up Salesforce and then set up Point of Rental. <strong><span style="color: #e74c3c;">This guide is only for setting up new Salesforce integrations. Some information in this guide may not be relevant to customers who have an older version of the integration. </span></strong></span></span><br><br><br><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics included in this article</span></span><br> 
+<ul><li><a href="#Salesforce-Setup"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Salesforce Setup</span></span></a>
+	<ul><li><em><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#High-level-checklist">High-level checklist</a></span></span></em></li><li><em><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Install-managed-package">Install Managed Package</a></span></span></em></li><li><em><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Configure-POR-Status-to-Salesforce-Opportunity-Stage-mapping">Configure POR Status to Salesforce Opportunity Stage mapping</a></span></span></em></li></ul>
+	</li><li><a href="#Point-of-Rental-Setup"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Point of Rental Setup</span></span></a>
+	<ul><li><em><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Salesforce-Key-and-Secret">Salesforce Key and Secret</a></span></span></em></li></ul>
+	</li><li><a href="#Checking-for-duplicates"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Checking for Duplicates</span></span></a></li><li><a href="#Sales-Reps"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Sales Reps</span></span></a></li><li><a href="#Creating-a-task-for-POR-and-Salesforce"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Creating the Task for Point of Rental and Salesforce.</span></span></a></li><li><a href="#POR-Data-Tables"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Point of Rental Data Tables</span></span></a></li><li><a href="#The-Error-log"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Error Log</span></span></a></li></ul>
+ 
+
+<p><a id="Salesforce-Setup" name="Salesforce-Setup"></a> <span style="font-size: 24px;"><span style="color: #c0392b;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-weight: normal;">Salesforce Setup</span></span></span></span></p>
+<span style="font-size: 24px;"> </span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The first step is to set up Salesforce. You must be set up as a Salesforce System Administrator in the customer&#39;s Salesforce Organization in order to proceed. The Salesforce opportunity and the Point of Rental contract lifecycle are not the same. So before proceeding, the customer&#39;s Salesforce administrator needs to confirm their Salesforce Opportunity paths (path = process). </span></span><br> 
+<p style="margin-top: 21px;margin-bottom: 5px;"><a id="High-level-checklist" name="High-level-checklist"></a> <span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">High-Level Checklist</span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Below is a high-level checklist of the required setup within Salesforce. The bolded items are steps that can be performed or reviewed by Point of Rental. The other steps can only be performed by the customer&#39;s Salesforce administrator. </span></span></p>
+
+<ul><li style="margin-left: 8px;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Install Managed Package (create a new Connect App)</span></span></span></strong></li><li style="margin-left: 8px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Assign Opportunity Compact Layout</span></span></span></li><li style="margin-left: 8px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Assign Opportunity Page Layout</span></span></span></li><li style="margin-left: 8px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Assign Opportunity Lightning Page Layout</span></span></span></li><li style="margin-left: 8px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Assign Product Page Layout</span></span></span></li><li style="margin-left: 8px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Assign Opportunity Product Page Layout</span></span></span></li><li style="margin-left: 8px;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Configure POR Status to Salesforce Opportunity Stage mapping </span></span></span></strong> </li></ul>
+
+<p style="margin-top: 24px;margin-bottom: 8px;"><br><a id="Install-managed-package" name="Install-managed-package"></a> <span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><span style="font-weight: normal;">Install Managed Package</span></span></span></span></p>
+
+<p><span style="font-size: 14px;">Below are the steps to install and create a new Connect App. <span style="font-family: Arial,Helvetica,sans-serif;">For more information on configuring Connect Apps, see this <a href="https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&amp;type=5" target="_blank"><span style="color: #0563c1;">Salesforce Article</span></a>. This step can be completed by the customer.</span></span><br> </p>
+
+<ol><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Go to</strong> the Managed Package Install <strong>Link</strong>: <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3h0000043vfx" target="_blank"><span style="color: #1155cc;">https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3h0000043vfx</span></a> (Updated Aug 14, 2023).</span></span></li></ol>
+ 
+
+<ol start="2"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After the App is installed, you&#39;ll get an email confirmation letting you know that the installation is complete.</span></span></li></ol>
+ 
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmZ" style="width: 499px;height: 270px;"></img></span></span></div>
+ 
+
+<ol start="3"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Once the installation is complete, you&#39;ll need to create a &quot;New Connected App.&quot; To do this, <strong>go to Setup</strong>. In the Quick Find, <strong>search for &quot;App Manager.&quot;</strong> For more information on configuring Connect Apps, see this <a href="https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&amp;type=5" target="_blank"><span style="color: #0563c1;">Salesforce Article</span></a>.</span></span></li></ol>
+ 
+
+<ol start="4"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Under the dropdown &quot;API (Enable OAuth Settings)&quot;, <strong>check the box for &quot;Enable OAuth Settings&quot; and fill in the below information.</strong></span></span></li></ol>
+
+<ul style="margin-left: 40px;"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">In &quot;Callback URL&quot; enter this URL: https://na.porwork.com/xeroauth/</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Under &quot;Selected OAuth Scopes&quot;, find &quot;m<em>anage user data via APIs (api)&quot;</em> in the &quot;Available OAuth Scopes&quot; list and add (move) it to the right. </span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Check the &quot;Require Secret for Web Server Flow&quot; box.</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Check the &quot;Require Secret for Refresh Token Flow&quot; box.</span></span></li></ul>
+
+<div style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJma" style="width: 931px;height: 462px;"></img></span></span><br> </div>
+
+<ol start="5"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Press Save</strong> to continue. </span></span></li></ol>
+
+<div style="margin-left: 80px;"><em><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #e74c3c;"><strong>Important! </strong></span>Once saved, the changes may take up to 10 minutes to update in the Salesforce Organization.</span></span></em></div>
+ 
+
+<ol start="6"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After the Connect App is set up, you&#39;ll need to adjust the IP Relaxation for the Point of Rental app. To do so, <strong>go back to the Setup page</strong> and within the Quick Find, <strong>search for  &quot;Manage Connected Apps.&quot;</strong> Then <strong>click on the App that you created </strong>from the App Manager.</span></span></li></ol>
+<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">    </span></span>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmb" style="width: 620px;height: 364px;"></img></span></span><br> </div>
+
+<ol start="6"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Next, <strong>click on &quot;Edit Policies&quot;</strong> at the top of the page.</span></span></li></ol>
+ 
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmc" style="width: 751px;height: 387px;"></img></span></span><br> </div>
+
+<ol start="7"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Update the IP Relaxation to &quot;Relax IP Restrictions.&quot;</strong> </span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmd" style="width: 488px;height: 207px;"></img></span></span></div>
+ 
+
+<ol start="8"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Click Save</strong>.</span></span></li></ol>
+ 
+
+<p style="margin-top: 24px;margin-bottom: 8px;"><a id="Configure-POR-Status-to-Salesforce-Opportunity-Stage-mapping" name="Configure-POR-Status-to-Salesforce-Opportunity-Stage-mapping"></a> <span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><span style="font-weight: normal;">Configure POR Status to Salesforce Opportunity Stage mapping</span></span></span></span></p>
+<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">      <br>This section will go over mapping Salesforce Opportunities to Point of Rental Contract statuses.<br><br>The Salesforce integration <strong>does not require</strong> Opportunity and Contract status mapping between Point of Rental and Salesforce. You can turn off this automation in the list of flows by deactivating <b>PORElite: Set Opportunity Stage</b>. This is important if the customer has their own automation to set the stage. </span></span><br> 
+<ol><li><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Navigate to Setup Home</span></span></span></strong></li></ol>
+<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> <img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmu" style="width: 852px;height: 547px;"></img></span></span>
+
+<ol start="2"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">In <b>Quick Find, search </b></span>for &quot;<span style="line-height: 115%;"><strong>Custom Metadata Types&quot;</strong></span></span></span></li></ol>
+
+<div style="margin-left: 40px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmv" style="width: 349px;height: 340px;"></img></span></span></span><br> </div>
+
+<ol start="3"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">By the record labeled &quot;Opportunity Stage Configuration&quot;, <strong>select &quot;</strong><b>Manage Records&quot;</b></span></span></span></li></ol>
+<br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><b><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmw" style="width: 1364px;height: 875px;"></img></b></span></span></span>
+
+<ol start="4"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><strong>Click the &#39;</strong><b>New&#39;</b> button to create a new Opportunity Stage Configuration<br>	<img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmx" style="width: 1230px;height: 789px;"></img></span></span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><strong>Enter “Default” for both the Label and the Opportunity Stage Configuration Name</strong>. <strong>Then enter the Opportunity Stage Name that each POR Transaction Status should map to.</strong> If no value is entered for a given status, the stage will not change when an opportunity is moved to that status. By default, all opportunities come across as Closed Won. So if no values are entered, the Stage will remain in the Closed Won status.<br>	<br>	<span style="color: #e74c3c;"><b>Important!</b></span> The stage name must match exactly with the text entered in the text box. If it does not match, it will cause a sync error that prevents opportunities from syncing from POR to Salesforce.<br>	<br>	<img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJmy" style="width: 607px;height: 448px;"></img></span></span></span></li></ol>
+ 
+
+<ol start="6"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><strong>Click</strong> <b>Save</b> to save the changes.</span></span></span></li></ol>
+<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">  </span></span>
+
+<h1 style="margin-top: 16px;"><a id="Point-of-Rental-Setup" name="Point-of-Rental-Setup"></a> <span style="font-size: 24px;"><span style="color: #c0392b;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-weight: normal;">Setting up Point of Rental</span></span></span></span></h1>
+<br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Now that you have Salesforce nearly configured, you&#39;ll have to set up the Point of Rental API so that it connects to the Salesforce API.</span></span><br> 
+<ol><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Go to</strong> <a href="" target="_blank"><span style="color: #0563c1;">\\porsrv1.us.corp.pointofrental.com\Download\Revision2023\@SalesforceSyncV4\POR\</span></a> and <strong>copy and paste all folders and files into</strong> <strong>the customer&#39;s local POR folder</strong>. </span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><span style="color: #e74c3c;"><strong>Important!</strong></span> If the customer is in a Cloud environment, then the Information Technology Operations Team may need to get involved.<a class="msocomanchor" id="_anchor_1" href="#_msocom_1" name="_msoanchor_1">[1]</a>  </em></span></span><br> </div>
+
+<ol start="2"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Make a copy of the 3 executable files in the Program SaleforceSync folder</strong>.<strong> Go to each file&#39;s properties and update their &quot;Start in&quot; location to the customer&#39;s &quot;Users&quot; folder in POR</strong>. The Users folder is in the root of the POR folder. See the image below. </span></span></li></ol>
+ 
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer screen  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJnA" style="width: 409px;height: 583px;"></img></span></span><br> </div>
+
+<ol start="3"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Once the files are copied, <strong>click on the Salesforce Sync icon</strong>. Once selected, the below window will open. <strong>Click on &quot;Configure SFSync Parameters.&quot;</strong></span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJnB" style="width: 800px;height: 589px;"></img></span></span></div>
+<br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. The Salesforce Login Settings window will open.<strong> Enter your Salesforce Login information</strong>. This information can be found in &quot;Manage Apps&quot; in Salesforce. It&#39;s recommended to use an integration account or the user account associated to all integrations.<br><br><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJnC" style="width: 622px;height: 474px;"></img></span></span><br> 
+<ul><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Salesforce Login URL </strong>- The Login of the Salesforce Oauth Services</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Salesforce Data Service URL Ending </strong>-<strong> </strong> This is prefilled by a Point of Rental Technician and your Salesforce Admin</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Salesforce Username </strong>- This is the Username of the Account that you would be using. Note: Connect this to your Integration Account or a default account that you use for Integrations and Services.</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Salesforce Password  </strong>- This is the Password of the account that you will be using.<strong> </strong></span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Salesforce Customer Key</strong> -  To learn how to get this information, see the below section Salesforce Key</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Salesforce Customer Secret</strong> - see below on how to get this info</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From the &quot;Feature Mode&quot; dropdown (middle area), <strong>select &quot;Salesforce Sync v4.&quot;</strong> </span></span></li></ul>
+ 
+
+<h2 style="margin-top: 24px;margin-bottom: 8px;"><a id="Salesforce-Key-and-Secret" name="Salesforce-Key-and-Secret"></a> <span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><span style="font-weight: normal;">Salesforce Key and Secret</span></span></span></span></h2>
+ 
+
+<ol><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You can </span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">the Salesforce Consumer Key and Secret from within Salesforce. <strong>Go to the Setup page</strong>, in the Quick Find<strong> search for &quot;App Manager.&quot; Next to the App that you created, click on the Down Arrow and then click on View</strong>.</span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJi4" style="width: 1110px;height: 105px;"></img></span></span><br> </div>
+
+<ol start="2"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From here, underneath &quot;API (Enable OAuth Settings)&quot;, <strong>click on &quot;Manage Consumer Details&quot; located next to &quot;Consumer Key and Secret.&quot;</strong></span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><span style="color: #e74c3c;"><strong>Important! </strong></span>A verification code will be sent to your inbox.</em></span></span><br> </div>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJi5" style="width: 553px;height: 262px;"></img></span></span><br> </div>
+
+<ol start="3"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After entering the code you received in your email, Salesforce Classic will appear where it will provide the Consumer Key and Secret.</span></span></li></ol>
+
+<div style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJi6" style="width: 921px;height: 432px;"></img></span></span><br> </div>
+  
+
+<div><span style="color: #e74c3c;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Important!</strong></span></span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></div>
+
+<div> </div>
+
+<ul><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Contracts must continue to be created inside of the Point of Rental. Once a contract is completed it will sync to Salesforce. Only changes done in Point of Rental will be made in Salesforce. If the customer makes a change in Salesforce, then the changes will not come over to Point of Rental.</span></span></li></ul>
+ 
+
+<ul><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Call Logs and Contact changes made in Salesforce will move over to Point of Rental.</span></span></li></ul>
+
+<div style="margin-left: 40px;"> </div>
+ 
+
+<p style="margin-top: 16px;"><a id="Checking-for-duplicates" name="Checking-for-duplicates"></a> <span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-weight: normal;">Checking for Duplicates</span></span></span></span></p>
+<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> In order for Point of Rental to properly sync with Salesforce, you will need to run the Setup Utility to check for duplicate customers/contacts. Point of Rental cannot resolve them. <br><br><em><span style="color: #e74c3c;"><strong>Important!</strong> </span>Duplicates will have to be resolved before the Sync turns on. If this does not get completed then it will not sync the records. You must resolve duplicates before creating a task in the POR task runner.</em></span></span><br> 
+<ol><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From the Salesforce Sync Screen, <strong>click Next</strong>.</span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJi7" style="width: 553px;height: 405px;"></img></span></span><br> </div>
+
+<ol start="2"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This will open up the Contact Duplication Check. Select the criteria for the customers/contacts to be reviewed by checking the boxes. The fields that you select will be reviewed for duplicates using the &#39;AND Command&#39; in SOQL. The more criteria checked the fewer duplications will be found. When you&#39;re ready to begin, <strong>click on Apply to start the process</strong>. </span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJne" style="width: 607px;height: 448px;"></img></span></span><br> </div>
+
+<ol start="3"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Resolve the duplicates by either merging or removing the contacts from either Salesforce or Point of Rental.</span></span></li></ol>
+ 
+
+<ol start="4"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Once there are no more duplicates, you can start the process of <strong>syncing Contacts to Salesforce by clicking &quot;Next&quot;</strong>. This will take you to a new page where you can <strong>click &quot;Run.&quot;</strong></span></span></li></ol>
+
+<div style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJnf" style="width: 583px;height: 421px;"></img></span></span><br> </div>
+
+<ol start="5"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Follow the steps until you get a <strong>&quot;Finished&quot; box</strong>. Do the same steps for Calls Logs and Registering Contracts to Opportunities. </span></span></li></ol>
+
+<div style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screen shot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJng" style="width: 531px;height: 383px;"></img></span></span><br> </div>
+ 
+
+<div>
+<div class="msocomtxt" id="_com_1"><a id="Sales-Reps" name="Sales-Reps"></a> <span style="font-size: 24px;"><span style="color: #c0392b;"><span style="font-family: Arial,Helvetica,sans-serif;"><span class="Heading1Char">Sales Reps</span></span></span></span><br><span style="color: #c0392b;"><span style="font-family: Arial,Helvetica,sans-serif;"><span class="Heading1Char"><span style="font-size: 14px;">    </span></span></span></span>
+
+<ol><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Sales Reps will have to be configured in Point of Rental in order for it to sync properly. In Point of Rental, you can go to Configuration Gear &gt; App Configuration &gt; System Configuration &gt; SalesReps. You will need to make sure that the Sales Rep has an assigned Operator.</span></span></li></ol>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJn3" style="width: 392px;height: 225px;"></img></span></span></div>
+ 
+
+<ol start="2"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From within the Salesforce Setup, <strong>click on Manage Users.</strong></span></span></li></ol>
+
+<div style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJn4" style="width: 488px;height: 359px;"></img></span></span><br> </div>
+
+<ol start="3"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This will open up a new window, where you can <strong>add a Sales Rep and associate them with a Salesforce User by clicking &quot;Add.&quot;</strong></span></span></li></ol>
+ 
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJoJ" style="width: 528px;height: 253px;"></img></span></span></div>
+ 
+
+<h1 style="margin-top: 16px;"><a id="Creating-a-task-for-POR-and-Salesforce" name="Creating-a-task-for-POR-and-Salesforce"></a> <span style="color: #c0392b;"><span style="font-size: 24px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-weight: normal;">Creating a Task for Point of Rental and Salesforce</span></span></span></span></h1>
+<br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The last step of this process is to schedule a task in the Point of Rental Task Scheduler so that Salesforce and Point of Rental can communicate. <strong>This step has to be done AFTER resolving duplicates</strong>. After this is complete Point of Rental will start syncing your Items (Products), Contracts (opportunities), and Customers (Accounts).</span></span><br> 
+<ol><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">To begin, in Point of Rental,  <strong>go to the Configuration Gear &gt; App Configuration &gt; System Configuration &gt; Task Scheduler.</strong></span></span></li></ol>
+ 
+
+<ol start="2"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Once there, create the following Task from the POR Task Runner by <strong>pressing &quot;Add.&quot;</strong></span></span></li></ol>
+
+<ul><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Name </b></span></span>-<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> Salesforce Sync</span></span></li><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Description </b></span>-<span style="font-family: Arial,Helvetica,sans-serif;"> This task is going to connect Salesforce and Point of Rental </span></span></li><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>File</b> <b>to</b> <b>Run </b></span>-<span style="font-family: Arial,Helvetica,sans-serif;"><strong> </strong>&lt;DataDrive&gt;:\POR\Program\SalesForceSync\ SalesforceSync.AutoRun.exe</span></span></li><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Start</b> <b>in</b> <b>Path </b>- &lt;DataDrive:\POR\Users</span></span></li><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Recurrence </b>- Minute</span></span></li><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Interval </b>- 15</span></span></li><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Priority </b></span></span>-<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> Low</span></span></li></ul>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJon" style="width: 607px;height: 373px;"></img></span></span><br> </div>
+
+<ol start="3"><li><strong>Press save </strong>to save the task.</li></ol>
+ 
+
+<ol start="4"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After the task is created and the process is started, All Products will have to sync before Opportunities are made in Salesforce. This may take time depending on how many Item Records the customer has. </span></span></li></ol>
+
+<h1 style="margin-top: 16px;"><br><a id="POR-Data-Tables" name="POR-Data-Tables"></a> <span style="color: #c0392b;"><span style="font-size: 24px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-weight: normal;">Point of Rental Data Tables</span></span></span></span></h1>
+<span style="color: #c0392b;"><span style="font-size: 24px;"> </span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> With the Salesforce Sync Point of Rental has some new Tables that will have the Salesforce Sync information.  These can be opened in Microsoft SQL Server Management Studio or From Database Management inside Point of Rental.<br><br><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJoo" style="width: 494px;height: 293px;"></img></span></span><br><br> 
+<h1 style="margin-top: 16px;"><a id="The-Error-log" name="The-Error-log"></a> The Error Log</h1>
+<span style="color: #c0392b;"><span style="font-size: 24px;"> </span></span><span style="font-size: 22px;"> </span><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you need to determine whether an Error occurred or find information on possible syncing issues, go to the Error Logs. You can find it by going to &lt;DataDrive&gt;:\POR\SFPORSync\AppLogs. <br><br><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ7s&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008VJop" style="width: 751px;height: 387px;"></img></span></span>
+
+<div>
+<div>
+<div class="msocomtxt" id="_com_1"> </div>
+</div>
+</div>
+</div>
+</div>
+    </body>
+    </html>
+    

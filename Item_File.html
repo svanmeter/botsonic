@@ -1,0 +1,120 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Item File</title>
+    </head>
+    <body>
+        <h1>Item File <a href="http://por.force.com/uLearn/s/article/Item-File-1472548626" target="_blank">[Item File]</a></h1>
+        <h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Item File</span></span></h1>
+
+<p style="background: white;margin: 9pt 0pt 7pt;"> </p>
+
+<p><b>Overview</b>: The item file will have all the information on the item. This can be Deprecation, Purchase History, Warranty information, Instructions Sheets, Item Specific Income reports, and many others. To get to an item file, you can go through File Maintenance, click on Item File and Search or add a new item. You can also go through Item Availability by clicking the name and from the contract processing screen.</p>
+
+<p>The item record will look like the following:<br> </p>
+
+<p><img alt="image3.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8U&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000003R7B1" style="width: 646px;height: 439px;"></img></p>
+
+<h2><b><span style="font-size: 11pt;">Functions Menu:</span></b></h2>
+
+<h4><b>Modify</b> – By clicking this, you will be allowed to modify the fields within the item record.</h4>
+
+<h4><b>Copy</b> –By clicking this, you will create a copy of the current item. After the item, has been copied, you will need to change the key to a unique value. In addition, any specific information about this item such as purchase date, purchase price, serial number, etc. should be entered.</h4>
+
+<h4><b>Create Serialized</b> –By clicking this, you will create a copy of the current header item. The system will try to create the next serialized key. If you don’t want the key assigned, you will need to change the key to a unique value. In addition, any specific information about this item such as purchase date, purchase price, serial number, etc. should be entered.</h4>
+
+<h4><b>Delete</b> – By clicking this, you will delete the item record from your database. Note: It is not recommended to delete any items from your database unless it was never used. By deleting an item, you also delete the historical income and detail associated with the item.</h4>
+
+<h4><b>Merge into a different item</b> – This will allow you to merge one item file record into another. *Note: the file being merged will be deleted; the items in the record will be kept.</h4>
+
+<h4><b>Make Inactive</b> – This will allow you to mark an item record inactive. You will need to make sure there is no quantity in the item record, prior to making it inactive.</h4>
+
+<h4><b>Transfer to Rental</b> –By clicking this, you will decrement the quantity for the sales item and a copy of the sales item will be made as a rental item. This option will only show on sale items.</h4>
+
+<p style="text-indent: 0.5in;">*Note: You can print a report listing all items transferred to rental from the Accounting Inventory Reports.</p>
+
+<h4><b>Contract Questions</b> –This option allows you to create contract questions for an item that will be prompted to the counter person on the open of a contract.</h4>
+
+<h4><b>t box</b> – Allows you to enter a language translation in either (Spanish, French, or English).</h4>
+
+<p> </p>
+
+<h2><b style="font-size: 12pt;">Item Record Types</b></h2>
+
+<p style="margin: 5pt 0pt;text-autospace: ;"><span style="font-family: &#39;&quot;times new roman&quot;, serif&#39;;font-size: 10pt;">When creating an item file record, there are many types you can choose to identify how the item will perform on a contract. Below is a list of the different types of items you can choose to</span></p>
+
+<p style="margin: 5pt 0pt;text-autospace: ;"><b><span style="font-size: 12pt;font-family: &#39;&quot;times new roman&quot;, serif&#39;;"><img alt="image002_178_893x601" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8U&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGdF"></img></span></b></p>
+
+<h4 style="margin: 5pt 0pt;"> </h4>
+
+<h3 style="margin: 5pt 0pt;"><b>Rental Items – </b>Items that will be entered on contract as rental inventory items, using the (hour, day, week, monthly rates)</h3>
+
+<h4><b>Rental Hour Meters</b> – Items entered on a contract will calculate charges based on the maximum of meter-hours used or the clock hours rented out.</h4>
+
+<p>*Note: If you do not want to see the meter hours printed on the contract, enter HOURS in the bin location field on the item file record.</p>
+
+<h4><b>Rental Usage</b> – Items entered on a contract will calculate rent as well as a usage charge on a per-unit basis. Ex. (Diamond Blades, Helium, Mileage, etc.)</h4>
+
+<h4><b>Rental Header</b> – is used to group like serialized items together. The rental header item would be rented on a reservation contract and when the contract is Sent Out, the counter person would be prompt to select the serialized item that is sent out.</h4>
+
+<h4><b>Rental Accessory</b> - Item is designed to rent an item either for your normal rates or for free.</h4>
+
+<h4><b>Rental No Sale</b> – Item that may be rented but not sold such as items that you have on consignment should have Rental /Sale items.</h4>
+
+<h4><b>Rental Miscellaneous</b> – Items designed to be rented that are not in your inventory.</h4>
+
+<h4><b>Rental Coupon</b> – Item gives away to offer a credit on a customer contract and have it reduce rental instead of sale income.</h4>
+
+<h4><b>Rental Package</b> – Item gives way to group a package item. The components of the package are listed in the Item Kit.</h4>
+
+<h4><b>Rental Dynamic Qty</b> – Items pieces give way to dynamically compute the quantity available based on the quantity required of items in the package.</h4>
+
+<p> </p>
+
+<h3><b>Sale Items</b> – Items that may be sold but not rented. Ex (Blades, sandpaper, parts).</h3>
+
+<h4>Sale Fractional Qty – Items are designated to sell items such as fuel in tenths or hundredths.</h4>
+
+<p>*Note: When selling a Fractional Item, you will be allowed to enter a decimal value.</p>
+
+<h4><b>Sale Miscellaneous</b> – Item will query you for a quantity, sell price and you will be able to type the name of the item selling.</h4>
+
+<h4>Sales Labor- Item is used to charge labor to Work Order or Internal Repair Order. When the Sales Labor item is selected, the counter person is prompted for the date labor is performed, as well as a print that on the contract.</h4>
+
+<p>*Note: If you do not want to see the labor date on the contract. Enter HOURS in the bin location field in the item record.</p>
+
+<h4><b>Sales Parts</b> – Item that is used for repair parts should have an item type of Sales – Parts. The sale price for the parts is the same as regular sales items.</h4>
+
+<h4><b>Sales Percentage of Rental</b> – Percentage Sale Item charges a percentage of the line item directly above it on the contract.</h4>
+
+<h4><b>Sales Header</b> – Item is used to group like serialized sale items together. When the Sales Header item is selected, the counter person is prompted to select the serialized item that is being sold.</h4>
+
+<h4><b>Non-rental Asset</b> – Item is used for items that you want to depreciate and keep track of purchase price and dates: however, the item is not a rental item. Ex. (Office equipment, Shop fixture)</h4>
+
+<h4><b>Work Order Item</b> – Work Order Item is used for items that are added to Customer work Order contracts.</h4>
+
+<h4><b>Search History:</b> This allows you to select previously view records. Selecting a previously viewed record will open that record without having to go back to the inventory selection screen.</h4>
+
+<p style="background: white;"><img alt="item Record 1" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8U&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGdG"></img></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-top: 5.75pt;"> </p>
+
+<h2><b style="font-size: 12pt;">Home location vs. Current location and its effects on the Item record.</b></h2>
+
+<p>1. An item’s home location is the store that the item was purchased into and where the inventory value is held in the Equipment Asset Account. Additionally, this is the store that the expense and the depreciation will be calculated. If an item has a home location designated as 001, then 001 is the owning location of that item.</p>
+
+<p>2. If the item’s current location is 002 and the home location is 001, 002 is the location where the item is currently and the purchase history for the item is still associated with 001.</p>
+
+<p>3. When transferring an item from 001 to 002, 001 is still the owning location of the purchase no matter that the item has been transferred to 002 the home location remains 001.</p>
+
+<p>4. We do not recommend changing the home location of an item.</p>
+
+<p> </p>
+
+<div id="" style="left: 20px;top: 244.812px;"> </div>
+    </body>
+    </html>
+    
