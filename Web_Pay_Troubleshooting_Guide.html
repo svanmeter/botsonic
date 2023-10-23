@@ -1,0 +1,47 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Web Pay Troubleshooting Guide</title>
+    </head>
+    <body>
+        <h1>Web Pay Troubleshooting Guide <a href="http://por.force.com/uLearn/s/article/Web-Pay-Troubleshooting-Guide" target="_blank">[Web Pay Troubleshooting Guide]</a></h1>
+        <strong><span style="color: #3b3e41;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Web Pay Troubleshooting Guide</span></span></span></strong><br><br><br><br><span style="color: #7bbe43;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><strong><em>Overview</em></strong></span></span></span><br><br><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">This guide will go over the basic steps for troubleshooting when payments using web pay do not come through to Point of Rental. This results in credit card inquire becoming out of balance.</span></span></span><br> 
+<p style="margin-left: 80px;"><em><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><strong>Note:</strong> Do not do a credit card bypass before following the below steps. This can cause double payments to happen.</span></span></span></em><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Go to update the website and ensure it is working properly.<br>Expert: <em>Configuration &gt; Other Updates &gt; Update Website </em><br>Elite: <em>Configuration Gear &gt; App Configurations &gt; Other Updates &gt; Update Website</em></span></span></span></p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. <span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">If you receive an error, more than likely the IP address has changed. </span></span></span></span></span></span></span></p>
+
+<p style="margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">i. Go to porhelp.com on the customer’s server side. Select Show My IP Address. Make a note of the IP address and create a case for Rental Hosting with the new IP address in the case.</span></span></span></span></span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Verify that the task runner is turned on.<br>Expert: <em>Configuration &gt; System Configuration &gt; Task Runner</em><br>Elite: <em>Configuration Gear &gt; App Configurations &gt; System Configuration &gt;Task Runner</em></span></span></span><br><br><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHF7&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006Uo3d" style="width: 577px;height: 400px;"></img><br> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. <span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">The task this service uses is Quote Import. If this does not show, then search for the task using the <strong>Show Inactives box</strong>. Edit the task to uncheck the inactive box.</span></span></span></span></span></span></span><br> </p>
+
+<p style="margin-left: 80px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHF7&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006Uo4l" style="width: 579px;height: 327px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Verify that the import file does not show as an XML file. <span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">This can be found on the POR Folder on the customer server. This will be the location of the file. POR: Pictures: Quote: WebPay.</span></span></span></span></span></span></span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<div style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">a. By design the file should automatically be saved as a .imported file type.</span></span></span></span></span></span></span></div>
+
+<p style="margin-left: 80px;"> </p>
+
+<div style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">b. If it does show as an XML you can open the file via Notepad to see the customer number and contract number to notate which customer the payment belongs to.</span></span></span></span></span></span></span></div>
+
+<div style="margin-left: 80px;"> </div>
+
+<div style="margin-left: 80px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHF7&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006Uo8K" style="width: 444px;height: 479px;"></img><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">c. In the Windows search bar on the customer’s server side, search for the program called RUN. Then enter this path &#39;C:\POR\Program\aracs.exe DDE:WebPay.&#39; Press OK. This will reimport the web pay file. The C in the path name is the drive letter of where POR is stored on the customer’s server.</span></span></span></span></span></span></span><br> </div>
+
+<p style="margin-left: 80px;"><img alt="Picture1.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHF7&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006yxo1"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">4. </span></span></span></span><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">When running a credit card inquire, the merchant transaction field will show 1234. That will represent the web payment for that entry. Web Pay will always post to store 1. There are a few customers who have their web pay configured to be store specific.</span></span></span></span></span></span></span><br><br><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHF7&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006Uo5Z" style="width: 545px;height: 207px;"></img></p>
+
+<p><br><br><br><strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></span></span></strong><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Web-Payment-2-longer-1662007861" target="_blank">Web Payment</a> <br><a href="/articles/en_US/Knowledge/Web-Payment-Configuration-Setup-1330829342" target="_blank">Web Payment Configuration/Setup</a> </span></span></p>
+
+<div id="" style="left: 60px;top: 1663px;"><br> </div>
+    </body>
+    </html>
+    

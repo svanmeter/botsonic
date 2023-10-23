@@ -1,0 +1,94 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Unlocking a User Account</title>
+    </head>
+    <body>
+        <h1>Unlocking a User Account <a href="http://por.force.com/uLearn/s/article/Unlocking-a-User-Account-1229165076" target="_blank">[Unlocking a User Account]</a></h1>
+        <p><strong style="color: rgb(59, 62, 65);font-size: 18px;font-family: sans-serif;">Unlocking a User Account</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">By default, attempting to use the wrong Windows user account password five times will lock the user account for 30 minutes. It will automatically unlock once the 30 minutes expire. In addition to being a default setting on most Windows servers, it is a PCI-DSS requirement (section 8.5 of the PCI Self-Assessment Questionnaire). This article will go through the process of unlocking a user&#39;s account depending on what kind of server you have.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Topics included in this article</span></p>
+
+<ul><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Domain Controlled Server</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Workgroup Server</span></li></ul>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<h2><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Domain Controlled Server</strong></span></span></h2>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">1. If you have a Domain Server: Open</span><em style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> Administrative Tools &gt; Active Directory Users and Computers</em><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> and find the appropriate user account. </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"><em>Note: </em></strong><em style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">You can search for a user account by right-clicking on the domain name in the left pane and clicking “Find…” </em></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="Unlocking a User Account 1.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH40&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006VDau"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">2. Right-click the appropriate user account and click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Properties</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="Unlocking a User Account 2.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH40&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006VDbE" style="width: 430px;height: 418px;"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">3. Select the </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Account</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> tab and un-check “Unlock account.” Click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">OK</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> to apply the changes and exit.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="Unlocking a User Account 3.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH40&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006VDbY"></img></p>
+
+<p><span style="color: rgb(51, 51, 51);"> </span></p>
+
+<p> </p>
+
+<h2><span style="font-family: Arial,Helvetica,sans-serif;"><strong><span style="font-size: 14px;color: rgb(59, 62, 65);">Workgroup Server</span></strong></span></h2>
+
+<p style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;color: rgb(59, 62, 65);">1. Open </span><em style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Administrative Tools &gt; Computer Management</em><span style="font-size: 14px;color: rgb(59, 62, 65);">. </span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Expand Local Users and Groups on the left pane and select the <strong>Users</strong> folder. </span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. On the right pane, right-click the appropriate user account and click <strong>Properties</strong>. </span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;color: rgb(59, 62, 65);">4. From the General tab, uncheck the box for “Account is locked out.” Click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">OK</strong><span style="font-size: 14px;color: rgb(59, 62, 65);"> to apply changes.</span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="Unlocking a User Account 4.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH40&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006VDbi" style="width: 366px;height: 414px;"></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong style="font-size: 14px;font-family: sans-serif;">Related articles</strong><br> </p>
+
+<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Changing-and-Resetting-Windows-User-Password" target="_blank">Changing Windows User Password</a><br><a href="/articles/en_US/Knowledge/Managing-Windows-Server-User-Accounts-616025664" target="_blank">Managing Windows Server User Accounts Windows Server 2012 R2 and Below</a> </span></span></p>
+
+<p><br><br> </p>
+
+<div id="" style="left: 60px;top: 2443.55px;"> </div>
+    </body>
+    </html>
+    

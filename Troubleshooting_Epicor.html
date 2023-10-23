@@ -1,0 +1,68 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Troubleshooting Epicor</title>
+    </head>
+    <body>
+        <h1>Troubleshooting Epicor <a href="http://por.force.com/uLearn/s/article/Troubleshooting-771708411" target="_blank">[Troubleshooting Epicor]</a></h1>
+        <h3><b style="color: rgb(70, 130, 180);font-size: 22px;">Epicor Troubleshooting</b></h3>
+
+<p> </p>
+
+<p><span style="color: rgb(34, 34, 34);font-size: 14px;">To test the interface between the Point of Rental server and the Epicor Point of Sale client, use the Epicor 3simr.exe simulator located at C:\Program Files (x86)\E4W Rental Network Server on the Point of Rental server. Opening 3simr.exe displays the dialog window below.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);"><img alt="image029" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7J&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCj"></img></span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);font-size: 14px;">Enter the IP Address of the Point of Rental server into the LocalIPAddress field, the IP Address of the Point of Sale Client into the RemoteIPAddress field, change the Object Type to Remote Object, and click bConnect2. If a connection is successful, the status label at the bottom of the window will show “True . . .”. Next, click the bConnectedtoE4WPOS button and a successful connection will show “True.”</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);"><img alt="image030" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7J&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCk"></img></span></p>
+
+<p><span style="color: rgb(51, 51, 51);font-size: 14px;">If either test does not work, the interface from Point of Rental to Epicor Point of Sale will not work. </span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p><span style="color: rgb(51, 51, 51);font-size: 14px;">Check the client PC Windows Task Manager for 3cclient.exe and 3posif.exe. If either or both are missing, then Epicor is not licensed for the Point of Rental interface or some other Epicor configuration must happen.</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);"><img alt="image031" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7J&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCl"></img></span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);font-size: 14px;">When the 3simr.exe simulator is tested, Server Message Monitors provide visibility for the connection status. Click the Show Server Messages item in the taskbar to view status:</span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);"><img alt="image032" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7J&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCm"></img></span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);font-size: 14px;">The status window below displays a Connected to POS “No” status and there are components missing from the dialog. The Point of Rental to Epicor Point of Sale interface will fail if the message below appears. </span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);"><img alt="image033" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7J&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCn"></img></span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);font-size: 14px;">The status window below displays a Connect to POS “Yes” status and all components are present in the dialog window. The Point of Rental to Epicor Point of Sale interface will succeed if the message below appears. </span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(51, 51, 51);"><img alt="image034" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7J&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCo"></img></span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+    </body>
+    </html>
+    
