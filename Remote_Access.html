@@ -1,0 +1,59 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Remote Access</title>
+    </head>
+    <body>
+        <h1>Remote Access <a href="http://por.force.com/uLearn/s/article/Remote-Access-1764021809" target="_blank">[Remote Access]</a></h1>
+        <h1><span style="color: #2980b9;"><b><span style="font-size: 16pt;">Remote Access</span></b></span></h1>
+ 
+
+<p style="background: white;margin-top: 5.75pt;"> </p>
+
+<p style="background: white;">It is important to note that the Point of Rental Software Applications do not offer support for remote access capabilities. However, the Windows Operating System (O/S) that these applications run on does have the capability to support remote access. As a merchant, you may choose to use this remote access capability, but it is crucial to ensure that any remote access technology you use supports two-factor authentication in order to comply with PCI DSS regulations. Two-factor authentication requires something you have, know, or are to access the remote system. It is also recommended to only enable remote access when necessary and disable it when it is no longer needed. Additionally, your remote access software must have specific features or configuration settings to meet the required standards.</p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">You must ensure changes are made to the default setting in the remote access software;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Remotes access software must be configured only to allow access from specific IP addresses;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Encrypted data transmissions such as IPSEC VPN, SSH, 128-Bit SSL v3.0 or must enforce;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Access to customer passwords must be restricted to authorized personnel;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Logging of remote access must be enabled;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Systems must be configured so a remote user must establish a Virtual Private Network (“VPN”) connection via a firewall before access is allowed;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Unique user IDs must be used for each user account;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Authentication composed of passwords and two-factor authentication must be used for remote access;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Remote access must not require or use any group, shared, or generic accounts or passwords;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Passwords must change every ninety (90) days or less;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Passwords must be a minimum of seven (7) characters;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Passwords must contain both numeric and alphabetic characters;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Password history of the last four (4) passwords must be kept and new passwords must be different than any of the last four (4) passwords;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Account lockout must occur after six (6) invalid login attempts;</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Remote access accounts must be locked out for no less than thirty (30) minutes or until reset by a system administrator; and</span></p>
+
+<p style="background: white;margin: 0pt 0pt 8pt 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Remote access sessions must timeout after no more than fifteen (15) minutes of inactivity.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Note: All remote non-console administrative access to the payment application or servers in the environment must be encrypted utilizing SSH, VPN, SSL/TLS, or other encryption technology in order to maintain PCI DSS compliance</span></b></p>
+
+<p style="background: white;"><span style="color: #333333;">In the case of Point of Rental Software customer support, Point of Rental Software utilizes the application TeamViewer for remote access. This access is only enabled during the time of support and must be disabled after support is concluded. The company uses AES256 encryption for securing the connection and with authentication based on a unique RSA private/public key combination for each Customer Support Engineer, further secured by the use of RSA tokens for each engineer in order to access their assigned keys.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">The Company engineer will direct you to the TeamViewer website to download and run the client. The company engineer will have you run the TeamViewer remote access software and you will verbally provide the engineer with the Session ID and password. Using this information, the engineer will authenticate to your system and assist with troubleshooting any issues. Once troubleshooting is complete, you will exit the TeamViewer application, terminating any remote access. The company will never have access to your computers without you initiating connectivity first. </span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Note: You must terminate the TeamViewer connection when requested so as not to have a persistent remote-access point in your network.  This is required in order for you to maintain your PCI DSS compliance.</span></b></p>
+
+<p> </p>
+    </body>
+    </html>
+    

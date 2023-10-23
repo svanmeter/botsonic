@@ -1,0 +1,104 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Purchase Order Price Change Review Grid</title>
+    </head>
+    <body>
+        <h1>Purchase Order Price Change Review Grid <a href="http://por.force.com/uLearn/s/article/Purchase-Order-Price-Change-Review-Grid-843350465" target="_blank">[Purchase Order Price Change Review Grid]</a></h1>
+        <h1 style="font-family: arial;"><b><span style="font-size: 16pt;color: #4682b4;font-family: arial;">Purchase Order Price Change Review Grid</span></b></h1>
+
+<p style="font-family: arial;"> </p>
+
+<p style="font-family: arial;"> </p>
+
+<p style="font-family: arial;font-size: 10pt;">When creating or Modifying a Purchase Order, changes in purchase costs can initiate suggestions to update the sell price. Additionally, the Vendor Markup and Price Model features will initiate suggestions or requirements for price changes.</p>
+
+<p style="font-family: arial;font-size: 10pt;">In cases where price change suggestions are being identified by an increase from the previous price or a change made to a Vendor Markup or Price Model, these items will be displayed in the Price Review Grid. No change in prices and the grid will not be shown.</p>
+
+<p style="font-family: arial;font-size: 10pt;">The Price Grid provides the user with one place to make pricing decisions for the items on the Purchase Order. It also provides the user with valuable analysis data related to variances and profitability goals.</p>
+
+<p style="font-family: arial;"> </p>
+
+<p style="font-family: arial;"><img alt="Purchase order price change review_767x270" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH1w&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGst"></img></p>
+
+<p style="font-family: arial;"> </p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><u style="font-weight: bold;font-size: 11pt;">Field and Feature Details</u></p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"> </p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Key/Name</b> - From this screen the user can double click on any item to view the Item Record.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Price Each</b> - This is the current price on the Purchase Order</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Extra Cost</b> - This reflects the assigned value for freight or other costs added in the subtotal section.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Current Sell</b> - This is the Sell Price currently in Item Record</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Amount Change</b> - When the New Sell price is changed, the difference between that price and Current Sell is shown here.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>% Change</b> - Same as Amount but in a percentage format.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Margin %</b> - This reflects the current Margin % based on the New Sell and Price Each displayed.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>New Sell</b> - This will show what the Sell Price will be updated to if the Save button is selected.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>New Retail</b> - Same as Sell</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>New Floor</b> - Same as Sell</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Update for all locations</b> -</p>
+
+<blockquote>
+<p style="font-size: 10pt;font-family: arial;">Leaving this selected (recommended in most cases) means that any items associated with the line item by a Header will also have their prices updated to what is on the grid.</p>
+
+<p style="font-size: 10pt;font-family: arial;">If that feature is unchecked, only the key/item on the PO will change. If you have a Bulk Header on the PO, when the item is received and serialized, that bulk serialized key/item will not have the updated pricing. Bulk items do not use the header to establish price when received.</p>
+
+<p style="font-size: 10pt;font-family: arial;">Typically, a user would only uncheck this feature when they sell items under the same header for different prices at other locations - it is best to put the location’s bulk item on the PO... not the header. Or, if you have older non-bulk serialized items (older model of power tool) and you want the prices of these older items to remain different than the newer items you will be receiving. Because non-bulk, serialized items use Header pricing when received, they will capture this new pricing but the ones already in the system will remain unchanged.</p>
+</blockquote>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Option</b> - This is where Quantity Discount pricing can be updated. This grid will also suggest pricing to maintain margins.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Show only price or cost changes</b> - When unchecked, all items on PO appear in the grid.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Apply suggested sell price</b> -</p>
+
+<blockquote>
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;">- This feature will adjust the Sell Price to maintain the Margin% you were getting from the previous Purchase Price.</p>
+
+<p style="font-size: 10pt;font-family: arial;"><span style="font-size: 10pt;">- Markup % or Price Model applied: This feature will not do anything. The Markup % or Price Model will calculate the price.</span></p>
+
+<p style="font-size: 10pt;font-family: arial;"> </p>
+</blockquote>
+
+<p style="font-size: 10pt;font-family: arial;"><b>Reset</b> - This will put the whole grid back to the state it was in when it first opened. You can also right click on an individual row and Reset it.</p>
+
+<p style="font-size: 10pt;font-family: arial;"> </p>
+
+<p style="font-weight: bold;font-size: 10pt;font-family: arial;">Other Right Click features (not available to user when a Price Model is used):</p>
+
+<blockquote>
+<p style="font-size: 10pt;font-family: arial;">- <b>Apply Current Sell Price</b>: If there was a calculation that changed the Sell Price, this will put it back to the current value.</p>
+
+<p style="font-size: 10pt;font-family: arial;">- <b>Apply Suggested Sell Price:</b> This is a row level option for that performs the same as the check box detailed above for all rows.</p>
+
+<p style="font-size: 10pt;font-family: arial;"> </p>
+</blockquote>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Save</b> - Updates the Sell, Retail and Floor prices as shown for the key number presented. Plus, any &#39;related by Header&quot; items at all locations with that option checked.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b>Security features</b> - Security settings are required to make edits within the Price Review Grid</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"> </p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><u style="font-weight: bold;font-size: 11pt;">New Sell Color References</u></p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b><span style="color: #3cb371;">Green</span> -</b> This indicates a Markup or Price Model formula is calculating the New Sell price.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b style="color: #ffff00;background-color: #dcdcdc;">Yellow</b> - This reflects a calculation to maintain current Margins due to a price change.</p>
+
+<p style="font-weight: normal;font-size: 10pt;font-family: arial;"><b style="color: #1e90ff;">Blue</b> - This reflects an edit has been made overriding any displayed pricing.</p>
+    </body>
+    </html>
+    
