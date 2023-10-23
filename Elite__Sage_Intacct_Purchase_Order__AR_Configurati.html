@@ -1,0 +1,217 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Elite | Sage Intacct Purchase Order & AR Configuration Setup</title>
+    </head>
+    <body>
+        <h1>Elite | Sage Intacct Purchase Order & AR Configuration Setup <a href="http://por.force.com/uLearn/s/article/Elite-Sage-Intacct-Purchase-Order-AR-Configuration-Setup" target="_blank">[Elite | Sage Intacct Purchase Order & AR Configuration Setup]</a></h1>
+        <strong><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 36px;">Elite | Sage Intacct Purchase Order &amp; AR Configuration Setup</span></span></span></strong><br><br><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">In this article, we will show you some areas where you can configure in Intacct. This article goes over how to set up items inside Sage Intacct. For information on how to set items up in Point of Rental please see our article on </span><a href="/articles/en_US/Knowledge/Elite-Sage-Intacct-Accounting-Integration" target="_parent">Sage Intacct Accounting Integration</a><span style="color: #3b3e41;">.</span></span></span><br><br> 
+<p><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span></p>
+ 
+
+<ul><li><a href="#t1"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Purchase Order Setup</span></span></span></a></li><li><a href="#t2"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Items</span></span></span></a></li><li><a href="#t3"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 16px;">Define the GL Groups in the Posting Configuration</span></span></span></a></li><li><a href="#t4"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Purchase Order Tax, Shipping, and Miscellaneous Items</span></span></span></a></li><li><a href="#t5"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Subtotals</span></span></span></a></li><li><a href="#t6"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Units</span></span></span></a></li><li><a href="#t7"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">AR Invoice Setup</span></span></span></a></li></ul>
+<br><br><br><a id="t1" name="t1"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Purchase Order Setup</span></span></span><br> 
+<div style="margin-left: 40px;"><span style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;">Enable Subtotals on the Purchase Order</span></div>
+
+<div style="margin-left: 40px;"> </div>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">With the integration, you have the option to have shipping and/or miscellaneous expenses appear in the subtotal lines of the PO instead of line items. If you want to enable that, make sure you have it set up correctly in POR, then follow the steps below to get it set up in Intacct.</span></span></span><br> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. In Intacct, <strong>go to</strong> <em>Purchasing &gt; Setup &gt; Transaction Definitions</em>.</span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9E" style="width: 579px;height: 412px;"></img></div>
+
+<div style="margin-left: 80px;"> </div>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Select <strong>Edit</strong> on Vendor Invoice.</span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9F" style="width: 805px;height: 414px;"></img></div>
+
+<div style="margin-left: 80px;"> </div>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. In the Accounting section, <strong>check the box Enable Subtotals</strong>.<br><br>4. <strong>Add a line to the table</strong> for Shipping and Misc. Spelling is important here. Use those exact keywords in the description field.</span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9G"></img></div>
+
+<div style="margin-left: 40px;"> </div>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e43;"><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">Enable Vendor Auto-Numbering</span></span></span></p>
+
+<div style="margin-left: 80px;"> </div>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This is required if you have enabled the Vendor Dimension.</span></span></span></p>
+
+<p style="margin-left: 80px;"><br><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. In Intacct, <strong>go to</strong> <em>Accounts Payable &gt; Setup &gt; Configuration &gt; Document Sequencing &gt; Vendors &gt; Purchase Order</em></span></span></span><br> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Vendors are matched between POR and Intacct by Vendor Name.</span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9H" style="width: 640px;height: 605px;"></img></div>
+
+<div style="margin-left: 40px;"> </div>
+
+<p style="margin-left: 40px;"><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up Terms</span></span></p>
+
+<div style="margin-left: 40px;"> </div>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Terms must be set up in Intacct.</span></span></span></p>
+
+<p style="margin-left: 80px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To get there, <strong>go to</strong> <em>Accounts Payable &gt; Setup &gt; Terms</em></span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9I" style="width: 631px;height: 536px;"></img></div>
+
+<div style="margin-left: 40px;"> </div>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. The terms will have to match the Vendor Record that is inside of Point of Rental.</span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9J" style="width: 1120px;height: 291px;"></img></div>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. To verify what is inside of Point of Rental, please see our article on </span></span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Vendor-File-217338131" target="_blank">Vendor File</a><span style="color: #3b3e41;">.</span></span></span></p>
+ 
+
+<div style="margin-left: 80px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9K" style="width: 492px;height: 370px;"></img></div>
+ <br><br> 
+<p><a id="t2" name="t2"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Items</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You will need to add GL Groups in Intacct so that each item can reference an account number. This can be done at the Top Level or Entity Level.</span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To add GL Groups <strong>go to</strong> <em>Purchasing &gt; Setup &gt; GL Groups &gt; Add</em></span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9L" style="width: 685px;height: 443px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Enter the name of your GL Group</strong> and select an account from the dropdown.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a login form  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9M" style="width: 597px;height: 273px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. After creating any GL Groups you need, <strong>you can add items</strong>.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9N" style="width: 548px;height: 374px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. <strong>Enter the following required fields</strong> and anything else you’d like. The Item ID and Name should match what is in your Point of Rental Purchase Order GL Accounts.</span></span></span></p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9O" style="width: 659px;height: 290px;"></img></p>
+
+<ul style="margin-left: 40px;"><li style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">To view your Purchase Order GL Accounts in Point of Rental, <strong>go to</strong> the <em>Purchase Orders module &gt; Options &gt; GL Accounts</em>.</span></span></span><br>	<img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9P" style="width: 483px;height: 290px;"></img></li></ul>
+
+<p style="margin-left: 40px;"> </p>
+
+<ul style="margin-left: 120px;list-style-type: circle;"><li style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Item ID will be the Account Number in the “Account #” column. Item Name will be the title in the “Description” column.</span></span></span></li></ul>
+
+<p><br><br><a id="t3" name="t3"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Define the GL Groups in the Posting Configuration</span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. <strong>Go to</strong> <em>Purchasing &gt; Setup Tab &gt; Transaction Definitions &gt; Edit the definition &gt; Posting Configuration tab</em></span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">. This is where you define GL Groups and which accounts they post to.<br><br>2. <strong>Add any GL accounts</strong> used for purchase orders here.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a security invoice  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9Q" style="width: 767px;height: 347px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Now that some of the basic configurations for this accounts payable are complete, we need to set this up in Point of Rental.<br><br>3. From Point of Rental, go to the Configuration Gear and <strong>click on Intacct Configuration</strong>, found under the Accounting Configuration area.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="A picture containing text, screenshot, font, line  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9R" style="width: 1091px;height: 170px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Go to the <strong>Dimension Data tab</strong> and<strong> select Accounting Item</strong> from the drop-down in the upper right corner.<br><br>5. <strong>Enter the Accounting Link and Title </strong>for each Item you added to Intacct. The accounting link should be what you entered for the Intacct Item ID. The title should be what you entered for the Intacct Name.<br><br>6. <strong>Select Save</strong> when finished.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9S"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. <strong>Go to the AP Accounts tab</strong> and map anything you are using in the left column to the corresponding selection in the right column. The left column is driven by what is in the Point of Rental Purchase Order GL accounts. The right column is driven by what is entered in the Dimension Data tab for accounting items.<br><br>8. <strong>Select Save</strong> when finished.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a calendar  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9T"></img></p>
+
+<p><br><br><a id="t4" name="t4"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Purchase Order Tax, Shipping, and Miscellaneous Items</span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. In addition to the Items listed in your POR Purchase Order GL accounts, you will need to <strong>add a GL account and item</strong> for Tax, Shipping, and Miscellaneous if you plan to use them.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Add GL Groups in Intacct </strong>so that each item can reference an account number. This can be done at the Top Level or Entity Level.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. To add GL Groups <strong>go to</strong> <em>Purchasing &gt; Setup &gt; GL Groups &gt; Add</em></span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9U" style="width: 554px;height: 358px;"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Enter the <strong>name of your GL Group </strong>and <strong>select an account</strong> from the dropdown.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a login form  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9V" style="width: 565px;height: 258px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. After creating any GL Groups you need, you can<strong> add items</strong>.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9W" style="width: 568px;height: 387px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. Proceed to <strong>add a new item</strong> to Intacct for each Tax, Shipping, and Miscellaneous grouping like so:</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9X" style="width: 722px;height: 375px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. In Point of Rental, from your account number screen, <strong>look at the purchase orders </strong>section to see the information you will need to add for these.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A picture containing text, screenshot, font, number  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9Y" style="width: 331px;height: 305px;"></img></p>
+
+<p><br><br><a id="t5" name="t5"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Subtotals</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you have chosen in POR to have Shipping and/or Miscellaneous appear on the subtotal lines of the purchase order, proceed with the steps below to configure that in Intacct as well.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To get started, <strong>go to</strong> <em>Purchasing &gt; Setup &gt; Subtotal Templates &gt; Add</em></span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9Z" style="width: 737px;height: 413px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Create one for Shipping and/or Miscellaneous</strong> like the picture below:</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9a" style="width: 751px;height: 269px;"></img></p>
+
+<p><br><br><a id="t6" name="t6"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting Up Units</span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To get started, <strong>go to</strong> <em>Purchasing &gt; Setup &gt; Units of Measure &gt; Add</em></span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9b" style="width: 624px;height: 423px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Add a new unit</strong> called “CountUnit” that looks exactly like below.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9c" style="width: 716px;height: 278px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. <strong>Enable custom units</strong> of measure in Purchasing Configurations.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with low confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9d" style="width: 659px;height: 290px;"></img></p>
+
+<p><br><br><a id="t7" name="t7"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">AR Invoice Setup</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. <strong>Enable Customer Auto-Numbering</strong>.</span></span></span></p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. This is required if you have enabled the Customer Dimension.</span></span></span></p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">b. In Intacct, go to <em>Accounts Receivable &gt; Setup &gt; Configuration &gt; Document Sequencing &gt; Customers &gt; Customer</em></span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Customers are matched between POR and Intacct by Customer ID.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="A screenshot of a computer  Description automatically generated with medium confidence" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHdN&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TJ9e" style="width: 664px;height: 530px;"></img></p>
+
+<p><br><br> </p>
+
+<div id="" style="left: 60px;top: 8485.77px;"> </div>
+
+<div id="" style="left: 100px;top: 4801.4px;"> </div>
+    </body>
+    </html>
+    

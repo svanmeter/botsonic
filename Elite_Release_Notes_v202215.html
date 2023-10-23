@@ -1,0 +1,55 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Elite Release Notes v2022.15</title>
+    </head>
+    <body>
+        <h1>Elite Release Notes v2022.15 <a href="http://por.force.com/uLearn/s/article/Elite-Release-Notes-v2022-15" target="_blank">[Elite Release Notes v2022.15]</a></h1>
+        <table><colgroup><col></col><col></col><col></col></colgroup><tbody><tr><td colspan="1" rowspan="1"><span style="color: #2980b9;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">v2022.15</span></span></strong></span></td><td colspan="1" rowspan="1"> </td><td colspan="1" rowspan="1"><span style="color: #16a085;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">11/08/2022</span></span></span></td></tr></tbody></table>
+ 
+
+<p><br>11/08/2022 v2022.15<br> </p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> We are listening! Items with this label are a result of your suggestions in uInnovate. Please continue to share and support those ideas that help your business.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/EliteReleaseNotes1_15x15.png"></img> We recommend reading these and understanding the impact prior to updating. These features may require adjustments to security or configuration and may have implications for your operations or current workflows.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/EliteReleaseNotes1_15x15.png"></img> <b>Contract Price Changes and Special Rates:</b> Our esteemed Elite users have been enjoying the benefits of having the ability to set their own special rate hierarchy. The side effect to this, is that every time something is added to the contract that could have a special rate (customer, jobsite, etc), the items check and the line is rerated. Which isn’t so great when there’s been a manual price override that is not a special rate. So that any price change on a line item is retained, Elite users will be pushed into the special rate modal when changing a price so that the special rate gets set. Be sure to double check employee security before updating, or some users may not be able to change prices on contracts until that is adjusted.</p>
+
+<p><b>Create contracts from browser:</b> In this release we continued our work towards bringing Core contract creation into the browser side of the application. Last release was all about rental contracts. This release is about adding options for Transfers, Internal Work Orders and Subrental contracts from the Universal Search Contract create options. If you want to control options from here, use the &#39;Create...&#39; options in the Transactions area for each contract type. You can control which stores a user can create these type of contracts for - or you can remove the option completely by setting them all (Company, Region, District, Store) to No. We default these to Yes because that is how the Core side of the application works &#39;out of the box&#39;. We let you then restrict access as needed.</p>
+
+<p><b>Universal Search:</b> We think so much of the &#39;All&#39; option when searching for stuff - we made the Universal Search feature flip back to All by default. If you are going on a Contract (or any other option here) search binge - you have two options: Select Contract and use the &#39;type ahead&#39; search from Universal Search. Or, simply hit the enter key after selecting it and a &#39;Search tab&#39; will be placed on your dashboard - now you will have that available all day long to search for Contracts. Once you do this, the option flips back to All.</p>
+
+<p>Bonus note - Each option in Universal Search is searching against several fields. You can type in a customer name while searching for contracts - and it will return contracts written to those customers. Each option has 4-6 fields it searches against giving this a smarter, &#39;google like&#39; experience searching for things. If you are curious about all the fields each option searches against - go to uLearn and search for the Universal Search documentation. And (wait, there’s more?) - with this release we are also searching against ‘translation tables’ for those that have added unique translations for certain languages.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Jobsite Search:</b> The jobsite search will now return results not only from the name field, but all from the address field. While making this search more versatile, it also helps prevent duplicate job site entries, should the same address be assigned to the same job sites with more than one name in the database.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img><b>Jobsite Search - browser:</b> Along with the Core side, browser search also added an Address filter for Jobsites.</p>
+
+<p><b>&#39;Today&#39; filter - browser search:</b> We updated the &#39;Today&#39; filter option in all date filters in browser search. Now when you specify &#39;Today&#39; it will be dynamic to the system date on your device. Additionally, you can specify a number of days forward or backward from &#39;today&#39;. So maybe you want a search view that looks at contracts closed during the last 5 days - you can do that. Or maybe Quotes created in the last 2 days, by a certain Sales Rep - you can do that. Do you have another date inspired option you would like to see - uInnovate us!</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Lockbox Import and Integrated Transaction Based Accounting:</b> Closed contracts for users on a transaction based API accounting package are paid in the accounting package. The API then updates the contracts in POR. Our lockbox import now aligns with this expected behavior. If a lockbox payment is applied against a closed contract, it will create a credit that can be accounted for and applied in the accounting package.</p>
+
+<p><b>Search by release:</b> You can now also search by the Version in the security grid. We&#39;re not sure what you&#39;ll do with it - but it was information being displayed so we think you should have the power to do it.</p>
+
+<p><b>Form styling:</b> We received feedback from browser users saying that the forms were hard to read. Not enough contrast between the background and fields. And it was hard to tell if a field had been populated or not. We like the subtle scheme so we did not go full &#39;dark mode&#39; but we did update the contrast in the forms and how incomplete fields look vs completed ones. We hope this helps!</p>
+
+<p><b>Fulfillment Speed:</b> On larger databases that handle contracts with hundreds of items, the loading time in fulfillment was often delayed. We changed how this screen loads on the back end to improve performance. Go speed racer, go!</p>
+
+<p><b>Statement Logos:</b> It came to our attention that when statements were being run through the customer dashboard, the logos on the invoices were coming from the store of the first invoice. Now, each invoice will display the logo of whichever store it belongs to.</p>
+
+<p><b>Translations:</b> According to Norad, Santa visits all children who believe in him. He must spend a lot of time on Duo Lingo. This time around we worked on translating certain fields in the report UI that are dynamically generated and certain reports from Accounting Inventory, Marketing, Fixed Assets, and Analysis.</p>
+
+<p><b>Copying Images into Point of Rental for SQL Users on a Cloud Server:</b> In the past, the fairly straightforward task of copying and pasting images into item records, categories, and the logo field has been a thorn in the side of those on cloud hosted servers. We have put in the work to make this simple copy/paste function work as expected. As a bonus, we&#39;ve thrown in the ability to drag and drop images from file explorer into their intended records. *tosses confetti*</p>
+
+<p><b>Memory Lane Monday:</b> This is a fun corner where we republish release notes from previous sprints you may have forgotten about.</p>
+
+<p><b>Auto Import of Web Quotes:</b> Rental Hosting Users now have the option of setting web quotes to be auto imported. With this enabled, web quotes will be imported automatically just as web payments have had the ability to do. One less thing to forget on a busy Monday! To enable this feature, please reach out to Rental Hosting support@rentalhosting.com.</p>
+
+<p><b>Create Subrental From the Contract:</b> Is creating the subrental contract after the reservation cumbersome for you? We have now added an alternative. When overbooking an item, say no when prompted to create a subrental request. Double click on the subrental field and enter the amount you wish to subrent. Now right click on the line item. Voila! You will see a new option to create a subrental right from here.<br> </p>
+
+<p style="margin-left: 80px;"><iframe frameborder="1" scrolling="auto" allowfullscreen="" height="360" src="https://player.vimeo.com/video/766924801?h=1bd79e8f65" title="vimeo-player" width="640"></iframe></p>
+    </body>
+    </html>
+    

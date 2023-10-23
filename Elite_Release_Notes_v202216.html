@@ -1,0 +1,55 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Elite Release Notes v2022.16</title>
+    </head>
+    <body>
+        <h1>Elite Release Notes v2022.16 <a href="http://por.force.com/uLearn/s/article/Elite-Release-Notes-v2022-16" target="_blank">[Elite Release Notes v2022.16]</a></h1>
+        <table><tbody><tr><td colspan="1" rowspan="1"><span style="color: #2980b9;"><strong><span style="font-size: 14px;">v2022.16</span></strong></span></td><td colspan="1" rowspan="1"> </td><td colspan="1" rowspan="1"><span style="color: #16a085;"><span style="font-size: 14px;">11/28/2022</span></span></td></tr></tbody></table>
+ 
+
+<p>11/28/2022 v2022.16<br><br> </p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> We are listening! Items with this label are a result of your suggestions in uInnovate. Please continue to share and support those ideas that help your business.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/EliteReleaseNotes1_15x15.png"></img> We recommend reading these and understanding the impact prior to updating. These features may require adjustments to security or configuration and may have implications for your operations or current workflows.</p>
+
+<p><b>Operator record:</b> Some of y&#39;all may have been getting confused when updating Stores or Security Groups for an Operator. Like maybe your changes were not getting saved. The fact is, changes made to those &#39;related objects&#39; are getting saved as you change them. But it still seemed odd because that Submit button was sitting there - grayed out. So now when you are in the &#39;modify&#39; state there will be a &#39;Done&#39; button displayed when viewing the related objects. You can make changes and select that Done button. This will push you back over to the Operator record where you can then select the Submit button which sets the record back to a &#39;read only&#39; state. It&#39;s just a better flow.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Customer record - browser:</b> One of our beloved Quality Assurance team members kept wanting to add a defect for the Customer record because the &#39;expire date&#39; fields did not do anything when the date was today or earlier. We had to keep saying that it&#39;s not a defect if there is no code to actually do that. It was, however, a great uInnovate idea. See, we even implement uInnovate ideas that come from our fellow &#39;pointers&#39;. All of the &#39;expire dates&#39; will now show a yellow warning message when in a &#39;read only&#39; state and the date is today or earlier. And, because we like to have fun, we are also showing a Happy Birthday message if the customer&#39;s birthdate is today.</p>
+
+<p><b>Payment Import:</b> We updated some logic in this process recently that made old Mappings&#39; no longer work as expected. But they were still sitting there in the list of Mappings. We have added an &#39;Inactive&#39; option to permanently hide them. That&#39;s right - once you set to Inactive that Mapping will no longer be available. If you have some &#39;old&#39; mappings in your list, now you can hide them.</p>
+
+<p> </p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Public API - Alias and Barcode:</b> This work was done to support a customer that required to be able to search against QR codes from POR One where there were codes in both Barcode and Alias fields. We were going to do it eventually - this just moved us along a little sooner.</p>
+
+<p><b>Special Rate Label:</b> Within the contract, when the user right clicks and selects ‘Set Special Rate’, a label has been added to show what level of special rate is being used (If any). It will read ‘Special Rate Type: Manual’, etc. This is useful for understanding what has been set on the contract to derive the rate before any changes are made.</p>
+
+<p><b>Image Resizing:</b> Previously, when images were copied into Point of Rental (on item files for example), the images were resized. This was great for disk space and uniformity of images, but not so great for image resolution on websites. Moving forward, any new images copied into the program will retain their original size and resolution. If an image is over 4MB (the max size for any single picture uploaded to the web through MakeWeb), the user will be notified, but allowed to proceed.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Default Payment Type for Cash Customers:</b> By popular demand, we are now giving our users the ability to set a default payment type for cash customers. This setting is found in the System container of the browser configurations and can be set on a per store basis for cash, check, or credit card. Once defined, this payment type will automatically be selected in the payment screen for any cash customer contract with no previous payments. If there has been a previous payment, it will default to the payment method of the previous payment as it always has. Not only will this streamline taking payments, but will help prevent mistakes (from example, for those locations that only take credit cards).</p>
+
+<p><b>API Endpoints:</b> For those users connecting to our API endpoints, CreatedDateTime and UpdatedDateTime have been added for Transactions and Item Files. They will display when the record was created and when it was last modified, respectively.</p>
+
+<p><b>Subrental Contract Links:</b> In the past, when a contract with a linked subrental was continuation billed, we prematurely set the contract link in the next contract with the corresponding next contract in the subrental continuation cycle in anticipation of that being the next step. However, we are now only updating the contract link when the subrental is actually continued. Otherwise, the previous subrental contract in the cycle will be left linked. We did this to make it easier to track oversights and to eliminate confusion that could be caused by contract numbers that do not actually exist yet.</p>
+
+<p><b>Quantity Overlap Store Selector from an Item:</b> The quantity overlap screen (Item Record&gt;Analysis&gt;Quantity Compare Analysis&gt;Quantity Compare) from the item record has been enhanced with a store selector. This is useful so that data from each store can easily be analyzed instead of on the company as a whole.</p>
+
+<p><b>eSign Error Messaging:</b> We have enhanced some of the messaging around certain ensign errors to indicate whether the issue lies with the PDF or the eSign server itself. This will help get those cases resolved in an efficient manner.</p>
+
+<p><b>Memory Lane Monday:</b> This is a fun corner where we republish release notes from previous sprints you may have forgotten about.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Discount Codes:</b> Users now have the ability to mark discount codes inactive. This will remove the discount code on customers and their future contracts, but leave it on already existing contracts.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Credit POs:</b> Invoice information from the original purchase order will no longer be carried over to any credit po created off of it.</p>
+
+<p><img src="https://help.point-of-rental.com/ReleaseNotesEL/Content/Resources/Images/uInnovate_68x11.png"></img> <b>Dynamic Sales Items:</b> Users can now utilize the item record type of Rental-Dynamic Quantity for sales items. Simply add sales items only to the package items, and the item will calculate the quantity of the package based on the sales item quantities.<br><br><br> </p>
+
+<p style="margin-left: 40px;"><iframe frameborder="1" scrolling="auto" allowfullscreen="" height="360" src="https://player.vimeo.com/video/775187015?h=3a377aa27b" title="vimeo-player" width="640"></iframe></p>
+
+<div id="" style="left: 60px;top: 1822.86px;"> </div>
+    </body>
+    </html>
+    

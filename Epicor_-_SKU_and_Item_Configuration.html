@@ -1,0 +1,250 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Epicor - SKU and Item Configuration</title>
+    </head>
+    <body>
+        <h1>Epicor - SKU and Item Configuration <a href="http://por.force.com/uLearn/s/article/Item-Configuration-2135018539" target="_blank">[Epicor - SKU and Item Configuration]</a></h1>
+        <p><strong><span style="color: #3b3e41;"><span style="font-size: 34px;"><span style="font-family: Arial,Helvetica,sans-serif;">Epicor - SKU and Item Configuration </span></span></span></strong></p>
+
+<p><br><br><br><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">This article will go over Epicor SKU integration and item configuration.</span></span></span><br><br><br><span style="color: #3b3e41;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span></p>
+
+<ul><li><a href="#t1"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Epicor license</span></span></span></a></li><li><a href="#t2"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Epicor SKU integration</span></span></span></a></li><li><a href="#t3"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Importing the file</span></span></span></a></li><li><a href="#t4"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Item configuration</span></span></span></a></li><li><a href="#t5"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Adding a category to the item</span></span></span></a></li></ul>
+<br><br><br> 
+<p><a id="t1" name="t1"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Epicor license</span></span></span><br><br><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Once the integration is enabled, the “User Defined 1” fields will appear as the “EpicorKey” for ‘Customer Field #1’ and ‘Item Field #1.’ This can be in the following areas.</span></span></span></p>
+ 
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert:<em> Program Menu &gt; Configuration &gt; System Configuration &gt; Parameters &gt; Display</em></span></span></span><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite: <em>⚙️&gt; App Configuration &gt; System Configuration &gt; Parameters &gt; Display</em></span></span></span></p>
+
+<p> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u00000721k1" style="width: 509px;height: 392px;"></img><br><br><br><a id="t2" name="t2"></a><span style="color: #7bbe43;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 22px;">Epicor SKU integration</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Epicor SKU is a CSV document that must be saved in the POREpicor folder (&lt;DataDrive&gt;\POR\POREpicor\</span></span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">EpicorSKUIntegration.CSV)</span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> after enabling the Epicor Integration for a customer.</span></span></span></p>
+
+<p> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007253n" style="width: 453px;height: 266px;"></img></p>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Once open, you will see three columns in the file.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b style="font-size: 14px;">Column 1:</b> Epicor SKU field. This <b style="font-size: 14px;">MUST</b> match the matching SKU in Epicor.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b style="font-size: 14px;">Column 2: </b>Description that is in Epicor.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b style="font-size: 14px;">Column 3:</b> Code for matching with Point of Rental. This MUST be what Point of Rental has otherwise it will not code correctly in Epicor.</span></span></span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007256I" style="width: 421px;height: 463px;"></img><br> </p>
+
+<table class="ql-table-blob" border="1" style="border: none;"><tbody><tr><td colspan="2" rowspan="1" valign="top" style="width: 311.65pt;border: solid windowtext 1.0pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="416">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;"><b>Epicor SKU and Description (Can Be Different from Example)</b></p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border: solid windowtext 1.0pt;border-left: none;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;"><b>Point of Rental Information</b></p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">SKU</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Description</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Code</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">*2</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Default Cash ID</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">002</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">*5</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Default Cash ID</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">001</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">RENTAL</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Rental</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">RENTAL</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">RENT DEPOSIT</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Rental Deposit</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">DEPOSIT</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">FUEL</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Fuel</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">FUEL</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">RETAIL</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Sale Charges</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">SALE</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">L</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Labor</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">LABOR</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">RENT MISC</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Rental Misc.</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">SURCHARGE</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">DELIVERY</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Delivery</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">DELIVERY</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">DAMAGE WAIVER</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Damage Waiver</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">DMGWVR</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">EQUIP_SALE</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Used Equipment Sale</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">FLEET</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">CREDIT MEMO</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Credit Memo</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">CREDIT</p>
+			</td></tr><tr><td colspan="1" rowspan="1" valign="top" style="width: 155.8pt;border: solid windowtext 1.0pt;border-top: none;mso-border-top-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">9999999</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">Unassigned</p>
+			</td><td colspan="1" rowspan="1" valign="top" style="width: 155.85pt;border-top: none;border-left: none;border-bottom: solid windowtext 1.0pt;border-right: solid windowtext 1.0pt;mso-border-top-alt: solid windowtext .5pt;mso-border-left-alt: solid windowtext .5pt;mso-border-alt: solid windowtext .5pt;padding: 0in 5.4pt 0in 5.4pt;" width="208">
+			<p class="MsoNormal" style="margin-bottom: 0in;line-height: normal;">UNASSIGNED</p>
+			</td></tr></tbody></table>
+
+<p> </p>
+
+<p> </p>
+
+<p><a id="t3" name="t3"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Importing the file</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Go to <strong>&lt;Data Drive&gt;\POR\Program\POREpicor.exe</strong></span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007257G" style="width: 479px;height: 226px;"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Once the program opens, go to <strong>Setup &gt; Update Epicor SKUs</strong>.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zeiy" style="width: 239px;height: 182px;"></img><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. You will get a message, this will delete and import new configurations from &lt;DataDrive&gt;\POR\POREpicor\EpicorSKUIntegration.CSV. <strong>Click yes</strong>.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zejI" style="width: 336px;height: 182px;"></img><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. When it is complete, you will get this message.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zejc" style="width: 272px;height: 171px;"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. To check to make sure it is imported, click on <strong>Setup &gt; View Epicor Profile</strong>.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zefH" style="width: 267px;height: 193px;"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. This will bring up the Data Explorer for the items that you imported.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zek1" style="width: 565px;height: 343px;"></img></p>
+
+<h1><br> </h1>
+
+<p><a id="t4" name="t4"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Item configuration</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Any specific item to be passed from Point of Rental to Point of Sale must be mapped. <strong>This includes parts, sales items, labor items, fees, and delivery charges. </strong></span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Parts and Sales Items</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">To pass a specific item to Epicor, you must enter that item’s Epicor SKU into the Epicor Key field on the Options tab of the Point of Rental Item File screen for the item. </span></span></span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p style="margin-left: 40px;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> Fractional quantities will be adjusted to the quantity of 1 with the item total price – this is because the Epicor interface does not allow fractional quantities.</span></span></span></em></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><strong><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Here&#39;s how to get there</span></span></span></strong></p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert: <em>Program Menu &gt; File Maintenance &gt; Item File &gt; Options</em><br>Elite: <em>⚙️&gt; File Maintenance &gt; Item File &gt; Options</em></span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u00000724BW" style="width: 464px;height: 264px;"></img></p>
+
+<p style="text-align: center;"><br><b style="color: rgb(0, 0, 0);font-size: 14px;"> </b></p>
+
+<p style="margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Labor Items, Fees, &amp; Delivery Charges</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">For this type of item, we will keep the Epicor Key blank in the Item File. What we will be doing is adding a Category and adding it in the GL #5 spot. If you need to create a New Category for your items, go to:</span></span></span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert: <em>Program Menu &gt; Configuration &gt; Item Configuration &gt; Item Category &gt; Add</em></span></span></span><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite: <em>⚙️ &gt; App Configuration &gt; Item Configuration &gt; Item Category &gt; Add</em></span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007251w" style="width: 479px;height: 402px;"></img></p>
+
+<p style="text-align: center;"> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">If you are integrated with Website integration, place ‘&lt;DONOTSHOW&gt;’ in the Web Tags so this category will not show in your store.</span></span></span></p>
+
+<p><br> </p>
+
+<p><a id="t5" name="t5"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Adding a category to the item</span></span></span></p>
+ <br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; File Maintenance &gt; Item File</em><br>Elite: <em>⚙️&gt; File Maintenance &gt; Item File.</em></span></span></span>
+
+<div style="margin-left: 40px;"> </div>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Go to <strong>Functions &gt; Modify</strong> (Ctrl + M)﻿.</span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Under Classifications <strong>change the Category</strong> to the recently created category. </span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH2F&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u00000721mb" style="width: 457px;height: 181px;"></img> </p>
+
+<p><br><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></span></span></p>
+
+<p><br><a href="http://por.force.com/uLearn/s/article/Epicor-477931401" target="_blank"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Epicor</span></span></span></a><br><a href="http://por.force.com/uLearn/s/article/User-Profile-Configuration-395006625" target="_blank"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Epicor - User Profile Configuration</span></span></span></a><br><br><br> </p>
+
+<div id="" style="left: 60px;top: 7006.08px;"> </div>
+
+<div id="" style="left: 60px;top: 6124.42px;"> </div>
+
+<div id="" style="left: 20px;top: 1351px;"> </div>
+
+<div id="" style="left: 20px;top: 3047.6px;"> </div>
+
+<div id="" style="left: 20px;top: 4612.94px;"> </div>
+
+<div id="" style="left: 60px;top: 4622.53px;"> </div>
+    </body>
+    </html>
+    

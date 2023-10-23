@@ -1,0 +1,224 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Elite | Sage Intacct Accounting Integration</title>
+    </head>
+    <body>
+        <h1>Elite | Sage Intacct Accounting Integration <a href="http://por.force.com/uLearn/s/article/Elite-Sage-Intacct-Accounting-Integration" target="_blank">[Elite | Sage Intacct Accounting Integration]</a></h1>
+        <div class="WordSection1">
+<p class="MsoNormal"><span style="font-size: 36px;"><span style="color: #3b3e41;"><span style="font-family: Arial, Helvetica, sans-serif;"><b>Elite</b><strong> | Sage Intacct Accounting Integration</strong></span></span></span></p>
+
+<p class="MsoNormal"><br><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article goes over how to configure the Sage Intacct accounting software in your Point of Rental software. </span></span></span><span style="font-size: 14px;"><span style="color: #000000;"><span style="font-family: Arial,Helvetica,sans-serif;">The integration setup of can be broken down into three steps: S</span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">etting up the General Ledger numbers in Point of Rental, t</span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">he Intacct Configuration setup, and g</span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">oing into Intacct software to set up. </span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The integration allows for transactions to be sent (based on Accounting Method) immediately, the end-of-day batch (e.g., Cost of Goods Sold), and it pushes Purchase Orders over as a Vendor Invoice. </span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<div style="list-style-type: decimal;"> </div>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span><br> </p>
+
+<ul><li class="MsoNormal"><span style="font-size: 16px;"><a href="#t2"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up the General Ledger Numbers in Point of Rental</span></span></a></span></li><li class="MsoNormal"><span style="font-size: 16px;"><a href="#t3"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Intacct Configuration Setup</span></span></a></span></li><li class="MsoNormal"><span style="font-size: 16px;"><a href="#t4"><span style="font-family: Arial,Helvetica,sans-serif;">Entering and Assigning a Class/Category in Intacct</span></a></span></li><li class="MsoNormal"><span style="font-size: 16px;"><a href="#t5"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Monitoring General Ledger Queue</span></span></a></span></li><li class="MsoNormal"><span style="font-size: 16px;"><a href="#t6"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Security Settings</span></span></a></span></li></ul>
+
+<p class="MsoNormal"><br><br><br> </p>
+
+<p class="MsoNormal"><a id="t2" name="t2"></a><span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up the General Ledger Numbers in Point of Rental</span></span></span></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The first step is to verify the account number in Point of Rental. </span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Go to <b>Configuration Gear &gt; App Configurations &gt; Account Numbers.</b> From here, you can verify your account numbers. You will have to confirm this at all locations. See our article about </span></span></span><a href="http://por.force.com/uLearn/s/article/Account-Numbers-1854120324" target="_blank"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Account Numbers</span></span></span></a> <span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">for more information.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image001.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zlc4"></img>-</p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Next, <strong>confirm your Export Format</strong>, this should be set to API – Intacct from the drop-down options.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image002.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zlgf"></img></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. <strong>Click</strong> on <strong>Settings</strong>. This will display a new window to confirm the Export Mode that you would like to use.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 120px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">   </span>Batch mode</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 160px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">o<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">   </span>Traditional daily GL postings</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 120px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">   </span>Real-Time GL mode</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 160px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">o<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">   </span>Real-time income, payment, and bank deposit postings</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">   </span>+ Batch end-of-day entries</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">  </span>Entries made in real-time mode are omitted from the end-of-day batch entries</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">  </span>Income is posted when transactions close.</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">  </span>Payments are posted to the cash drawer and suspense or income accordingly.</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">  </span>Bank deposits post to the bank and the cash drawer</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 120px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">  </span>Transaction mode</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 160px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">o<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">   </span>Invoice detail so AR can be done from Intacct</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  + Batch end of day entries</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  Entries made in transaction mode are omitted from the end of day batch entries</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  Creates/updates customer record in Intacct when necessary</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">  </span>Invoices are created in Intacct</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 240px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●  Transactions with monies owed (account or cash) create a full invoice that can be sent to the customer from within Intacct</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 240px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●  Fully paid Account contracts create a fully paid invoice against the customer for visibility within Intacct</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 240px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●  Fully paid Cash contracts can be created against a single default customer record or the actual customer</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  No inventory linking within the invoice record in Intacct</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  Income is posted by way of the invoice</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  Closed transactions cannot be modified within Point of Rental</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  Closed transactions that are modified will create credit adjustments in a new transaction that gets passed to Intacct for A/R purposes</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 200px;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">▪  Closed transactions cannot be paid directly in Point of Rental (must be paid through Intacct)</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. After you decide on the Export Mode, <strong>fill out the Company ID, Sender ID, and User ID</strong>.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image003.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zlgu"></img><br> </p>
+
+<p class="MsoNormal" style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Company ID</b> - This is given when you create your Intacct account.</span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Sender ID</b> - Must say pointofrental.</span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>User ID</b> - Specific to your account.</span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. <strong>Press</strong> <strong>OK </strong>to save.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p style="list-style-type: decimal;margin-left: 80px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Accounts Payable</span></span></span></span></span></span></span></p>
+
+<ul><li style="list-style-type: circle;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Closed purchase orders will create a payable within Intacct.</span></span></span></span></span></span></span></li></ul>
+
+<ol start="1" style="margin-left: 120px;list-style-type: lower-roman;"><li style="list-style-type: lower-roman;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Creates/updates vendor record in Intacct when necessary.</span></span></span></span></span></span></span></li><li style="list-style-type: lower-roman;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">No inventory linking</span></span></span></span></span></span></span></li><li style="list-style-type: lower-roman;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Purchase order line items will require GL Accounts to be assigned. These can be set up from the Purchase Order Dashboard from <em>Options &gt; GL Accounts</em>.</span></span></span></span></span></span></span></li><li style="list-style-type: lower-roman;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Modifications to a payable in Intacct do not sync back to Point of Rental.</span></span></span></span></span></span></span>
+	<ol><li style="list-style-type: decimal;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Void the payable in Intacct and unpost the PO in Point of Rental, make adjustment and let the PO repost to Intacct.</span></span></span></span></span></span></span></li></ol>
+	</li><li style="list-style-type: lower-roman;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">When a PO is verified the PO will automatically go to the Export - Pending Queue. It will be sent over to your accounting software when the POR Accounting Sync Service is run.</span></span></li></ol>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t3" name="t3"></a><span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Intacct Configuration Setup</span></span></span></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The next step is setting up what Intacct describes as Dimension. This is connecting Intacct and POR together, but you must set up the data in Intacct first.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">To get there, go to <strong>Configuration Gear &gt; Intacct Configuration</strong>.</span></span></span><br> </p>
+
+<p class="MsoNormal"><img alt="image004.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zlh9"></img></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This is the main screen where you will map the Intacct Dimensions to the POR data.<br><br>On this tab, you will need to check the box for which dimensions will be enabled. The column titled &quot;Enable for PO&quot; will activate those dimensions for Purchase Orders in POR. The column titled &quot;Enable for GL&quot; will activate those dimensions for General Ledger entries on contracts.</span></span></span><br> </p>
+
+<p class="MsoNormal"><img alt="image005.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zlj0"></img></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">On the Dimension Data tab, you will need to select what items you want to enter (departments, classes or items, etc…) from the drop-down list in the upper right corner. Once you choose what you want to enter, you take the exact info you have from Intacct for that dimension and enter it on this screen.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Accounting Link </strong>- ID in Intacct (the department ID D150 for example). The max c</span></span></span><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">haracter limit</span></font><font face="Helvetica"><span style="font-size: 16px;"> </span></font><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">for this field is 20. <br><br><strong>Title</strong> - The name of what you are entering (D150 is for Service Department, so you enter Service Department in this field). The max character limit for this field is 100.<br><br><strong>Description</strong> - is not required and irrelevant on some dimensions.</span></span></span></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You will need to enter every item for each dimension of the respective choices from the drop down that you will want POR and Intacct to pass data back and forth with no issues. <strong>Make sure you hit SAVE before changing dimensions. If you do not, your data will not be saved in the system.</strong></span></span></span><br> </p>
+
+<p class="MsoNormal"><img alt="image006.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zljF"></img></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">On the classes tab, you will map the data that currently exists in POR to the Intacct class you entered on the Dimension Data tab. POR data is broken into three hierarchical tabs (Divisions &gt; Departments &gt; Categories), and you can map the Intacct class to which ever level you want. In order for data to flow to Intacct, something needs to be selected from the drop down list. If nothing is selected, the Purchase Order or Journal Entry will still flow to Intacct, just without the dimensional data.</span></span></span><br> </p>
+
+<div style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. a. </span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you map the Intacct class at the Category level, it will apply to all items in that Category.<br><br>1. b. </span></span></span><span style="font-family: Arial, Helvetica, sans-serif;font-size: 14px;color: rgb(59, 62, 65);">If you map the Intacct class at the Department level, it will apply to all items in that Department. There may be several Categories in that Department, so it will apply to all the items in each of those Categories as well.</span><br> <br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. c.</span></span>  <span style="font-family: Arial, Helvetica, sans-serif;font-size: 14px;color: rgb(59, 62, 65);">If you map the Intacct class at the Division level, it will apply to all items in that Division. There may be several Departments in that Division, and several Categories in each of those Departments, so it will apply to all items that live in that hierarchy.</span></div>
+
+<div class="MsoNormal"> </div>
+
+<p class="MsoNormal" style="margin-left: 80px;"><img alt="image007.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zljK"></img></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">On the Departments tab, you will map the data that currently exists in POR to the Intacct department you entered on the Dimension Data tab. POR data is broken into 3 hierarchical tabs (Divisions &gt; Departments &gt; Categories), and you can map the Intacct class to whichever level you want. In order for data to flow to Intacct, something needs to be selected from the drop down list. If nothing is selected, the Purchase Order or Journal Entry will still flow to Intacct, just without the dimensional data.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. a. If you map the Intacct department at the Department level, it will apply to all items in that Department.</span></span></span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. b. If you map the Intacct class at the Department level, it will apply to all items in that Department. There may be several Categories in that Department, so it will apply to all the items in each of those Categories as well.</span></span></span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. c. If you map the Intacct class at the Division level, it will apply to all items in that Division. There may be several Departments in that Division, and several Categories in each of those Departments, so it will apply to all items that live in that hierarchy.</span></span></span></p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><span style="color: #7bb43e;"><a id="t4" name="t4"></a><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Entering and Assigning a Class/Category in Intacct</span></span></span></p>
+
+<p class="MsoNormal"><br><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">After all the appropriate boxes have been checked on the Dimension Setup tab, go to the Dimension Data tab.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Step 1</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This is where you will enter all your data. Choose what you are entering from the top right drop down. Then simply click in the Accounting Link (1) field and <strong>enter the Intacct ID</strong> (C015 for this example) into the Accounting Link (1) box. Next, (and this is very important) enter the category name as it will appear in Intacct into the Title (1) box. Repeat that process for every single category you have. There is no import feature yet so you have to enter everything one by one. <strong>Make sure you hit save before you leave a screen or everything you just put in will be lost</strong>. See example below Step 2.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Step 2</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Now click on the Classes tab and then the Item Category tab. Select the category in the column Division, Department and finally Item categories for POR in the column titled Category Name (PR). Next you will go to the column (on the same line) titled Intacct Class (I) and select the appropriate name/category from the list that appears when you click the down arrow. It is very important that the info you enter on the Dimension Data tab matches Intacct exactly. <strong>Remember to save constantly because if you leave a screen without saving, there is no warning. It is just gone</strong>. See example below:</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image008.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zli2"></img><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Continue this process until all of the dimensions being used have been mapped somewhere.</span></span></span></p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t5" name="t5"></a><span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Monitoring General Ledger Queue</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To monitor the General Ledger Queue, navigate to the <strong>Left Menu &gt; Accounting &gt; Reprint General Ledger Entries</strong>.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image009.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zli7"></img></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Once this is open,<strong> click the View button</strong> under the GL Queue.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image010.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zliC"></img></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This will open the Accounting Export Queue. From here, the user can see GL entries, and the status of the export (Pending, Complete, Error, etc). An entry might error out if the GL Accounts do not match, for example.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image011.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGnv&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zliH"></img></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Transaction</b> - Similar to Real-Time G/L, but all A/R functionality is handled in Intacct. This requires closed accrual accounting.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Completed contracts export to Intacct and if still owing, become part of receivables.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Credits, credit memos, disbursements, cash payments, customer deposits, and modifications of completed cash contracts all export to Intacct.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Completed account contracts cannot be modified.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Payments from Intacct are imported and allocated to the correct contracts. Payments and credits cannot be applied in Point of Rental.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Bank deposits and credit card deposits are exported to Intacct.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Depreciation and inventory changes are exported to Intacct.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Statements and finance charges will be done in Intacct and are disabled in Point of Rental.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 1in;text-indent: -0.25in;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">●<span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>Intacct Transaction mode will still allow a web payment, but it just gets processed as a Credit Memo and then transferred to Intacct where it can be applied.</span></span></span></p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t6" name="t6"></a><span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Security Settings</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The security settings for Intacct are held in system security at the company, group, and employee levels. They are only visible if the export method in Account Numbers is set to Intacct.</span></span></span><br><br><br> </p>
+</div>
+
+<div id="" style="left: 60px;top: 7801.11px;"> </div>
+
+<div style="left: 60px;top: 7801.11px;"><br> </div>
+    </body>
+    </html>
+    

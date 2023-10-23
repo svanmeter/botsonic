@@ -1,0 +1,58 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Employee Email Setup</title>
+    </head>
+    <body>
+        <h1>Employee Email Setup <a href="http://por.force.com/uLearn/s/article/Employee-Email-Setup-312755540" target="_blank">[Employee Email Setup]</a></h1>
+        <p class="p_1"><span style="font-size: 16pt;color: #4682b4;">Employee Email Setup</span></p>
+
+<p class="p_1"> </p>
+
+<p class="p_1"><b>Email Hierarchy Logic:</b></p>
+
+<p class="p_1">In this logic list, when the result is true, the program stops processing and uses those email settings to send the email.</p>
+
+<ol class="ol_1"><li class="ListParagraph">Check for employee-store specific settings.</li><li class="ListParagraph">Check for employee global settings.</li><li class="ListParagraph">Check for company store specific settings.</li><li class="ListParagraph">Use the company global settings.</li></ol>
+
+<p style="text-indent: 1in;">a. If not setup, the email will fail.</p>
+
+<p><img alt="Security Employee Setup Email_806x467" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH9f&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGOz"></img></p>
+
+<p><span class="span_1" style="font-weight: bold;">Options</span><span class="span_1" style="font-weight: bold;">:</span></p>
+
+<ol class="ol_1"><li class="ListParagraph">Dropdown menu: allows you to designate an email setup based upon Company usage or by each Individual Store usage for the selected employee.</li><li class="ListParagraph">Use default email settings: by checking this box, the program will skip these settings and move to the next level in the hierarchy.</li></ol>
+
+<p class="ListParagraph_1"> </p>
+
+<p><span class="span_1" style="font-weight: bold;">Signature: </span></p>
+
+<ol class="ol_1"><li class="ListParagraph">When these email settings are used, the text in this box will be appended to the bottom of the email body</li></ol>
+
+<p><span class="span_1" style="font-weight: bold;">Email Method</span><span class="span_1" style="font-weight: bold;">: </span></p>
+
+<ol class="ol_1"><li class="ListParagraph"><span class="span_2">Use MAPI (local </span><span class="span_3">email</span><span class="span_2">) –</span><span class="span_2"> N</span><span class="span_2">o longer supported.</span><span class="span_2">  While it can still be used</span><span class="span_2"> by someone with knowledge of MAPI, we no longer support this method.</span></li><li class="ListParagraph"><span class="span_2">Use SMTP for </span><span class="span_3">email</span><span class="span_2"> – </span><span class="span_2">This method allows you to set up email server settings directly in the program, eliminating the need for third party email applications. </span></li></ol>
+
+<p class="ListParagraph_1"> </p>
+
+<p class="p_1"><b>SMTP Settings:</b></p>
+
+<ol class="ol_1"><li class="ListParagraph"><span class="span_2"><b>Email Address</b>:  The email address</span><span class="span_2">/account</span><span class="span_2"> of the employee.</span></li><li class="ListParagraph"><b>Email Password:</b>  The password for the email account referenced in #1.</li><li class="ListParagraph"><b>Email Domain</b>: This will be determined by your email provider.</li><li class="ListParagraph"><b>SMTP Server:</b> This will be determined by your email provider.</li><li class="ListParagraph"><b>SMTP Port:</b> This will be determined by your email provider.</li><li class="ListParagraph"><b>Use SSL</b>: This will be determined by your email provider.</li><li class="ListParagraph"><span class="span_2"><b>Reply to Address:</b> Enter in an </span><span class="span_3">email</span><span class="span_2"> where you would want the recipient to reply</span><span class="span_2">. If you </span><span class="span_2">prefer </span><span class="span_2">it to be the same</span><span class="span_2"> as the email above, </span><span class="span_2">leave </span><span class="span_2">this blank</span><span class="span_2">.</span></li><li class="ListParagraph"><span class="span_2"><b>Display Name</b> – </span><span class="span_2">This </span><span class="span_2">will be the name th</span><span class="span_2">at the</span><span class="span_2"> </span><span class="span_2">recipient will see </span><span class="span_2">regarding </span><span class="span_2">who the </span><span class="span_3">email</span><span class="span_2"> came from.</span></li><li class="ListParagraph"><span class="span_2"><b>Blind Carbon Copy</b> – </span><span class="span_2">Point of Rental is not an email application and therefore does not have a sent box</span><span class="span_2">.  We recommend setting up a BCC with the operator</span><span class="span_2">’</span><span class="span_2">s email address</span><span class="span_2">.  This allows access to all sent emails from the Point of Rental application.  Additionally</span><span class="span_2">,</span><span class="span_2"> we recommend setting up a secondary generic email box where</span><span class="span_2"> all emails </span><span class="span_2">sent </span><span class="span_2">from Point of Rental </span><span class="span_2">will be</span><span class="span_2"> sent through th</span><span class="span_2">is</span><span class="span_2"> BCC</span><span class="span_2"> email</span><span class="span_2">; this give</span><span class="span_2">s</span><span class="span_2"> management an easy way to see all email activity from Point of Rental. </span></li><li class="ListParagraph_1"><b>Graphic File Name:</b> You can place a logo on your hard drive and enter the path to the logo here (c:\por\mylogo.jpg).  The logo will appear below the signature text.</li></ol>
+
+<p class="ListParagraph_1"> </p>
+
+<p class="p_1"><b>Send Test Email:</b></p>
+
+<p>Testing email is not about testing the email settings as seen on the screen. It is really testing the hierarchy logic outlined above and then the Program tests the email settings for the account selected by the hierarchy logic.</p>
+
+<p class="p_2"> </p>
+
+<p class="p_2"><span class="span_4" style="font-weight: bold;">Likely the cause of the Recipient Not receiving your </span><span class="span_5" style="font-weight: bold;">Email</span><span class="span_4" style="font-weight: bold;">.</span></p>
+
+<ol class="ol_3"><li class="li_1">The default message that POR says when sending a contract is, “Your invoice is attached”, and this can be flagged by other people’s <span class="span_3">email</span> as spam. You can change this by going from the Program Menu&gt; Configurations&gt; System Configuration&gt; Parameters&gt; Email Letters.</li><li class="li_1">The recipient&#39;s <span class="span_3">email</span> provider has filtered the mail as spam or junk mail based upon the domain of the email address.</li><li class="li_1">The recipient’s “Junk Mail” filter has identified one or more keywords in your email message or attachment that spammers repeatedly use.</li><li class="li_1">The recipient has set up &#39;rules&#39; in their mail program that are too generic and therefore tagging your mail as spam.</li><li class="li_1">The recipient&#39;s email provider has flagged the sender as someone that sends spam and is blocking the email.</li></ol>
+
+<p> </p>
+    </body>
+    </html>
+    
