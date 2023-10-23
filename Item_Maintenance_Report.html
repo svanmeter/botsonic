@@ -1,0 +1,82 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Item Maintenance Report</title>
+    </head>
+    <body>
+        <h1>Item Maintenance Report <a href="http://por.force.com/uLearn/s/article/Item-Maintenance-Report-844714283" target="_blank">[Item Maintenance Report]</a></h1>
+        <h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Item Maintenance Report</span></span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">This program produces a report of any items in your inventory that are approaching or have passed their required preventative maintenance period.  The report will show the item key, number, name, hours used since the last service, required service interval, and the difference between hours used and required service interval.  If the difference is negative, the item is that many hours under the service interval.  If the difference is positive, the item is that many hours over the service interval.  Only items that you have previously specified in the ITEMS file as having a required service interval will be reported.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Each item has four separate maintenance frequencies that can be defined.  You can set each frequency to be based on hours, times out, days, or months.  If the interval is blank or zeroes the program assumes that the item is not using that frequency.  The frequency intervals are defined below:</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">HOURS –</span></b><span style="color: #333333;"> is the number of meter hours used for metered items and it is the number of hours out for non-metered items.  For metered items, you should set the maintenance frequency interval to the number of hours of actual use between service intervals.  For non-metered items, one must presume the item is used 1/4 or 1/3 of the time it is out on rental by setting the interval 4 or 3 times what the manufacturer suggests for the maintenance frequency.  Example:  Suppose you want to sharpen the teeth on a stump grinder every 20 hours of use.  Since this item doesn’t have an hour meter and you presume it is being used ¼ of the time it is rented, set the maintenance frequency interval to 80 (20 x 4) hours.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">TIMES –</span></b><span style="color: #333333;"> is the number of times rented.  If you want to sharpen the teeth on a stump grinder every 5 times out regardless of the time rented, then set the maintenance frequency interval to 5 times.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">DAYS –</span></b><span style="color: #333333;"> is the number of days since the last maintenance on this frequency.  If you want the teeth on a stump grinder sharpened every 30 days, set the maintenance frequency interval to 30 days.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">MONTHS –</span></b><span style="color: #333333;"> is the number of months since the last maintenance on this frequency.  If you want the teeth on a stump grinder sharpened every 3 months, set the maintenance frequency interval to 3 months.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><i><span style="color: #333333;">Note:</span></i><span style="color: #333333;"> You must reset the maintenance hours each time a piece of equipment is maintained.  You can reset the maintenance hours through the Maintenance Due option of the Counter System or under Maintenance History under Item Inquire in File Maintenance.  In addition, when closing an Internal Repair Order, you will be given the opportunity to reset the maintenance hours.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">First, you will see the following menu:</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image001_168_303x256" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DI5o&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGdn"></img></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Category – </span></b><span style="color: #333333;">with this button, you can select a specific item category for the report.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Select items within x% of maintenance –</span></b><span style="color: #333333;"> this option allows you to select the percentage approaching maintenance. </span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Sort –</span></b><span style="color: #333333;"> The report will be sorted alphabetically by item category, and for each category, the items can be sorted by part number, item name, item number, or item key.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Store – </span></b><span style="color: #333333;">Select the desired store to report.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Select Printer –</span></b><span style="color: #333333;"> this button defines the printer for the report.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">The report will look like the following sample report:</span></p>
+
+<p style="background: white;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DI5o&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000002pIzY" style="width: 831px;height: 294px;"></img></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>
+    </body>
+    </html>
+    

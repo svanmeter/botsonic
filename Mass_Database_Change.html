@@ -1,0 +1,102 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Mass Database Change</title>
+    </head>
+    <body>
+        <h1>Mass Database Change <a href="http://por.force.com/uLearn/s/article/Mass-Database-Change-950933786" target="_blank">[Mass Database Change]</a></h1>
+        <h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Mass Database Change</span></span></h1>
+
+<p style="background: white;margin-top: 5.75pt;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">This selection from the PROGRAM MENU permits you to make mass changes to data fields in the Item, Customer, or Transaction records. It is mostly used to change groups of Item records.  For example, you may change an entire category over to another category.  It may also be used to just “look at” records on the screen by not specifying any replacement values.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">First, you must enter the owner&#39;s level password.  Then you must select which records will be modified.  Next, you must define which data fields of the selected records will be modified and what data will be placed in those fields.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">To define which records will be modified.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Once the selection criteria have been defined, either by manual selection or by choosing a pre-defined set, you must define which data fields of the selected records will be modified and what data will be placed in those fields.  Up to 10 data fields may be modified simultaneously in each record. These are defined by entering the following information:</span></p>
+
+<p style="background: white;margin-left: 18pt;text-indent: -18pt;"><span style="color: #333333;">1.   Enter the field number from the item, customer, or contract record.  The field numbers and their descriptions will be displayed on the screen.</span></p>
+
+<p style="background: white;margin-left: 18pt;text-indent: -18pt;"><span style="color: #333333;">2.   Enter the beginning through ending positions that are to be replaced in the selected field.  If the entire field is to be replaced, just press ENTER when asked for these.</span></p>
+
+<p style="background: white;margin-left: 18pt;text-indent: -18pt;"><span style="color: #333333;">3.   Enter the new value to be placed in that field.  <i>The new value must contain the exact number of characters specified by the beginning and ending positions.</i>  For numeric fields, you may use either leading zeros or leading spaces to fill up the positions.  For alphabetic fields, you may use either leading or trailing spaces to fill up the positions, depending on how you want the data to appear in the field.</span></p>
+
+<p style="margin-bottom: 6pt;background: white;"><span style="color: #333333;">If <u>nothing</u> is entered for the replacement value, an option of manually entering data is available.  A No response will ask for the new value again.  The manual entry option will permit a string of characters to be entered as each data record is displayed.  However, this is only allowed if the entire field in step 2 above was specified.  If not, step 2 will be repeated.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">When finished defining the fields to be modified, respond with a 0, and ENTER when asked for the next field number.  If no fields are defined to be modified, the program assumes that you only want to “look at” selected data records on the screen.  The program begins searching the appropriate file for the first record that meets the selection criteria.  That record will be displayed with the options of (S)elect, (R)eject, (P)proceed, or (A)bort. After all selected records have been modified, you will be returned to the Program Menu.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><i><u><span style="color: #333333;">EXAMPLE #1</span></u></i><span style="color: #333333;">Change the deposit amount for all items in category 6 to $10.00.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">First, select the Items to file from the File Menu.  Then select ADD from the selection criteria and enter the selection criteria as follows:</span></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Field #   :  11                   (Item category field)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Operation :  EQ               (Equal to)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Value:  6                     (Category 6)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"> </p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Click DONE                     (End of selection criteria)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Then you will be asked if you wish to save the selection criteria.  In this example, answer No.  At this point, only item records that will be modified have been defined, namely those in category 6.  Next, you must specify what changes are to be made to the selected records by making the following entries for “Replacement Values”.  In this example, 10.00 will be put into the deposit field replacing anything that may have been in the deposit field.</span></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Field#   :  7                       (Deposit)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Position  :  1-6                 (Entire field)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Value:  10.00                    (Deposit of 10.00)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"> </p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Field #   :  0                     (End of replacement values)</span></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><i><u><span style="color: #333333;">EXAMPLE #2</span></u></i><span style="color: #333333;">Change all items that are in categories 10 or 14.</span></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Field#:  11                       (Item category field)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Operation:  EQ               (Equal to)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Value:  10                        (Category 10)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"> </p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Field #   :  11                   (Item category field)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Operation :  EQ               (Equal to)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Value     :  14                   (Category 14)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">AND/OR    :  OR              (Logical OR with first selection)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Click DONE                     (End of selection criteria)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Again the option to save the selection criteria was not chosen.  Items in either category 10 or 14, have been selected, those will be changed to category code 20:</span></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Field #   :  11                   (Item category field)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Value     :  20                   (Category 20)</span></b></p>
+
+<p style="background: white;margin-left: 63pt;"><b><span style="color: #333333;">Field #   :  0                     (End of replacement values)</span></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>
+    </body>
+    </html>
+    
