@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Your website html</title>
+        <!-- Include the css file   -->
+        <link defer href="https://PointOfRental.community.druidplatform.com/druid_webchat.css" rel="stylesheet">
+    </head>
+    <body>
 <h1>Table of Contents</h1>
 <ul>
 <li><a href="2014_Release_Notes.html">2014 Release Notes</a></li>
@@ -1447,3 +1456,24 @@
 <li><a href="Zebra_Item_Prep_Label_Configuration.html">Zebra Item Prep Label Configuration</a></li>
 <li><a href="Zip_Code_Tax_Jurisdictions_Import.html">Zip Code Tax Jurisdictions Import</a></li>
 </ul></ul>
+        …
+        … 
+        <!-- Include the script file   -->
+        <script defer type="text/javascript" src="https://PointOfRental.community.druidplatform.com/druid_webchat.js"></script>
+
+        <!-- Init the webchat component on document load -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(event) {
+                DruidWebchat.init({
+                    <!-- Common settings  -->
+                    botId: "6688992e-d2ca-4926-0754-08dbc03f725c",
+                    baseUrl: "https://druidapi.comm.eu.druidplatform.com",    
+                    queryParams: "", // pass queryParams to AuthorizeAsync method
+                    UI: {
+                        containerElement: null, // [MANDATORY] example: document.getElementById('druidContainerElement') -> specify the webchat expand DOM element
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
