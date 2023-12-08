@@ -1456,22 +1456,24 @@
 <li><a href="Zebra_Item_Prep_Label_Configuration.html">Zebra Item Prep Label Configuration</a></li>
 <li><a href="Zip_Code_Tax_Jurisdictions_Import.html">Zip Code Tax Jurisdictions Import</a></li>
 </ul></ul>
-        <!-- Include the script file   -->
-        <script defer type="text/javascript" src="https://PointOfRental.community.druidplatform.com/druid_webchat.js"></script>
-
-        <!-- Init the webchat component on document load -->
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", function(event) {
-                DruidWebchat.init({
-                    <!-- Common settings  -->
-                    botId: "6688992e-d2ca-4926-0754-08dbc03f725c",
-                    baseUrl: "https://druidapi.comm.eu.druidplatform.com",    
-                    queryParams: "", // pass queryParams to AuthorizeAsync method
-                    UI: {
-                        containerElement: null, // [MANDATORY] example: document.getElementById('druidContainerElement') -> specify the webchat expand DOM element
-                    }
-                });
-            });
+        <script>
+  (function (w, d, s, o, f, js, fjs) {
+    w["botsonic_widget"] = o;
+    w[o] =
+      w[o] ||
+      function () {
+        (w[o].q = w[o].q || []).push(arguments);
+      };
+    (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+    js.id = o;
+    js.src = f;
+    js.async = 1;
+    fjs.parentNode.insertBefore(js, fjs);
+  })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+  Botsonic("init", {
+    serviceBaseUrl: "https://api.botsonic.ai",
+    token: "1501039e-b5f0-4b26-8c55-14e06e25e918",
+  });
         </script>
     </body>
 </html>
