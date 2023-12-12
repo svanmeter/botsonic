@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .syrinx { color: #81BB40; }
+            .essentials { color: #0C71B3; }
+            .elite { color: #EE8222; }
+        </style>
+    </head>
+    <body>
+        <h1>Table of Contents</h1>
+        <ul>
+            <li><a href="/elite">Point of Rental - <span class="elite">Elite</span></a></li>
+            <li><a href="/essentials">Point of Rental - <span class="essentials">Essentials</span></a></li>
+            <li><a href="/syrinx">Point of Rental - <span class="syrinx">Syrinx</span></a></li>
+        </ul>
+        <script>
+          (function (w, d, s, o, f, js, fjs) {
+            w["botsonic_widget"] = o;
+            w[o] =
+              w[o] ||
+              function () {
+                (w[o].q = w[o].q || []).push(arguments);
+              };
+            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+          })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+          Botsonic("init", {
+            serviceBaseUrl: "https://api.botsonic.ai",
+            token: "1501039e-b5f0-4b26-8c55-14e06e25e918",
+          });
+        </script>
+    </body>
+</html>
