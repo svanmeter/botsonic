@@ -1,0 +1,227 @@
+<h1><b style="font-family: sans-serif;font-size: 18px;color: rgb(59, 62, 65);">Email Basic Troubleshooting</b></h1>
+
+<h1> </h1>
+
+<h1><b style="font-family: sans-serif;font-size: 14px;color: rgb(123, 180, 62);"><i>Overview</i></b></h1>
+
+<p><span style="font-family: sans-serif;font-size: 14px;">Email is something that we rely on every day. Here are some issues that we can correct easily in Point of Rental.</span></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;">Topics in this article include:</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;"> </span></p>
+
+<ul style="margin-left: 40px;"><li><span style="font-family: sans-serif;font-size: 14px;">Location of email settings in Point of Rental</span></li><li><span style="font-family: sans-serif;font-size: 14px;">Are they using the right SMTP port and server?</span></li><li><span style="font-family: sans-serif;font-size: 14px;">MXTOOLBOX</span></li><li><span style="font-family: sans-serif;font-size: 14px;">Gmail-specific settings to look for</span></li><li><span style="font-family: sans-serif;font-size: 14px;">Office 365 specific issues</span></li><li><span style="font-family: sans-serif;font-size: 14px;">Yahoo email specifics</span></li><li><span style="font-family: sans-serif;font-size: 14px;">Junk email </span></li></ul>
+
+<p><span style="font-family: sans-serif;font-size: 14px;"> </span></p>
+
+<p> </p>
+
+<p><b style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Location of email settings</b><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">Go to <i>Configuration &gt; Company Configuration</i>.</span></span></span></span><br><br></img><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Then click email options.</span></span></span><br> </p>
+
+<p></img></p>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Then change from Standard Email Settings to Custom Email Settings.</span></span></span><br> </p>
+
+<h1><b style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Are they using the right SMTP port and server</b></h1>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">One of the common mistakes is that we are using a different server and port then what the mail providers would like. Here are some common servers and ports that you can look at.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<table class="ql-table-blob"><tbody><tr><td colspan="1" rowspan="1" valign="top"> </td><td colspan="1" rowspan="1" valign="top">Microsoft 365</td><td colspan="1" rowspan="1" valign="top">Gmail</td><td colspan="1" rowspan="1" valign="top">Yahoo</td><td colspan="1" rowspan="1" valign="top">iCloud</td></tr><tr><td colspan="1" rowspan="1" valign="top">SMTP Server</td><td colspan="1" rowspan="1" valign="top"><a href="http://smtp.office365.com/" target="_blank">Smtp.office365.com</a></td><td colspan="1" rowspan="1" valign="top"><a href="http://smtp.gmail.com/" target="_blank">Smtp.gmail.com</a></td><td colspan="1" rowspan="1" valign="top"><a href="http://smtp.mail.yahoo.com/" target="_blank">Smtp.mail.yahoo.com</a></td><td colspan="1" rowspan="1" valign="top"><a href="http://smtp.mail.me.com/" target="_blank">Smtp.mail.me.com</a></td></tr><tr><td colspan="1" rowspan="1" valign="top">SMTP Port</td><td colspan="1" rowspan="1" valign="top">587</td><td colspan="1" rowspan="1" valign="top">587</td><td colspan="1" rowspan="1" valign="top">587</td><td colspan="1" rowspan="1" valign="top">587</td></tr><tr><td colspan="1" rowspan="1" valign="top">SSL</td><td colspan="1" rowspan="1" valign="top">Yes</td><td colspan="1" rowspan="1" valign="top">Yes</td><td colspan="1" rowspan="1" valign="top">Yes</td><td colspan="1" rowspan="1" valign="top">Yes</td></tr></tbody></table>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Office 365: </span><a href="https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353" style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);" target="_blank">https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353</a></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<h1><b style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">I don’t know who my email provider is (MXTOOLBOX)</b></h1>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">MXtoolbox is all of your MX record, DNS, blacklist and SMTP diagnostics in one integrated tool. Input a domain name or IP Address or Host Name. Links in the results will guide you to other relevant tools and information and you&#39;ll have a chronological history of your results.</span></p>
+
+<h2><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Website: </span><a href="http://www.mxtoolbox.com/" style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);" target="_blank">http://www.mxtoolbox.com</a></h2>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Common issues:</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><i style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">“I don’t know who my email host is”</i></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Go to the website and type your email address in.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">For example:</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">I don’t know who the email host is for the following email address </span><a href="mailto:*****@point-of-rental.com" style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);" target="_blank">*****@point-of-rental.com</a></p>
+
+<p></img></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">If you click “MX Lookup” you will get the following results:</span></p>
+
+<p></img><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">The results above show that the email host is “Rackspace” for this particular email account.</span></p>
+
+<p><br><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">You can actually run the “SMTP Test” to see if the email server is having any issues. Results show that this particular server forbids sending spam, but also shows that it may not have any relaying issues at the moment.</span></p>
+
+<h1><br><b style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Gmail-specific settings to look for</b></h1>
+
+<p><u><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Enable it from Google Workspace (Formerly G Suite) admin</span></u></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">If that option is not available then you may need to enable it on the Google Workspace Admin. Please note that as of June 2020, Google is limiting the ability for Less Secure Apps (LSAs) to access Google Workspace Account Data. This means for Point of Rental Customer they should upgrade to POR 2021.03 or later to get Oauth 2.0.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Go to </span><a href="http://admin.google.com/" style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);" target="_blank">admin.google.com</a><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> and sign in to your administrator account.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. Click on Security &gt; Less Secure Apps.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">3. Select Allow users to manage their access to less secure apps and then click Save.</span></p>
+
+<p></img></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Once you’ve set Allow users to manage their access to less secure apps to on, affected Google Workspace users within the selected group or Organizational Unit will be able to toggle access for less secure apps on or off themselves. It may take a minute or so for the setting to take effect. Follow the instructions above to turn on Less Secure Apps. </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><u style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2 Factor Authentication Enabled</u></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">If you are using 2 Factor Authentication and less secure apps here is how to create an Application Password.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Go to </span><a href="http://myaccount.google.com/" style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);" target="_blank">Myaccount.Google.com</a><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">, and sign in.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. Click on Security and look for App Passwords.</span></p>
+
+<p></img></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">3. Follow the prompts to Generate a password.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Place it in Point of Rental.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<h1><b style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Office 365-specific issues</b></h1>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Office 365 (aka Microsoft 365) is a business email that has a lot of limitations to our program. Here are some of the limits.</span></p>
+
+<h2><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Note: This might change. Please refer to this article for more information </span><a href="https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits" style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);" target="_blank">https://docs.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits</a></h2>
+
+<p><u style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Sending Limits</u></p>
+
+<p> </p>
+
+<p></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">If you hit this limit, your account will be locked and your Microsoft 365 admin will have to unlock it.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><u style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Application Password</u></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">If you have two-step verification turned on and an app isn&#39;t prompting you to enter a security code when you sign in, you may be able to sign in with an app password instead. An app password is a long, randomly generated password that you provide only once instead of your regular password when signing into an app or device that doesn&#39;t support two-step verification.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><i style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Reference: </i><a href="https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944" style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);" target="_blank"><i>https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944</i></a></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">To create a new app password for an app or device, take the following steps. You can repeat these steps to create an app password for as many apps or devices as you need.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Go to the Security basics page and sign in to your Microsoft account.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. Select More security options.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">3. Under App passwords, select Create a new app password. A new app password is generated and appears on your screen.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Enter this app password where you would enter your normal Microsoft account password in the application.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<h1><b style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Yahoo email specifics</b></h1>
+
+<p><u style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Application Password</u></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Some older, third-party email apps (that do not use our Yahoo branded sign-in page) require you to enter a single password for login credentials. To access your Yahoo Mail account on these apps, you&#39;ll need to generate and use an app password. An app password is a long, randomly generated code that gives a non-Yahoo app permission to access your Yahoo account. You’ll only need to provide this code once to sign into your third-party email app.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Sign into your Yahoo Account Security page.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. Click Generate app password or generate and manage app passwords.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">3. Enter your app&#39;s name in the text field.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Click Generate password.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">5. Follow the instructions below the app password.</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">6. Click Done.</span></p>
+
+<p></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<h1><b style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Junk email</b></h1>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">We cannot prevent all junk emails. Here are some suggestions.</span></p>
+
+<p></img></p>
+
+<ul><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">The default message that POR says when sending a contract is, “Your invoice is attached”, and this can be flagged by other people’s email as spam. You can change this in your parameters.</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">The recipient&#39;s email provider has filtered the mail as spam or junk mail based on the content or the senders (your) IP address.</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">The Junk Mail filter has identified one or more keywords that spammers repeatedly use in their messages.</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">The recipient has set up &#39;rules&#39; in their mail program that are too generic and therefore tagging your mail as spam.</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">The recipient has flagged the sender as someone that sends spam.</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">You are sending an attachment with your message, and you have included wording that is SPAM.</span></li></ul>
+
+<div id="" style="left: 20px;top: 7611.65px;"> </div>
