@@ -1,0 +1,228 @@
+<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 36px;"><span style="break-inside: avoid;"><span style="break-after: avoid;"><span style="line-height: 115%;"><span style="color: #e74c3c;"><strong>INTERNAL </strong></span><span style="color: #3b3e41;"><strong>POR Pay | Essentials Stripe Integration</strong></span></span></span></span></span></span><br><br><br> 
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;"><span style="color: #3b3e41;">This article goes over how to connect Stripe and Stripe terminals in Essentials. POR Pay is a new micro application that integrates natively with Expert/Elite/Rental Hosting, Syrinx, and Essentials. The following are the currently supported setup and migration processes: Stripe for NEW or existing Essentials customers. <strong>Not all processors support all of POR Pay’s features. Also, processors only support some countries and currencies.</strong></span></span><br><span style="color: #333333;"><span style="font-size: 14px;"> </span></span><br><br><br><span style="color: #3b3e41;"><span style="font-size: 20px;">Topics in this article include</span></span></span></span></span><br> </p>
+
+<ul><li style="line-height: 115%;padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;">
+	<p><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Stripe:NewEssentialsImplementation"><span style="color: #0782c1;">Setting up Stripe in Essentials</span></a></span></span></p>
+	</li><li style="line-height: 115%;padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;">
+	<p><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Stripe:ExistingStripeCustomersinEssentialsPORPayMigration"><span style="color: #0782c1;">POR Pay Migration for existing Stripe Customers in Essentials - (POR Pay adds terminal support for Stripe)</span></a></span></span></p>
+	</li><li style="line-height: 115%;padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;">
+	<p><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#OptionalStripe:TerminalOrderandSetup"><span style="color: #0782c1;">(Optional) Terminal Order and Setup (new or existing customer, post-migration)</span></a></span></span></p>
+	</li><li style="line-height: 115%;padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;">
+	<p><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#ProcessingPaymentwithPORPay"><span style="color: #0782c1;">Processing Payment with POR Pay → Stripe</span></a></span></span></p>
+	</li></ul>
+
+<p><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"> </span></span><br><br><span style="color: #c0392b;"><span style="font-size: 18px;"><a id="Stripe:NewEssentialsImplementation" name="Stripe:NewEssentialsImplementation"></a></span><span style="font-size: 22px;">Setting up Stripe in Essentials </span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">1. <strong>Go to Accounting</strong> → <strong>Credit Card Processing</strong>.</span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO44" style="width: 550px;height: 136px;"></img></span></span></span><br> </div>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">2. In the Update Merchant Credentials section, <strong>select Payment App</strong>, and <strong>click Save</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="Graphical user interface, application, Word  Description automatically generated" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO45" style="width: 562px;height: 130px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">3. <strong>Go back to Accounting</strong> → <strong>Credit Card Processing.</strong></span></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO46" style="width: 254px;height: 188px;"></img></span></span></span><br> </div>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">4. In the Card Processing section, <strong>click Connect with Point of Rental</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO47" style="width: 510px;height: 178px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">5. The POR Payments interface will display (pictured below). If not displayed, refresh the page.</span></span></span></span></span></p>
+
+<div style="margin-left: 48px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO48" style="width: 464px;height: 240px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">6. From the POR Payments interface, <strong>expand the Organization Info accordion</strong>, <strong>fill out the organization info</strong>, and <strong>click Save</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 48px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO49" style="width: 516px;height: 338px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">7. <strong>Expand the Payment Processors accordion</strong> and <strong>click Add Payment Processors</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 48px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4A" style="width: 474px;height: 146px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">8. In Processor Selection, <strong>choose Stripe </strong>from the dropdown and <strong>click Select</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 48px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4B" style="width: 442px;height: 182px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">9. <strong>Give your processor a Label</strong> (anything works to identify the processor and multiple processors are supported), <strong>select the appropriate Currency</strong>, and <strong>click Save</strong>.</span></span></span></span></p>
+
+<div style="margin-left: 48px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4C" style="width: 508px;height: 230px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">10. <strong>Find your processor in the list</strong> (red highlighted) and <strong>click Complete</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 48px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4D" style="width: 616px;height: 32px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">11. <strong>Click Finish Stripe Registration</strong>.</span></span></span></span></span></p>
+
+<p style="margin-left: 48px;"> </p>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">12. <strong>Complete the Stripe setup wizard</strong>, providing information and documents when asked.</span></span></span></span></span></p>
+
+<p style="margin-left: 48px;"> </p>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">13. When the Stripe process is complete, the processor on the list will be gray and show a status of ‘Stripe credentials are valid.’</span></span></span></span></span></p>
+
+<div style="margin-left: 48px;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4E" style="width: 648px;height: 32px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">14. <strong>The setup process is complete</strong>. You will now see the option to use the configuration in all application functions where payments are supported (counter, storefront, email, etc.). When multiple processors are set up, you will have a dropdown to select the appropriate processor.</span></span></span></span></span></p>
+
+<div style="margin-left: 48px;"><br><br> </div>
+<span style="color: #c0392b;"><span style="font-family: Arial,Helvetica,sans-serif;"> <span style="font-size: 18px;"><a id="Stripe:ExistingStripeCustomersinEssentialsPORPayMigration" name="Stripe:ExistingStripeCustomersinEssentialsPORPayMigration"></a> </span><span style="font-size: 22px;"><span style="break-inside: avoid;"><span style="break-after: avoid;"><span style="line-height: 115%;">POR Pay Migration for e</span></span></span></span></span></span><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="break-inside: avoid;"><span style="break-after: avoid;"><span style="line-height: 115%;">xisting Stripe Customers in Essentials</span></span></span></span></span><br><br><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="color: #3b3e41;"><span style="font-size: 14px;">The migration script is in beta, with alpha testing approved. The worst-case scenario in running the script is existing tokens no-longer being valid and some CC reporting issues. These issues can be manually hot-fixed by development if reported. The business scenario for this is POR Pay adds terminal support for Stripe.</span></span><span style="color: #333333;"><span style="font-size: 14px;"> </span></span></span></span><br><span style="font-size: 10.5pt;"><span style="line-height: 115%;"> </span></span></span>
+
+<p style="margin-left: 43px;line-height: 115%;padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To initiate the process, <strong>create a Tier 2 support ticket</strong> <strong>with the following information</strong>:</span></span></span></p>
+
+<ol start="1" style="padding-left: 0pt;list-style-type: lower-alpha;margin-left: 40px;"><li style="margin-left: 42px;padding-left: 4.31pt;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Title - Enter the title &quot;<strong>POR Pay Essentials Setup for Client XXX</strong>&quot;</span></span></span></p>
+	</li><li style="margin-left: 43px;padding-left: 4.02pt;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Description -</span></span></span></p>
+
+	<ol start="1" style="padding-left: 0pt;list-style-type: lower-roman;"><li style="margin-left: 31px;padding-left: 13pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Server or Location </span></span></span></p>
+		</li><li style="margin-left: 31px;padding-left: 13pt;">
+		<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Company ID (company details)</span></span></span></p>
+		</li></ol>
+	</li></ol>
+
+<p style="margin-left: 31px;padding-left: 13pt;"> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">2. <strong>Advise customer</strong> we will coordinate on a migration date/time after hours.</span></span></span></span><br> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="line-height: 115%;">3. <strong>Push ticket </strong>from Salesforce to Azure DevOps (AZD).</span></span></span></span><br> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;"><span style="color: #3b3e41;">4. </span><strong><span style="color: #3b3e41;">Hop in the ‘#por-pay’ Slack channel chat and include @</span><a href="mailto:ben.mohorc@pointofrental.com" style="text-decoration: none;" target="_blank"><u>Ben Mohorc</u></a></strong>.<span style="color: #3b3e41;"> If you don’t have access,</span> <a href="mailto:kirk.bennett@pointofrental.com" style="text-decoration: none;" target="_blank"><u>Kirk Bennett</u></a><font color="#0000ee"> </font><span style="color: #3b3e41;">can provide.</span></span></span></span></p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">5. Development will facilitate the migration. The customer can order the terminal in preparation for the support.</span></span></span></span><br><br> </p>
+
+<p><span style="color: #c0392b;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 18px;"><a id="OptionalStripe:TerminalOrderandSetup" name="OptionalStripe:TerminalOrderandSetup"></a></span><span style="font-size: 10.5pt;"><span style="break-inside: avoid;"><span style="break-after: avoid;"><span style="line-height: 115%;"><span style="font-size: 22px;">(Optional) Terminal Order and Setup (new or existing customer, post-migration)</span></span></span></span></span></span></span></p>
+<br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="break-inside: avoid;"><span style="break-after: avoid;"><span style="line-height: 115%;"><span style="color: #333333;"><span style="font-size: 14px;">The client has access to execute this process.</span></span></span></span></span></span><br><span style="font-size: 10.5pt;"><span style="line-height: 115%;"> </span></span></span>
+
+<p style="padding-left: 4.09pt;margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="color: #3b3e41;"><span style="font-size: 14px;">1.  After registration, the client can order a Stripe terminal from their Stripe dashboard → Terminal → Shop</span></span> <span style="font-size: 14px;"><a href="https://dashboard.stripe.com/terminal/shop" style="text-decoration: none;" target="_blank"><u><span style="color: #1155cc;">https://dashboard.stripe.com/terminal/shop</span></u></a></span></span></span></span><br> </p>
+
+<p style="padding-left: 4.09pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">2. POR’s Integration uses the ‘JavaScript SDK,’ so <strong>ensure the customer orders the device in their region that supports that integration</strong> (BBPOS WisePOS™ E is supported).</span></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4F" style="width: 638px;height: 374px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="color: #3b3e41;"><span style="font-size: 14px;">3. From the</span></span> </span></span><span style="font-size: 14px;"><a href="https://dashboard.stripe.com/login" target="_blank"><span style="line-height: 115%;">S</span></a><a href="https://dashboard.stripe.com" style="text-decoration: none;" target="_blank"><u><span style="color: #1155cc;">tripe dashboard</span></u></a></span><span style="font-size: 10.5pt;"><span style="line-height: 115%;">, <span style="color: #3b3e41;"><span style="font-size: 14px;"><strong>click settings</strong> (top right gear icon <img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4G" style="width: 32px;height: 25px;"></img>).</span></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">4. From the ‘Business settings’ section, <strong>click Public Details</strong>.</span></span></span></span></span></p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">5.<strong> Fill out the ‘Support address’ section</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4H" style="width: 684px;height: 378px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;"> <span style="font-size: 10.5pt;"><span style="line-height: 115%;"> </span></span></span><br> 
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="color: #3b3e41;"><span style="font-size: 14px;">6. <strong>Connect your Stripe terminal to the internet</strong> and <strong>generate pairing code</strong>.</span> ( </span><span style="font-size: 14px;"><span style="color: #3b3e41;">- </span><a href="https://stripe.com/docs/terminal/payments/setup-reader/bbpos-wisepos-e#settings" style="text-decoration: none;" target="_blank"><u><span style="color: #1155cc;">Stripe Instructions</span></u></a></span>)</span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><em><span style="font-size: 14px;"><strong>Note:</strong> The Stripe terminal must connect to the internet from the same network running Essentials.</span></em></span></span></span></span></p>
+<span style="color: #3b3e41;"> </span>
+
+<p><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">7. <strong>Log in to your Essentials rental management platform</strong>.</span></span></span></span></span></p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">8. <strong>Navigate to Accounting</strong> → <strong>Credit Card Processing</strong>.</span></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4I" style="width: 926px;height: 102px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">9. <strong>Find your processor</strong> from the list and <strong>click Add Terminal</strong>.</span></span></span></span></span><br> </p>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4J" style="width: 930px;height: 40px;"></img></span></span></span></div>
+
+<div style="margin-left: 48px;"> </div>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">10. <strong>Enter a Label </strong>(anything you want to identify later), the <strong>Registration Code from the terminal</strong>, and <strong>click Save</strong>.</span></span></span></span></span><br> </p>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">11. <strong>Navigate to Stations</strong> → <strong>Registers</strong>.</span></span></span></span></span><br> </p>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4K" style="width: 518px;height: 88px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">12. <strong>Click the pencil icon</strong> <img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4L" style="width: 23px;height: 16px;"></img>for the register you want to add the terminal to.</span></span></span></span></span></p>
+
+<p style="margin-left: 48px;"> </p>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">13. From the ‘Register Configurations’ section → <strong>click the plus icon </strong><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4M" style="width: 26px;height: 20px;"></img>.</span></span></span></span></span></p>
+
+<p style="margin-left: 48px;"> </p>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">14.<strong> Enter the Name you want to identify the terminal by</strong> → <strong>select your terminal from the dropdown</strong> and <strong>click Save</strong>.</span></span></span></span></span><br> </p>
+
+<div style="margin-left: 48px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4N" style="width: 692px;height: 153px;"></img></span></span></span></div>
+
+<div style="margin-left: 48px;"> </div>
+
+<p style="margin-left: 48px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">15. <strong>Back in the Stations → Register section, check the &#39;Associated’ box for the terminal</strong> you just set up and <strong>click Save,</strong> completing the terminal setup process.</span></span></span></span></span><br> </p>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"> <img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4O" style="width: 550px;height: 136px;"></img></span></span></span></div>
+<span style="font-family: Arial,Helvetica,sans-serif;"> <span style="font-size: 10.5pt;"><span style="line-height: 115%;"> </span></span><br><br><span style="color: #c0392b;"><span style="font-size: 18px;"><a id="ProcessingPaymentwithPORPay" name="ProcessingPaymentwithPORPay"></a></span><span style="font-size: 22px;"><span style="break-inside: avoid;"><span style="break-after: avoid;"><span style="line-height: 115%;">Processing Payment with POR Pay </span></span></span></span></span></span>
+
+<p style="padding-left: 4.09pt;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">Once setup is complete, you can leverage POR Pay anywhere in Essentials where payments are collected (counter, storefront, auto billing, pre authorization, refunds, and automatic billing).</span></span></span></span></p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">1. For this example, we will collect a payment from Workbench → <strong>Click an existing Reservation → Collect Payment.</strong></span></span></span></span></p>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<div style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4P" style="width: 833px;height: 333px;"></img></span></span></span></div>
+
+<div style="margin-left: 43px;padding-left: 4.09pt;"> </div>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">2. <strong>Select ‘Card’ as the payment method, then select how to charge the card. </strong></span></span></span></span><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><span style="font-size: 14px;">Select ‘Manually Enter Card’, for new card form (other options are ‘Terminal’, if set up, and card&#39;s on file,<br>if card was previously run with POR Pay), enter the amount, and <strong>click Save</strong>.</span></span></span></span></span><br> </p>
+
+<div style="margin-left: 80px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 10.5pt;"><span style="line-height: 115%;"><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4Q" style="width: 357px;height: 424px;"></img></span></span></span></div>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">3. Enter the card information, verify the customer information, scroll to the bottom, and<strong> click Process</strong>.<br><br><img alt="" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGfw&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zO4R" style="width: 82px;height: 32px;"></img></span></span></span></span><br> </p>
+
+<p style="margin-left: 43px;padding-left: 4.09pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 115%;">4. You will then be redirected to the contract upon payment success.</span></span></span></span></p>
+
+<p style="padding-left: 4.09pt;"><br><br><br> </p>
