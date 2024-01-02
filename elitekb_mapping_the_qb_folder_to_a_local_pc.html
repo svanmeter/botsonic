@@ -1,0 +1,61 @@
+<p style="margin-top: 0pt;margin-bottom: 0pt;line-height: normal;font-size: 28pt;"><span style="font-family: &#39;Calibri Light&#39;;letter-spacing: -0.5pt;">Mapping the QB Folder from a Local Server to a Local PC</span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><strong><em>Overview:</em></strong><strong><em> </em></strong><em>For users with their accounting software not installed on the same server as Point-of-Rental, to import the general ledger entry automatically generated at the end of the day, the QB folder needs to be mapped as a drive to the computer with the accounting software installed.</em></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><em> </em></p>
+
+<h1 style="margin-top: 12pt;margin-bottom: 0pt;page-break-inside: avoid;page-break-after: avoid;line-height: 108%;font-size: 16pt;"><span style="font-family: &#39;Calibri Light&#39;;font-weight: normal;color: #2f5496;">Share the QB Folder</span></h1>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">1. On the local side of the PC, open a windows explorer. In the address bar, type \\(server IP) Example:\\192.168.1.5</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, text, application, email  Description automatically generated" height="284" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJY" width="624"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">2. Enter a username and password to the server. This has to be an already existing user account. It is recommended to use an account that does not have a password that expires. </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><strong><em>Note:</em></strong><em> Remember to check the box to save credentials.</em></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, application  Description automatically generated" height="208" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJZ" width="248"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">3. Several folders may appear. Look for the one named QB, if that folder does not appear, skip to the next section.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, application  Description automatically generated" height="352" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJa" width="624"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">4. Right-click on the QB folder and click map network drive.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><em>Note: If you are on Windows 11 you will have to click the Show more Options Button (Shift + F10) for this option.</em></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, application  Description automatically generated" height="172" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJb" width="219"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">5. Choose any available letter, ensure the box “Reconnect at login” is checked then click “Finish”.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, text, application  Description automatically generated" height="297" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJc" width="401"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">6. The QB folder will now show up under Network Drives under This PC.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, application  Description automatically generated" height="301" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJd" width="366"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"> </p>
+
+<h1 style="margin-top: 12pt;margin-bottom: 0pt;page-break-inside: avoid;page-break-after: avoid;line-height: 108%;font-size: 16pt;"><span style="font-family: &#39;Calibri Light&#39;;font-weight: normal;color: #2f5496;">If the QB folder does not show up</span></h1>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">1. Log onto the console of the server as an administrator account.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">2. Navigate to &lt; DataDrive&gt;:\POR and look for your QB Folder</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, text, application, email  Description automatically generated" height="151" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJe" width="392"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">3. Right click the QB folder and click properties</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, application  Description automatically generated with medium confidence" height="182" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJf" width="403"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">4. Click the sharing tab and click share.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, text, application  Description automatically generated" height="362" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJg" width="377"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">5. It will bring up a list of users that can access the folder. Add the username used from Step 2 in the previous section. Give them permission to read/write. Click Share when completed.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"><img alt="Graphical user interface, application  Description automatically generated" height="268" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3T&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004mdJh" width="366"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;">6. Repeat Step 3 from the previous section.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;"> </p>

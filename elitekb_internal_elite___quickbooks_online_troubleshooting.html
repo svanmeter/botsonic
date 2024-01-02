@@ -1,0 +1,55 @@
+<span style="font-family: Arial,Helvetica,sans-serif;"><strong><span style="font-size: 36px;"><span style="color: #e74c3c;">INTERNAL </span>Elite | QuickBooks Online Troubleshooting</span></strong><br><br><br><br><span style="font-size: 14px;"><span style="color: #3b3e41;">This article goes over how to troubleshoot the QuickBooks Online integration with Point of Rental Elite.</span></span><br><br><br><span style="color: #3b3e41;"><span style="font-size: 20px;">Topics in this article include</span></span></span><br> 
+<ul><li>
+	<p><span style="font-size: 16px;"><a href="#t1"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Errors &amp; Troubleshooting</span></span></a></span></p>
+	</li><li>
+	<p><span style="font-size: 16px;"><a href="#t2"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">How the System Matches Fields</span></span></a></span></p>
+	</li><li>
+	<p><span style="font-size: 16px;"><a href="#t3"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Common Errors</span></span></a></span></p>
+	</li><li>
+	<p><span style="font-size: 16px;"><a href="#t4"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">API Reference</span></span></a></span></p>
+	</li></ul>
+<br><br><br><span style="color: #c0392b;"><a id="t1" name="t1"></a><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 22px;">Errors &amp; Troubleshooting</span></span></span>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Error Logging:</strong><br><br>You can check the following places to see if any errors have been logged.</span></span></span><br> </p>
+
+<ul><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">QB Log in the Programs folder - C:\POR\Program\logs\QuickBooksAPI.txt</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Sync Service Log in the Programs folder- C:\POR\Program\logs\AccountingSyncService\AccountingSyncServce.txt</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">In the Database (SQL) - Select * from ErrorLog Order By DateTimeStamp desc</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">In the Database (SQL) - Select ErrorMsg, * from AccountingAPIQueueGL Where DateCancelled is Null and NoExport = 0 Order By Id desc</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">In the Database (SQL) - Select ErrorMsg, * from AccountingAPIQueueTR Where DateCancelled is Null and NoExport = 0 Order By Id desc</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">In the Database (SQL) - Select ErrorMsg, * from AccountingAPIQueuePO Where DateCancelled is Null and NoExport = 0 Order By Id desc</span></span></span></p>
+	</li></ul>
+ <br> 
+<p><span style="color: #c0392b;"><a id="t2" name="t2"></a><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">How the System Matches Fields</span></span></span></p>
+ 
+
+<ul><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The system automatically sends customers and vendors to QuickBooks Online as they are used on contracts or purchase orders. It has a process of verifying if they have already been sent, and if they have, it matches them to the existing one. If it does not exist yet, it creates the customer or vendor in QuickBooks when it posts the contract or purchase order.</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Customer</strong> - Looks for Customer by NAME field.</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Accounts</strong> - Looks for existing accounts by Account Number.</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Locations</strong> - Looks for existing locations by Name.</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Vendor</strong> - Looks for Vendor by Vendor Name.</span></span></span><br>	 </p>
+	</li><li style="margin-left: 8px;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Item</strong> - Looks for Item by ItemDetail &gt; Item Memo</span></span></span></p>
+	</li></ul>
+<br><br><span style="color: #c0392b;"><a id="t3" name="t3"></a><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Common Errors</span></span></span>
+
+<p><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #ff0000;"><strong>Error:</strong> System.IO.FileLoadException: Could not load file or assembly &#39;Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60&#39; or one of its dependencies. The located assembly&#39;s manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)<br><strong>File name:</strong> &#39;Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60&#39;</span></span></span></p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><b><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Solution: </span></span></b><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Clean and rebuild the project, which will remove and replace old DLLs with new ones. Copy DLLs to the Program folder.</span></span></span></p>
+
+<p><br><span style="color: #ff0000;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Error:</strong> Validation failing on a property, but property exists.</span></span></span></p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b style="font-family: Arial, Helvetica, sans-serif;font-size: 14px;">Solution:</b> Make sure property [property]Specified = true </span></span></span></p>
+<br><br> 
+<p><a id="t4" name="t4"></a><span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">API Reference</span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">This is some sample code from the .NET SDK that we use. You can also access other folders from the breadcrumb trail that will show you some more coding examples:</span></span></span><br><br><a href="https://github.com/IntuitDeveloper/SampleApp-CRUD_.Net_Oauth2/blob/master/SampleApp_CRUD_.Net/SampleApp_CRUD_.Net/Helper/QBOHelper.cs" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">https://github.com/IntuitDeveloper/SampleApp-CRUD_.Net_Oauth2/blob/master/SampleApp_CRUD_.Net/SampleApp_CRUD_.Net/Helper/QBOHelper.cs</span></span></a><br><br><br><br><span style="font-size: 22px;">Internal Related articles</span><br><br><span style="font-size: 16px;"><a href="/articles/en_US/Knowledge/Account-Numbers-1854120324" target="_blank">Account Numbers - Chart of Accounts</a></span><br><span style="font-size: 16px;"><a href="/articles/en_US/Knowledge/INTERNAL-Elite-Quickbooks-Online-Testing-Setup-and-Credentials" target="_blank">INTERNAL | Elite Quickbooks Online Testing Setup and Credentials</a><br><a href="/articles/en_US/Knowledge/INTERNAL-Elite-QuickBooks-Online-Connection-Instructions" target="_blank">INTERNAL | QuickBooks Online Connection Instructions for Elite</a> </span><br><br><br> </p>

@@ -1,0 +1,51 @@
+<h1><span style="color: #2980b9;">Depreciation Set Up</span></h1>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="font-size: 11pt;">Setting Up Depreciation</b></p>
+
+<p> </p>
+
+<p><b>From Program Menu&gt; System Configurations&gt; Parameters&gt; Accounting Tab</b></p>
+
+<p>a. Capitalize Extra Charges: If they want to capitalize on Extra Charges, this box will need to be selected. If they use the PO Module, the extra charges are Shipping, Tax, and Misc which will be charged to the asset account and not expenses (Meaning, the extra charges are capitalized with the purchase price). If they don’t use the PO Module, the extra charges will need to be manually entered.</p>
+
+<p>b. Included Extra Charges: If they want to include the extra charges into Inventory Value, this box will need to be selected.</p>
+
+<p>c. Depreciation %: This is only used if the Depletion method is chosen.</p>
+
+<p> </p>
+
+<p><b>From Program Menu&gt; File Maintenance&gt; Item File&gt; Asset Tab</b></p>
+
+<p>a. Capitalized box will need to be checked to capture depreciation.</p>
+
+<p>b. Select the Depreciation button.</p>
+
+<p>c. The first schedule is the only one that will be part of the General Ledger entry.</p>
+
+<p>d. From the drop-down menu, select the depreciation method.</p>
+
+<p>e. Salvage Value: How much the item will depreciate too. If it’s depreciating to $0, leave it alone.</p>
+
+<p>f. Additional Depreciation: Holds extra depreciation taken outside of the normal depreciation. i.e. accelerated depreciation (Section 179).</p>
+
+<p>g. Equipment GL Accounts: Equipment Inventory Account outside of the general Equipment Asset Account.</p>
+
+<p>h. Current Month Depreciation: The amount the item will depreciation that month.</p>
+
+<p>i. Total Depreciation Accrued: The total amount the item has depreciated.</p>
+
+<p>j. Book Value: The value of the asset.</p>
+
+<p>k. Accumulated Depreciation acct: The Depreciation account outside of the general Depreciation account if it is broken out into more than one account.</p>
+
+<p>l. Recompute: Will re-compute the depreciation based on any changes that were made to the item’s purchase detail and/or depreciation schedule. (This is not normally done. Re-computing will create changes in your GL accounts for previous periods.)</p>
+
+<p> </p>
+
+<p>- Depreciation will need to be set for each serialized item. You can set the schedule on the Header record but that is only for reference.</p>
+
+<p>- Improvement: This feature adds more value to the item and depreciates the expense. This can be done through an IRO if the total repair cost is more than $1,000.01 (Tools&gt; Add as Improvement) or by right-clicking anywhere below the purchase details within the Purchases tab of the serialized item then selecting Add Improvement.</p>

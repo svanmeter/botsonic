@@ -1,0 +1,471 @@
+<p><b style="color: rgb(59, 62, 65);font-size: 18px;font-family: sans-serif;">Smart Equip Installation Guide</b></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="color: rgb(123, 180, 62);font-size: 14px;font-family: sans-serif;"><i>Overview</i></b></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">This guide is to help you install Smart Equip plug in for Point of Rental. </span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Topics included in this article:</span></p>
+
+<p> </p>
+
+<ul style="margin-left: 40px;"><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Configure Smart Equip</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Configuring IIS</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Create firewall exceptions</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Set up production service</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Set up development service</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Testing Smart Equip</span></li></ul>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Configure Smart Equip</b></p>
+
+<p> </p>
+
+<p><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Please Note: Admin access is going to be required to complete these steps. </i></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Requirements:</span></p>
+
+<p> </p>
+
+<ul style="margin-left: 40px;"><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Windows Server 2012R2 and Above (Note Windows Server 2012 is set to End Life in January 2023)</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">.Net 4.5 and all Current Updates from Windows</span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Internet Information Services (IIS) </span></li><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Smart Equip Installed</span></li></ul>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Configuring IIS</b></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">1. Go to your Start Menu and search for Internet Information Services (IIS) Manager.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="Picture 1.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPJK" style="width: 649px;height: 286px;"></img></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">2. Click on Application Pools</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="Picture 2.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPJj"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">3. Check to see if “ASP .NET v4.0” and ASP .Net v4.0 Classic” are listed.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-2"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">If not listed</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">, verify to make sure that .Net 4.0/4.5 is installed. If it is installed and does not show up, it may be that it has not been registered. Open Command Prompt and type in the following line: </span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">“CD C:\Windows\Microsoft.NET\Framework64\v4.0.30319\” then “aspnet_regiis.exe -I” </span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Please Note: The version number may change, for example: v4.0.30319.</i></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><img alt="Picture 3.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPJt" style="width: 650px;height: 242px;"></img></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">If listed</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">, click on them both and from the Actions Menu on the right click on ‘Advanced Settings…’ </span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><img alt="Picture 4.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPK3" style="width: 663px;height: 226px;"></img></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">4. In the General area, set the Enable 32-Bit Applications to ‘True.’ Click OK when you are done.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="Picture 5.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPKX"></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Create firewall exceptions</b></p>
+
+<p> </p>
+
+<p><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Please Note: If you are running any other program besides Windows Defender, then you will need to go to that program&#39;s website on how to create exceptions.</i></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">1. Go to your Start Menu and search for Windows Defender Firewall with Advanced Security. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 6.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPKh" style="width: 614px;height: 283px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">2. From the left menu, click on ‘Inbound Rules.’</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="Picture 7.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPL1" style="width: 663px;height: 226px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">3. Then from the right menu, click on ‘New Rule.’</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 8.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPLk" style="width: 663px;height: 176px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">4. Choose Port and click Next. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 9.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPM4" style="width: 520px;height: 419px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">5. Choose TCP and Specific local ports 57368, Click Next</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 10.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPMJ"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">6. Select &#39;Allow the connection.&#39;</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 11.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPMT"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">7. Select Domain, Private, and Public. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 12.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPMY"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">8. Name it the following:</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Name:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> PORSmartEquip – Production </span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Description:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> Point of Rental SmartEquip Production Port</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 13.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPMi"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">9. Do the above process for port 57369 as well and call it the following: </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Name:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> PORSmartEquip – Dev</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Description:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> Point of Rental Software Development Port</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Set up production service</b></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">1. Verify that Port 57368 rule was created on the Windows Firewall.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">2. Go to &lt;DataDrive&gt;:\POR\ and make sure there is a directory called PORSmartEquip. If there is not, create one.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture14.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPN7" style="width: 483px;height: 295px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">3. From Our PORSvr copy the Webservice Folder and place it in the &lt;DataDrive&gt;:\POR\PORSmartEquip directory. </span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Please Note: Please see IT for the directory path for this folder.</i></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">4. Open &lt;DataDrive&gt;:\POR\PORSmartEquip\WebService\Web.config with notepad to customize the app settings </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 15 (2).jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPNM" style="width: 324px;height: 338px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="font-size: 14px;font-family: sans-serif;">5. Modify entry to: &lt;add key=”Item Search” Value=”Num” /&gt; Options are NUM for ItemFile NUM or KEY for ItemFile KEY.</span><br> </p>
+
+<p class="ql-indent-1"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>*Note for Elite:</strong>  In the webconfig file if it is set to Lookup by NUM or System Set to AutoKey, Keys for Headers and Parts will use the item number (NUM) as value for the key when creating new parts. If Set to Lookup by Key or Part, and AutoKey = False, keys for headers and parts will use key, but use FLENG - (Store Code char count) - 1 - (3 digit Manf) constraints  to take the Right most characters off the PartNumber.  i.e. FLENG = 16, Store Code = 501, Manf = KUBOTA, PartNumber = 995865342107968754321  makes a store key of KUB968754321 -501. Header logic so the pneumonic aspect is intact, i.e. KUB968754321</span></span></span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">6. Modify entry to: &lt;add key”PartsCategory” value=”13” /&gt; Set the default parts category for items added through SmartEquip. Determine this category by querying ItemCategory in the POR database – defaults to “Parts – Special Order” unless the customer specifies otherwise. SELECT [Name],[Category] FROM [ItemCategory]</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">7. Modify entry: &lt;Add Key=”DBPath” value=”” /&gt; Set Value= “&lt;DataDrive&gt;:\POR\Users\”</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">8. Go back to IIS Manager.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">9. From the left menu, go to Sites.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 16 (2).jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPOj"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">10. From the right menu, go to “Add Website.” Enter in the following information: </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 17.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPP3"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Site Name: </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">SmartEquip</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Application Pool:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> ASP .Net v4.0</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Path: </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">&lt;DataDrive&gt;:\POR\PORSmartEquip\WebService</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Type:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> HTTP</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">IP Address: </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">&lt;Server IPv4 Address&gt;</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Port: </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">57368</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Pool ASP:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> 4.0/4.5</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 18.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPPD" style="width: 405px;height: 468px;"></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Set up development service</b></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">1. Verify that Port 57369 rule was created on the Windows Firewall.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">2. Open the Webservice and call it WebService – Copy.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">3. Open &lt;DataDrive&gt;\POR\PORSmartEquip\WebService - Copy\Web.config with notepad to customize the &lt;App Settings&gt;</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 19.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPPX" style="width: 383px;height: 400px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">4. &lt;add key=”Item Search” Value=”Num” /&gt; </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Options are NUM for ItemFile NUM or KEY for ItemFile KEY</span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>*Note for Elite:</strong>  In the webconfig file if it is set to Lookup by NUM or System Set to AutoKey, Keys for Headers and Parts will use the item number (NUM) as value for the key when creating new parts. If Set to Lookup by Key or Part, and AutoKey = False, keys for headers and parts will use key, but use FLENG - (Store Code char count) - 1 - (3 digit Manf) constraints to take the Right most characters off the PartNumber.  i.e. FLENG = 16, Store Code = 501, Manf = KUBOTA, PartNumber = 995865342107968754321  makes a store key of KUB968754321 -501. Header logic so the pneumonic aspect is intact, i.e. KUB968754321</span></span></span><br> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">5. &lt;add key”PartsCategory” value=”13” /&gt; </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Sets the default parts category for items added through SmartEquip  </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Determine this category by querying ItemCategory in the POR database – defaults to “Parts – Special Order” unless the customer specifies otherwise </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">SELECT [Name],[Category] FROM [ItemCategory]</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">6. IMPORTANT: This is for the Training Database Set the Following Key &lt;Add Key=”DBPath” value=”” /&gt; </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Set Value= “&lt;DataDrive&gt;:\POR\Users\train\”</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">7. Go back to IIS Manager.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">8. From the left menu, go to Sites.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 20.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPPm"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">9. From the right menu, go to “Add Website.” Enter in the Following Information:</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 21.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPPw"></img></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Enter the following information:</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Site Name:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> SmartEquip</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Application Pool: </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">ASP .Net v4.0</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Path</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">: &lt;DataDrive&gt;:\POR\PORSmartEquip\WebService</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Type: </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">HTTP</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">IP Address:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> &lt;Server IPv4 Address&gt;</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Port:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> 57369</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Pool ASP:</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> 4.0/4.5</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 22.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPQ6" style="width: 379px;height: 437px;"></img></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Testing Smart Equip</b></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">To test Smart Equip, we recommend that you install Fiddler. To get the installer, go to https://www.telerik.com/download/fiddler</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">1. Run test on Development (SmartEquipDev – POR 57369).</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">2. Click the Composer button to begin the test </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 23.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPQQ" style="width: 653px;height: 142px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">3. Click on the Parsed Tab – The History section will show historically created test. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 24.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPQV" style="width: 662px;height: 144px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">4. The Point of Rental Test Server has sample tests that can be used on a customer system.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Login </b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">- Tests User Login – Requires customer user id and password with Smart Equip Role</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Create Order</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> - Creates purchase order and adds equipment to work order – requires customer user id with Smart Equip Role, Valid unit and valid Point of Rental transactions</span></p>
+
+<p class="ql-indent-1"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Validate Order</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> - Validates the existence of the rental unit and Point of Rental transactions</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">5. Search Criteria must be taken from the customer’s Point of Rental instance.</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">User ID and Password</span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Unit</span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Model</span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Manufacturer</span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Serial Number </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Item</span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Part Number</span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">6. Double-click the functionality to test and the Parse Section will update to test criteria</span></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;"> </span></p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">7. Click the Execute button to test the criteria. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 25.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPQk" style="width: 660px;height: 167px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">8. The results will appear in the left-hand capture box. A result of 200 means success. </span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 26.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPR4"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">9. Click on the right-hand Inspectors tab and XML tab to view the results detail. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="Picture 27.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJLk&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004kPR9"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">10. Log file is located at &lt;DataDrive&gt;:\POR\PORSmartEquip\Logs\</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: sans-serif;">Related articles</b></p>
+
+<p><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/SmartEquip-1565273038" target="_blank">SmartEquip</a><br><a href="/articles/en_US/Knowledge/Smart-Equip-Setup-in-Point-of-Rental" target="_blank">Smart Equip Setup in Point of Rental</a></span></span></p>
+
+<div id="" style="left: 20px;top: 14460.6px;"> </div>

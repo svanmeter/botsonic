@@ -1,0 +1,92 @@
+<p><span style="font-size: 36px;"><strong><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Shipping Module | UPS or FedEx Integration Setup &amp; Process</span></span></strong></span></p>
+
+<p style="background: white;"><br><br> </p>
+
+<p style="background: white;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This is an add-on module and is not part of the standard Point of Rental software. This article will go over the shipping process and explain the steps necessary to set up the data connections required for the UPS or FedEx integration for creating the Ship Link Data Connection.</span></span></span><br><br> </p>
+
+<p style="background: white;"><span style="font-size: 22px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span></p>
+ 
+
+<ul><li style="background: white;"><span style="font-size: 16px;"><a href="#t2"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">How does it work on a contract?</span></span></a></span></li><li style="background: white;"><span style="font-size: 16px;"><a href="#t1"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up the ODBC Connection from UPS/FedEx to Point of Rental</span></span></a></span></li><li style="background: white;"><span style="font-size: 16px;"><a href="#processing-a-shipment"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Processing a Shipment</span></span></a> </span></li><li style="background: white;"><span style="font-size: 16px;"><a href="#tracking-shipments-within-POR"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Tracking shipments within Point of Rental</span></span></a></span></li></ul>
+
+<p style="background: white;"><br><br><br><a id="t2" name="t2"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">How does it work on a contract?</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This is done by adding an item to the contract with an Item Key that starts with &quot;<strong>UPS</strong>&quot; or &quot;<strong>FEDEX.</strong>&quot; It needs to be on the contract with a $0 price. Whenever the contract is pulled up later (modify, close, send out, etc), it will look up the shipping cost from Worldship, multiply that by the Vendor Markup Percentage, and put that price on the contract.</span></span></span><br><br> </p>
+
+<p style="background: white;"><a id="t1" name="t1"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up the ODBC Connection from UPS/FedEx to Point of Rental</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up an ODBC connection allows the UPS and FedEx software to read and write to your Point of Rental system.</span></span></span><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> If you are using a cloud environment, then a VPN (virtual private network) needs to be configured.</span></span></span></em><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1.  You must be <strong>logged in as an administrator</strong>.</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2.  Run: c:\Windows\SysWOW64\odbcad32.exe</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3.  Click on the <strong>System DSN</strong> tab.</span></span></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vsvy" style="width: 482px;height: 396px;"></img><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4.  Click the <strong>Add…</strong> button.</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5.  <strong>Select the driver named: Microsoft Access Driver (*.mdb)</strong>. There are several variations of this name; be sure to select the correct one.</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6.  Select the <strong>Finish</strong> button.</span></span></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vsxK" style="width: 504px;height: 375px;"></img><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7.  <strong>Fill in</strong> the <strong>Data Source Name</strong> and <strong>Description</strong>.</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">8.  <strong>Click</strong> on the <strong>Select button</strong> to choose the database.</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vsxZ" style="width: 477px;height: 321px;"></img><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">9. N<strong>avigate to the location of your PORShipLink.mdb file</strong>. It will be in the POR folder that is typically located on the C: drive. The drive letter will vary depending on your specific setup.</span></span></span>  <br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">10. <strong>Press </strong>the <strong>OK</strong> button.</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vsxt" style="width: 465px;height: 288px;"></img></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">11. When completed, your ODBC Data Source Administrator should have an entry for your newly added database.</span></span></span><br> </p>
+
+<p style="background: white;margin-left: 80px;text-indent: -18pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vsy8" style="width: 482px;height: 396px;"></img></p>
+
+<p style="background: white;"><br> </p>
+
+<p><a id="processing-a-shipment" name="processing-a-shipment"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Processing a Shipment</span></span></span></p>
+
+<p> </p>
+
+<ol class="ol_1"><li class="ListParagraph_1"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Ensure </strong>the <strong>‘Delivery Address’ fields</strong> on the contract <strong>have been filled out properly</strong>.</span></span></li></ol>
+
+<div class="ListParagraph_1"> </div>
+
+<ol start="2" class="ol_1"><li class="ListParagraph_1"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Open</strong> the <strong>UPS WorldShip</strong> program.</span></span></li></ol>
+
+<div class="ListParagraph_1"> </div>
+
+<ol start="3" class="ol_1"><li class="ListParagraph_2"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong><span class="span_1">Select </span><span class="span_1">the </span><span class="span_2">Import/Export tab</span></strong><span class="span_1"> then <strong>click on the </strong></span><strong><span class="span_2">Keyed Import button</span></strong><span class="span_1"> like in the photo below and <strong>choose</strong></span><span class="span_2"><strong> POPUPS</strong>.</span></span></span></li></ol>
+
+<p class="p_1" style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span class="span_2"><img alt="Ensure that the Delivery Address_517x475" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FH4d"></img></span><span class="span_2"><img alt="Ensure that the Delivery Address_1_235x64" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FH4e"></img></span></span></span><br> </p>
+
+<ol start="4" class="ol_1"><li class="ListParagraph_2"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong><span class="span_2">Enter the contract number in the import Key</span></strong><span class="span_2"><strong>.</strong> </span><span class="span_1">This going to prompt POR to pull the shipping data for the customer.</span></span></span></li></ol>
+
+<div class="ListParagraph_2"> </div>
+
+<ol start="5" class="ol_1"><li class="ListParagraph_2"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong><span class="span_1">Fill i</span><span class="span_1">n the remaining shipping information (UPS service, dimensions, weight, etc.)</span></strong><span class="span_1"><strong> </strong>on the right side of the </span><span class="span_1">window. When you&#39;re done, <strong>select the </strong></span><strong><span class="span_2">Process Shipment</span></strong><span class="span_1"><strong> </strong><strong>option </strong>in the bottom right corner of the window. </span></span></span></li></ol>
+
+<p class="ListParagraph_1"><br><br><a id="tracking-shipments-within-POR" name="tracking-shipments-within-POR"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Tracking shipments within Point of Rental</span></span></span></p>
+
+<p class="p_2"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span class="span_1">After you have completed a shipment, verify that the tracking information has been updated within Point of Rental.  </span></span></span><br> </p>
+
+<ol class="ol_1"><li class="p_2"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span class="span_1"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Open the contract within Point of Rental</strong>.</span></span></span></span></span></li></ol>
+
+<div class="p_2"> </div>
+
+<ol start="2" class="ol_1"><li class="ListParagraph_2"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong><span class="span_1">Select </span></strong><span class="span_2"><strong>Tools</strong>, located in the top toolbar<strong> then</strong></span><strong><span class="span_1"> select </span><span class="span_2">Track Shipment</span></strong><span class="span_1">.</span></span></span></li></ol>
+
+<p class="ListParagraph_2" style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img alt="Ensure that the Delivery Address_2_279x284" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGus&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FH4f"></img></span></span><br> </p>
+
+<ol start="3" class="ol_1"><li class="ListParagraph_1"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">A new window will open containing the tracking information for the contract.</span></span></li></ol>
+
+<div class="ListParagraph_1"> </div>

@@ -1,0 +1,49 @@
+<h1 style="font-weight: bold;color: #749AB6;"><span style="font-size: 16pt;color: #4682b4;">Mulitple Out Dates (SQL ONLY)</span></h1>
+
+<p>In most rental scenarios, all of the items on a contract would have the same out date on a contract. However, they may be scenarios in which the user would like to put items on the same contract with multiple out dates. For example, if a user rents a piece of equipment for a week and then comes back two days later and rents an additional piece of equipment for the duration of the week. Both pieces can be put on the same contract and billed together rather than having them on two separate contracts.</p>
+
+<p> </p>
+
+<p><b>Security</b></p>
+
+<p>This feature must be enabled to be utilized, This can be done on a company, group, or individual level. Security&gt;System Security&gt;Security Defaults&gt;Transactions (can also be found in Security&gt;Employee Setup&gt;Choose and Employee&gt;Security&gt;Transactions).</p>
+
+<p><img alt="Mulitple Out Dates_821x597" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKC&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWOl"></img></p>
+
+<p> </p>
+
+<p><b>Counter System</b></p>
+
+<p>Once a user has access to set multiple outdates, they will need to turn on their out date columns within the contract. Modify a contract and right click on the blue column bar. Scroll down in the list of options and then check the boxes to display the “Out Date” and “Due Date”.</p>
+
+<p><img alt="mulitple Out Dates1_812x549" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKC&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWOm"></img></p>
+
+<p>Multiple out dates are not intended to be used for Quotes of Reservations. The user must be manipulating an open or closed contract that already has at least one modification.</p>
+
+<p><b>Adding Items With Different Out Dates</b></p>
+
+<p>Modify an existing open contract. Add an item. The user will be prompted with the following:</p>
+
+<p><img alt="mulitple Out Dates3_395x219" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKC&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWOn"></img></p>
+
+<p>If the user chooses “Yes”, then the item will be given an out date of the current date and time. The hours will be calculated for that item separately. If the user chooses “No”, then the item will be added to the contract with the original out date and time.</p>
+
+<p><img alt="mulitple Out Dates5" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKC&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWOo"></img></p>
+
+<p> </p>
+
+<p><b>Item Availability</b></p>
+
+<p>Availability will calculate off of the line item. For example, the contract the below item is on was opened on the 3rd. The item went out on the 6th, so that is when it is shown as out on the availability display. A delivery or pickup date on the contract supersedes this however, just as it always has, and the item will show out for the entire duration between the delivery and pickup.</p>
+
+<p><img alt="mulitple Out Dates6_1201x527" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKC&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWOp"></img></p>
+
+<p> </p>
+
+<p><b>Continuation Billing</b></p>
+
+<p>The user can choose whether or not to include multiple out dates in their auto continuation routines. If they do, the due dates for all items will be adjusted to be the due date of the contract.</p>
+
+<p><img alt="mulitple Out Dates7_930x530" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKC&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWOq"></img></p>
+
+<p> </p>

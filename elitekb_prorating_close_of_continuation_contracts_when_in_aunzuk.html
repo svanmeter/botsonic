@@ -1,0 +1,32 @@
+<h1><span style="color: #2980b9;"><b><span style="font-size: 16pt;">Prorating Close of Continuation Contracts when in AU/NZ/UK</span></b></span></h1>
+ 
+
+<p>Billing structures are handled differently on the worldwide stage. For example, if a customer takes a piece of equipment out at the end of the month and then returns it at the beginning of the next month, but it was billed on the 1st (in the middle of the rental), you may only want to charge them for the combined time it was out in the two months vs having each contract calculate the time to charge separately. This is possible by making a few changes to your configurations<br> </p>
+
+<p style="text-indent: 0.5in;">1. You must set to Australia, New Zealand, or the United Kingdom in Parameters.</p>
+
+<p style="text-indent: 0.5in;">2. The rate engine must be set up to ‘Prorate rentals on close of continuation’.</p>
+
+<p style="text-indent: 0.5in;"><img alt="Prorating Close of Continuation Contracts" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHAT&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGsV"></img></p>
+
+<p>When the store is set this way, billing will behave as outlined below.</p>
+
+<p> </p>
+
+<p><b>Example:</b></p>
+
+<p>Item Rates: $200/day $600/week $1200/month</p>
+
+<p>Not billing for Saturday or Sunday</p>
+
+<p>Rental begins on April 27th 2019</p>
+
+<p>Rental ends on May 3rd 2019</p>
+
+<p>Billing is done on May 1st 2019</p>
+
+<p> </p>
+
+<p>April billing is for 2 days or $400.</p>
+
+<p>May billing is for 2 days but will only bill for $200 because of the April billing that was $400. The Item Week rate is $600. We do not want to exceed the weekly rate of $600.</p>

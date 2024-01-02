@@ -1,0 +1,251 @@
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 36px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Elite -</strong><strong> </strong><strong>Tax </strong><strong>Integration</strong></span></span></span><br><br><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article is going to go over how to configure the Tax Integration in Elite Software. Licensing may be required for this integration to work properly. The Closed Accrual Accounting Method is also a requirement when integrating with an External Tax Solution. </span></span></span><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics included in this article</span></span></span><br> </p>
+
+<ul><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#t1"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">50k Summary</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#t2"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Credentials Configuration</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#t3"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up the System Parameters to Use Your Tax Integration</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#t4"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Transactions</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#t5"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Additional Notes</span></span></span></a></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br><br><br><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="t1" name="t1"></a><span style="color: #7bb34e;"><span style="font-size: 22px;"><span style="font-family: Arial;">50k Summary</span></span></span></p>
+
+<div style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Sales Tax Quotation</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. Any transaction requiring sales tax will request a sales tax quotation from the external tax service API.</span></span></span></p>
+
+<div style="margin-left: 31.76pt;padding-left: 4.24pt;"> </div>
+
+<p style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Sales Tax Posting</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. Any transaction posting income within the application will also make a sales tax posting to the external tax service API.</span></span></span><br> </p>
+
+<p style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Configurations</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. System Configurations</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. API Key, Password, Company Code</span></span></span></p>
+
+<div style="margin-left: 23pt;padding-left: 13pt;"> </div>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">b. Store Configurations - done from store 001 only</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. An external tax service must be set as the Sales Tax Calculation Method.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">ii. This sets all stores and validates each store&#39;s location with the external tax service to ensure accurate tax calculations.</span></span></span></p>
+
+<p style="margin-left: 160px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. When enabled 3 settings in the Adjustment section are set and locked.</span></span></span></p>
+
+<p style="margin-left: 200px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. These settings are required for proper operation.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">iii. Tax Display name for contract printouts.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">iv. Tax Classes - defaults if no item configurations exist.</span></span></span></p>
+
+<p style="margin-left: 160px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Sales Items, Rental Items, Assets Sales, Item Percentage, Damage Waiver, Other</span></span></span></p>
+
+<p style="margin-left: 160px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. When there are no downstream tax codes/classifications set up these are the defaults that will be used.</span></span></span></p>
+
+<p style="padding-left: 4.83pt;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">c. Customer Configurations</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. External Sales Tax Code - generally applies to a single customer.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">ii. External Sales Tax Class - generally applies to many customers.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">iii. Customers can be set to Tax Exempt within the Point of Rental; this applies to all transactions.</span></span></span></p>
+
+<p style="padding-left: 4.24pt;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">d. Item Configurations</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. Sales Tax Code - used if any special rules apply to any type of item.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">ii. Inventory records CAN NOT be set to non-taxable.</span></span></span></p>
+
+<p style="margin-left: 160px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. This field should be disabled in File &amp; Field Security so it cannot be manipulated by users.</span></span></span></p>
+
+<p style="padding-left: 4.24pt;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">e. Item Category Configurations</span></span></span></p>
+
+<p style="padding-left: 13pt;margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. Rental Tax Class</span></span></span></p>
+
+<p style="padding-left: 13pt;margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">ii. Sales Tax Class</span></span></span></p>
+
+<p style="padding-left: 13pt;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">f. Jobsite Configurations</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. External Sales Tax Code - A way to set a tax code against individual job sites in order to set exemptions.</span></span></span></p>
+
+<p style="padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Operation</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. When a transaction is being created/modified and a tax calculation is needed the Tax, Total, and Due fields will display as ‘----’ and a tax calc icon will appear in the top right corner of the contract.</span></span></span></p>
+
+<p style="padding-left: 13pt;margin-left: 120px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. The user can click the icon to get an immediate tax calculation if needed.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">ii. When the user saves the contract a tax quote will be requested and the transaction updated to include sales tax.</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">b. Transactions must have valid addresses for accurate tax calculations.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. If a necessary address is missing or formatted incorrectly a sales tax calculation will not be requested and instead, the user will receive a warning message.</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.83pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">c. If the external tax service is unreachable for any reason, the contract can be switched back to use locally configured jurisdictions for each store.</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">d. If a contract is closed and the external tax service is unreachable, the contract will be forced into a status of Review Billing.</span></span></span></p>
+
+<p style="margin-left: 120px;padding-left: 13pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">i. These contracts can be modified and the tax jurisdiction changed to External, then closed and posted.</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">e. When a closed/posted contract is modified an adjustment contract is created with the net changes including the sales tax posting</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 7.17pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">f. There are NO current methods to manipulate sales tax postings outside of a transaction. Any tax adjustments should be made from the transaction the error occurred to get adjusting Point of Rental income postings and external tax postings.</span></span></span></p>
+
+<div style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;">5. Reporting</div>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. Your external tax service will be your source of reporting and filing.</span></span></span></p>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">b. The sales tax reporting within Point of Rental can be generated and will report all transactions and sales tax for a single jurisdiction by store. But no detail can be obtained from Point of Rental.</span></span></span></p>
+
+<div style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;">6. General Ledger</div>
+
+<p style="margin-left: 80px;padding-left: 4.24pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. Sales tax will continue to post to the GL account configured in Account Numbers for sales tax payable.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Arial;"> </span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="t2" name="t2"></a><span style="color: #7bb34e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Credentials Configuration</span></span></span></p>
+
+<p style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><br><span style="font-family: Arial;font-size: 10.5pt;">1. From Elite, go to Configuration Gear and look for API Configurations.</span><br> </p>
+
+<p style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">2. Enter the</span><span style="font-family: Arial;font-size: 10.5pt;"> </span><span style="font-family: Arial;font-size: 10.5pt;">Vertex</span><span style="font-family: Arial;font-size: 10.5pt;"> </span><span style="font-family: Arial;font-size: 10.5pt;">Key, Password, and Company Code under the API Configurations. </span><br> </p>
+
+<p style="margin-left: 80px;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><strong>Note:</strong> If you are using another Tax Integration Service please see that API Integration area.</em></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-left: 36pt;margin-bottom: 0pt;font-size: 10.5pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DII2&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zH4c" style="width: 471px;height: 300px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><strong><span style="font-family: Arial;"> </span></strong><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="t3" name="t3"></a><span style="color: #7bb34e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up the System Parameters to Use Your Tax Integration</span></span></span></p>
+
+<p style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. In Elite, <strong>go to</strong> your <em>Configuration Gear &gt; App Configurations &gt; System Configurations &gt; Parameters &gt; Accounting Tab</em></span></span></span><br> </p>
+
+<p style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Set the Sales Tax Calculation method</strong> to the Tax Integration that you are using.</span></span><br> </p>
+
+<ul style="margin-right: 0pt;margin-left: 40px;padding-left: 0pt;"><li style="margin-left: 80px;padding-left: 7pt;">
+	<p><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This step will initiate address verification requests for each store/location.</span></span><br>	 </p>
+	</li><li style="margin-left: 80px;padding-left: 7pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Tax Area Id from each result is stored in Elite on the location record and is used in all sales tax requests. </span></span></li></ul>
+
+<p style="margin-left: 80px;padding-left: 7pt;"> </p>
+
+<p style="margin-left: 160px;padding-left: 7pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><strong>Note:</strong> If multiple Tax Area IDs are returned for a location, the user will choose the one that will be stored in Elite.</em></span></span></p>
+
+<div style="margin-left: 29pt;padding-left: 7pt;"><br><img alt="Graphical user interface, application, table  Description automatically generated" height="212" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DII2&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006yGvY" width="439"></img><br> </div>
+
+<p style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Optional: <strong>Configure a tax class code</strong> for each income type.</span></span></span><br> </p>
+
+<p style="margin-left: 80px;padding-left: 7pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. The income types: Rental, Sales, Asset Sales, Damage Waiver, Item Percentage, and Other.</span></span></span><br><br><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DII2&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Txl0" style="width: 564px;height: 348px;"></img></p>
+
+<div style="margin-left: 29pt;padding-left: 7pt;"> </div>
+
+<p style="margin-left: 120px;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">3a. Optional: <strong>Configure tax codes </strong>associated with specific item categories.</span><br> </p>
+
+<p style="margin-left: 160px;padding-left: 7pt;"><span style="font-family: Arial;font-size: 10.5pt;">1. Two tax codes can be configured at the item category level: Rental, Sales.</span></p>
+
+<div style="margin-left: 29pt;padding-left: 7pt;"> </div>
+
+<p style="margin-left: 120px;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">3b. Optional: <strong>Configure a tax code</strong> associated with specific items.</span><br> </p>
+
+<p style="margin-left: 160px;padding-left: 7pt;"><span style="font-family: Arial;font-size: 10.5pt;">1. A single tax code can be configured at an item level.</span></p>
+
+<div style="margin-left: 29pt;padding-left: 7pt;"> </div>
+
+<p style="margin-left: 120px;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">3c. Optional: <strong>Configure tax codes</strong> or tax classes associated with specific customers.</span><br> </p>
+
+<p style="margin-left: 160px;padding-left: 7pt;"><span style="font-family: Arial;font-size: 10.5pt;">1. A customer can be set up with either a tax class or tax code.</span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">When using an integrated sales tax solution, Closed Account &amp; Cash Mods are automatically turned on and cannot be disabled. The closed contract (invoice) that is modified will not change, but an adjustment (credit) for the changes is created. It is important that no modifications are made to the Customer or products related to tax exemptions. To get accurate credits, all sales tax codes/classes (exemptions) need to remain the same as the original contract was when it was closed.</span></span></span><br><br><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DII2&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Tczo" style="width: 381px;height: 244px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><strong><span style="font-family: Arial;"> </span></strong><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="t4" name="t4"></a><span style="color: #7bb34e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Transactions</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br><span style="font-family: Arial;">Anytime a change is made to the transaction that could impact the tax calculation (i.e. pricing, delivery address, etc.), the sales tax needs to be updated. That condition is indicated by the Tax, Total, and Due amounts being removed and the Tax Update icon being displayed.</span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DII2&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zH4h" style="width: 607px;height: 151px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Arial;">The sales tax calculation can be requested from</span><span style="font-family: Arial;"> </span><span style="font-family: Arial;">your Tax Integration Service</span><span style="font-family: Arial;"> </span><span style="font-family: Arial;">in two ways:</span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. You can manually request the tax calculation and transaction totals by <strong>clicking the Tax Update icon</strong>.</span></span></span><br> </p>
+
+<ul style="margin-left: 40px;"><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The sales tax request will be sent to your tax integration provider and the transaction totals will be updated.</span></span></span></li></ul>
+
+<div style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"> </div>
+
+<div style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. The Tax Update icon <strong>will be removed from the screen</strong> to indicate a successful update.</span></span></span><br> </div>
+
+<ul style="margin-left: 40px;"><li style="margin-left: 31.17pt;padding-left: 4.83pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This “manual” tax request will always generate a quotation request only.</span></span></span></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DII2&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zH4r" style="width: 703px;height: 155px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Alternatively, you can simply <strong>submit the transaction</strong> without the manual tax update.</span></span></span><br> </p>
+
+<ul style="margin-left: 40px;"><li style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">A tax quote request will be sent to your tax integration provider automatically.</span></span></span></li></ul>
+
+<div style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<ul style="margin-left: 40px;"><li style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The transaction totals with the updated tax amount will be shown on the payment screen.</span></span></span></li></ul>
+
+<div style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DII2&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zH51" style="width: 493px;height: 205px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If the transaction is being finalized and updated to a Completed status:</span></span></span><br> </p>
+
+<p style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. A <strong>tax invoice request will be submitted</strong> to your Tax Integration Provider.</span></span></span></p>
+
+<p style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </p>
+
+<p style="margin-left: 31.76pt;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. The transaction totals with the final tax <strong>amount will be posted in Elite</strong>.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Crediting tax only off a contract: Select modify the contract and check the non-taxable box on the information tab of the contract, then save the contract. This creates a credit for the tax only.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">To fully credit an invoice, zero out the price on each line item so that the total of the contract is $0.00, then close out of the contract. This will create a credit for the exact amount of the invoice.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The original contract will have a call log that pops up for every credit created. They can use the related contract lookup tool to see the credits and the details of what was credited. This can be used to verify multiple credits are not created for the same purpose.<br><br>When modifying a closed contract you cannot change the quantity of rental items, but you can change the price. You can change the quantity of sold assets or sale items which will create a credit for the difference.<br><br>Sales tax is calculated based on the delivery flag on a contract. If delivery is not flagged, the tax will be calculated based on the contract store’s address. If delivery is flagged, tax is calculated based on the delivery address on the contract. Sales tax integrations support passing the zip +4 from POR for the most accurate tax calculation. </span></span></span><br> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Vertex: If the full street address is not provided, the tax will default to the highest tax rate for that zip code (this can be changed to default to the lowest tax rate, but is not recommended).<br><br>SureTax (CCH): Delivery addresses are validated as part of the integration and will produce an error to the user that the address is not correct. </span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Credits created for continuation billed contracts will always look back at the very first contract (parent) to determine the delivery flag and delivery address, so the tax will be calculated correctly. <strong>This applies even if the original contract was prior to the integration with Vertex.</strong></span></span></span></p>
+
+<p><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="t5" name="t5"></a><span style="color: #7bb34e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Additional Notes</span></span></span><br> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">In all</span><span style="font-family: Arial;font-size: 10.5pt;"> </span><span style="font-family: Arial;font-size: 10.5pt;">Tax Integration </span><span style="font-family: Arial;font-size: 10.5pt;">requests, sales tax classes and codes will be included as configured.</span></li></ul>
+
+<div style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </div>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">When a transaction involves an on-site delivery, the delivery address is included in a request as the destination address.</span></li></ul>
+
+<div style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </div>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">When the value of a previously Completed/Posted transaction is modified, a new tax invoice request will be sent to</span><span style="font-family: Arial;font-size: 10.5pt;"> </span><span style="font-family: Arial;font-size: 10.5pt;">your Tax Integration Service</span><span style="font-family: Arial;font-size: 10.5pt;"> </span><span style="font-family: Arial;font-size: 10.5pt;">for the delta amounts of the modification.</span></li></ul>
+
+<div style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </div>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">Non-taxable criteria can be managed within Elite at the customer or transaction level. While there is a non-taxable flag in the item record, it is not used in the tax call. Whether or not an item is non-taxable is determined by the external tax jurisdiction calculation.</span></li></ul>
+
+<div style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </div>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">If the tax call fails during manual continuation billing, the user will be warned and prompted to exit the contract. If it happens during auto continuation, the contract is skipped, and the incident is logged in the error log. These contracts can be addressed after the tax call conflict is resolved.</span></li></ul>
+
+<div style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </div>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">Currently, only US zip codes and Canadian postal codes are supported to make a tax call.</span></li></ul>
+
+<div style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </div>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="font-family: Arial;font-size: 10.5pt;">Delivery flags/addresses cannot be modified after the contract has closed.</span></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br><br> </p>
+
+<div id="" style="left: 109.328px;top: 4683.08px;"> </div>

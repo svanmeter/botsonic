@@ -1,0 +1,195 @@
+<p><strong><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 26px;"><span style="color: #3b3e41;">End of Day Imbalance Troubleshooting </span></span></span></strong></p>
+
+<p><br><br> </p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #7bb43e;"><span style="font-size: 14px;"><strong>Overview</strong>:</span></span></span></p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;color: rgb(59, 62, 65);">This article will cover End of Day imbalance troubleshooting methods for cash, check, and credit card amounts. </span><br><br><br><span style="color: #7bb43e;"><span style="font-size: 14px;"><strong>Prerequisites</strong>:</span></span></span></p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;color: rgb(59, 62, 65);">You must have everyone logged out of their terminal before starting the end-of-day in your store location. Multi-store locations can set a close to either Auto Close or create a scheduled task runner to have their store close a certain time.</span></span></p>
+
+<p><br><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;color: rgb(59, 62, 65);">Topics covered in this article include:</span></span></p>
+
+<ul><li><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#topic1"><span style="color: #2980b9;"><span style="font-size: 14px;">Cash Over/Under</span></span></a><span style="color: #2980b9;"> </span></span></li><li><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#topic2"><span style="color: #2980b9;"><span style="font-size: 14px;">Checks Over/Under</span></span></a><span style="color: #2980b9;"> </span></span></li><li><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#topic3"><span style="color: #2980b9;"><span style="font-size: 14px;">Checks Going to Cash</span></span></a><span style="color: #2980b9;"> </span></span></li><li><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#topic4"><span style="color: #2980b9;"><span style="font-size: 14px;">Credit Cards</span></span></a></span></li></ul>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong><span style="font-family: Arial,Helvetica,sans-serif;"><a id="topic1" name="topic1"></a> <span style="font-size: 18px;"><span style="color: #3b3e41;">Cash Over/Under</span></span></span></strong></p>
+ 
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">If there is a cash discrepancy, this can mean money has physically gone in or out of the cash drawer without anyone paying or refunding a contract in Point of Rental. As a general rule, always make sure that all monies, including cash and checks, have not been misplaced. Then take the following steps to further troubleshoot these problems:</span></span></span></p>
+
+<p> </p>
+
+<ol><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Review the End of Day History Report (Totals Summary) to see what the carry over cash was set to on the last close.</span></span></span></li></ol>
+<span style="font-family: Arial,Helvetica,sans-serif;"> </span>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="color: rgb(0, 0, 0);">Where to find the report: </b></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="font-size: 14px;color: rgb(0, 0, 0);">Expert:</b><span style="font-size: 14px;"> Program Menu &gt; End of Day Processing &gt; End of Day History Report</span></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="font-size: 14px;color: rgb(0, 0, 0);">Elite:</b><span style="font-size: 14px;"> Right Menu &gt; Reports &gt; End of Day History Report</span></span></span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><img alt="End of Day History Rpt.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5y&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000043ntg" style="width: 839px;height: 259px;"></img></span></span><br> </p>
+
+<ol start="2"><li><span style="font-family: Arial,Helvetica,sans-serif;">Make sure checks that were taken on the last close were deposited. If checks were not deposited, then they will rollover as carry over cash the next day. If that is the amount that is off, then include that amount as the cash count. If the amount is not the checks, then proceed to the next step. </span></li></ol>
+
+<p class="ql-indent-2"> </p>
+
+<ol start="3"><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">After reviewing carry over cash, make note of that amount and run the Operator Detail Report for the current date. This report will display all the cash that was taken for the date selected. </span><span style="font-size: 14px;">V</span><span style="font-size: 14px;">erify that the totals are correct and recount the cash. </span></span></span></li></ol>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="color: rgb(0, 0, 0);">Where to find the report:</b></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="color: rgb(0, 0, 0);font-size: 14px;">Expert:</b><span style="font-size: 14px;"> Program Menu &gt; End of Day Processing &gt; Operator Edit Report</span></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="font-size: 14px;color: rgb(0, 0, 0);">Elite:</b><span style="font-size: 14px;"> Right Menu &gt; Reports &gt; Operator Edit Report</span></span></span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><img alt="Operator Edit Report.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5y&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000043nxO" style="width: 551px;height: 407px;"></img></span></span></p>
+
+<p class="ql-indent-2"> </p>
+
+<ol start="4"><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">If the above steps do not reflect the difference in cash, confirm all transactions are accounted for while confirming all payments were made with the correct payment type.</span></span></span></li></ol>
+
+<p><br> </p>
+
+<h1><strong><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 18px;"><a id="topic2" name="topic2"></a> <span style="color: #3b3e41;">Checks Going to Cash</span></span></span></strong></h1>
+<strong> </strong><span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Check the End of Day History Report and look at the carry over amount.</span></span></span></p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><img alt="End of Day History Rpt.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5y&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000043ntg" style="width: 747px;height: 231px;"></img></span></span></p>
+
+<p><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="color: rgb(0, 0, 0);">Where to find the report:</b></span></span></p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="font-size: 14px;">Expert: </b><span style="font-size: 14px;">Program Menu &gt; End of Day Processing &gt; End of Day History</span></span></span></p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="font-size: 14px;">Elite</b><span style="font-size: 14px;">: Right Menu &gt; Reports &gt; End of Day History</span></span></span></p>
+
+<p> </p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">If there is a carry over amount from a check that was not deposited from the day before, you can deposit the check as currency during your end-of-day process. For more information, visit our article </span></span><span style="font-size: 14px;"><a href="http://por.force.com/uLearn/s/article/Close-Drawer-for-End-of-Day-1571517373" target="_blank"><span style="color: #2980b9;">Close Drawer for End of Day</span></a><span style="color: #3b3e41;">. </span></span></span></p>
+
+<p><br> </p>
+
+<p><strong><span style="font-family: Arial,Helvetica,sans-serif;"><a id="topic3" name="topic3"></a> <span style="color: #3b3e41;"><span style="font-size: 18px;">Checks Over/Under</span></span></span></strong><br> </p>
+<span style="font-family: Arial,Helvetica,sans-serif;"> <span style="font-size: 14px;color: rgb(59, 62, 65);">As a general rule, always make sure that all monies, including cash and checks, have not been misplaced before you take the following steps.</span></span><br> 
+<ul><li><u><em><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Checks Over</span></span></span></em></u>
+
+	<ul><li><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Line up all checks and compare them against the Check &amp; Card Report in the checks sections of end-of-day. Make sure that you locate the check(s). If you do not have the check(s), you will have to remove the check from that contract. </span></span></span></li></ul>
+	</li></ul>
+
+<p class="ql-indent-2" style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><strong>Where to find the report:<br>Expert:</strong> Program Menu &gt; End of Day Processing &gt; Check &amp; Card Report</span></span></span></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><strong>Elite</strong>: Right Menu &gt; Reports &gt; Check &amp; Card Report</span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">You can also find this report while going through the End of Day process in the Cash Drawer Balancing.<br><br><img alt="Cash Drawer Balancing.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5y&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000043p0Y" style="width: 441px;height: 310px;"></img></span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">For more information on this report, please visit our article </span></span></span><a href="http://por.force.com/uLearn/s/article/Check-Credit-Card-Report-2118718308" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #2980b9;">Check Credit Card Report</span></span></span></a> <span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">.</span></span></span></p>
+
+<p> </p>
+
+<ul><li><u><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Checks Under</span></span></span></u>
+
+	<ul><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Line up all checks and compare them against the Check &amp; Card Report in the checks sections of End of Day. Enter the missing check(s). If it is a refund of a check, then you will have to enter the check back in the drawer. </span></span></li></ul>
+	</li></ul>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;"> </span></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">See our article </span></span><span style="font-size: 14px;"><a href="http://por.force.com/uLearn/s/article/Refund-by-Company-Check-481917565" target="_blank"><span style="color: #2980b9;">Refund by Company Check</span></a></span></span> <span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">f</span><span style="color: #3b3e41;"><span style="font-size: 14px;">or more information.</span></span></span></p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;"> </span></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Where to find the report:</span></span></strong></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Expert</strong><span style="color: #3b3e41;"><b style="color: rgb(0, 0, 0);font-family: Calibri, sans-serif;font-size: 14px;">:</b> Program Menu &gt; End of Day Processing &gt; Check &amp; Card Report</span></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong><span style="font-size: 14px;">Elite</span></strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><b style="color: rgb(0, 0, 0);font-family: Calibri, sans-serif;font-size: 14px;">:</b> Right Menu &gt; Reports &gt; Check &amp; Card Report<br><br>You can also find this report while going through the End of Day process in the Cash Drawer Balancing.</span></span></span></p>
+
+<p>  <br> </p>
+
+<h1><strong><span style="font-family: Arial,Helvetica,sans-serif;"><a id="topic4" name="topic4"></a> <span style="color: #3b3e41;"><span style="font-size: 18px;">Credit Cards</span></span></span></strong></h1>
+<strong> </strong><span style="font-family: Arial,Helvetica,sans-serif;">  </span>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Review the following information for more details regarding non-integrated and integrated credit cards. </span></span></span></p>
+ 
+
+<ul><li><u><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Non-Integrated Credit Cards</span></span></span></u>
+
+	<ul><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Confirm the correct payment method in Point of Rental when making a credit card transaction.</span></span></span>
+
+		<ul><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">To confirm all credit card payments where recorded correctly, run the Check &amp; Card Report and compare with you credit card processor. </span></span></span></li><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Correct the payment accordingly. </span></span></span></li></ul>
+		</li><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">Confirm the charges were recorded correctly as a sale instead of a refund, and vice versa.</span></span></span>
+		<ul><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;">To confirm all credit card payments where recorded correctly, run the Check &amp; Card Report and compare with your credit card processor. </span></span></span></li></ul>
+		</li></ul>
+	</li></ul>
+
+<p> </p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Where to find the report:</span></span></strong></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="color: rgb(0, 0, 0);font-size: 14px;">Expert:</b><span style="font-size: 14px;"> Program Menu &gt; End of Day Processing &gt; Check &amp; Card Report</span></span></span></p>
+
+<p class="ql-indent-2" style="margin-left: 40px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><b style="color: rgb(0, 0, 0);font-size: 14px;">Elite:</b><span style="font-size: 14px;"> Right Menu &gt; Reports &gt; Check &amp; Card Report<br><br>You can also find this report while going through the End of Day process in the Cash Drawer Balancing.</span></span></span></p>
+
+<p> </p>
+
+<ul><li><u><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Integrated Credit Cards</span></span></u>
+
+	<ul><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you are integrated, you will get an error message advising to review credit card transactions to resolve the discrepancy between your processor and Point of Rental.</span></span></li></ul>
+	</li></ul>
+
+<div style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><img src="https://lh3.googleusercontent.com/nDLOf3b2Q3dZnH4DTFat2wfZ4l8RdBzndUDeTSR7FAnWA_XxzwMiuND8PN4CHBAa1lLYHSzcfdxG44ORp4goRlLofyjODaQ7HK-KU5ye_JgxbJtEW46BWVsOBbnMxBlf9gB-Bls"></img></span></span></div>
+
+<ul style="margin-left: 40px;list-style-type: circle;"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>If the processor is higher,</strong> there is most likely a charge that hit the processor but Point of Rental has not recorded. This can also be a <strong>duplicate charge</strong> OR <strong>a charge that hit the processor but not Point of Rental</strong>.</span></span>
+
+	<ul style="list-style-type: square;"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Access the customer portal through your credit card processor and compare the charges listed with the Check &amp; Card Report in Point of Rental.</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If there is an extra charge in the processor, you can void it out via your processor&#39;s customer portal.</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If all charges match or for further assistance, please <a href="https://www.point-of-rental.com/contact/?creative=595845801343&amp;keyword=point%20of%20rental&amp;matchtype=b&amp;network=g&amp;device=c&amp;utm_source=google+ads&amp;utm_medium=paid+keyword&amp;utm_campaign=us+campaign+-+branded&amp;region=north+america&amp;gclid=Cj0KCQiA-oqdBhDfARIsAO0TrGHsaiEBo0QEQu6c4G1Rbj2TxA94Xj4b71ViaZQS_IkS3138Ay8m7GEaAhQ0EALw_wcB" target="_blank">contact</a> our Product Support Team. </span></span></li></ul>
+	</li></ul>
+<span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">  </span></span>
+
+<p> </p>
+
+<ul style="margin-left: 40px;list-style-type: circle;"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>If the processor is lower, </strong>then either <strong>an amount was charged after the end-of-day</strong> on the prior day OR there was a <strong>duplicate refund</strong>. </span></span>
+
+	<ul style="list-style-type: square;"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This could be that the payment was recorded in Point of Rental but did not hit the processor or vice versa.  </span></span>
+
+		<ul style="list-style-type: disc;"><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Access the customer portal for your credit card processor and compare the charges that you have there and what you have on the Point of Rental Check &amp; Card Report.</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If there is a duplicate refund in the processor, you can void it out via your processor&#39;s customer portal.</span></span></li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If all refunds match or for further assistance, please </span></span><a href="https://www.point-of-rental.com/contact/?creative=595845801343&amp;keyword=point%20of%20rental&amp;matchtype=b&amp;network=g&amp;device=c&amp;utm_source=google+ads&amp;utm_medium=paid+keyword&amp;utm_campaign=us+campaign+-+branded&amp;region=north+america&amp;gclid=Cj0KCQiA-oqdBhDfARIsAO0TrGHsaiEBo0QEQu6c4G1Rbj2TxA94Xj4b71ViaZQS_IkS3138Ay8m7GEaAhQ0EALw_wcB" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">contact</span></span></a> <span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">our Product Support Team. </span></span></li></ul>
+		</li></ul>
+	</li><li><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><strong>Moneris or Point Integration</strong>: If you run a card after you do End of Day, this can create a difference in your processor because the processor settled the transaction at midnight. Please contact Point of Rental support to get this resolved.</em></span></span></li></ul>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;background-color: transparent;">If you’re unsure about any of these steps, please our </span></span></span><a href="https://www.point-of-rental.com/contact/?creative=595845801343&amp;keyword=point%20of%20rental&amp;matchtype=b&amp;network=g&amp;device=c&amp;utm_source=google+ads&amp;utm_medium=paid+keyword&amp;utm_campaign=us+campaign+-+branded&amp;region=north+america&amp;gclid=Cj0KCQiA-oqdBhDfARIsAO0TrGHsaiEBo0QEQu6c4G1Rbj2TxA94Xj4b71ViaZQS_IkS3138Ay8m7GEaAhQ0EALw_wcB" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">contact</span></span></a> <span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 14px;background-color: transparent;">Product Support Team. </span></span></span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;"><span style="font-size: 18px;">Related articles</span></span></span></p>
+
+<p><a href="http://por.force.com/uLearn/s/article/Check-Credit-Card-Report-2118718308" target="_blank"><span style="color: #2980b9;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Check &amp; Card Report</span></span></span></a><span style="color: #2980b9;"> <span style="font-family: Arial,Helvetica,sans-serif;"> </span></span><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><a href="http://por.force.com/uLearn/s/article/Refund-by-Company-Check-481917565" target="_blank"><span style="color: #2980b9;">Refund by Company Check</span></a></span></span> <br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><a href="http://por.force.com/uLearn/s/article/Close-Drawer-for-End-of-Day-1571517373" target="_blank"><span style="color: #2980b9;">Close Drawer for End of Day</span></a></span></span><br><a href="http://por.force.com/uLearn/s/article/End-of-Day-History-Report-1064967485" target="_blank"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">End of Day History Report</span></span></a></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<div id="" style="left: 60px;top: 1097.48px;"> </div>
+
+<div id="" style="left: 100px;top: 5018.88px;"> </div>
+
+<div id="" style="left: 20px;top: 4322.06px;"> </div>
+
+
+
+<div id="" style="left: 20px;top: 658.328px;"> </div>

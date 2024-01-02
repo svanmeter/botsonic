@@ -1,0 +1,41 @@
+<h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Dispatch Service</span></span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Overview: </span></b><span style="color: #333333;">Configuring the Dispatch Service to autorun will allow your routes to be sent to TSO overnight. This eliminates the need for someone to manually open the Dispatch Center each morning for your trucks to receive their route information.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">1.   Program Menu &gt; Configuration &gt; Store Configuration &gt; Configure Task Runner</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">2.   Ensure that the Task Runner is running in the bottom right corner under the Status section.</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">a.   It not go to your server and login as an administrator and Create / Start the service.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">3.   Click the Add Task button.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">4.   Create a name – Dispatch Service</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">5.   Create a description – Dispatch Service runs at 3 am</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">6.   Click the button to the right of the File to Run box and navigate to x:\POR\Program\DispatchService.ex.(where x is the drive letter Point-of-Rental is installed on your server).</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">7.   Click the button to the right of the Start in Path box and navigate to x:\POR\Users (where x is the drive letter Point-of-Rental is installed on your server).</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">8.   Command Arguments should be set to ’RefreshRange’ (without the quote marks)</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">9.   Recurrence is set to ‘Days’</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">10.  Interval is set to 1 (every 1 day)</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">11.  Click Save and answer the prompts that follow.</span></p>
+
+<p style="background: white;margin-left: 36pt;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Based on your settings, the Dispatch Service will run and send the necessary information to TSO Mobile allowing routes to be uploaded and ready when drivers get in their trucks.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">Information passed to TSO is as follows:</span></p>
+
+<p>Description- Customer, Delivery/Pickup company name, contact name, and number</p>
+
+<p>Name- Trip, route#, sequence, contract number, and promised arrival</p>
+
+<p style="background: white;"> </p>

@@ -1,0 +1,53 @@
+<h1><span style="font-size: 16pt;font-family: arial;color: #4682b4;">Equipment Transfers Between Stores</span></h1>
+
+<p><b style="color: #3d3d3d;">(Multi-Store)</b></p>
+
+<p> </p>
+
+<p><span style="color: #3d3d3d;font-family: arial;font-size: 10pt;">To properly use transfers the item keys have to be properly setup. Under Parameters, there is a setting for &quot;Item Key Begins with Store Number&quot;. If this is checked, then the item keys must begin with the store number, for example, 1AER for #1 2AER for store #2, etc. IF this is unchecked, then the item keys must end with a hyphen followed by the store number, for example, AER-1 for store #1, AER-2 for store #2, etc. If the inventory you want to transfer does not have the proper format for the item records at both store., then the system cannot transfer the equipment. NOTE: The inventory cannot be mixed. All the inventory has to be in the same format. If an item is transferred, then an entry will be made in the item&#39;s edit history.</span></p>
+
+<p><span style="color: #3d3d3d;font-family: arial;font-size: 10pt;">When transferring serialized items, the current location will change to the new store number and the header item will change to the new store&#39;s header item. For example, transferring BOB753#5 to store #2, will change the current location to &quot;002&quot; and the header key will be changed to BOB753-1 (assuming the header is BOB753-1, BOB753-2, etc).</span></p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #3d3d3d;">When transferring non-serialized items, the transfer quantity will be deducted from the original store and added to the new store. For example, if you transfer 10 chairs from store #1 to store #2, CHAIR-1&#39;s quantity will be decreased by 10, and CHAIR-2&#39;s quantity will be increased by 10. Note It is important to understand that you must have CHAIR-1 and CHAIR-2 item records to be able to transfer the equipment. If you do not have both item records set correctly, you will not be allowed to transfer. </span></p>
+
+<p> </p>
+
+<p><span style="font-family: arial;color: #3d3d3d;font-size: 11pt;">There are two recommended methods to transfer equipment from store to store:</span></p>
+
+<p> </p>
+
+<p><b style="color: #3d3d3d;font-family: arial;"><span style="font-size: 11pt;">Method 1 Transfer item from Item Availability -</span></b></p>
+
+<p><span style="font-family: arial;font-size: 10pt;">In Item Availability, select the item to be transferred. Click on Tools, Store Transfers. Next, select the store you want to transfer the item to. If it is a non-serialized item, you will need to enter the quantity that you are transferring.</span></p>
+
+<p> </p>
+
+<p><b style="color: #3d3d3d;font-family: arial;font-size: 11pt;">Method 2 Write a Transfer Contract - </b></p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #3f3e3e;">To use this method you need to add a Transfer customer for each store. The customer key must begin with &quot;XFER-&quot; followed by the store number (for example XFER-1, XFER-2, etc). The customer name should be &quot;TRANSFER TO STORE #!, TRANSFER TO STORE #2, TRANSFER TO SAN JOSE, etc&quot; A Transfer Contract is written just like any other contract.</span></p>
+
+<p style="font-size: 6pt;"> </p>
+
+<p><span style="font-size: 10pt;font-family: arial;color: #333333;">1. From Counter System Main Menu, select Tools, Contract, Transfer</span></p>
+
+<p><span style="font-family: arial;font-size: 10pt;"><span style="color: #323131;">2. Select the store to transfer the items to</span></span>.</p>
+
+<p><span style="color: #3d3d3d;font-family: arial;font-size: 10pt;">3. You will be asked whether you are transferring the items right then. If you answer No, then you will need to enter the date of the transfer</span>.</p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #323131;">4. Select the items that you are going to transfer. The default time for a non-serialized item is on the week. This is to protect you from overbooking your items locally. The one week is the estimate of how long it will take to get the items back in your store.  If it is longer or shorter, you can override the default. For serialized items, the default time is 1 hour. This is the time to transfer from one store to the other store</span>.</p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #373737;">5. Finish the contract as normal, no money will be requested or entered</span>.</p>
+
+<p><span style="color: #3c3c3c;font-family: arial;font-size: 10pt;">6. When the items are ready for transferring use Send Out Reservation to send out the Transfer Contract</span>.</p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #333333;">7. Give a copy to the delivery driver.</span></p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #373737;">8. When the delivery driver arrives at the other store, give the paperwork to the receiving store.</span></p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #303030;">9. The receiving store then needs to use Close Contract to Close the Transfer Contract, which transfers all of the equipment to the receiving store.</span></p>
+
+<p> </p>
+
+<p><b><span style="font-family: arial;font-size: 11pt;color: #303030;">A close item at a location other than an item&#39;s current location</span></b></p>
+
+<p><span style="font-family: arial;font-size: 10pt;color: #383838;">If a customer returns equipment to a store other than the original store, the counter person will be asked if they want to transfer the equipment to their store. By answering Yes, the item will be transferred. By answering No, nothing will be done to the item. </span></p>

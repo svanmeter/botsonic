@@ -1,0 +1,51 @@
+<h3><span style="color: #2980b9;"><span style="font-size: 16pt;">Mobile Workforce - How It Works</span></span></h3>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Overview: </span></b><span style="color: #333333;">A basic summary of the processes used with Mobile WorkForce.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">1.   User performs a task on their mobile device using the WorkForce site </span><a href="http://www.porwork.com/" target="_self"><span style="color: #1b75bb;">www.porwork.com</span></a></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">2.   WorkForce server creates the necessary files for each transaction that is submitted.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">3.   Rental stores server is set up to run a task every 1 minute (this is set up in Configure Task Runner – Configuration&gt;Store Configuration&gt;Configure Task Runner).</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">4.   This task downloads the WorkForce server transaction files, and upload new data to the WorkForce site if necessary.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">5.   Downloaded transaction files are saved in x:\POR\Pictures\Quote\Mobile\</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">6.   If any transaction files are received, the WorkForceEngine is started.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">7.   WorkForceEngine reads the transaction files and moves/renames any image/signature files.</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">a.   Files are saved in:</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">b.   Contract Images go into             x:\POR\WebTasks\Images\ContractImages\Year\Month\</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">c.   Contract Signatures go into        x:\POR\WebTasks\Images\ContractSignatures\Year\Month\</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">d.   Item Images go into                   x:\POR\WebTasks\Images\ItemImages\Year\Month\</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">8.   WorkForceEngine updates the WebTaskEngine database (x:\POR\WebTasks\WebTaskEngine.mdb) with the transaction detail.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">9.   WorkForceEngine starts the Counter System with a command telling it to read from the WebTaskEngine database.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">10.  Counter System processes the tasks and updates the WebTaskEngine database fields ImportedOn (DateTime), and ImportingAgent (name of the program doing work).</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">a.   If it is a Contract Attachment, a Windows Shortcut .lnk file is added to \POR\Attachments\ pointing to the file in the folder from step #7 and referencing the contract within the link filename. These show in POR as Contract Attachments.</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">b.   If it is a Contract Signature, the image file is imported into the Database TransactionSignature table.</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">c.   If it is an Item Image, the image file is imported into the POR Database ItemPicture.</span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18pt;"><span style="color: #333333;">d.   Any other task is put directly in the corresponding place in the database (i.e. Call Log, Service Contract, Updated arrival time, etc.)</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">11.  Process is complete.</span></p>
+
+<p style="background: white;margin-left: 72pt;"> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>

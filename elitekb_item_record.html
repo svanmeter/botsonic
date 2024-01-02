@@ -1,0 +1,155 @@
+<h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Item Record</span></span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Overview:</span></b><span style="color: #333333;"> This document explains the proper ways to set up bulk and serialized item records. All items in Point-of-Rental must have a unique <b>item key</b>; generally, similar items should have similar keys. For example, a store that rents 6 and 8-foot tables could have TAB6 and TAB8 as the <b>item keys</b>. Or, if they prefer, they could have x4d6-tth2n and x4d6-tth5n. An <b>item key</b> can be up to 15 characters long, but we recommend making them as short as possible. Of course, there are a few rules that must be followed to make sure the program runs smoothly which will be explained in detail below.</span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">Note:  There are two fields, <u>Link Item,</u> and <u>Fuel</u> that when information is entered in those fields in the Rental or Sales Header, it will override whatever info, if any, in the serialized items belonging to it. (Fuel field is the exception when the Header record is blank it will not update the serialized record)</span></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">The following are reserved <b>Item Keys</b> that Point-of-Rental uses – you should not use these keys.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>DEFAULT</b> used to define the pre-set data in a new item record.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>FINANCECHG</b> used for taxable finance charges.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>HOLDFORCOUNT</b> used for event stores when putting a contract on hold.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>REP-MAINT</b> used on an Internal Maintenance Order (IMO).</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>RESVCANCEL</b> used to capture cancellation fees on a contract.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">The following are reserved Item Key prefixes that Point-of-Rental uses.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>WO</b> used for Work Order items.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>NOTE</b> used for a line item label or separator on a contract.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>REP-SERV</b> used on Service Call contracts.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>|PKUP</b> is used for charging a pickup fee when calling an item off rent.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">• <b>|XFER</b> is used for charging a transfer fee when doing a site transfer.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="color: #333333;">•<b>|</b> is used in the first character of the <b>Item Key</b> for any item that is a delivery fee.</span></p>
+
+<p style="background: white;margin-left: 18pt;"><span style="color: #333333;">      (called a ‘pipe’ and is above the enter key)</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">An <b>item key</b> can have letters, numbers, and some symbols. Please be aware that many symbols are still considered ‘special’ and can affect the program in unexpected ways. The following characters could cause issues and should be used with caution: ‘~! @ $ % ^ &amp; * ( ) + ` = { } [ ] \ ? &gt; &lt; , / : ; ”   </span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;"># -</span></b><span style="color: #333333;"> (pound sign and hyphen). These symbols designate serialized and bulk items or the two major item types used by the system. This is true for both rental and resale items. Do not use these characters for any reason other than those described below.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Serialized items are generally items with a serial number, specifically, every single item has its own record, i.e. if you have 10 backhoes, you have 10 individual backhoe records, each with a quantity of one. This allows for tracking of income, repair costs, utilization, ROI, and much more per individual unit.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Bulk items are items like chairs, dishes, scaffolding, air hoses, etc. If you have ten tables, you will only have one record for them, with a quantity of ten. There is no need to track specifics about one table, rather you would track income, repair costs, utilization, and ROI about all ten tables.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Header Records are used to give you summary information about a group of items.  A header can be specific to items in a store or in the entire company and is used for both serialized and bulk items. With header / serialized records you can choose to view specific information about one unit or one store or a high-level view of all units and all stores. In all item records the Header Key field is what links the serialized and header records. The Header Key is typically the same as the Key for the Header record and the beginning of the Key for the serialized records. See the examples below.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">The way item records are setup affects many aspects of the program such as Purchasing, Contract Writing, Transferring, and Sub-Renting, to name a few. It is important that these basic rules are followed.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Basic Setup of Bulk Items</span></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Multi-Store Environment: Create a header record with a Home and Current Location of 000.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Single Store Environment: Header/bulk serialized is not necessary, but could be used with no advantage or disadvantage.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Make sure to check the Bulk Item box in the Options tab. See below for an example.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image001_030" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8b&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGfG"></img></span></p>
+
+<p style="background: white;"><span style="color: #333333;">If you do not share inventory in a multi-store environment and do not need the visibility to replace the 000 in the Home and Current Location with the store number the header record is representing. You would need a header record for each store in this situation. This is not a recommended method unless you have a unique circumstance that warrants this. When creating a header record with 000 in the store locations, only one record is required. Ask a POR support person for help if needed.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Once the header is created, you will need to create a serialized record for each store. Select the header record again and click on the Options pull-down menu in the top left corner and choose ‘Create Serialized’. The record that is created will have a key that ends in a -1, -2, etc. (the number is the store location). Make sure to change the Home Loc and Current Loc to the appropriate store number (001 for store 1, etc.)</span></p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image002_020" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8b&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGfH"></img></span></p>
+
+<p style="background: white;"><span style="color: #333333;">Once the items are set up correctly, transferring between stores is a simple task. When you transfer a bulk item from store 1 to store 2, POR will automatically lower the quantity of the store 1 item and increase the quantity of the store 2 items. Also, this makes the item lookup screen easier to navigate. Note the example below; when you select All Stores and check the Serialized Items box, you can see the header and the store 1 and 2 item records immediately below the header. The header quantities are calculated based on the bulk serialized records.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">*Note:</span></b><span style="color: #333333;"> Never end an <b>item key</b> with a hyphen, it will cause you grief.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">            (i.e. CHAIR- = wrong; CHAIR-1 = correct)</span></p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image003_023" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8b&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGfI"></img></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Basic Setup of Serialized Items</span></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Multi-Store and Singe Store Environments: Create a header record with a Home and Current Location of 000.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">DO NOT check the Bulk Item box in the Options tab. See below for an example.</span></p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image004_019" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8b&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGfJ"></img></span></p>
+
+<p style="background: white;"><span style="color: #333333;">If you do not share inventory in a multi-store environment and do not need the visibility to replace the 000 in the Home and Current Location with the store number the header record is representing. You would need a header record for each store in this situation. This is not a recommended method unless you have a unique circumstance that warrants this. When creating a header record with 000 in the store locations, only one record is required. Ask a POR support person for help if needed.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Once the header is created, you will need to create a serialized record for each unit. Select the header record again and click on the Options pull-down menu in the top left corner and choose ‘Create Serialized’. The record that is created will have a key that ends in a #01, #02, etc. (the number is the unit number). Your unit number can be anything you want it to be (typically 2 or 3 digits, but no more than 5 digits) Make sure to change the Home Loc and Current Loc to the appropriate store number (001 for store 1, etc.)</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image005_013" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8b&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGfK"></img></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">The advantage of using sequential unit numbers is that the program will automatically select the next unit number when a new unit is added to your fleet.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Once the items are set up correctly, transferring between stores is a simple task. When you transfer a serialized item from store 1 to store 2, POR will automatically change the current loc to 002. Also, this makes the item lookup screen easier to navigate. Note the example below; when you select All Stores and check the Serialized Items box, you can see the header and the serialized records immediately below the header. The header quantities are calculated based on the serialized records.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">*Note:</span></b><span style="color: #333333;"> Never end an item key with a pound sign. it will cause you grief.</span></p>
+
+<p style="background: white;"><span style="color: #333333;">            (i.e. CRANE# = wrong; CRANE#04 = correct)</span></p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image006_011" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8b&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGfL"></img></span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">In addition to what was discussed above, it is important to select the correct Item Type, Item Category, and enter inaccurate part numbers and serial numbers.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">Keywords: (setup bulk and serialized item records)</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>

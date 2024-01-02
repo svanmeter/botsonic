@@ -1,0 +1,91 @@
+<p style="line-height: 1.38;"><strong><span style="color: #3b3e41;"><span style="font-size: 36px;"><span style="font-family: Arial,Helvetica,sans-serif;">POR Pay | Global POR Credit Card Processing</span></span></span></strong></p>
+<br><br> 
+<p style="line-height: 1.38;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Point of Rental offers its own credit card integration through which you can choose a variety of processors (CAYAN, Stripe, Peach Payments, etc.). This opens up many options globally that have been unavailable through our previous integrations. Like other integration options, this allows you to take and reconcile payments within POR, keeping end of day processes seamless and easy.</span></span></span></span></span></span></span></p>
+ <br><br><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span>
+
+<ul><li>
+	<p><a href="#t1"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Set Up</span></span></span></a></p>
+	</li><li>
+	<p><a href="#t2"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Terminals</span></span></span></a></p>
+	</li><li>
+	<p><a href="#t3"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Payments</span></span></span></a></p>
+	</li><li>
+	<p><a href="#t4"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Refunds</span></span></span></a></p>
+	</li></ul>
+<br><br><br> 
+<p style="line-height: 1.38;"><a id="t1" name="t1"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Set Up</span></span></span></p>
+ 
+
+<p style="line-height: 1.38;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">This integration is set up on the drawer tab of Parameters (<em>Configurations &gt; System Configurations</em>). </span></span></span></span></span></span></span><br> </p>
+
+<p style="line-height: 1.38;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">1. Select ‘<strong>POR</strong>’ from the combo box of options.<br><br>2. Then select ‘<strong>Global Setup</strong>’ to configure the credit card setup.  </span></span></span></span></span></span></span></p>
+  
+
+<div style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u0000005kg4&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Spe2" style="width: 542px;height: 470px;"></img></div>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">3. <strong>Select</strong> ‘<strong>Add Payment Processors</strong>’ to configure the processor of your choice. <br><br>4. <strong>Follow the prompts</strong> (these will be slightly different depending on the processor), to enter credentials. For example, CAYAN will provide credentials for users to enter, while Stripe users will need to setup or login to their account.<br><br>5. Once the credentials are saved, <strong>take</strong> the <strong>processor ID</strong> and <strong>enter it </strong>in the appropriate space on the drawer tab. This will be used to determine which processor to use if stores have unique processors set up.</span></span></span></span></span></span></span></p>
+ 
+
+<p style="line-height: 1.38;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u0000005kg4&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Spca" style="width: 598px;height: 351px;"></img></p>
+
+<p style="line-height: 1.38;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Once this is done, terminals can be added. If using an onscreen terminal, rather than a physical terminal, no further setup is needed.  </span></span></span></span></span></span></span></p>
+ <br> 
+<p style="line-height: 1.38;"><a id="t2" name="t2"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Terminals</span></span></span></p>
+ 
+
+<p style="line-height: 1.38;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">You will need to input whatever label they have designated to the terminal and the terminal’s IP address. This can be obtained from the settings on the terminal itself. After this information is saved, the terminal label and its system generated terminal ID will appear under payment terminals. The terminal ID will be needed to set up the terminal in security so that it can be assigned to a user profile. </span></span></span></span></span></span></span></p>
+ 
+
+<p style="line-height: 1.38;margin-left: 40px;"><span style="font-size: 11pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #3b3e41;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To complete the setup of a physical terminal, <strong>open Security</strong> from Program Menu and <strong>go to Verifone Terminals</strong>.</span></span></span></span></span></span><span style="color: #000000;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">  </span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38;"> </p>
+
+<p style="line-height: 1.38;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Add a terminal</strong>. You will need the terminal ID from configurations. </span></span></span></p>
+
+<p style="line-height: 1.38;"> </p>
+
+<p style="line-height: 1.38;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">3.<strong> Label the terminal</strong> and <strong>select POR Payment</strong> from the dropdown.  </span></span></span></span></span></span></span></p>
+ 
+
+<p style="line-height: 1.38;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u0000005kg4&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Spma" style="width: 355px;height: 343px;"></img></p>
+ 
+
+<p style="line-height: 1.38;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">4. This can now be assigned to a user profile. These can be accessed through <strong>User Profiles</strong> (the option right above Verifone terminals in the security menu). </span></span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38;"> </p>
+
+<p style="line-height: 1.38;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. Navigate to the advanced tab of the selected profile and <strong>select the modify button</strong>. </span></span></span></p>
+
+<p style="line-height: 1.38;"> </p>
+
+<p style="line-height: 1.38;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">6. <strong>Choose the correct terminal</strong> from the dropdown at the bottom.</span></span></span></span></span></span></span></p>
+ 
+
+<p style="line-height: 1.38;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u0000005kg4&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008SpiT" style="width: 463px;height: 529px;"></img></p>
+ <br> 
+<p style="line-height: 1.38;"><a id="t3" name="t3"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Payments</span></span></span></p>
+ 
+
+<p style="line-height: 1.38;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">When a payment is taken, you will have the option of using either the physical or the onscreen terminal. If a token exists, an existing card can be used, or a new card can be entered. <span style="background-color: #f1c40f;">Selecting the physical terminal will direct your customer to interact with the terminal. By selecting the onscreen terminal, it will appear on your screen.</span></span></span></span></span></span></span></span></p>
+ 
+
+<p style="line-height: 1.38;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u0000005kg4&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008SpaF" style="width: 677px;height: 523px;"></img></p>
+ 
+
+<p style="line-height: 1.38;"><strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Onscreen Terminal:</span></span></span></strong></p>
+
+<p style="line-height: 1.38;"> </p>
+<img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u0000005kg4&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008SpQU" style="width: 303px;height: 426px;"></img>
+<p style="line-height: 1.38;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-variant: normal;white-space: pre-wrap;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">After completing the payment, you will be guided through the usual contract processes to print/email the contract or return to another screen.</span></span></span></span></span></span></span></p>
+ <br> 
+<p style="line-height: 1.38;"><a id="t4" name="t4"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Refunds</span></span></span></p>
+ 
+
+<p style="line-height: 1.38;"><span style="font-size: 11pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #3b3e41;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Whether you are able to do an independent or dependent refund will depend on the processor. Those who support independent refunds, will be able to refund any amount to a particular card. Otherwise, you can only refund up to the amount paid on any particular card. If a contract has two $10 payments on two different cards, then $10 has to be refunded to each card, rather than being able to refund $20 to one card.</span></span></span></span></span></span><br><span style="color: #000000;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;"> </span></span></span></span></span></span></p>
+
+<p style="line-height: 1.38;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u0000005kg4&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008SpNk" style="width: 627px;height: 197px;"></img></p>
+ 
+
+<div id="" style="left: 20px;top: 4445.48px;"><br> </div>
+
+<div id="" style="left: 60px;top: 2522.99px;"> </div>

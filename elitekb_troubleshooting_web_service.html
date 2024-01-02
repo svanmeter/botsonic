@@ -1,0 +1,197 @@
+<h3><span style="color: #2980b9;">Web Service Troubleshooting</span></h3>
+
+<p style="background: white;margin-top: 5.75pt;"> </p>
+
+<p style="background: white;"><u><b><span style="color: #222222;">Web Service</span></b></u></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Webservice folder in c:\POR\PORSmartEquip directory</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Validate Port 57368 is open in firewall   </span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Check for Windows updates – needs .net 4.5</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Check for Web.config in c:\POR\PORSmartEquip\WebService</span></p>
+
+<p style="background: white;margin-left: 54pt;"><span style="color: #333333;"><img alt="image025_002" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCs"></img></span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Web.config customized appsettings</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">1.             &lt;add key=&quot;ItemSearch&quot; value=&quot;NUM&quot; /&gt;</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Options are NUM for ItemFile NUM or KEY for ItemFile KEY</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">2.             &lt;add key=&quot;PartsCategory&quot; value=&quot;13&quot; /&gt;</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Sets the default parts category for items added through SmartEquip</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Determine this category by querying ItemCategory in the POR database – defaults to “Parts – Special Order” unless the customer specifies otherwise</span></p>
+
+<p style="background: white;margin-left: 180pt;"><span style="color: #333333;">SELECT [Name]</span></p>
+
+<p style="background: white;margin-left: 180pt;"><span style="color: #333333;">      ,[Category]</span></p>
+
+<p style="background: white;margin-left: 180pt;"><span style="color: #333333;">  FROM [ItemCategory]</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">3.             &lt;add key=&quot;DBPath&quot; value=&quot;C:\POR\users\&quot; /&gt;</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Sets the default path for por.ini</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">In IIS Manager</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">In IIS</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">1.         Configure Application Pool for ASP 4.0/4.5 to enable 32-bit applications to True</span></p>
+
+<p style="background: white;margin-left: 108pt;"><span style="color: #333333;"><img alt="image026_002" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCt"></img></span></p>
+
+<p style="background: white;margin-left: 108pt;"><span style="color: #333333;">Click the Advanced Settings link under the Actions menu</span></p>
+
+<p style="background: white;margin-left: 108pt;"><span style="color: #333333;"><img alt="image027_001" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCu"></img></span></p>
+
+<p style="background: white;margin-left: 108pt;"><span style="color: #333333;">Change Enable 32-Bit Applications to True</span></p>
+
+<p style="background: white;margin-left: 108pt;"><span style="color: #333333;"><img alt="image028_002" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCv"></img></span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">2.         Path (c:\POR\PORSmartEquip\WebService)</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">3.         Port 57368</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">4.         Pool ASP 4.0</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">5.         Browse to service on IE to validate</span></p>
+
+<p style="background: white;margin-left: 180pt;"><span style="color: #333333;"><img alt="image029_001" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCw"></img></span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">6.         Click the API link to view API information</span></p>
+
+<p style="background: white;margin-left: 180pt;"> </p>
+
+<p style="background: white;margin-left: 54pt;text-indent: -0.75pt;"><span style="color: #333333;"><img alt="image030_003" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCx"></img></span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #222222;">Web Service Test</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Webservice - Copy folder in c:\POR\PORSmartEquip directory</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Validate Port 57368 is open in the firewall   </span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Check for Windows updates – needs .net 4.5</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Check for Web.config in c:\POR\PORSmartEquip\WebService - Copy</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Web.config customized appsettings</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">1.             &lt;add key=&quot;ItemSearch&quot; value=&quot;NUM&quot; /&gt;</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Options are NUM for ItemFile NUM or KEY for ItemFile KEY</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">2.             &lt;add key=&quot;PartsCategory&quot; value=&quot;13&quot; /&gt;</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Sets the default parts category for items added through SmartEquip</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">3.             &lt;add key=&quot;DBPath&quot; value=&quot;C:\POR\users\&quot; /&gt;</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Sets the default path for por.ini</span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><b><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">In IIS Manager</span></b></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">1.         Configure Application Pool for ASP 4.0 to enable 32-bit applications to True</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">2.         Path (c:\POR\PORSmartEquip\WebService - Copy)</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">3.         Port 57368</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">4.         Pool ASP 4.0</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">5.         Browse to service on IE to validate<br><img alt="image031_001" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCy"></img></span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="color: #333333;">6.         Click the API link to view API information</span></p>
+
+<p style="background: white;margin-left: 180pt;"> </p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="color: #333333;"><img alt="image032_002_623x386" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHCz"></img></span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Using Fiddler (</span><a href="https://www.telerik.com/download/fiddler" target="_self"><span style="color: #1b75bb;">https://www.telerik.com/download/fiddler</span></a><span style="color: #333333;">)</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Fiddler allows for sending XML files to the SmartEquip interface and receiving XML responses</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">This enables testing from the customer Point-of-Rental server</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Click the Composer button to begin the test</span></p>
+
+<p style="background: white;margin-left: 54pt;"><br><span style="color: #333333;"><img alt="image033_001" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHD0"></img></span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Click the Parsed tab – the History section will show historically created tests</span></p>
+
+<p style="background: white;margin-left: 54pt;"><span style="color: #333333;"><img alt="image034_001" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHD1"></img></span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">The Point of Rental Test Server has sample tests that can be used on a customer system</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">Login – tests user login – requires a customer user id and password with SmartEquip role</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">CreateOrder – creates a purchase order and adds equipment to work order – requires customer user id with SmartEquip role, valid unit, and valid Point of Rental transaction</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">ValidateOrder – validates the existence of rental unit and Point of Rental transaction</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">Equipmentsearch – searches for the unit by unit number or KEY if specified on the web.config</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">EquipmentList – searches for the unit(s) by model and manufacturer – requires the customer has matched model number and manufacturer to SmartEquip(vendor) standards</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">Iteminventory – searches for parts by KEY or part number, manufacturer and location – requires the customer has matched part number/KEY and manufacturer SmartEquip(vendor) standards</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">Make – lists makes in a location by manufacturer – requires a valid location</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">Modelsbymake – lists models for a manufacturer in a location - requires a valid location and customer has matched part manufacturer to SmartEquip(vendor) standards</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">Serial – searches for a unit by serial number and manufacturer - the customer has matching serial number and manufacturer SmartEquip(vendor) standards</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 108pt;"><span style="font-family: &#39;&quot;courier new&quot;&#39;;color: #333333;">o     </span><span style="color: #333333;">Search criteria must be taken from the customer’s Point-of-Rental instance</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">User ID and password</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Unit</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Model</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Manufacturer</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Serial number</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Item</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 162pt;"><span style="font-family: wingdings;color: #333333;">§ </span><span style="color: #333333;">Part number</span></p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Double-click the functionality to test and the Parsed section will update to the test criteria</span></p>
+
+<p style="background: white;margin-left: 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Click the Execute button to test the criteria</span></p>
+
+<p style="background: white;margin-left: 54pt;"><br><span style="color: #333333;"><img alt="image035_001" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHD2"></img></span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">The results will appear in the left-hand capture box (Result of 200 means success)</span></p>
+
+<p style="background: white;margin-left: 54pt;"><br><span style="color: #333333;"><img alt="image036_001" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHD3"></img></span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Click on the right-hand Inspectors tab and XML tab to view the results detail</span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;margin-left: 54pt;"><span style="color: #333333;"><img alt="image037" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH5O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHD4"></img></span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;margin: 5pt 0pt 0pt 54pt;text-indent: -0.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;">Log file is located at C:\POR\PORSmartEquip\Logs</span></p>
+
+<p style="background: white;margin-left: 54pt;"> </p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-top: 5.75pt;"> </p>

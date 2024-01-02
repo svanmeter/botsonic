@@ -1,0 +1,151 @@
+<p class="MsoNormal"><span style="font-size: 36px;"><strong><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Subrental Process</span></span></strong></span></p>
+
+<p class="MsoNormal"><br><br><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><span style="color: #3b3e41;">In this article, we are going to go over the Subrental Process, also known as Rerents, in the Point of Rental program.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><span style="color: #3b3e41;">To track subrental cost and the income generated you can create Subrental contracts. The Subrental contract will not generate income or accounting balances; that is handled by the con writer for your customer. They simply track what is being subrented, for how long, from which vendor, and the cost of the Subrental (if the data is entered). The Subrental contract is also in the dispatch module for scheduling the pickup and return of the subrented equipment.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;"><span style="color: #3b3e41;">You can create a single Subrental contract per vendor for multiple items having the same date range. If you are subrenting five items for five different contracts at the same time, create one Subrental contract. If you are subrenting five items for five different contracts for five different lengths of time they need to be on five separate Subrental contracts.</span></span></span></p>
+
+<p class="MsoNormal"><br><br><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span><br> </p>
+
+<ul><li class="MsoNormal"><a href="#t1"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up a Subrental Vendor Record</span></span></span></a></li><li class="MsoNormal"><a href="#t2"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up an Item Record</span></span></span></a></li><li class="MsoNormal"><a href="#t3"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Bulk Items</span></span></span></a></li><li class="MsoNormal"><a href="#t4"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Serialized Items</span></span></span></a></li><li class="MsoNormal"><a href="#t5"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From the Original Contract</span></span></span></a></li><li class="MsoNormal"><a href="#t6"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Creating the Subrental Contract</span></span></span></a></li><li class="MsoNormal"><a href="#t7"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite Only Features</span></span></span></a></li><li class="MsoNormal"><a href="#t8"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Subrental Analysis Report</span></span></span></a></li></ul>
+
+<p class="MsoNormal"><br><br><br> </p>
+
+<p class="MsoNormal"><a id="t1" name="t1"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up a Subrental Vendor Record</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; File Maintenance &gt; Customer File</em><br>Elite: <em>Configuration Gear &gt; File Maintenance &gt; Customer File</em></span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You will need to create a customer file for each company you subrent from. The key to this customer record must start with “SUBRENT-&quot;. So, you might have a “SUBRENT-UN “SUBRENT-BOBSRENTS”. The status would be “Cash”.</span></span></span><br> </p>
+
+<p class="MsoNormal"><img alt="image001.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgPL"></img><br> </p>
+
+<p class="MsoNormal"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you plan on creating POs from your Subrental contracts the Key should be “SUBRENT-1234” (1234 is the vendor num Purchase Order Module). This will allow Point of Rental to create a PO for the correct vendor.</span></span></span><br> </p>
+
+<p class="MsoNormal"><img alt="image002.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgPV"></img><br> </p>
+
+<p class="MsoNormal"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If your vendors give you a discount you will want to assign a discount table so the proper discount is applied every time a Subrental contract is written. This can be done on the Customer File under Discount.</span></span></span><br> </p>
+
+<p class="MsoNormal"><img alt="image003.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgPa"></img></p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t2" name="t2"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setting up an Item Record</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; File Maintenance &gt; Item File</em><br>Elite: <em>Configuration Gear &gt; File Maintenance &gt; Item File</em></span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You will need to set up the item record to populate the message to create a pending subrental. If you want to allow the overbooking of the item and to create a pending subrental from the item, enter a quantity in the Subrent field. If you do not want to allow overbooking of the item enter ‘-1’ in the subrental field.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you want to break out the subrental income separately from the regular income you will need to create an Item Category for Subrental items or add a G/L Income Account to any category that has subrental items. Don&#39;t forget to assign the correct G/L number to the subrental item. The category will need to be assigned to the correct G/L number. Lastly, assign your subrental equipment to that category. This is only necessary if you wish to break out the income; if not, assign your subrental items to the appropriate category for the type of item. With the Subrental Analysis Report, this is not necessary as you can run a report at any time to see what your subrental income was for any period.</span></span></span></p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t3" name="t3"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Bulk Items</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you are subrenting bulk inventory items such as scaffolding, tables, or chairs you won’t need to create any new item records unless you want to break out income from Subrentals (the Subrental Analysis Report can show you your subrental income). If you do, however, in the item file you need to make sure the &quot;bulk item&quot; box is checked in the options tab. You must indicate that will allow your staff to subrent in the &quot;Subrent&quot; field. To do this you can place ‘9999’ in the Subrental Quantity or if your area has limited inventory, enter a number or zero in the &quot;Subrent&quot; field.</span></span></span><br> </p>
+
+<p class="MsoNormal"><img alt="image004.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgPu"></img></p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t4" name="t4"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Serialized Items</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you are subrenting serialized equipment such as lifts or backhoes you will need to create new item records for those items before they can go on Subrental contracts. They will need to be set up exactly like any other serialized item but have a quantity of zero as you don’t own the item. They can be generic (i.e. “Backhoe SR”) or you can create specific records with serial numbers to you. Generic records may be repeatedly used, but you won’t have specific information about the type of equipment being rented. You should enter something in the key for the indication that the item is a Subrental item (i.e. BACKHOE#SR01, BACKHOE#SR02, ETC…). Also, indicate in the “Subrent” field the quantity you will allow your staff to overbook to a c is not a SUBRENT- the customer. In a serialized item, it should be 1.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><img alt="image005.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgPz"></img></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><a id="t5" name="t5"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">From the Original Contract</span></span></span></p>
+
+<p class="MsoListParagraphCxSpFirst" style="text-indent: -0.25in;margin-left: 40px;"> </p>
+
+<p class="MsoListParagraphCxSpFirst" style="text-indent: -0.25in;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. First you need to overbook the item you are going to Subrent by writing a reservation for it. If the qty of the item is 0 for that date range and there is a qty in the Subrent field of the item file the system will ask if you would like to submit a subrental request. Click yes. If you do not select yes, you can double-click on the subrental field on the line item to create the subrental request. The process is what will link this contract to the subrental contract successfully in the Subrental Analysis report.</span></span></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 80px;"><br><i><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note for Elite: </strong>If you would like to turn off the prompt to create a subrental request to prevent users from adding items to the pending subrental requests form because as a company you don’t Subrent or because you want them to just do this from the right-click, this can be done in the transaction section of the browser configurations.</span></span></span></i><br> </p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: -0.25in;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. A pending subrental will be created and <strong>held in the pending Subrental field</strong> when you create the subrental contract.</span></span></span><br> </p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: -0.25in;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Enter the <strong>items onto the reservation</strong>.</span></span></span><br> </p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: -0.25in;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. <strong>Enter</strong> the <strong>delivery address</strong>, under the delivery tab.</span></span></span><br> </p>
+
+<p class="MsoListParagraphCxSpLast" style="text-indent: -0.25in;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. <strong>Finish</strong> through the <strong>reservation</strong> and then <strong>create the subrental contract</strong>.</span></span></span></p>
+
+<p class="MsoNormal"><b> </b><br> </p>
+
+<p class="MsoNormal"><a id="t6" name="t6"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Create the Subrental Contract</span></span></span></p>
+
+<p class="MsoNormal"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Subrental contract is created as a reservation for the period of the period. The quantity available for that time will be adjusted as soon as the Subrental reservation is written; eliminating any overbooking created and allowing an accurate view of availability for you and your staff.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal"><strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Here&#39;s how to get there</span></span></span></strong><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert: <em>Counter System &gt; New Contract &gt; Subrental Contract</em><br>Elite: <em>Left Menu &gt; Transactions &gt; New Contract &gt; Subrental Contract</em></span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. A new window will open with Pending Subrentals. <strong>Choose the subrental</strong> that is applicable to you.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image006.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgQ4"></img><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. The system will find every vendor that you have subrented those items from in the past and allow you to <strong>select the desired vendor</strong>.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image007.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgQ9"></img><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. The pending subrented items checked will be added to the subrental contract. The items will be automatically linked to the contract where the item was overbooked. You will see the contract number under the contract link field on the subrental contract.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 80px;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> The Event Date on the subrental will be the same as the date on the contract that the item was overbooked on. If multiple items are checked, then it will use the date of the earliest out date and the latest due date to enter on the subrental contract.</span></span></span></em><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image008.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgQE"></img><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. You can also <strong>manually select items</strong> using the Inventory Selection screen just as you would when writing a regular contract, or you can use the <strong>Pending Subrental menu</strong> option at the top of the Contract Processing Screen (if you submitted the subrental request). For bulk items simply <strong>select the actual item</strong> (i.e. scaffolding part, table, chair). <strong>Choose the quantity required</strong>. When manually selecting items, you will be asked “What contract is this item being subrented for?”. Point of Rental will use this contact number for reports concerning Subrental profit and loss; it is important to enter the correct contract number. If you do not enter the contract number the Subrental Analysis Report will not be accurate. Add all items that you are Subrenting from this vendor for this time.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image009.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgQJ"></img><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">When using the Pending Subrental selection screen, all Subrental Requests for the time selected on the subrental contract will be listed. You will not be asked for a contact number as the system already knows what contract the items are being subrented for.</span></span></span></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;">5. </span><span style="font-style: normal;font-variant: normal;font-kerning: auto;font-optical-sizing: auto;font-feature-settings: normal;font-variation-settings: normal;font-weight: normal;font-stretch: normal;line-height: normal;"> </span>It is important to enter your cost for each item being Subrented. <strong>Right-click</strong> each item and <strong>choose Set Special Rate</strong>. Equally important, is setting the Daily, Weekly, and Monthly rate regardless of how long you think it will be rented for. If for any reason you keep it for more time than anticipated, your cost will calculate correctly. Any discounts you receive should also be set at this point.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. The delivery address will populate from the rental contract. You will still have to <strong>set</strong> the subrental <strong>to Get It/Delivery</strong>. If your vendor is not delivering for you, simply <strong>check the box </strong>to switch to the vendor&#39;s address.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><i><strong>Note:</strong> If your store is set to the Party Code rate, the delivery address will not be set since most event stores do not ask their vendors to make deliveries for them.</i></span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">8. Next, <strong>you can print a copy from the print screen</strong> if you wish. The contract number will start with an “s” indicating that it is a Subrental contract. You now have a Subrental reservation. The system now knows these items need to be picked up and for what contract. And by utilizing the Subrental tab on the Day at a Glance screen you can track the status of your various Subrental contracts.</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 40px;"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">9. Once you take possession of the subrented item(s) and before you send out your customer’s reservation, you will need to send out the Subrent reservation. This will temporarily increase the quantity of those items for the specified time and make them available for your customer’s contract. From the Day at a Glance screen, you can send out the Subrental contract by <strong>right-clicking on the contract </strong>and <strong>selecting Send out Subrent</strong>. This is just like sending out a regular reservation and it changes the status to “Subrent Open”.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">10. Using the <strong>Day at a Glance screen</strong> and looking at your “Subrent “, “Delivery”, or “Pickup” tabs you will be able to see Subrental reservations, open Subrentals, Subrental returns, etc.… and be able to send out, modify or close as needed.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">11. When the equipment has been returned to your vendor it will be necessary to close the Subrental contract (this is done the same way you would close a rental contract), <strong>adjust your item cost</strong> and <strong>add any freight or extra charges</strong>.</span></span></span></p>
+
+<p class="MsoNormal" style="margin-left: 40px;"> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">12. When the subrented line item is closed or called off rent on the original contract, the user will be prompted to go ahead and call off the subrental contract.  From this message screen, the subrental will open so it can be called off. </span></span></span><br> </p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 1.0in;text-indent: -.25in;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">a. A system notification (Configurations &gt; Reports and Notifications &gt; System Notifications &gt; Subrental Called Off Rent) can be set up to notify the appropriate person (inventory management, dispatch, etc.). See our article on</span> <a href="http://por.force.com/uLearn/s/article/System-Notifications-2116567548" target="_blank">System Notifications</a> <span style="color: #3b3e41;">for more information.</span></span></span><br> </p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: 0in;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">13. In the Subrental tab, within Day at a Glance, under reports, there is an option for <strong>Subrentals Needs Closing</strong>. This will list any contracts where the line item has been closed, but the subrental is still open/called off rent. The subrental can be opened right from this screen and actioned as needed.</span></span></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: 0in;margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">14. After a Subrental contract has been closed you can create a PO from the Tools Menu in the top left corner of the contract screen by <strong>selecting Create PO</strong>. Creating a PO is only necessary if you are importing your PO’s into an accounting package as invoices to be paid.</span></span></span><br> </p>
+
+<p class="MsoNormal" style="margin-left: 40px;"><img alt="image010.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgQO"></img></p>
+
+<p class="MsoNormal"> </p>
+
+<p class="MsoListParagraph" style="text-indent: 0in;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">15. The Subrental cost assigned to each item will be posted to that item&#39;s Subrental cost in POR and you will be able to see, by looking at the item record, the income generated and cost incurred by the Subrental. </span></span></span> </p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t7" name="t7"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite Only Features</span></span></span><br><br><b><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Continuation Billing:</span></span></span></b><span style="color: #3b3e43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> In the browser configurations, users can turn on an option called “Continue Subrental Contracts”. With this turned on, when a contract with a connected subrental contract is continuation billed, the user will also be prompted to continuation bill the subrental contract. <br><br><b>Subrental Purchase Orders:</b> These purchase orders can be created from the Tools tab of a subrental contract after they have been closed. If you would like them to be automatically created when the subrental is closed, turn the “Auto Create Subrental POs” option on in browser configurations.<br><br><b>Subrental Request: </b>This allows you to define which store can prompt for subrentals. </span></span></span></p>
+
+<p class="MsoNormal"><img alt="image011.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DJ6p&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007vgQT"></img></p>
+
+<p class="MsoNormal"><br> </p>
+
+<p class="MsoNormal"><a id="t8" name="t8"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Subrental Analysis Report</span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">The Subrental Analysis Report shows all the sub-rents for a selected time as well as the contract the sub-rent was for. The total cost of the sub-rent and the total income will be shown to give a net profit for each item and each category. For more information see our article on</span> <a href="http://por.force.com/uLearn/s/article/Subrental-Analysis-717512043" target="_blank">Subrental Analysis</a></span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">.</span></span><br><br><br><br><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></span></span><br><br><a href="http://por.force.com/uLearn/s/article/Customer-File-762302599" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Customer File</span></span></span></a><br><a href="http://por.force.com/uLearn/s/article/Item-Records" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Item Records</span></span></span></a><br><a href="http://por.force.com/uLearn/s/article/Continuation-Billing" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Continuation Billing</span></span></span></a><br><a href="http://por.force.com/uLearn/s/article/Subrental-Analysis-717512043" target="_blank"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #0782c1;">Subrental Analysis</span></span></span></a><br><br><br> </p>

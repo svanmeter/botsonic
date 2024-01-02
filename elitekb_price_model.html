@@ -1,0 +1,339 @@
+<p><span style="font-size: 20px;"><span style="color: rgb(41, 128, 185);">Price Model</span></span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Security to access this feature is located in Configurations/Price Model  It will expose or remove the menu option in Configurations.  </span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">The Price Model feature allows for a mathematical formula to be applied to a Sales or Rental item to adjust prices as they are purchased or to existing items in inventory.  The primary purpose of the feature is to ensure that the Price adjusts as costs adjust so that a preferred Margin or Markup is maintained without having to individually consider and adjust every item in your inventory.</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">For Rental assets, you can apply a formula that will adjust the Sell, Retail or Floor price of an item based on both financial and rental activity.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Prices that can be affected:  Sale, Retail and Floor. Retail and floor are values that are not currently tied to any other processes or reports.  Informational only.</span></p>
+
+<p> </p>
+
+<p><b style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Price Updates</b></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Price updates based on the formula set are made at the following times:</span></p>
+
+<ul><li><span style="background-color: transparent;font-size: 11pt;">On update to the formula to items already assigned</span></li><li><span style="background-color: transparent;font-size: 11pt;">On assignment of items - in either the Price Model feature or Item File</span></li><li><span style="background-color: transparent;font-size: 11pt;">During receipt of items in Purchase Orders</span></li><li><span style="background-color: transparent;font-size: 11pt;">During End of Day, Rental assets will get updated to account for time, repairs, etc.</span></li></ul>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Tags and operators that can be used in the formula for Sales items:</span></p>
+
+<ul><li><span style="background-color: transparent;font-size: 11pt;">Purchase Price</span></li><li><span style="background-color: transparent;font-size: 11pt;">Extra Cost (typically freight)</span></li><li><span style="background-color: transparent;font-size: 11pt;">Replacement Cost</span></li><li><span style="background-color: transparent;font-size: 11pt;">Mathematical Operators: +, -, * (multiply) or / (divide)</span></li><li><span style="background-color: transparent;font-size: 11pt;">Any number</span></li></ul>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Tags and operators that can be used in the formula for Rental items:</span></p>
+
+<ul><li><span style="background-color: transparent;font-size: 11pt;">Purchase Price</span></li><li><span style="background-color: transparent;font-size: 11pt;">Extra Cost (typically freight)</span></li><li><span style="background-color: transparent;font-size: 11pt;">Replacement Cost</span></li><li><span style="background-color: transparent;font-size: 11pt;">Lift to Date revenue</span></li><li><span style="background-color: transparent;font-size: 11pt;">Life to Date hours</span></li><li><span style="background-color: transparent;font-size: 11pt;">Life to Date repairs</span></li><li><span style="background-color: transparent;font-size: 11pt;">Current Meter</span></li><li><span style="background-color: transparent;font-size: 11pt;">Age in Months</span></li><li><span style="background-color: transparent;font-size: 11pt;">Current Value (from depreciation 1)</span></li><li><span style="background-color: transparent;font-size: 11pt;">Mathematical Operators: +, -, * (multiply) or / (divide)</span></li><li><span style="background-color: transparent;font-size: 11pt;">Any number</span></li></ul>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Sales item examples:</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">I want to maintain a 30% margin on all parts in a Category:</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">{PurchaseEach}/.70</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">I want to add a 10% markup to freight along with the 100% markup on gloves:</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">({PurchaseEach}*200%)+({ExtraCost*1.10)</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">I want my freight costs included when my 30% margin is calculated:</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">({PurchaseEach}+{ExtraCost})/.70</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">I want my Floor Price to be cost plus 10%:</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">{PurchaseEach}*1.10</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Rental asset examples:</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">I want to recoup Current Value plus 75% of all repair costs and deduct $200 for each month in age: ({CurrentValue}+({LifetimeRepair}*.75))-({AgeInMonths}*200)</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">I want my Floor price to be Current Value plus 20%: {CurrentValue}*1.2</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">In addition, you can apply a “Margin Chart” to Price Model.  This allows you to apply the same model across many items of varying costs.  Typically, users will have higher margins on lower cost items and lower margins as the costs increase.  This is primarily for sales and parts items.  An example:</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh5.googleusercontent.com/VDuVQpI6m7M1-HbtgRpHk_732ZFRb5Pb6ktPIEAiNxkz5VFTeDJVKTMgKbAjU44CRUZ9ZFfhXBzGOfaDeRg2Rq5kLvsFiIvl98IXs3y68f4_XS1g8Hfwf1m4fcYCm89Dubl7rCRq"></img></span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">When assigned to a Price Model, it will adjust the Margin operator used based on the cost.  In the chart above, an item with a cost of $120 will be priced at a 40% margin.  An item that costs $2.00 will be priced at an 80% margin.</span></p>
+
+<p> </p>
+
+<p><b style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Security Features</b></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Configurations: This will add/remove the access option from the Configurations.  In addition, while in a Shared User terminal, it will use each unique user’s credentials to either allow them to proceed or not.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Price Model:</span></p>
+
+<ul><li><span style="background-color: transparent;font-size: 11pt;">Add/Edit Price Models and Margin Records: This allows a user to Save New and/or Save modifications to existing Price Models. If the user has access from Configurations, they can access the feature but will require this security permission or override credentials to save any modifications made on the Price Model or Margin Chart tabs.</span></li><li><span style="background-color: transparent;font-size: 11pt;">Assign Price Models to Item Records: Same as above but this applies to the Item Assignment tab. Additionally, this controls a user to modify Price Models in Item File.</span></li></ul>
+
+<p> </p>
+
+<p><b style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">How to Create a New Price Model</b></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">From Configurations, select Price Model.  If it is not showing, Price Model security needs to be changed. </span></p>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Add New</u></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Sales Items</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh6.googleusercontent.com/jE9vVv3PLKE4Zw6TcRJKgmxa9XEVGNtlYLNxAJ32DcIX4d8L_PrVCjfhGGOp2lbW_TdqAWeZMkk_Q1gnGBTj61I8DGlyIPcCCY3qWK5p7FZTlmDhouZe2vbuy-9ciVuecuulyPhZ"></img></span></p>
+
+<p> </p>
+
+<ul><li><span style="background-color: transparent;font-size: 11pt;">Add Name (must be unique)</span></li><li><span style="background-color: transparent;font-size: 11pt;">Add Description - not required but might be useful as more are added</span></li><li><span style="background-color: transparent;font-size: 11pt;">Select Rental or Sale - this updates tags available. </span></li><li><span style="background-color: transparent;font-size: 11pt;">Margin Chart - not required</span></li><li><span style="background-color: transparent;font-size: 11pt;">Price Model Type - required to select which price you will affect with this price model</span></li><li><span style="background-color: transparent;font-size: 11pt;">Allow prices to go lower than current - by default this is unchecked.  When checked, if the cost of the part (or ExtraCost) goes down, this will allow the price to be recalculated at a lower price.  For Sales items, this is typically left off so that your price is maintained and profits are increased when you get a better cost.  For Rental assets, this should be selected because these prices typically go lower over time and use.</span></li></ul>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Create Formula</u></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh3.googleusercontent.com/AJQ8CKmq_ZEiPPlaq8BP1J5IAK-9g7ssKkH5mAyRmlQCfw3WG_0OMyan5515VcDYUmPD1kGHF4GBCY-_6vw3ZMXrnQRcP3Ujno_KbK4V0_ncMsHjaEQPcMeeimT-D0QuiRue_hb1"></img></span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">The Price Model requires a valid formula.  There are default sample values contained in the formula tag options to help you test values to understand what your formula would produce based on what you have added. You can adjust these sample values to any value you choose. If the formula does not validate as a proper mathematical formula, an “Error” message will be shown.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">By simply clicking on the “+” symbol next to each field, you can add the Tag to the formula.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">When a Margin Chart has not been assigned to a Price Model, the default value in case it is added to the formula is “1”.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Example formula build:</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">({PurchaseEach}+{ExtraCost})/.70</span></p>
+
+<p> </p>
+
+<ol><li><span style="background-color: transparent;font-size: 11pt;">Click inside the Formula field and enter a “(“</span></li><li><span style="background-color: transparent;font-size: 11pt;">Click the + next to Purchase Each field</span></li><li><span style="background-color: transparent;font-size: 11pt;">Click at the end of the formula and enter a “+”</span></li><li><span style="background-color: transparent;font-size: 11pt;">Click the + next to the Extra Cost field</span></li><li><span style="background-color: transparent;font-size: 11pt;">Click at the end of the formula and enter a “)”</span></li><li><span style="background-color: transparent;font-size: 11pt;">Then enter “/.70”</span></li></ol>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">The Calculation Display will use the sample values to test your formula so you can see it with the values in it. You will also see the Calculation Result adjust as values are added.  Once created, you can test different sample values to see what the calculated price would be.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Once a valid formula is added, the Price Model can be Saved.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">You can Save a Price Model as “Inactive” and it will no longer apply the formula to items it is assigned to.</span></p>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Margin Charts</u></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">If you want to add a Margin Chart, simply click on the Margin tab.  Similar to Price Models, when adding a new chart simply enter a unique name and a description if you choose.</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh4.googleusercontent.com/ZZz5vucZcV2C4-wqcNWj20GnEwQQBzI2d_6sgUxTM-Eec-Ha9UIDC6nyE_4zTf_GaQoy8P1cf6fZ6_LRiK1Zz4VeXpAqEtH8LUqQZUEKmfKHviQ2ytHIahcpskNVK89SllKBKgqg"></img></span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Enter values into the chart:</span></p>
+
+<p> </p>
+
+<ul><li><span style="background-color: transparent;font-size: 11pt;">Minimum price - this is the lowest price for the operators on that row.  The highest price would be one penny less than what is entered in the next row.</span></li><li><span style="background-color: transparent;font-size: 11pt;">Margin/Markup Percent - here you enter the margin or mark up you want.  The operators cannot be modified. When you add one, the other will automatically calculate.  If you like Margin - use Margin.  If you like Markup, use Markup.</span></li></ul>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Margin vs Markup</u></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">We included both in this chart simply because some businesses use margin and some use markup.  They are two different ways to calculate prices.  A margin has the additional function of measuring profits.  </span><b style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">One important distinction:  When using the Operators in a formula, you must use “/” (divide) for the margin operator and use “*” (multiply) for the markup operator.</b></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Once you have a Margin Chart created and Saved, you can go back to the Price Model tab and assign it to the Price Model.</span></p>
+
+<p> </p>
+
+<p><b style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Assigning Price Models to Items</b></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">There are two ways to assign a Price Model to items: from Item File or using the Items tab within the Price Model feature.</span></p>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Item Assignment in Feature</u><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"> - used when assigning a Price Model to many items</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Price Model - This is a required field.  Select a saved Price Model from the drop down.  If items are already assigned to this Price Model, they will appear in the Assigned Items area.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Item Type - For a Rental Price Model, only Rental is available.  For a Sale type, either Parts or Sales  or both can be selected.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Manufacturers - This is a drop down displaying the list of all manufacturers entered via Item File (Asset tab) into your database.  You can select one or multiple.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Divisions - This is a filter that will narrow your search down to items within the selected division.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Show other assigned items - This will display items in your search that have a conflict due to the same </span><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">type</u><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"> (Sell, Retail or Floor) of Price Model already assigned to items you have filtered down to.</span></p>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Sections</u></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Categories - Categories that are assigned to the Division(s) selected will appear here. You can select one, multiple or Select All from the top.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Headers - As you select Categories, related Headers will appear in this section.  If there are items in the Category that are not related to a header, that will prompt the “No Header” option to appear.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Items - As Headers are selected, related items will appear here.  A Header is also considered an item so they will also appear in Items. They will be displayed in order: Header, then serialized items with the same Header.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">All sections have an index counter that sums the quantity of items displayed in each section.  This gives you the idea of the amount of items you will be affecting.</span></p>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Example</u></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Here we are looking to add a new Price Model we just created for our Safety Products in the Rental Related Category.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">After navigating to our items, our list of items is displayed:</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh6.googleusercontent.com/CmFW_zqCYDzuZXAYsP6gYiT7HLUSNboxVUbW9269fyooCRfltWWdFrk_B4eDfKAvpvqa5M8qOGFitCVcaJkkLvfzhgMtjfKCRm7DCtQbFUXMDKCpwrPk_GWmt2xXF7zutaG-Zq1Z"></img></span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">It is a good idea to flip the “Other Assigned” switch to see if any Headers selected did not end up in the Items area because they are already assigned to the same Type of Price Model.  This messaging will not be applied right away to improve performance.  You must close and re-open Price Model to see it. </span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh5.googleusercontent.com/RFioHnsul8S477XDKykBo3qjO6ythEOjud5vquALVYW2E7rVJBpqUgEM-Pf0nwPvBvQ7EkmEJw3tMjin10SXww5hJAy139P-SyzE7KMA3nJzM56frlgzBjsTBHNF291XQ0_BwiaA"></img></span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">We can quickly see here that the Gloves and Masks are already assigned to another Sell Type Price Model.  We can choose to include them and overwrite the existing Price Model assignment.  Or, we can either flip the “Other Assigned” off prior to selecting items or uncheck the Header to deselect them.  </span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Once we have decided which items to assign, you can either select one or some in the Items section or use the “Select All” feature.  In either case, once items are selected, an Add option will appear at the bottom of the section.  Selecting Add will put these items in the assigned Items grid below.</span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh5.googleusercontent.com/DUBO7NcmOI2QCz_87L2KK7SisBnlFvYu3y1Ii1ALwjOhMRQVEMpi6_amhlj2t8e5KvAEhAQjcWCm3DCMld6B0gtTvT_rHqnylEdigm98CFQ9udeVADYJc5GuzeIdvqMrPEjxYDHt"></img></span></p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Choosing “Reset” in this area will clear added items.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Choosing “Save” will assign the Price Model to the selected items AND trigger a calculation based on the formula in the model for the price type of the model.</span></p>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Item Assignment in Item File</u><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"> - for when you need to make changes to a small number of items</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">From Item File, select Functions&gt;Modify and then select the Price Model button in the Rates section.  From here you can select models by type and they will be saved and trigger a re-calculation upon Save.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">In all cases of a Price Model changing the price of an item, there will be an edit comment logged.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"><img src="https://lh5.googleusercontent.com/QB3PfKSAjM76uwRvnKuK4QwqwsOEPWs-XztKMACzfZmcQYbfCXXHB9qs72w9XCiKoCI2L75D8mX-Fc5V-QVQmh95ubmV8yh9cJJaasf0jyPCSSJtr4gX9iGndezuiFrXMk02P4vL"></img></span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><b style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Converting from Vendor/Item Markup to Price Models</b></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">For users converting from the Expert version of Vendor and Item Markup features, when upgrading, your Vendor and Item markups will be converted into Price Models. Behavior will essentially be the same, the system will simply use Price Models rather than item level markups or vendor markup tables.</span></p>
+
+<ul><li><span style="background-color: transparent;font-size: 11pt;">Any Vendor Markup and associated Markup Table will be converted into a Price Model using the name of the vendor.</span></li><li><span style="background-color: transparent;font-size: 11pt;">All items with “like” markup percentages will have a new Price Model created with the name of the model being the markup percentage value (ie: 150%, or 300%). All items will be assigned to this price model.</span></li></ul>
+
+<p> </p>
+
+<p><b style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Price Model Application Guidance</b></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Price Models can be a powerful tool to help you maintain profits as prices fluctuate.  And, they will do exactly as they are told to whatever they are assigned to!  </span></p>
+
+<p> </p>
+
+<p><u style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Using ExtraCost in your calculation</u><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;"> - There can be a trade-off here for retail items you display in your showroom. While using ExtraCost in the formula will allow you to include it in your profit calculation, it will also create a constant fluctuation in the prices. As freight goes up, even by a small amount, the prices will change.  If you are ok with the prices for these things fluctuating...go for it!  Otherwise, it might be better to increase your markup or margin to offset freight costs to keep prices more stable.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Also, for parts or sale items, when placing an order and getting expedited delivery which is usually more expensive, place this freight as a line item on the PO rather than in the blue footer section (ExtraCost) of the PO.  That way, special freight for a “one off ” purchase will not change the price inordinately.  In fact, if you have the Extra Cost at $0.00 and your model does not allow for the price to go lower, the price will remain the same as long as the Price Each does not increase a great amount.</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 11pt;">Once items are initially assigned, purchases via Purchase Orders will be the primary way prices get adjusted. Be aware of this when writing POs. When getting specials (buy 5 get 1 free) be aware that “unusual” or “one off” pricing may affect prices.  Typically this lowers the price of items so leaving the “Allow prices to go lower” option in the off position is a good practice for this situation.</span></p>
+
+<p> </p>
+
+<p> </p>

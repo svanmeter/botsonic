@@ -1,0 +1,63 @@
+<h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Item Instructions</span></span></h1>
+
+<p style="background: white;margin-left: 18pt;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">Overview:</span></b><span style="color: #333333;">  You may add instructions to individual items, allowing them to automatically print upon opening a contract or they can be manually printed when writing a reservation. These are usually safety instructions or “How to Operate” instructions.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">1.   Modify an Item Record within File Maintenance. Instruction files should be assigned to the Header and Serialized records; You can assign different instruction files to each serialized record if necessary.</span></p>
+
+<p style="background: white;margin-left: 90pt;text-indent: -18pt;"><span style="color: #333333;">a.   When the instruct file field is added/modified in the Header record when saving the record, the system will prompt to update all serialized items.</span></p>
+
+<p style="background: white;margin-left: 90pt;text-indent: -18pt;"><span style="color: #333333;">b.   When a new serialized item is created from the Header record, the instruct file field will copy from the Header.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">2.   Find the “Instruct” file on the left side.  You can type a file name that already exists in the c:\por\instruct folder or you can enter a new file name.  If you are creating a new file it will be WordPad or Word document (i.e. a 5-horsepower front tine merry tiller could be TIL5MT).</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">3.   Once you type in that name, tab, or enter out of the field.  You will now see a Lookup button.</span></p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="Item Instructions_885x597" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8S&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGci"></img></span></p>
+
+<blockquote>
+<p style="background: white;"><span style="color: #333333;font-weight: bold;">* Note - This field can only contain up to 25 Characters </span></p>
+</blockquote>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"> </p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">4.   Click the Lookup button.  You will be notified that the file does not exist. And asked if you would like to create it? Select Yes.</span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">5.   Your default document program will open (usually WordPad).  Create your instructions in this document.  Once finished close the document and save.  Once a file exists you can use the same file name for other “like” items.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image002_032" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8S&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGcj"></img></span></p>
+
+<p style="background: white;"><b><span style="color: #333333;">*Note: </span></b><span style="color: #333333;">You may also use Adobe PDF files for this.  Save the PDF file in c:\por\instruct.  Keep the name short.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;margin-left: 36pt;"><span style="color: #333333;">6..  To select a file that already exists double click the field in the Item Record a list of possible files will be displayed.  Select the file you would like to use.</span></p>
+
+<p style="background: white;margin-left: 18pt;"><span style="color: #333333;"><img alt="Item Instructions1_862x584" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8S&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGdZ"></img></span></p>
+
+<p style="background: white;margin-left: 18pt;"><span style="color: #333333;">7.    You must also define an instruction printer on all terminals you want instructions to print from.  This is done through configuration/printer selection/other tab and define your instruction printer.  This would normally be the plain paper tray on the front counter.  You would not normally do this for office terminals.</span></p>
+
+<p style="background: white;margin-left: 18pt;"> </p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">8.   You can also define the parameter to print instructions.  By default, will print instructions on an open contract if there are any items on the contract with instructions defined.  However, you may want to be asked if you want instruction sheets to print each time you open a contract.  This is done through configuration/parameters/printing/print letters.</span></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="Item Instructions2_867x650" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8S&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGda"></img></span></p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18pt;"><span style="color: #333333;">9.   When you print an open contract with items that have instructions, the contract can print a line for the customer to sign that he/she received the instructions.  You can change this statement in the system configuration/print outfield.  Below is what is defined by default:</span></p>
+
+<p style="background: white;"><span style="color: #333333;"><img alt="image005_015_443x42" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH8S&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGdb"></img></span></p>
+
+<p style="background: white;margin-left: 72pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><b><span style="color: #333333;">Note: When an instruction file is added to a sales item, the instructions will automatically print out with the Reservation Contract. If the Reservation is sent out, to open status, then the instruction file will also be printed.    </span></b></p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"> </p>
+
+<p> </p>

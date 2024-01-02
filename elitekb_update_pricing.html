@@ -1,0 +1,63 @@
+<p><span style="font-size: 18pt;font-weight: bold;color: #4682b4;">Update Pricing</span></p>
+
+<p> </p>
+
+<p><img alt="Update Pricing" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHHy&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWql"></img></p>
+
+<p>Update Pricing is an Action option accessed from the Action Menu in a contract line item. There are several different ways to adjust line item pricing and discounts in this feature.</p>
+
+<p> </p>
+
+<p><b>Special Rates</b></p>
+
+<p>A Special Rate is the preferred method to adjust a rental rate. By doing it this way you can be assured this rate structure will follow this item throughout continuation billing.</p>
+
+<p><img alt="Update Pricing1_332x528" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHHy&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWqm"></img></p>
+
+<p><u>Manually</u></p>
+
+<p>You can click into either of the 4 rate settings at the top of the feature and set a specific rate for each period.</p>
+
+<p><u>Relational</u></p>
+
+<p>The relational method allows the user to adjust one of the rate settings (Minimum or Daily or, Weekly or Monthly) and each of the others will adjust based on their relationship. If Weekly is 4 times Daily and Monthly is 3 times Weekly, those relationships will remain when adjusting one of them.</p>
+
+<p><u>Percentage</u></p>
+
+<p>Percentage allows the user to set a percentage discount on each rate setting. You may want to discount the Daily rate by 5%, the Weekly rate by 15% and the Monthly rate by 20%.</p>
+
+<p>An item with a Book Rate of $0.00 cannot be set using Relational or Percentage. It must be done manually.</p>
+
+<p> </p>
+
+<p><b>Rate Engine</b></p>
+
+<p>You can use existing Rate Engines to calculate the rate of a line item.</p>
+
+<p> </p>
+
+<p style="text-decoration: underline;font-weight: bold;"><span style="text-decoration: none;">Discounts</span></p>
+
+<p>This is where you can set discount amounts and percentage discounts to a line item. The values added can be controlled with Employee and Parameter settings.</p>
+
+<blockquote>
+<p><u>Percentage</u> - The max for most employees should be set in Store Parameters. You can give other employees approval for a larger percentage by their setting in their Employee set up. When an employee exceeds their allowed amount they will see a message and an override option will be displayed.</p>
+</blockquote>
+
+<blockquote>
+<p><u>Amount ($)</u> - This amount is controlled at the Employee Set up area. A user could enter a % discount that, because of the rate, could exceed this $ value. The security only controls the maximum amount they can add to this field.</p>
+
+<p> </p>
+</blockquote>
+
+<p><b>Other options</b></p>
+
+<ul><li>Round - this will round prices to the nearest dollar. Price is less than 50 cents? It will go to $0.00.</li><li>Reset - If you came into this feature from a line item with an existing Special Rate and you adjusted it. You can select Reset and this will set the Special Rate back to what it was.</li><li>Clear - This will clear any Special Rate (new or existing) and put the rates back to Book Rate.</li></ul>
+
+<p> </p>
+
+<p><b>Security and Forcing Special Rate</b></p>
+
+<p>There are two security settings related to this feature located in the Transactions area:</p>
+
+<ul><li>Update Price - this controls a user being able to open this feature from a line item.</li><li>Force Special Rate - with this option checked, it only allows a Special Rate to be set (relational or percentage). Trying to add values to either the $ Amount or Percentage Discounts fields will result in an override requirement. Forcing a Special Rate is highly recommended for users that do long term rentals with adjusted rates.</li></ul>

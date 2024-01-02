@@ -1,0 +1,127 @@
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 20pt;"><strong><span style="font-size: 28px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Metered Items on Varying Hour Shifts</span></span></span></strong></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><br><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article will walk you through configuring your rate engine to accommodate metered items to run on varying shift lengths (8 hours, 16 hours, 24 hours, etc..). To do this, you&#39;ll need to create multiple rate engines. Once created, it&#39;s recommended to assign them to either a jobsite or contract. </span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;">1st way is charging the meter to run for the enite shift <br><br>base rate - charging them triple <br><br><span style="font-size: 22px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics included in this article</span></span></span></p>
+
+<ul><li style="margin-top: 0pt;margin-bottom: 0pt;"><a href="#Topic1"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Creating a Rate Engine</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;"><a href="#Topic2"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Applying the Rate Engine to a Jobsite</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;"><a href="#Topic4"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Applying the Rate Engine to a Contract (Whole Contract)</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;"><a href="#Topic5"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Applying the Rate Engine to a Line Item on the Contract</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;"><a href="#Topic6"><span style="color: #0782c1;"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Verification by Counter Staff (when applying Rate Engine to contract)</span></font></span></a></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 16pt;"><a id="Topic1" name="Topic1"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Creating a Rate Engine</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">As mentioned above, you&#39;ll need to create multiple rate engines; one for each shift length.<br><br><strong>How to get there</strong></span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><font color="#3b3e41" face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Expert: <em>Program Menu &gt; Configurations &gt; </em></span></font><em><font color="#3b3e41"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">System Configurations &gt; Rate Engine</span></font></font></em><br><font color="#3b3e41" face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Elite: <em>Gear icon &gt; App configurations &gt; System Configurations &gt; Rate Engine</em></span></font></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000070Ibi" style="width: 510px;height: 254px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1.<strong> Select the Add button</strong>.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><font color="#3b3e41" face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">2.<strong> Enter a name</strong>.</span></font><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><font color="#3b3e41" face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">3.<strong> Configure the Overtime and Clock Overtime area</strong>. For for information, see our article </span></font><a href="http://por.force.com/uLearn/s/article/Starndard-Rate-Engine-2076314090" target="_blank"><span style="color: #0782c1;"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Standard Rate Engine</span></font></span></a>.</p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Set up the <strong>Meter Overtime area</strong>:</span></span></span></p>
+
+<ol start="1" style="list-style-type: lower-alpha;"><li style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> In the <strong>Hours in a day</strong> field, <strong>enter the amount of hours for the shift </strong>before it goes to overtime (8 hours, 16 hours, 24 hours, etc..).</span></span></span></li><li style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Enter the<strong> Days in a week</strong> and <strong>Weeks in a month</strong>.</span></span></li><li style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Enter a &quot;% charge for a meter overtime&quot;</strong>.</span></span> <span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This sets the percentage of hour meter overtime charged to the bill. An entry of 50% would only charge half of the normal overtime rate for hour meter usage.</span></span></span></li></ol>
+
+<div style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5.<strong> Press OK</strong> to save.</span></span></p>
+
+<div style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. Repeat steps 1-5 until a rate engine is created for each shift.</span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Below are examples displaying 8 Hours, 16 Hours, and 24 Hours. </span></span></span><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="font-size: 16px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">8 Hours</span></span></span></p>
+
+<div style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000070IfV" style="width: 568px;height: 354px;"></img></div>
+
+<div><br> </div>
+
+<div style="margin-left: 40px;"><span style="font-size: 16px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">16 Hours</span></span></span></div>
+
+<div style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000070Ifz" style="width: 591px;height: 368px;"></img><br><br><br><span style="font-size: 16px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">24 Hours</span></span></span><br><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000070IgJ" style="width: 624px;height: 387px;"></img></div>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><br><br><span style="color: #7bb43e;"><a id="Topic2" name="Topic2"></a> <span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Applying the Rate Engine to a Jobsite</span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; File Maintenance &gt; Job Site</em><br>Elite: <em>Gear icon &gt; File Maintenance &gt; Job Site</em></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. If you need to create a new job site, <strong>select the add button</strong>. Otherwise, <strong>select</strong> the desired <strong>job site</strong>. <br><br>2. <strong>Select</strong> the <strong>Pricing</strong> tab. </span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">There is a drop-down menu for rate engine on the right side of the window.  </span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. <strong>Select </strong>the desired <strong>rate engine</strong> from the drop-down.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u0000070Jfv" style="width: 505px;height: 355px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 16pt;"><span style="color: #7bb43e;"> <a id="Topic4" name="Topic4"></a> <span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;"> Applying the Rate Engine to a Contract (Whole Contract)</span></span></span></p>
+
+<div style="margin-left: 32.11pt;padding-left: 3.89pt;"> </div>
+
+<p style="margin-left: 32.11pt;padding-left: 3.89pt;"><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To change the contract Rate Engine,<strong> go to the Information Tab</strong> on the contract.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><img alt="A picture containing timeline  Description automatically generated" height="312" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zwWA" style="width: 738px;height: 216px;" width="1066"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-left: 32.11pt;padding-left: 3.89pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Change the Rate Engine</strong> to the appropriate time frame that you need.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><img alt="Graphical user interface, text, application  Description automatically generated" height="674" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zwWB" style="width: 636px;height: 349px;" width="1226"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 18pt;"><a id="Topic5" name="Topic5"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Applying the Rate Engine to a Line Item on the Contract</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 18pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To change the rate on the line item, you can do that by<strong> right-clicking on the line item</strong> of the contract.</span></span></span><br><span style="font-size: 14px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Click on <strong>Set Special Rate</strong>.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><img alt="Graphical user interface, text, application  Description automatically generated" height="318" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zwWC" style="width: 575px;height: 241px;" width="759"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Under the Special Rate area, you can <strong>choose the Rate Engine</strong> that you need. </span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. <strong>Press OK</strong> when you are done.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><img alt="Graphical user interface  Description automatically generated" height="510" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zwWD" style="width: 517px;height: 292px;" width="904"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><span style="font-size: 16pt;"><a id="Topic6" name="Topic6"></a> </span><span style="font-size: 22px;"><span style="color: #7bb43e;"><font face="Arial, Helvetica, sans-serif">Verification by Counter Staff (when applying Rate Engine to contract)</font></span></span><br><br><span style="font-size: 16pt;color: rgb(59, 62, 65);"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">It is recommended that you create a contract question to remind counter people that they will need to verify the Rate Engine.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">How to get there</span></span></span></strong></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Expert: <em>Program Menu &gt; File Maintenance &gt; Item File &gt; Functions &gt; Contract Questions</em></span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Elite: <em>Configuration Gear &gt; File Maintenance &gt; Item File &gt; Functions &gt; Contract Questions</em></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><img alt="Graphical user interface, application  Description automatically generated" height="322" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zwW7" style="width: 282px;height: 232px;" width="392"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Enter the question that you want to verify with your counter staff, then press OK.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><img alt="Graphical user interface, application  Description automatically generated" height="375" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGyl&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zwW8" style="width: 352px;height: 264px;" width="500"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;"><br><br><span style="font-size: 22px;"><strong><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></strong></span><br><br><a href="http://por.force.com/uLearn/s/article/Base-Rate-Engine-934745604" target="_blank"><span style="color: #0872c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Base Rate Engine</span></span></span></a><br><a href="http://por.force.com/uLearn/s/article/Rate-Engine-1202258173" target="_blank"><span style="color: #0872c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Rate Engine</span></span></span></a><br><a href="http://por.force.com/uLearn/s/article/Starndard-Rate-Engine-2076314090" target="_blank"><span style="color: #0872c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Standard Rate Engine</span></span></span></a></p>
+
+<div id="" style="left: 27.7031px;top: 756.703px;"><br> </div>
+
+<div id="" style="left: 20px;top: 4835.75px;"> </div>
+
+<div id="" style="left: 60px;top: 3232.06px;"> </div>

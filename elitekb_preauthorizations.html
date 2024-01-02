@@ -1,0 +1,163 @@
+<p style="margin-top: 0pt;margin-bottom: 14pt;line-height: normal;font-size: 16pt;"><strong><span style="color: #3b3e41;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pre-Authorizations </span></span></span></strong></p>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-family: Arial;"> </span><br><br><br><em><strong><span style="color: #7bbe43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Overview</span></span></span></strong></em><br><br><span style="font-family: Arial;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article will discuss contract pre-authorization. Some rental stores prefer capturing pre-authorizations instead of full credit card deposits and performing a post-authorization at rental return. </span></span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This feature is available in Point of Rental Expert and Elite v2017 and later, with the Cayan gateway.</span></span></span><br><br><br><em><strong><span style="color: #7bbe43;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Prerequisites</span></span></span></strong></em><br> </p>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. In order to perform a pre-auth on a contract, it must be the first payment.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. The next credit card payment must be a post-auth, although you can bypass it when prompted to perform a full credit card sale. However, you will not be allowed to perform the post-auth again.</span></span></span></p>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">a. If it is determined a full credit card sale is necessary, and you want to avoid nullifying the ability to perform the post-auth, then you should create a separate contract and pay it with the credit card.</span></span></span></p>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-family: Arial;"> <br><br>Topics in this article include:</span></p>
+
+<ul><li style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Topic1"><span style="color: #0782c1;">Use Cases</span></a></span></span></li><li style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Topic2"><span style="color: #0782c1;">Things to Know</span></a></span></span></li><li style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Topic3"><span style="color: #0782c1;">Enable Pre-Authorizations</span></a></span></span></li><li style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="#Topic4"><span style="color: #0782c1;">Pre-Authorization from a Contract</span></a></span></span></li><li style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><a href="#Topic5"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Post-Authorization from a Contract</span></span></span></a></li><li style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><a href="#Topic6"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Verify in Payment History</span></span></span></a></li></ul>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><br><br> </p>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><a id="Topic1" name="Topic1"></a> <span style="color: #3b3e41;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><u>Use Cases</u></span></span></span><br> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-top: 14pt;margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Rental stores do a large pre-auth ($30k, for example) at contract opening. Then, upon rental return, a lower post-auth is captured ($10k). The larger pre-auth was to ensure the customer had enough funds to cover extra charges in case of damages or overtime. </span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Rental stores do a pre-auth equal to what the rental deposit will be. Then, upon rental return, the full rental amount is used for the post-auth.</span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;margin-bottom: 14pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This case has its vulnerabilities. Merchants run the risk of their customer not having enough funds to capture the post-auth or them canceling the card.</span></span></span></li></ul>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-family: Arial;"> </span><br><br> </p>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><a id="Topic2" name="Topic2"></a> <span style="color: #3b3e41;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><u>Things to Know</u></span></span></span><br> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-top: 14pt;margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;">
+	<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pre-auths are not sales, they are holds; post-auths are captured sales.</span></span></span><br>	 </p>
+	</li><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You can post-auth a larger or smaller amount than the pre-auth.</span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pre-auths do not store a token usable on other contracts.</span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pre-auth option is only in the deposit amount field.</span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Post-auths are through the rental/sale amount field, by putting the desired post-auth amount in and then selecting credit card as the payment option. Point of Rental will automatically prompt the counter person, asking if they would like to perform a post-auth against the pre-auth.</span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If post-auths are unsuccessful a credit card sale is performed immediately without prompting the counter person.</span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pre-auth’s may last as long as 30 days, depending on the issuing bank. If the pre-auth expires a full credit card sale will be captured upon the post-auth attempt. The end result is equivalent. </span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pre-auths do not impact credit card inquire, contract’s ‘Amount Due’, or the GL; post auths do because they are actual credit card sales.</span></span></span></li></ul>
+
+<p style="margin-left: 27.6pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"> </p>
+
+<ul style="margin: 0pt;padding-left: 0pt;"><li style="margin-left: 27.6pt;margin-bottom: 14pt;line-height: normal;padding-left: 8.4pt;font-family: serif;font-size: 10pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Pre-auths are for credit transactions, not debit transactions. If you perform a pre-auth and the cardholder runs their debit card as debit, entering their PIN, then the result will be a debit sale with no follow-on token for future use.</span></span></span></li></ul>
+
+<p style="margin-top: 14pt;margin-bottom: 14pt;line-height: normal;font-size: 10.5pt;"><span style="font-family: Arial;"> </span><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><a id="Topic3" name="Topic3"></a> <span style="color: #3b3e41;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><u>Enable Pre-Authorizations</u></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; Configuration &gt; Store Configuration &gt; Parameters &gt; Drawer</em><br>Elite: <em>Configuration Gear &gt; App Configuration &gt; System Configuration &gt; Parameters &gt; Drawer </em></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface, text, application  Description automatically generated" height="564" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEe" style="width: 477px;height: 415px;" width="648"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Arial;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. <strong>Check the box</strong> next to <strong>Allow Pre-authorization</strong>.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface, text, application  Description automatically generated" height="232" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEf" style="width: 348px;height: 179px;" width="452"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span><br><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><a id="Topic4" name="Topic4"></a> <span style="color: #3b3e41;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><u>Pre-Authorization from a Contract</u></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">A pre-authorization (also “pre-auth” or “authorization hold”) is a temporary hold on a customer’s credit card that typically lasts around 5 days, or until the post-authorization (or “settlement”) comes through.</span></span></span></span><br> </p>
+
+<p style="margin-left: 31.76pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. To do a pre-authorization from a contract, go to the contract payment screen.</span></span></span></p>
+
+<div style="margin-left: 31.76pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-top: 0pt;margin-left: 80px;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> When doing a pre-authorization, this should be the only transaction made at this time.</span></span></span></em></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface  Description automatically generated" height="504" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEg" style="width: 464px;height: 361px;" width="648"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<div style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;">2. From the deposit amount, <strong>enter\verify the Deposit Amount</strong>.</div>
+
+<div style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><br><br>3. Under payment type,<strong> choose CC Pre-authorization</strong>.</div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface, text  Description automatically generated" height="504" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEh" style="width: 482px;height: 375px;" width="648"></img><br> </p>
+
+<p style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Finish the contract as normal and print the receipt if needed.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span><br><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><a id="Topic5" name="Topic5"></a><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"> <span style="color: #3b3e41;"><u>Post-Authorization from a Contract</u></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">A post-authorization, or post-auth, is a type of authorization that confirms the merchant is ready to capture payment of the existing pre-authorized transaction. When the post-auth is processed, the amount is debited from the cardholder&#39;s account. A post-auth cannot be voided.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-left: 31.76pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Return to the contract and go to <strong>Tools &gt; Modify</strong>.</span></span></span><br> </p>
+
+<div style="margin-left: 31.76pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;">2. Click OK to go to the<strong> Payment Screen</strong>.</p>
+
+<div style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface  Description automatically generated" height="504" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEi" style="width: 517px;height: 402px;" width="648"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. In the rental/sales amount, <strong>place the desired amount</strong>.</span></span></span></p>
+
+<p style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. <strong>Choose credit card</strong> as the payment option.</span></span></span></p>
+
+<div style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface  Description automatically generated" height="504" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEj" style="width: 500px;height: 389px;" width="648"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. <strong>Press OK</strong> and finish changes.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span></p>
+
+<p style="margin-left: 31.76pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. When the payment interface screen comes up, <strong>click on</strong> either <strong>Manual Entry or Customer Swipe</strong>.</span></span></span></p>
+
+<div style="margin-left: 31.76pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-top: 0pt;margin-left: 80px;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> Customer Swipe is only enabled if you have a physical terminal at your location and assigned to your user profile in Point of Rental.</span></span></span></em></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface, text, application  Description automatically generated" height="284" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEk" style="width: 358px;height: 232px;" width="438"></img><br> </p>
+
+<p style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. A message will display asking if you want to use the pre-authorization on file. <strong>Click Yes</strong>.</span></span></span></p>
+
+<div style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface, text, application  Description automatically generated" height="166" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEl" style="width: 387px;height: 155px;" width="414"></img><br> </p>
+
+<div style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;">8. An approval message will appear showing completion.</div>
+
+<div style="margin-left: 31.76pt;margin-bottom: 8pt;line-height: 108%;padding-left: 4.24pt;font-family: Arial;font-size: 10.5pt;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface, application  Description automatically generated" height="284" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEm" style="width: 358px;height: 232px;" width="444"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> </span><br><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><a id="Topic6" name="Topic6"></a> <span style="color: #3b3e41;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><u>Verify in Payment History</u></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you look at the contract&#39;s payment history, it will show two lines. The top line is the pre-authorization (pre-auth) as the bottom line shows the post-authorization (post-auth).</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;margin-left: 40px;"><img alt="Graphical user interface, text  Description automatically generated" height="158" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGzy&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000006zPEn" width="648"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 8pt;line-height: 108%;font-size: 10.5pt;"><span style="font-family: Arial;"> <br><br><br><br><br><br><br><strong><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></span></span></strong></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="http://por.force.com/uLearn/s/article/Payment-History-216149146" target="_blank">Payment History</a></span></span><br><br><a href="/articles/en_US/Knowledge/Credit-Card-Report-1192660292" target="_blank">Credit Card Report</a><br><br><a href="/articles/en_US/Knowledge/How-to-Enable-and-Use-the-Open-Credit-Card-Payment-Method-44817246" target="_blank">How to Enable and Use the Open Credit Card Payment Method</a><br><br><a href="/articles/en_US/Knowledge/Creating-a-New-Disbursement-Item-1522747197" target="_blank">Creating a New Disbursement Item</a></p>

@@ -1,0 +1,521 @@
+<p><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 18px;"><span style="color: #e74c3c;">INTERNAL: </span>Tier 1- EOD Common Error Guide </b></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Below are the most common issues customers encounter during the End of Day process. This document is in relation to users not being able to open contracts due to the End of Day not finishing correctly.</span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. For multi-store customers, stores not closing can be a common issue that arises at End of the Day. The below image is a sample from the End of Day History report. There are a couple of key pieces of information in this report that can be used when the customer is experiencing an issue with stores not closing or users being unable to access the Counter System or access/create new contracts. </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Here’s how to get there:</span></p>
+
+<p class="ql-indent-1"><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"><i>Expert </i></b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">- </span><i style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">2. End of Day Processing </i></p>
+
+<p class="ql-indent-1"><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"><i>Elite</i></b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> - </span><i style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Right Menu, Reports Search </i></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v63u" style="width: 477px;height: 216px;"></img></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. Here are the best ways to confirm if all stores have closed:</span></p>
+
+<p> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">By looking at the End of Day History report &gt; Store column.</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> At the top of the report, stores that have closed will be listed in sequential order (see above image). If a store or stores are not displaying, the missing store(s) needs to run or complete theirs by the end of day. </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii.</span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> By looking at the End of Day History report &gt; Batch and Active Batch number.</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> You can confirm this information by looking at the batch number located next to the store and the active batch displayed above the listed stores (see highlighted columns in the image above).</span></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. The active batch cannot be the same as the batch number of the store number. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. If it is, then your next step is to look at the locks table </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">from within the report.</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> To do this press the I icon.</span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v644"></img></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">b. A list of locks will display. You may see a 1400 numbered lock </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">(DO NOT CLEAR LOCKS)</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">. In most cases, the computer from store 1 will need to log in, to finish by the end of day. </span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v64n" style="width: 313px;height: 259px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">iii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">By looking at the Locks Table. </b></p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">To get there from within Expert, go to #10 Security &gt; Database Locks. </span></p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">From Elite, go to the Gear icon&gt; Security&gt; Database Locks. You’ll be able to see the same information above in the report. However, it does display more information. </span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">DO NOT CLEAR LOCKS. </b><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">Clearing End of Day locks</span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;"> will </b><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">cause miscellaneous entries with the accounting general ledger file. This can’t be corrected.</span><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">b. It is also important to know the differences between manual and automatic closings. The End of Day report will display whether the closing was automatically or manually closed. </span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v64s" style="width: 442px;height: 148px;"></img></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Automatic Closings</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> - the Point of Rental system will close the store instead of a user. You can identify if the store was closed automatically by looking at the End of Day report and looking at the Employee column. This column will show the user who ran the End of the Day. An autoclosed store will display “Autoclose &#39;&#39; in red under the Employee column. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. Autoclose can be initiated in 2 ways: </span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">By the Point of Rental system.</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> Within the report under the Employee column, if there is a “ * ” before the word “Autoclose&#39;&#39;, it means the autoclose option has been enabled within the Parameters &gt; Drawer tab of that store. Keep in mind that this box will only autoclose remotes stores. If store 1 needs to be set to autoclose then a task in task runner needs to be setup.</span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">b. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">By a User. </b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">If Autoclose appears without the “ * ”, it means a user pressed the Autoclose button found in #2 End of Day Processing end of day or Store 1 has a Taskrunner set to autoclose. </span></p>
+
+<p> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Manual Closings</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> - a user initiates the End of the Day by pressing the Closed Drawer for End of the Day button. </span></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-3"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v64x" style="width: 450px;height: 239px;"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">c. When working with Month End you want to make sure that the EOM shows yes. If not then you should look at the EOM in Calendar Maintenance.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-2"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v652" style="width: 736px;height: 142px;"></img></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">2. If your customer receives the below error message, it means a user at their store location pressed the button “Close Drawer for End of Day,” initiating the End of Day process. The instance of End of Day is running. </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65C" style="width: 461px;height: 433px;"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">The resolution</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">: </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Find the computer where the End of Day instance is running. </b></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You can do this by going to the Locks Table or by pressing the i-icon at the End of Day report (as shown in the above section). Find the End of the Day lock, and identify the computer or terminal that initiated the End of Day process. </span></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. If you go to the Locks Table, </span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">DO NOT CLEAR ANY LOCKS. DO NOT LET THE CUSTOMERS CLEAR LOCKS.</b><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;"> Clearing End of Day locks </span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">will</b><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;"> cause miscellaneous entries with the accounting general ledger file. This can’t be corrected. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Completed the End of Day process on the computer that initiated the End of Day.</b></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You can do this by pressing Close Drawer for the End of Day if the EOD processing screen is not already open. </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">3. If your customer is receiving the message below, they are attempting to open the Counter System in Expert or write a contract in Elite. The message is notifying the customer that their End of Day process is currently running in their store or other stores (if multi-store setup) and that they must finish their End of Day. </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65M" style="width: 420px;height: 186px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Resolution</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">: </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i.</span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> Run the End of Day History report </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. If multi-store, identify which store(s) need to complete their end of day. For further detail on how to do this, see Section 1 in this document. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">2. If a single store, press the i-icon to see which computer initiated the end of day and complete it on that terminal. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Let the customer know to complete their End of Day. </b></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">4. If your customer is receiving the message below, it means the customer is a multi-store company. This message is received when a couple or several stores are waiting for other stores to complete their End of the Day process. For multi-store companies, all stores need to run their End of the Day, before any other store can continue to create/modify contracts.</span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65R" style="width: 392px;height: 154px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Resolution</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">:</span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Have the customer contact the store location displayed in the pop-up message and have them complete their End of the Day. </b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">The message will disappear once all stores have completed their End of Day. </span></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. If Cancel is selected, then a user with Regional Manager’s password level or higher will be prompted to enter credentials. This in turn will ‘autoclose’ that store. This can be done for each store except Store 1.</span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">5. If your customer is receiving the message below, it means the customer is a multi-store company. This message is received when a couple or several stores are waiting for other stores to complete their End the Day process. For multi-store companies, all stores need to run their End of the Day before any other store can continue to create/modify contracts. However, the End of Day instance can become stuck even if all stores have completed their closing. </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65W" style="width: 392px;height: 154px;"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Resolution</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">:</span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Confirm that the End of the Day instance is stuck. </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. Open the Locks Table. Below is an example of a multi-store company locks table. </span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">DO NOT CLEAR ANY LOCKS. DO NOT LET THE CUSTOMERS CLEAR LOCKS. </b><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">Clearing End of Day locks </span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">will</b><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;"> cause miscellaneous entries with the accounting general ledger file. This can’t be corrected. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65b" style="width: 647px;height: 255px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. Notice in the first column, that the file name is “End of Day.” These are instances of the End of Day. </span></p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">In the Number column, it is displaying the End of Day instance for each store. These will display as inactive. </span></p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1= Store 1. </span></p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">There will also be a 1400 lock.</span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">b. Notice the 1400 </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">lock</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> of </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1407 and the End of Day instance for store 1 is inactive.</u></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Confirm that all stores have completed their close. </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">iii. In this scenario, </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">the customer will have to log into the computer that initiated the end of day from store 1 and finish the End of Day.</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">iv. You will receive a prompt asking if you want to finish the close. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Select yes</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> and the system will finish the end of day process.</span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">6. In this scenario, a multi-store company is set to auto-close but no one can modify transactions or access the Counter System. The below image is the locks table for this scenario. </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65g" style="width: 655px;height: 192px;"></img></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Resolution</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">:</span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Confirm that the customer is using auto-close.</b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You can do this by going to the locks table and looking for the “STR1Admin” user under the User column. </span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">DO NOT CLEAR ANY LOCKS. DO NOT LET THE CUSTOMERS CLEAR LOCKS. </b></p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">Clearing End of Day locks </span><b style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;">will</b><span style="font-family: sans-serif;color: rgb(255, 0, 0);font-size: 14px;"> cause miscellaneous entries with the accounting general ledger file. This cannot be corrected.</span><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. This means that Store 1 is set to auto-close but somehow end of day is stuck somewhere in the close.</span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">b. If you cannot find this user, the customer may not have auto-close enabled in Parameters and may have instead manually auto-closed. To confirm, run the End of the Day History report. </span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Confirm that all stores have completed their end of day. </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You can do this by running the End of the Day History report.</span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">2. If they have not, have all stores finish closing. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">iii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Confirm that the 1407 lock is “Running” within the locks table. </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You can do this by going back to the locks table and seeing the running status on the same row as the 1407 lock.</span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">This means that the ARACD1 task is “running” on the server but is stuck. </u></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">b. If all stores have closed and this 1407 lock is still running. </span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">2. If not, open a Store 1 terminal and run the End of the Day.</span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">iv. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Open the task manager&gt; Details tab. </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You can do this by right-clicking the taskbar on the server and selecting Task Manager. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65l" style="width: 347px;height: 236px;"></img></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> 2. Once the Task Manager appears, go to the Details tab. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65q" style="width: 403px;height: 301px;"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">v. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">On the server, end the task named “ARACD1.” </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. To do this, find the task named “ARACD1”, right-click, and select End Task. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v65v" style="width: 633px;height: 325px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">2. Within the Locks Table, this will change the Store 1 end of day instance and 1407 lock to “Not Running.”</span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">vi. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Run the End of Day again from any Store 1 computer. </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You will be prompted to finish the close, </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">select yes</b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">. This will pick up the end of the day where the close left off. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">By ending the task in the task manager you will bypass the lock while avoiding the loss of information. </u></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">7. In this scenario, a customer wants to close their drawer for the day prior. However, the current day is the end of the month. </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Resolution</u></p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Initiate the End of Day using the “Close for Specific Day” option found within the Support Panel. </b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. You can do this by opening the support panel. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">To do this in Expert</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">: open the Program Menu and double-click on the date and enter the POR Admin Date Code.</span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-5"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v660" style="width: 382px;height: 185px;"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">b. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">To do this in Elite</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">: </span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-6"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. Right-click on the upper left-hand corner of the application. </span></p>
+
+<p class="ql-indent-6"> </p>
+
+<p class="ql-indent-6"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v665" style="width: 300px;height: 321px;"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p class="ql-indent-6"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. This will launch POR File Sync in Admin Mode. Go to Tools &gt; Support Panel or press this key combination (Ctrl + S).</span></p>
+
+<p class="ql-indent-6"> </p>
+
+<p class="ql-indent-6"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v66A" style="width: 413px;height: 311px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">2. Within the Support Panel, select Tools, in the top-menu bar, and then select the option “Close for a Specific Day.” </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v66F" style="width: 388px;height: 265px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">3. A warning message will appear, shown in the image below. Select Yes. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v66K" style="width: 382px;height: 168px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">4. Enter the date specified by the customer and press OK. In this scenario, the customer is attempting to close for the day before the End of Month. The system will ask you to confirm the date again.</span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v66P" style="width: 399px;height: 174px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">5. The system will then give you another prompt to confirm the date entered. If correct, proceed and select yes. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v66Z" style="width: 411px;height: 211px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">6. Multistore ONLY: If the customer is a multistore, a prompt will appear allowing you to select which store to close. When selected, press “Launch POR.”</span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v66j" style="width: 427px;height: 199px;"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">7. Follow the EOD Process from here. </span></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">If the above scenario does not result in a solution, ESCALATE to a TIER 2. </b><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">This may need to require the server time be set to the night prior. This option will require all users to be out of the program. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">This is considered a SYSTEM DOWN.</b></p>
+
+<p> </p>
+
+<p class="ql-indent-1"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">8. In this scenario, a customer wants to close their drawer for the day prior. However, the customer has already closed for the End of Month/Year. </span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-2"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. </span><u style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">Resolution</u><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">:</span></p>
+
+<p class="ql-indent-2"> </p>
+
+<p class="ql-indent-3"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. </span><b style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">This is not possible. They will not be able to close again until the next business day.</b></p>
+
+<p class="ql-indent-3"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">1. To see if the customer has closed for End of Month/Year, run the End of Day history report and look for the EOM column. Y = Yes. N = No. </span></p>
+
+<p class="ql-indent-4"> </p>
+
+<p class="ql-indent-4"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">﻿</span><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHDY&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004v66o" style="width: 651px;height: 136px;"></img></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p> </p>
+
+<p class="ql-indent-5"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">a. During the End of Month and End of Year, Point of Rental does several things in the background that you might not be able to see. </span></p>
+
+<p class="ql-indent-5"> </p>
+
+<p class="ql-indent-6"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">i. During the End of Month one of the big things is that it recomputes depreciation and how item income is determined. </span></p>
+
+<p class="ql-indent-6"> </p>
+
+<p class="ql-indent-6"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">ii. The End of the Year not only recomputes depreciation but it also updates several tables like the Customer File, Item File, and Vendor File to name a few. It is vital that you do not clear any locks during this time. </span></p>
+
+<p class="ql-indent-6"> </p>
+
+<p class="ql-indent-6"><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;">iii. If the customer is integrated with Credit Cards, during the year end process the system will unencrypt and re-encrypt credit card tokens that are stored within the Point of Rental. So, new tokens are created for those cards.</span></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);font-size: 14px;"> </span></p>
+
+<p> </p>
+
+<p> </p>
+
+<div id="" style="left: 20px;top: 15118.6px;"> </div>

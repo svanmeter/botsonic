@@ -1,0 +1,35 @@
+<p><span style="color: #4682b4;font-size: 16pt;">How to Enable DEBIT Card Acceptance</span></p>
+
+<p> </p>
+
+<p>Point of Rental’s CAYAN credit card integration supports debit card acceptance.  Before we get into how to enable it, let’s cover a few caveats.</p>
+
+<ul class="ul_1"><li class="ListParagraph_1">Debit transactions do not allow for follow-on transactions using a token because per PCI DSS, merchants cannot store the debit PIN.  Please be aware when renting equipment with a debit card payment.  The customer is required to bring the debit card in for any card transactions or provide the card number for phone payment.</li></ul>
+
+<ul class="ul_1"><li class="ListParagraph_1">Most US debit cards allow the card transaction to be downgraded to EMV credit, instead of DEBIT.  This requires the cardholder to insert their debit card into the Genius device and press the button named “Skip PIN Entry”.  This allows the saving of a token for future use.</li></ul>
+
+<ul class="ul_1"><li class="ListParagraph_1">Debit transactions cannot be used for pre-authorization.  Since a debit payment is like cash, it will result in a debit payment in the amount of the pre-authorization and will post as such in Point of Rental.</li></ul>
+
+<p> </p>
+
+<p>Enablement of debit card acceptance takes place on your CAYAN merchant account and on the CAYAN Genius device. </p>
+
+<p><span class="span_1">To enable</span><span class="span_1"> debit:</span></p>
+
+<ol class="ol_1"><li class="ListParagraph">Contact CAYAN merchant services at (888) 302-2926, option #1.  Request to enable debit on your account.  Depending on who your credit card acquirer is, CAYAN may request info from you that you would get from your merchant services provider (MSP).</li></ol>
+
+<ol class="ol_1"><li class="ListParagraph">After debit is enabled on your account, CAYAN will release an update to your Genius device(s).  They will now automatically recognize debit cards, but still allow cardholders to run their debit cards as credit by pressing the “Skip PIN Entry” on the Genius device.</li></ol>
+
+<p class="ListParagraph"> </p>
+
+<p class="p_1">To process a debit card as a debit transaction:</p>
+
+<ol class="ol_1"><li class="ListParagraph">When the Genius device prompts to “Please enter PIN”, the cardholder enters their PIN. </li></ol>
+
+<p class="ListParagraph"> </p>
+
+<p class="p_1">To process a debit card a credit transaction:</p>
+
+<ol class="ol_1"><li class="ListParagraph">When the Genius device prompts to “Please enter PIN”, the cardholder is to press the “Skip PIN Entry” button.</li></ol>
+
+<p><img alt="Point of Rental s CAYAN credit_673x366" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DGsr&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGWI"></img></p>

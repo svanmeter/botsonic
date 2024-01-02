@@ -1,0 +1,53 @@
+<h1><span style="color: #2980b9;">Tiered Tax Calculated By Line Item</span></h1>
+
+<p>Overview: <span style="font-size: 10pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #000000;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">Tiered taxes are </span></span></span></span></span></span><span style="font-size: 10pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #000000;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">utilized to calculate different taxes depending on the value of what is being taxed. Once the item/contract</span></span></span></span></span></span><span style="font-size: 10pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #000000;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;"> reaches the max taxable amount in tier 1, then it will calculate the remaining amount at the tier 2 tax rate and so on.</span></span></span></span></span></span></p>
+
+<p>To create a tax jurisdiction with tiered tax by line item, go to Program Menu&gt;Configuration&gt;Accounting Configuration&gt;Tax Tables, click on ‘Add’ in the bottom right or right-click any existing tax jurisdiction, and select ‘Tax Rate Change’ to replace.</p>
+
+<p>1. Enter the beginning dates and description in the appropriate fields</p>
+
+<p>2. Enter the max tax amount. (The total taxable dollar amount)</p>
+
+<p>3. Enter the tax percentage rate under Tier 1 (Rental, Sale, Dam Wvr, and Road Tax).</p>
+
+<p>4. Enter the dollar amount in the Taxable amount up to the field. <i>This would change the percentage tax amount set under each tax field up to the dollar amount set in the Taxable Amount up to the field.</i></p>
+
+<p>5. Enter a different percentage for the tax under tier 2 (and tier 3 if necessary). <i>This would normally be a lower amount than tier 1.</i></p>
+
+<p style="font-style: italic;">6. <span style="font-size: 10pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #000000;"><span style="font-weight: 400;"><span style="font-style: italic;"><span style="text-decoration: none;">Choose whether the tiered tax should calculate on the contract total, the line item extended price (line total), or the line item each price (line each).</span></span></span></span></span></span> </p>
+
+<p style="font-style: italic;"><b>*Note:</b> Once the jurisdiction is saved, there will be no option available to edit the rates.</p>
+
+<p style="font-style: italic;"> </p>
+
+<p>In the example below, the tax percentage is set to 10%. This would charge 10% on any line item up to $1000. If the dollar amount was over $1000, then the tier 2 tax would be charged at 5%. <span style="font-size: 10pt;font-variant: normal;white-space: pre-wrap;"><span style="font-family: Arial;"><span style="color: #000000;"><span style="font-weight: 400;"><span style="font-style: normal;"><span style="text-decoration: none;">It is being calculated on the line item extended price.</span></span></span></span></span></span><br> </p>
+
+<p><img alt="Tiered Tax 1.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3q&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000004vxNM" style="width: 664px;height: 453px;"></img></p>
+
+<p style="font-weight: bold;"> </p>
+
+<p style="font-weight: bold;">From the contract:</p>
+
+<p style="font-weight: bold;">Example 1</p>
+
+<p style="font-weight: bold;"><img alt="Tier tax by Line Item1_905x185" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3q&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGdR"></img></p>
+
+<p>With the tax rate set correctly under the information field, in this example, the tax amount is set to 10%, and the Amount up to is set to $1000. This would add a $100 tax to the contract.</p>
+
+<p style="font-weight: bold;"> </p>
+
+<p style="font-weight: bold;">Example 2</p>
+
+<p style="font-weight: bold;"><img alt="tier tax by Line Item2_902x200" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH3q&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGdS"></img></p>
+
+<p>In this example, the amount on line 1, shows the item value at $1000, and line 2 value of $1200. Since the value of Line 2 is over $1000, it would use the tier 1 rate of 10% on the first $1000 and 5% on the remaining amount.</p>
+
+<p style="text-indent: 0.5in;">Line item 1: $1000 x .10 tax percentage = $100 in tax</p>
+
+<p style="text-indent: 0.5in;">Line item 2: $1000 x .10 + $200 x .05 tax percentage = $110.00 in tax</p>
+
+<p style="text-indent: 0.5in;">Total tax = $100 + $110 = $210.00 total tax</p>
+
+<p><b>*Note:</b> Damage Waiver and Item Percent taxes are calculated as if they were separate line items.</p>
+
+<div id="" style="left: 20px;top: 651.938px;"> </div>

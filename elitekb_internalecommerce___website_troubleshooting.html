@@ -1,0 +1,51 @@
+<h1><strong><span style="font-size: 36px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #e74c3c;">INTERNAL </span><span style="color: #3b3e41;">eCommerce | Website troubleshooting</span></span></span></strong></h1>
+
+<p><br><br>This article will go over troubleshooting steps for when websites are not updating.<br><br><br><span style="font-size: 22px;">Topics included in this article</span><br> </p>
+
+<ul><li><a href="#Reasons-a-customer-may-call-in"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Reasons a customer may call in</span></span></a></li><li><a href="#How-do-I-confim-a-website-is-not-updating"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">How do I confirm a website is not updating?</span></span></a></li><li><a href="#Troubleshooting"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Troubleshooting</span></span></a></li></ul>
+
+<p><br><br><br><a id="Reasons-a-customer-may-call-in" name="Reasons-a-customer-may-call-in"></a> <span style="color: #c0392b;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 22px;">Reasons a customer may call in</span></span></span><br> </p>
+
+<ul><li><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Price changes are not showing on website</span></span></li><li><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">New pictures are not showing on website  (check for browser refresh first!)</span></span></li><li><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">New items are not showing on website</span></span></li><li><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Web quotes are not showing in the web quote import window</span></span></li></ul>
+
+<p><br><br><a id="How-do-I-confim-a-website-is-not-updating" name="How-do-I-confim-a-website-is-not-updating"></a> <span style="color: #c0392b;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">How do I confirm a website is not updating? </span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">The best way to confirm that a site is not updating is to check the time/date stamp at the very bottom of the website. Each website has a scheduled task that runs each night; if it is successful, the time/date stamp will be up-to-date. If it is not, then the website is not updating.</span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">The most common reason that a website stops updating is that the customer&#39;s IP address changes. The first thing to ask them is for their current IP address.</span></span></p>
+
+<p><br><br><a id="Troubleshooting" name="Troubleshooting"></a> <span style="color: #c0392b;"><span style="font-size: 22px;font-family: sans-serif;">Troubleshooting</span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 18px;"><span style="font-family: sans-serif;">Step 1</span></span></p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Ask the customer to go to porhelp.com and click on the green &quot;Show Me My IP Address&quot; button, then send/tell you the resulting IP address.  </span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">If the store&#39;s static IP address has changed, go to </span><a href="http://porhelp.com/" target="_blank"><span style="color: #3b3e41;">porhelp.com</span></a><span style="color: #3b3e41;"> from a POR Terminal, click on the &quot;Show My IP Address&quot; button, and copy and paste the new IP address into a message to </span><a href="mailto:support@rentalhosting.com" target="_blank"><span style="color: #3b3e41;">support@rentalhosting.com</span></a><span style="color: #3b3e41;"> with the subject title &quot;Change in Static IP address.</span></span></span><br> </p>
+
+<p style="margin-left: 80px;"><font color="#3b3e41"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;"><strong>Only f</strong></span></font></font><font color="#3b3e41" face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;"><strong>or Rental Hosting/IT team members</strong></span></font></p>
+
+<ul><li style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Search our firewall to see if the IP is already there for the customer. If it is not, enter it into the firewall and communicate to the customer to try running the Update Website process. If it works, then the problem is solved.</span></span></li></ul>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">If the Update did not work after the IP address was added to the firewall, proceed to Step 2.</span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">If the IP address is already in our firewall, proceed to Step 3.</span></span></p>
+
+<p><br> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 18px;"><span style="font-family: sans-serif;">Step 2</span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Ask for a TeamViewer session and view the log file in the .../POR/web/logs folder on their server. See if you can discern what might be the issue. If you can, proceed as necessary to fix the issue. If not, create a case for POR Support, being sure to let them know that the IP address is good.</span></span></p>
+
+<h1> </h1>
+
+<h1 style="margin-left: 40px;"><span style="font-size: 18px;"><span style="font-family: Arial, Helvetica, sans-serif;">Step 3</span></span></h1>
+
+<div style="margin-left: 40px;"> </div>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">It could be that the store never runs the Update manually, and it&#39;s the Scheduled Task that isn&#39;t running.  Ask for a TeamViewer connection and check it. You&#39;ll find the Task Runner on the <strong>Configuration &gt; System Configurations menu</strong>. Find the Website Update task and be sure it&#39;s active. Check the log window to see the last date it ran. See Customer Support doc &quot;Scheduled Task Runner&quot; for more information or check with other eCommerce team members for more information.</span></span></span></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Reasons why the Update could stop running properly, aside from a changed IP address:</span></span></span></p>
+
+<ul><li style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The store is running Mobile Workforce and POR recently re-configured MW over the Update.</span></span></span></li><li style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The store recently moved or upgraded their server and tasks weren&#39;t properly finished.</span></span></span></li><li style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The store did a Windows update or updated their firewall, and ports 20 &amp; 21 are now blocked. </span></span></span></li><li style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Their scheduled task has been tinkered with.</span></span></span></li></ul>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Any of these reasons would require help from POR Support.</span></span></span></p>
+
+<p><br><br> </p>

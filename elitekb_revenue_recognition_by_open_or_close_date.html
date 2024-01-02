@@ -1,0 +1,31 @@
+<h1 style="font-weight: bold;color: #749AB6;"><span style="color: #4682b4;"><b>Revenue Recognition by Open or Close Date</b></span></h1>
+
+<p> </p>
+
+<p>Independent of the actual posting dates, revenue can be recognized on another date for integrated, real time accounting postings. This allows the user to recognize income in one month, even if the contract is not actually closed until the next due to waiting on counts, etc. The user system must be ‘Elite’ and the accounting program must be Intact or Microsoft Dynamics. This will only affect real time GL postings, not end of day batch totals. Below we have outlined what is meant by transaction open date and transaction close date.</p>
+
+<p> </p>
+
+<ol><li style="font-size: 11pt;">Transaction open Date: refers to the Contract Out Date or Event Beg Date (if Party)</li><li style="font-size: 11pt;">Transaction Close Date: refers to the date the contract close action was taken, not a date in the contract form. Close Date can be seen in Transaction Edit of File Maintenance ---&gt; Transactions.</li></ol>
+
+<p> </p>
+
+<p>This is set on the accounting tab in Store 1 and applied to all stores.</p>
+
+<table style="width: 50%;margin-left: 0;margin-right: auto;"><colgroup><col style="width: 46px;"></col><col style="width: 745px;"></col></colgroup><tbody><tr><td colspan="1" rowspan="1"> </td><td colspan="1" rowspan="1">- Default (revenue date works as it does today)</td></tr><tr><td colspan="1" rowspan="1"> </td><td colspan="1" rowspan="1">- Transaction Open Date (revenue is recognized in the GL as of the transaction open date)</td></tr><tr><td colspan="1" rowspan="1"> </td><td colspan="1" rowspan="1">- Transaction Close Date (revenue is recognized in the GL as of the transaction close date)</td></tr><tr><td colspan="1" rowspan="1"> </td><td colspan="1" rowspan="1">- In Closed Accrual accounting, any of the 3 options can be selected and saved</td></tr><tr><td colspan="1" rowspan="1"> </td><td colspan="1" rowspan="1">- In Cash or Open Accrual accounting, the &#39;Transaction Close Date&#39; option cannot be selected</td></tr></tbody></table>
+
+<p><img alt="Revenue Recognition 1" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHHr&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWbF"></img></p>
+
+<p> </p>
+
+<ul><li>When the &#39;Revenue Recognition Date&#39; parameter is set to &#39;Transaction Open&#39;
+	<ul><li>The transaction&#39;s &#39;Revenue&#39; date field will be populated when the Transaction is opened.</li></ul>
+	</li><li>When the &#39;Revenue Recognition Date&#39; parameter is set to &#39;Transaction Close&#39;
+	<ul><li>The transaction&#39;s &#39;Revenue&#39; date field will be populated when the Transaction is closed. It will be blank while the Transaction is open.</li><li>If using Review Billing, the &#39;Revenue&#39; date field will be set when the Transaction is put into review billing and will not change when the Review is finalized.</li><li>If the closed Transaction is reopened, the &#39;Revenue&#39; date field will be cleared.</li></ul>
+	</li></ul>
+
+<p>In the account numbers, the Real Time GL option must be selected in the Settings for Intact or Dynamics.</p>
+
+<p><img alt="Revenue Recognition 2" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHHr&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWbG"></img></p>
+
+<ul><li>The Transaction&#39;s &#39;Posted to Totals&#39; report does not use the &#39;Revenue&#39; date. It will still show totals posted on the date of the activity that caused the posting.</li><li>The Transaction&#39;s &#39;GL Entries&#39; list will show the &#39;Revenue date&#39; as the Trans Date on entries related to posting income. The &#39;Revenue date&#39; is not used on entries related to receiving cash. Those entries will still show the Trans Date being the date of receipt.</li></ul>

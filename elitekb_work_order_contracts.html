@@ -1,0 +1,85 @@
+<h1><span style="font-size: 18pt;font-family: arial;color: #6495ed;">Work Order Contracts</span></h1>
+
+<p><span style="font-family: arial;">The Work Order functionality in Point of Rental is used to track repairs, service, or maintenance that you are providing your customers for their equipment. A work order generates income as you are selling your customer labor and sales or parts inventory. Essentially, it is a sales contract with a due date that you can track its status.</span></p>
+
+<p> </p>
+
+<p style="font-family: arial;"><b>Creating a Work Order:</b></p>
+
+<p style="font-family: arial;">New Contract&gt;Work Order&gt;Select Customer</p>
+
+<p style="font-family: arial;">The user will then enter a “Committed Date”. If you have created Work Order questions they will now display and the information may be entered.</p>
+
+<p><img alt="work order contracts_491x207" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHPV"></img></p>
+
+<p> </p>
+
+<p style="font-family: arial;">To set up contract questions for your work orders go to #9 Configuration&gt;Transaction Configurations&gt;Contract Questions to create Work Order prompts for required information (Equipment Description, Model #, Serial #, Problem, etc.). Remember an * at the beginning of the prompt will force a response when creating the work order. These questions and the responses will print on the contract.</p>
+
+<p style="font-family: arial;">Next, a list of the work order items that are in the database will appear and the user will select the appropriate one or click on the “Add WO Item” button to create a serialized unit record specific to this customer.</p>
+
+<p><img alt="work order contracts1" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHPW"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: arial;">In the contract processing screen, the user can click on “Select Operation” where a status (“In Repair”, “Repair Complete”, “Waiting on Diagnosis” or “Waiting on Parts”) can be selected to monitor where the work order is in the repair process. Additional operations can be added as needed through Transaction Operations in Transaction Configurations under # 9 Configurations.</span></p>
+
+<p><img alt="work order contracts2_1002x142" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHPX"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: arial;">On the comments tab, there will be separate sections to specify the complaint, cause, and correction of the repair.</span></p>
+
+<p><img alt="work order contracts3_949x497" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHPY"></img></p>
+
+<p style="font-family: arial;">A prompt to “Enter Summary for Work Order” will appear and the user should note what is being repaired as a reference.</p>
+
+<p style="font-family: arial;">The system will now go to the payment screen where payment can be taken. If the customer has a charge account no payments will be required.</p>
+
+<p style="font-family: arial;">The user can modify and sell parts or sales items and labor to give the contract value.</p>
+
+<p style="font-family: arial;">When the work has been finished and the customer is picking up his repaired item(s), the user must use “Close Contract” to complete the Work Order.</p>
+
+<p> </p>
+
+<p style="font-family: arial;"><b>How to create a Work Order Quote/ WO Quote:</b></p>
+
+<p style="font-family: arial;">Create the work order and click on &quot;Change Status&quot; to change to Quote</p>
+
+<p><img alt="Work Order 4_1141x247" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHPZ"></img></p>
+
+<p> </p>
+
+<p style="font-family: arial;"><b>Adding Items that Need to be Ordered onto a Work Order:</b></p>
+
+<p style="font-family: arial;">Your mechanic may need to add an item to a work order that is not in inventory, they will click on the Special Order button. It is likely that they will not know the price, so they can add the item at 0 prices.</p>
+
+<p style="font-family: arial;">Once the purchase order is submitted, the purchase price can be updated. When the work order is closed, Point of Rental looks at an item with a price of 0. If the item record has a selling price, it will populate with that. If the selling price is empty it will defer to the purchase price so at the very least your company doesn’t lose money.</p>
+
+<p><img alt="work order contracts4_713x113" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH7O&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FHPa"></img></p>
+
+<p style="font-family: arial;"><b>Waiting on Parts:</b></p>
+
+<p style="font-family: arial;">The system will automatically change the contract operation to &quot;Waiting on Parts&quot; whenever right-clicking and selecting “Order Items”.</p>
+
+<p style="font-family: arial;">When all the items for the contract have been received and are in stock, the contract&#39;s Operation will automatically change to &quot;In Repairs&quot;. The mechanic, customer, or any other employee waiting for that knowledge can be set to notify on change of Operations and they would automatically be kept up to date as well.</p>
+
+<p> </p>
+
+<p style="font-family: arial;"><b>Work Order Notes:</b></p>
+
+<p style="font-family: arial;">Items are not pulled from inventory until you right-click on the item and select “Pull inventory” or the Work Order is closed.</p>
+
+<p style="font-family: arial;">To see open work orders go to Day at a Glance&gt; Work Order tab.</p>
+
+<p style="font-family: arial;">You can update the operation status as the work order progress which you can see from “Day at a Glance”.</p>
+
+<p style="font-family: arial;">Call logs should be created to record any communications with your customer regarding the work order.</p>
+
+<p style="font-family: arial;">Reporting on Work Orders can be found by going from the Program Menu&gt; Maintenance Reports. There are several options: Work Orders Pending, Work Order Detail, and Work Order Item Maintenance.</p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="font-size: 12pt;font-family: &#39;&quot;times new roman&quot;, serif&#39;;color: #333333;"><b style="font-size: 10pt;">Also see Related Documents</b></span>: <span style="font-size: 12pt;font-family: &#39;&quot;times new roman&quot;, serif&#39;;color: #333333;"><b style="font-size: 10pt;"><a href="/articles/en_US/Knowledge/Work-Order-Items-1483930284" target="_self">Work Order Items</a></b></span></p>
+
+<p> </p>

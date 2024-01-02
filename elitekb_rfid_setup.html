@@ -1,0 +1,9 @@
+<h1><span style="font-size: 16pt;">RFID Setup</span></h1>
+
+<p>While Point of Rental has an RFID software component, we do not support the RFID hardware. The user will need to arrange purchase/setup of the devices through a company such as Posittek.</p>
+
+<p>The devices communicate to Point of Rental through IMPINJ Speedway Connect. Below are crucial pieces of the speedway configuration that allow that communication.</p>
+
+<p><img alt="RFID Setup" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH6y&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FGyq"></img></p>
+
+<p>POR uses a TCP client to listen to an IP Address using a port. POR captures a stream and terminates each tag on a carriage return.</p>

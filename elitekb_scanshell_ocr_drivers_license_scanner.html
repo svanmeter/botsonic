@@ -1,0 +1,271 @@
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-size: 34px;"><strong><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Scanshell OCR Driver’s License Scanner</span></span></span></strong></span><br><br><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This article covers how to install, configure, and troubleshoot ScanShell OCR Driver’s License scanners. If your company has remote locations they should be on a secure virtual private network (VPN) with the location where the Remote Desktop Server hosting the Point of Rental software resides.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><span style="font-family: Tahoma;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> Not compatible with Windows XP and earlier operating systems.</span></span></span></em></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> <br><span style="font-size: 18px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span></span></p>
+
+<ul><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#T1"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring your Point of Rental Server to Share the Pictures Folder</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#T2"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Installing the OCE Scanner Software</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#T3"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring Scanshell Application and Folder</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#T4"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Running Updates</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#T5"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Troubleshooting an OCR Scanner</span></span></span></a></li><li style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a href="#T6"><span style="color: #0782c1;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Credentials Manager</span></span></span></a></li></ul>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="T1" name="T1"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring your Point of Rental Server to Share the Pictures Folder</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. From the Point of Rental server, share the \POR\Pictures folder and allow “authenticated users” write access.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<table cellpadding="0" cellspacing="0" style="width: 467.5pt;border-collapse: collapse;"><tbody><tr><td colspan="1" rowspan="1" style="padding-right: 5.4pt;padding-left: 5.4pt;vertical-align: top;">
+			<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdrz" style="width: 288px;height: 351px;"></img></p>
+			</td><td colspan="1" rowspan="1" style="padding-right: 5.4pt;padding-left: 5.4pt;vertical-align: top;">
+			<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zds4" style="width: 268px;height: 354px;"></img></p>
+			</td></tr></tbody></table>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">2. Obtain the network path from the shared window before you close the Properties window. You can even go by the server&#39;s IP address, for example, \\192.168.1.5\Pictures\. </span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Write this down, as you will need this later during the workstation installation process. </span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="T2" name="T2"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Installing the OCE Scanner Software</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><strong><span style="font-family: Tahoma;"> </span></strong></p>
+
+<p style="padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Make sure to install the software on the counter PC (outside of the POR system).</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-family: Tahoma;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. </span></span></span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">Download the <strong>OCR</strong><strong> </strong><strong>Installer (IdScan)</strong> and IdScan supplemental files from</span><span style="color: rgb(51, 51, 51);"> </span><a href="http://www.porhelp.com/" style="text-decoration: none;" target="_blank"><u><span style="color: rgb(0, 0, 255);">http://www.porhelp.com</span></u></a><span style="color: rgb(51, 51, 51);"> </span></span></span><span style="color: #3b3e41;"><span style="font-family: Tahoma;font-size: 10.5pt;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">to the workstation that will have the driver’s license scanner plugged into it.</span></span></span></span><br><br><span style="color: #3b3e41;"><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Install the</span></span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> <strong>OCR Installer </strong><em>(</em>IdScan<em>)</em> program. </span></span></span><br> </p>
+
+<p style="padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><strong>Note:</strong> You must be logged in as an administrator.</em></span></span></span></span><br> </p>
+
+<p style="padding-left: 4.09pt;font-family: Tahoma;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Follow the installation procedures on the installation wizard.</span></span></span></span><br><br><span style="color: #3b3e41;"><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. Once the SetScan Installer opens up, click the Install button.</span></span></span></span><br> </p>
+
+<div style="margin-top: 5pt;margin-left: 18pt;background-color: #ffffff;">
+<p style="margin-top: 0pt;margin-left: 40px;margin-bottom: 0pt;text-indent: -18pt;font-size: 10.5pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdsO" style="width: 522px;height: 220px;"></img></p>
+</div>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. After you click on Install, the following window will open up. Click on the <strong>Scan Shell option</strong> on the left.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdj3" style="width: 357px;height: 248px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. Once that is complete, click <strong>Done</strong> on the scanner setup.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdsT" style="width: 279px;height: 254px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="T3" name="T3"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring Scanshell Application and Folder</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. Open File Explorer on the local computer and enter the address that you wrote down earlier. Navigate to the pictures folder on the server. You may need to authenticate in order to access this folder. </span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Open the IdScanHelp program.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdtg" style="width: 473px;height: 329px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Under Server File Methods select <strong>On Server</strong> and click the <strong>Create IdScan Profile</strong> button.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdtv" style="width: 149px;height: 279px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Give a unique name for the current workstation.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdu0" style="width: 454px;height: 208px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="line-height: 108%;font-family: Tahoma;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. Next, insert the share path from Step 1 and press <strong>OK</strong>.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdu5" style="width: 408px;height: 120px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><span style="font-family: Tahoma;">a. </span><span style="font-family: Tahoma;">If you are prompted for user account credentials, enter an appropriate user account for the server.</span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Double-click on the <strong>New Text Document</strong> file.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zduA" style="width: 611px;height: 47px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Close the IdScanHelp program and start the IdScan program.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">8. Remote into the Remote Desktop Server hosting your Point of Rental software from this computer and update the OCR </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">scanner path in <em>Printer Selections &gt; Advanced</em>. Exit the Point of Rental program and log back in.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;">9.</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">Test by scanning a license and you should see it arrive in the \POR\Pictures\ folder on the server.</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">If it does, then go to open a new contract in POR and select <strong>From License</strong> on the customer selection window.</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">The license should be recognized. Open a new customer record showing the license picture and populating the customer record OR asking if you want to update the existing customer record.</span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;">10.</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">Finally, you must see if any other workstations are to share this</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">OCR.</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;"> If so, then their Point of Rental</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">OCR</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;">scan path in Printer Selections should match the one you just configured.</span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="T4" name="T4"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Running Updates</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After the main installation is complete, click unzip on the IdScan supplemental files that you installed from PORHelp.com earlier.</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Update to 10.11</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></span></p>
+
+<p style="margin-left: 23pt;line-height: 108%;padding-left: 13pt;font-family: &quot;Times New Roman&quot;;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 108%;">1. Open the 10.11_key text file and copy the license key that is stored inside. You will be pasting it inside the 10.11 installation wizard.</span></span></span></span><br> </p>
+
+<p style="margin-left: 23pt;line-height: 108%;padding-left: 13pt;font-family: &quot;Times New Roman&quot;;"> </p>
+
+<p style="margin-left: 23pt;margin-bottom: 8pt;line-height: 108%;padding-left: 13pt;font-family: &quot;Times New Roman&quot;;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 108%;">2. Once copied, close the text file.</span></span></span></span></p>
+
+<div style="margin-left: 23pt;margin-bottom: 8pt;line-height: 108%;padding-left: 13pt;font-family: &#39;Times New Roman&#39;;"> </div>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> Installing 10.11 and 10.16 can sometimes cause the computer to shutdown unexpectedly. To avoid this inconvenience, open Notepad and type something like ‘test’ and then minimize the Notepad window. Now if Windows decides to shutdown during the 10.11 or 10.16 installation, you will have a chance to cancel it. It will say something like ‘a program is preventing windows from shutting down… shutdown anyway? Or cancel.&#39; Thanks to Notepad being open, we can click on Cancel and continue with the installation.</span></span></span></em></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 108%;">3. Run the 10.11 installation wizard as Administrator, keep clicking </span><strong><span style="line-height: 108%;">Next</span></strong><span style="line-height: 108%;">, and agree to the User’s License. </span><strong><span style="line-height: 108%;">Do not</span></strong><span style="line-height: 108%;"> change any settings or check/uncheck any boxes, just keep clicking </span><strong><span style="line-height: 108%;">Next</span></strong><span style="line-height: 108%;">, until the software finishes installing.</span></span></span></span><br><br><span style="line-height: 108%;font-family: Tahoma;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Once the wizard is done, close it by clicking on </span></span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong><span style="line-height: 108%;">Finish</span></strong></span></span></span><span style="line-height: 108%;font-family: Tahoma;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">. Run the IdScan software to verify that the software has been updated to 10.11. Once verified, close it by right-clicking on the icon in the taskbar and clicking Exit, just like before.</span></span></span></span><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Update to 10.16</span></span></span><br> </p>
+
+<p style="margin-left: 14pt;line-height: 108%;padding-left: 13pt;font-family: &quot;Times New Roman&quot;;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 108%;">1. With the IdScan software closed, right-click on 10.16 and run as Administrator.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-left: 36pt;margin-bottom: 0pt;line-height: 108%;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></span></p>
+
+<p style="margin-left: 14pt;line-height: 108%;padding-left: 13pt;font-family: &quot;Times New Roman&quot;;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 108%;">2. Just as with the 10.11 installation wizard, keep clicking </span><strong><span style="line-height: 108%;">Next</span></strong><span style="line-height: 108%;"> and agree to the User’s License.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-left: 36pt;margin-bottom: 0pt;line-height: 108%;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></span></p>
+
+<p style="margin-left: 14pt;margin-bottom: 8pt;line-height: 108%;padding-left: 13pt;font-family: &quot;Times New Roman&quot;;"><span style="line-height: 108%;font-family: Tahoma;font-size: 10.5pt;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. When you reach the following screen of the installation wizard, click on <strong>Change</strong> near the top. A small window should appear for you to navigate and select the correct path.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-left: 36pt;margin-bottom: 0pt;font-size: 10.5pt;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zczo" style="width: 489px;height: 375px;"></img><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. Scroll down until you find Card Scanning Solutions, expand that folder and click on the folder labeled ScanShell.<br><br>5. The directory at the top of this small window should match the one from the picture: <strong>C:\Program Files (x86)\Card Scanning Solutions\ScanShell</strong>.<br><br>6. Click OK, and you should be back on the 10.16 wizard. Click <strong>Next</strong>.</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">7. The following window should look like the following image:</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdw6" style="width: 501px;height: 384px;"></img><br><br><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">8. Make sure to check all the boxes for </span></span></span></span><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Driver License, ID &amp; Passports</strong>,<strong> Business</strong> <strong>Card</strong>, <strong>Check</strong>, <strong>Medical</strong> <strong>Cards</strong>, <strong>Receipt</strong>, and <strong>Vehicle</strong> <strong>Insurance</strong>.<br><br>9. Click <strong>Next</strong>, and then <strong>Install</strong>.</span></span></span></p>
+
+<p style="margin-left: 41.07pt;margin-bottom: 8pt;line-height: 108%;padding-left: 21.93pt;font-family: Tahoma;font-size: 10.5pt;"><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Update to 10.19</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 108%;">1. After the 10.16 installer has finished and you have made sure that the IdScan software is not running, right-click run as administrator the 10.19 installer.</span></span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="line-height: 108%;">2. Since the 10.19 is like the 10.16 installer, this installer will auto update the software just by clicking next through the wizard.<br><br>3. Wait for the installer to finish before proceeding.</span></span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="T5" name="T5"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Troubleshooting an OCR Scanner</span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. If an OCR scanner suddenly stops working, the first thing to try is to verify the scanner is plugged in. </span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Next, reboot the computer to see if it starts working again. If not, it may give an error message when scanning a Driver’s License. </span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. If it does, then see if the error matches any of the errors below and use the solution provided.</span></span></span><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">No Pathway Selected Error</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Sometimes the folder on the server being shared is changed or permissions on the server are edited, causing an error with transmitting the scanned files to the server. </span></span><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This requires re-mapping the IdScan program to deliver the scanned files to the server share again.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="color: #3b3e41;">1. The first error you will run into is “IDScanOCR”: &quot;The destination folder to the auto-saved license images is Invalid. Please correct the patch by clicking on the button “AutoSave file naming” and select the image destination folder path.”</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdwB" style="width: 416px;height: 197px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">When you select OK, you will be prompted with the following screen.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdwf" style="width: 394px;height: 515px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Open Task Manager, highlight IDScanOCR.exe from within the processes tabs, and select <strong>End Process</strong> to kill the program.</span></span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note</strong></span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>:</strong> If you are on Windows 8, you will have to kill the program labeled “ScanShell MFC Application (32 bit)” under the Apps section of Task Manager.</span></span></span></span></em><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Windows 8</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdwz" style="width: 484px;height: 237px;"></img><br><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><span style="color: #000000;"><span style="font-size: 18px;"><span style="font-family: Tahoma;"><span style="font-family: Arial,Helvetica,sans-serif;">Windows 7</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdx9" style="width: 418px;height: 472px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Next, determine the hostname (LAN IP address) the terminal is using to remote into the server.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdno" style="width: 430px;height: 267px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">5. On the local computer the scanner is plugged into open C:\OCR\Help\ and double-click <strong>SetScan</strong>.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdxJ" style="width: 546px;height: 382px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">6. Select the <strong>Save On Server</strong> method and click on <strong>1. Create IdScan Profile</strong> button.  <br><br>7. You will be prompted with a window asking you “Are You Sure.” Click <strong>Yes</strong> to continue.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">This is the name of the file that will be created on the server in the \POR\Pictures folder.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdxO" style="width: 460px;height: 194px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">8. A warning message will pop up. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Select <strong>OK.</strong></span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdxY" style="width: 475px;height: 229px;"></img><br><br><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">9. In the top address bar, navigate to the server’s IP address.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdxs" style="width: 415px;height: 291px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">When you attempt to navigate to the server’s IP address, you will be prompted to enter valid server credentials.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">10. Use the username and password this workstation uses to remote into the server. </span></span></span><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Be sure to select the <strong>Remember my credentials</strong> checkbox.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdxx" style="width: 420px;height: 273px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">After successfully imputing the credentials, you will be taken to the server’s \POR\Pictures folder from the local terminal.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">11. </span></span><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Select the pictures folder.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdyH" style="width: 496px;height: 348px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">12. </span></span><span style="font-family: Tahoma;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Select <strong>New Text Document</strong> file. If there is not a file there, then create it.</span></span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdyb" style="width: 518px;height: 363px;"></img><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">13. Start up the program and perform a test by scanning a driver’s license through.</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdyq" style="width: 430px;height: 267px;"></img></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-family: Tahoma;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Now you are going to want to be on the local side on the terminal the scanner is physically plugged into and modify the settings of the remote desktop icon like so.</span></span></span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><a id="T6" name="T6"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Credentials Manager</span></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"><span style="font-family: Tahoma;">Sometimes credentials to access the server folder share are saved even though they are wrong.</span><span style="font-family: Tahoma;"> </span><span style="font-family: Tahoma;"> Then all you get is an error message stating you are using the wrong credentials.</span><br><span style="font-family: Tahoma;"> </span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. In order to edit the saved credentials, open <em>Control Panel &gt; Credential Manager</em>.  </span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><em><strong>Note:</strong> Credential Manager is available on Windows PCs going back to Windows XP Professional (not Home Edition).</em></span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. Once Credentials Manager is open, click <strong>Windows Credentials</strong> to display your network share credentials. </span></span></p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;"> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. Maximize the appropriate saved Windows Credentials and click the edit link to change the username and password.</span></span><br> </p>
+
+<p style="margin-top: 0pt;margin-bottom: 0pt;font-size: 10.5pt;margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH06&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zdz5" style="width: 599px;height: 365px;"></img></p>
+
+<p id="" style="left: 60px;top: 12550.1px;"><br><br><br><span style="font-size: 22px;"><span style="color: #3b3e41;"><span style="font-family: Arial,Helvetica,sans-serif;">Related articles</span></span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="http://por.force.com/uLearn/s/article/Reservations-and-Scanning-Drivers-Licenses-312511315" target="_blank">Reservations and Scanning Drivers Licenses</a></span></span></p>
+
+<div id="" style="left: 60px;top: 12900.9px;"> </div>
+
+<div id="" style="left: 60px;top: 12361.7px;"> </div>
+
+<div id="" style="left: 368.562px;top: 720.734px;"> </div>
+
+<div id="" style="left: 60px;top: 2343.42px;"> </div>
+
+<div id="" style="left: 60px;top: 6084.53px;"> </div>
+
+<div id="" style="left: 60px;top: 2348.42px;"> </div>
+
+<div id="" style="left: 60px;top: 13311.6px;"> </div>

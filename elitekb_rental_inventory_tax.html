@@ -1,0 +1,65 @@
+<p><span style="color: #2980b9;"><span style="font-size: 22px;"><b>Rental Inventory Tax</b></span></span></p>
+
+<p> </p>
+
+<p><span class="span_1">You are here: </span><a href="http://help.point-of-rental.com/2017-new/Content/Program%20Menu.htm%3FTocPath%3DProgram%2520Menu%7C_____0" target="_self"><span class="span_2">Program Menu</span></a><span class="span_1"> &gt; </span><a href="http://help.point-of-rental.com/2017-new/Content/File%20Maintenace2.htm%3FTocPath%3DProgram%2520Menu%7CFile%2520Maintenance%7C_____0" target="_self"><span class="span_2">File Maintenance</span></a><span class="span_1"> &gt; </span><a href="http://help.point-of-rental.com/2017-new/Content/Item%20File.htm%3FTocPath%3DProgram%2520Menu%7CFile%2520Maintenance%7CItem%2520File%7C_____0" target="_self"><span class="span_2">Item File</span></a><span class="span_1"> &gt; </span><span class="span_1">Your </span><span class="span_1">State Mandate</span><span class="span_1">d</span><span class="span_1"> Inventory Tax</span></p>
+
+<p> </p>
+
+<p class="p_1"><span class="span_3" style="font-weight: bold;">Varying states require a</span><span class="span_3" style="font-weight: bold;">n inventory </span><span class="span_3" style="font-weight: bold;">tax to be collected on Rental </span><span class="span_3" style="font-weight: bold;">Revenue</span></p>
+
+<p>Typically, a tax like this would be accomplished using the Item Percentage field in the item record. Sometimes that field is already being used, if this applies to your business, this document will explain how to add the tax by using a Sales-Percentage Item to accomplish the objective. This document will guide you through the process for setting up and charging the tax. If you have any questions or need advice regarding the tax itself, please contact your tax adviser, as we cannot make recommendations or suggestions. If you have questions about the setup, please call the support line at 800-944-7368.</p>
+
+<p> </p>
+
+<p class="p_2"><span class="span_1" style="font-weight: bold;"> </span><span class="span_4" style="font-weight: bold;">1. Setup </span><span class="span_4" style="font-weight: bold;">of </span><span class="span_4" style="font-weight: bold;">tax</span><span class="span_4" style="font-weight: bold;">.</span></p>
+
+<p>a. In File Maintenance, add a new item.</p>
+
+<p>b. Set the KEY to your choosing (example: INVTAX).</p>
+
+<p>c. Set the Name to your choosing (example: TAX STATE NAME)</p>
+
+<p>d. Set the QUANTITY to 99999.</p>
+
+<p>e. Set the TYPE to &quot;Sales-Percentage.&quot;</p>
+
+<p>f. Set your category accordingly. If you want to post the income generated to a specific GL, you can use categories to accomplish this.</p>
+
+<p>g. Set the percentage field to the tax percentage desired. (example 0.1528 will equal 0.001528).</p>
+
+<p>h. Set the NON-TAXABLE field accordingly. If you do not charge tax on top of this tax, then check the box to mark it non-taxable.</p>
+
+<p>j. You can enter a description in the Print Out tab if desired.</p>
+
+<p>k. Click OK when done.</p>
+
+<p>l. If you are a multi-store system and have different tax rates at each location create a record for each and include a -1, -2 on the end of the key. (i.e. INVTAX-1, INVTAX-2, etc...)</p>
+
+<p> </p>
+
+<p><span class="span_4" style="font-weight: bold;">2</span><span class="span_4" style="font-weight: bold;">. Apply the Tax Item to the </span><span class="span_4" style="font-weight: bold;">applicable </span><span class="span_4"><b>Equipment</b>. </span></p>
+
+<p>a. Modify the header record.</p>
+
+<p>b. In the link item field, put the letter &quot;o&quot;, then the key of your item, then #1. In this example, oINVTAX#1. (do not include the -1, -2 if you are multi-store)</p>
+
+<p>The result: upon opening a contract with a qualifying item, it will put a quantity of 1 for the TAX item underneath the rental item. The TAX item will automatically charge the appropriate percentage of the rental amount of the item above it.</p>
+
+<p>c. Click OK to complete.</p>
+
+<p>d. Repeat step “a” until all header records are linked.</p>
+
+<p>e. If you do not have header records, enter the tax into the “link” item field of each serialized item record.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>

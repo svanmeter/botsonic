@@ -1,0 +1,43 @@
+<h1 style="font-weight: bold;color: #749AB6;"><span style="color: #4682b4;font-weight: bold;font-size: 16pt;">Prophet 21 Accounting Integration</span></h1>
+
+<p> </p>
+
+<p><span style="font-size: 10pt;">This accounting integration allows for interactive upload of accounting information from Point of Rental to Prophet 21. This integration is only available for Elite systems.</span></p>
+
+<p> </p>
+
+<p>Required configurations in the Accounting Sync Service (C:\POR\PORAccountingSyncService)<br> </p>
+
+<ul><li>Enter API Key in the properties of the exe.config file</li><li>Enter the client URL for API posting in the properties of the exe.config file</li></ul>
+
+<p>Required configurations in Elite</p>
+
+<ul><li>Accounting Export set to “API - Prophet 21” Configurations&gt;Accounting Configurations&gt;Account Numbers</li></ul>
+<img alt="prophet 21 accounting integration_661x443" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKG&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWVL"></img>
+<ul><li>Export Mode set to “Transaction” Account Numbers&gt;Settings</li></ul>
+
+<p><img alt="prophet 21 accounting integration1_582x478" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKG&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWVM"></img></p>
+
+<ul><li>Account numbers mapped to P21 chart of accounts</li><li>Tax codes mapped to P21 VAT codes. Accounting Configurations&gt;Tax Tables</li></ul>
+
+<p><img alt="prophet 21 accounting integration2_686x462" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKG&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWVN"></img></p>
+
+<p><img alt="prophet 21 accounting integration3" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKG&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWVO"></img></p>
+
+<ul><li>Currency codes mapped to P21 currency codes. Accounting Configurations&gt;Multi-Currency</li></ul>
+
+<p><img alt="prophet 21 accounting integration5_407x339" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKG&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWVP"></img></p>
+
+<p><img alt="prophet 21 accounting integration6_734x337" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKG&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWVQ"></img></p>
+
+<ul><li>Closed accrual accounting</li><li>Save Closed Account &amp; Cash Mods as Adjustments System Configurations&gt;Parameters&gt;Accounting Tab</li></ul>
+
+<p> </p>
+
+<p>Functionality specific to “Transaction” Mode</p>
+
+<p>Counter System</p>
+
+<ul><li>When a contract is closed on an account customer, it will be exported to P21 as an Invoice (SI) on that same customer’s account.</li><li>When a contract is closed on a cash customer, it will be exported to P21 as an Invoice on the internal Cash Customer account if they have chosen to have all Cash contracts go to a generic Cash Customer.</li><li>This customer is the one whose customer number is configured on the API Setup screen.</li></ul>
+
+<p><img alt="prophet 21 accounting integration7_489x403" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHKG&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001GWVR"></img></p>

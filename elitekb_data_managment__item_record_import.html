@@ -1,0 +1,123 @@
+<h1><b style="font-size: 16pt;color: rgb(70, 130, 180);">Database Management - Item Record Import</b></h1>
+
+<p> </p>
+
+<p><b style="font-size: 14px;color: rgb(51, 51, 51);">*</b><b style="font-size: 14px;color: black;">DataManagement</b><b style="font-size: 14px;color: rgb(51, 51, 51);"> Module Required</b></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p><b style="color: rgb(51, 51, 51);font-size: 14px;">Overview:</b><span style="color: rgb(51, 51, 51);font-size: 14px;"> Point of Rental has a very simple way of doing a mass import of data files from Microsoft Excel. When you have more than 20 item records you would like to import, you now can simultaneously add this data to your item records instead of adding each record individually. </span></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;">Before you begin you should have a spreadsheet containing the data to be imported. Please be sure to check this data in your spreadsheet to confirm the following:</span></p>
+
+<p> </p>
+
+<ul><li><span style="color: rgb(51, 51, 51);font-size: 14px;">You can use formulas to create the new/updated </span><span style="color: black;font-size: 14px;">data.</span><span style="color: rgb(51, 51, 51);font-size: 14px;"> However, you must convert those columns to values.</span></li><li><span style="color: rgb(51, 51, 51);font-size: 14px;">Remove any unnecessary columns that won’t be used.</span></li><li><span style="color: rgb(51, 51, 51);font-size: 14px;">Save your finished file as one of the following:</span>
+	<ul><li><span style="color: rgb(51, 51, 51);font-size: 14px;">First Row contains Header info</span></li><li><span style="color: rgb(51, 51, 51);font-size: 14px;">Comma delimited file (CSV) (Preferred method)</span></li><li><span style="color: rgb(51, 51, 51);font-size: 14px;">Delimited file</span></li><li><span style="color: rgb(51, 51, 51);font-size: 14px;">Fixed length</span></li></ul>
+	</li><li><span style="color: rgb(51, 51, 51);font-size: 14px;">Your file name cannot contain more than 40 characters.</span></li></ul>
+
+<p><b style="color: black;font-size: 14px;">Program Menu&gt;Database Management&gt;Item Record Import&gt;Data Management Module</b></p>
+
+<p> </p>
+
+<p><i style="color: black;font-size: 14px;">Note:</i><b style="color: black;font-size: 14px;"><i> </i></b><i style="color: black;font-size: 14px;">If the Data Management Module is light gray, you do not have the Item Record Import module. You have the option of either purchasing this module or it can be rented daily.</i></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHAK&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000001sHbD"></img></span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p><b style="font-size: 14px;">Select Item Record - Import</b></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;">Select the find button and enter the path of the file to be imported. </span></p>
+
+<p> </p>
+
+<p><b style="color: black;font-size: 14px;">1. File Name</b><span style="color: black;font-size: 14px;">: Name of comma-delimited CSV file to be imported into your inventory.</span></p>
+
+<p> </p>
+
+<p><span style="font-size: 10pt;background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;"><img src="https://lh4.googleusercontent.com/jMcQ1hDxf4LDUvvEBUlUeTHICSn0pltaxZfHREGBk9OdhoV87RKfAfj5ghkTFp-Ljx9nf9oZGKSq3oYnFWploXmCx_l-msrj35kfwd4vQbNz7LAjVRNptcOFZmnA7y9caVmLw44w=s0"></img></span><span style="font-size: 14px;"> </span></p>
+
+<p> </p>
+
+<p><b style="color: black;font-size: 14px;">Type</b><span style="color: black;font-size: 14px;">: From the drop-down menu, select the type of record to be imported (Sales, Item, Header, Fractional QTY, Miscellaneous). For Parts Items, set the type as a Sales Item. The spreadsheet will then need to have a column for ‘IsPartItem’ with a value of -1 to denote it as a parts item and be defined as one of the columns in the Import Settings.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Category</b><span style="color: black;font-size: 14px;">: Enter from the drop-down menu the category the items will be imported under. </span><i style="color: black;font-size: 14px;">Note: If no category is selected, then all categories will be updated.</i></p>
+
+<p><b style="color: black;font-size: 14px;">Manufacturer</b><span style="color: black;font-size: 14px;">: You can enter the manufacturer name in this field or leave it blank.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Web Link</b><span style="color: black;font-size: 14px;">: Enter the link to the manufacturer website if importing from the manufacturer.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Bin Location</b><span style="color: black;font-size: 14px;">: If you use bin locations, you can enter the bin location in this field and it will update the item file record.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Vendor Number</b><span style="color: black;font-size: 14px;">: Enter the number from the vendor on where the items are purchased from.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Mark Up %</b><span style="color: black;font-size: 14px;">: Enter the amount the items are to be marked up when imported into your database.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Price A, B, C</b><span style="color: black;font-size: 14px;">: Enter if any special pricing to be associated with the items being imported.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Home Loc</b><span style="color: black;font-size: 14px;">: Enter the store location of where these items are being imported (Home Loc 000, Str 1 001, Str2 002).</span></p>
+
+<p><b style="color: black;font-size: 14px;">Current Loc</b><span style="color: black;font-size: 14px;">: Enter the store locations where the items imported will be added to their inventory.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Reorder Min</b><span style="color: black;font-size: 14px;">: Enter the minimum qty of when an item should be reordered.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Reorder Max</b><span style="color: black;font-size: 14px;">: Enter the maximum qty of inventory to have on hand.</span></p>
+
+<p><b style="font-size: 14px;">Finalize Count:</b><span style="font-size: 14px;"> When uploading qty count differences, checking this box would automatically update the item record without going through update inventory count.</span></p>
+
+<p><b style="color: black;font-size: 14px;">User Define</b><span style="color: black;font-size: 14px;">: This allows you to update all fields simultaneously instead of selecting each individual field.</span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p><span style="color: black;font-size: 14px;">2.  If you have header records on the spreadsheet, then check the box the First Row contains Header Info.</span></p>
+
+<p> </p>
+
+<p><b style="color: black;font-size: 14px;">Boxed Checked: </b><span style="color: black;font-size: 14px;">It will consider the first line in the data file as having Header items.</span></p>
+
+<p><b style="color: black;font-size: 14px;">Boxed Unchecked</b><span style="color: black;font-size: 14px;">: It will not consider the first line in the data file as having Header items.</span><span style="font-size: 14px;"> </span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p><b style="font-size: 14px;color: black;">Import Setting</b><span style="font-size: 14px;color: black;">:</span></p>
+
+<p> </p>
+
+<p><span style="color: black;font-size: 14px;">3. Select from the drop-down the items that correspond with what you have on your spreadsheet. Each field will need to match each column for the file to be imported. Below is the way it should look when it’s completed (if the first row of Excel has the item information like this example, it automatically puts your spreadsheet column headings next to each drop-down box to make it easier).</span></p>
+
+<p> </p>
+
+<p><span style="background-color: transparent;color: rgb(0, 0, 0);font-family: Arial;font-size: 10pt;"><img src="https://lh4.googleusercontent.com/Qt0vjUF01uf3FWEJW7PyVMGXZiS7v08V7bBexCZO8s1pzmOdrDZqT5bByAKDzo2CBJ-5abSfRUoZVY5BSOWS5ur93HYaQn5ViU2x47eAOsBLI5ZiZpt0PV9tCznDtxZXYriJNatb=s0"></img></span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p><span style="font-size: 14px;color: rgb(51, 51, 51);">4. </span><span style="font-size: 14px;color: black;">Once you are done, select Import Records and you will see a box showing the number of records being imported. It will also let you know if there were any duplicate records, and if any were not imported. You can check in your file maintenance, item file to confirm records have been imported.</span></p>
+
+<p><span style="font-size: 14px;"> </span></p>
+
+<p><b style="font-size: 14px;">Importing serialized items: </b><span style="font-size: 14px;">The key factor when importing serialized items is to link the Header Key. Select “header” from the dropdown for the appropriate column. Once you import, the items will be linked to the header key.</span></p>
+
+<p> </p>
+
+<p><b style="font-size: 14px;">To add the quantity:</b><span style="font-size: 14px;"> Select “qty count dif.&quot; You will then need to finalize the count to set the quantity on the item file (Program Menu&gt; Inventory&gt;Update Inventory Count).</span></p>
+
+<p> </p>
+
+<p><b style="font-size: 14px;">To import item types that are not listed in the dropdown:</b><span style="font-size: 14px;"> You will need to have a column in your spreadsheet designated as “type.&quot; Please refer to the document “Status Codes” for the list of Item Types in Point of Rental.</span></p>
+
+<p> </p>
+
+<p><b style="font-size: 14px;">Note:</b><span style="font-size: 14px;"> Associating an existing header in the header field of an imported item will copy all of the fields from the header that it would if the user were to go to the header in file maintenance and select ‘Create Serialized’ from Functions. </span><span style="font-size: 14px;color: rgb(64, 64, 64);">It will also copy any associated maintenance schedules and depreciation setup.</span> It will also copy any associated maintenance schedules and depreciation setup.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>

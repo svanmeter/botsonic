@@ -1,0 +1,77 @@
+<p><strong><span style="color: #3b3e41;"><span style="font-size: 36px;"><span style="font-family: Arial,Helvetica,sans-serif;">Transfer to a 901 Location</span></span></span></strong></p>
+
+<p><br><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">If you have inventory stored off-site or in remote warehouses, such as service trucks or jobsite trailers, this feature helps you track and move inventory from stores and multiple inventory locations without creating transactions at those sites. In addition, reports can be generated to show inventory available at the locations.</span></span></span></p>
+
+<p><br><br><span style="color: #3b3e41;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Topics in this article include</span></span></span><br> </p>
+
+<ul><li><a href="#t1"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setup</span></span></span></a></li><li><a href="#t2"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Customer Record</span></span></span></a></li><li><a href="#t3"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Transferring Items</span></span></span></a></li></ul>
+
+<p><br><br><br> </p>
+
+<p><a id="t1" name="t1"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Setup</span></span></span></p>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; Configurations &gt; System Configurations &gt; Delivery Truck</em><br>Elite: <em>Configuration Gear &gt; App Configurations &gt; System Configurations &gt; Delivery Truck</em></span></span></span></p>
+
+<p><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You will need to identify what is going to be your 901 location (Warehouse, Service Truck, Trailer). These would be places where you would NOT have a cash drawer. From the Delivery Truck screen, you can select a truck, if the equipment will be stored in the truck.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. <strong>Select or enter a truck</strong> you would like to designate as the 901 location.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIHx&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Tkpx" style="width: 825px;height: 96px;"></img></p>
+
+<p style="margin-left: 40px;"><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Check the box</strong> to mark this vehicle as a service truck and enter 901 in the number field.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIHx&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Tkr4" style="width: 579px;height: 359px;"></img></p>
+
+<p style="margin-left: 80px;"><br><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> If you are using a warehouse as the 901 location, then in the name field, enter the name warehouse and follow steps 1 and 2 as listed above.</span></span></span></em></p>
+
+<p><br> </p>
+
+<p><a id="t2" name="t2"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Customer Record</span></span></span><br> </p>
+
+<p><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Before you begin, it is important to make sure you have your transfer customers set up in your database.<br><br><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; File Maintenance &gt; Customer File &gt; Add Customer</em><br>Elite: <em>Configuration Gear &gt; File Maintenance &gt; Customer File &gt; Add Customer</em><br><br>For this type of transfer, you will need to enter XFER-901 in the customer key.</span></span></span><br> </p>
+
+<p><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIHx&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TkrY"></img></p>
+
+<p style="margin-left: 40px;"><br><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note: </strong>The transferred contract will now automatically select Use Same Address from the Transfer customer’s record. Make sure you set the store’s address in the XFER customer for each store. You also need to be sure that any serialized items you are transferring have a header record. The header record should have a store location of 000 and a current location of 000.</span></span></span></em></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><a id="t3" name="t3"></a><span style="color: #7bbe43;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Transferring Items</span></span></span><br><br><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Here&#39;s how to get there</strong><br>Expert: <em>Program Menu &gt; Counter System &gt; New Contract</em><br>Elite: <em>Left Menu &gt; Transactions &gt; New Contract</em></span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">1. <strong>Select Transfer Contract</strong> as your contract type.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">The Select Store to Transfer to screen will appear. This will display the 901 created as a store location.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIHx&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008Tks2" style="width: 335px;height: 312px;"></img><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">2. <strong>Select 901</strong> and a message will appear asking you &quot;Are you transferring Now&quot;.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Answering Yes</b> - You will be taken to the Inventory Selection screen where you can start selecting the inventory to be transferred.</span></span></span></p>
+
+<p> </p>
+
+<p style="margin-left: 80px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><b>Answering No</b> - You will be taken to the Event Date and Time where you can select a date to do the transfer. You will be taken to the Inventory Selection Screen.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">3. <strong>Enter the items</strong> you are transferring to the 901 location.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">From Day at a Glance, you will be able to see the item being transferred under the Transfer Out tab.</span></span></span><br> </p>
+
+<p style="margin-left: 40px;"><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">4. <strong>Right-click</strong> on the transfer contract and select closed.</span></span></span><br> </p>
+
+<p style="margin-left: 120px;"><em><span style="color: #3b3e41;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Note:</strong> If you are in store one, you will select from store one the transfer contract and close. This will add the items to the 901 location.</span></span></span></em><br> </p>
+
+<p style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DIHx&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000008TksC" style="width: 611px;height: 265px;"></img></p>
+
+<div id="" style="left: 60px;top: 1076.06px;"> </div>
+
+<div id="" style="left: 20px;top: 3352.88px;"><br> </div>

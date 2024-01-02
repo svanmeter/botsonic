@@ -1,0 +1,707 @@
+<h1><strong style="font-size: 18px;font-family: sans-serif;color: rgb(59, 62, 65);">Azure Backup Setup and Recovery Instructions</strong></h1>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span><br><br><br><br> </p>
+
+<p><em><strong><span style="color: #7bb43e;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Overview</span></span></span></strong></em><br> </p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Backing up critical files offsite is a disaster recovery solution that can help save time and money. In severe cases, even the business itself can be saved. Point of Rental recommends Microsoft’s</span></p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Azure Backup for offsite backups.</span><em style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> </em><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">This article covers the sign-up and configuration of an Azure account and backup client.</span><br> </p>
+
+<p style="margin-left: 40px;"><em><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"><strong>Note:</strong> Images and steps are subject to change.</span></em><br> </p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Topics included in this article</span></p>
+
+<ul><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> What is Azure Backup?</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">I. Create Azure Account</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">II. Create a Recovery Services Vault </span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">III. Setting Storage Redundancy</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">IV. Vault Configuration</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">V. Install and Register the Agent</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">VI. Create an Azure Backup Policy</span></li><li><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">VII. How to Recover Files</span><br>	 </li></ul>
+
+<p><br><br><u><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">What is Azure Backup?</strong></u></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Azure Backup is the Azure-based service you can use to back up (or protect) and restore your data in the Microsoft cloud. Azure Backup replaces your existing on-premises or off-site backup solution with a cloud-based solution that is reliable, secure, and cost-competitive. Azure Backup offers multiple components that you download and deploy on the appropriate computer, server, or in the cloud. The component, or agent, that you deploy depends on what you want to protect. All Azure Backup components (no matter whether you&#39;re protecting data on-premises or in the cloud) can be used to back up data to a Recovery Services vault in Azure [1]. Store plans start from $5/month. For Storage Plans and Pricing, please visit: https://azure.microsoft.com/en-us/pricing/details/backup/</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">[1] Markgalioto, “What is Azure Backup?,” What is Azure Backup? | Microsoft Docs. [Online]. Available https://docs.microsoft.com.en.-us/azure/backup/backup-introduction-to-azure-backup :Accessed: 31-Oct-2018</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"><u>I. Create Azure Account</u></strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">1. Go to https://azure.microsoft.com/en-us/services/backup/</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="Backup1" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3M"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">2. Click the </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Get Started</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> button.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">3. An Azure account will be needed to use Azure services. Azure provides 12 months of free services and $200 to use for 30 days.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup2" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3N"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">4. Click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Start free.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">5. This will take you to the Microsoft Sign In page.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup3" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3O"></img></p>
+
+<p> </p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;"> </span></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">6. If you already have a Microsoft account go ahead and sign in and skip to step 20. If you do not have an account go on to the next step.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">7. Click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Create One!</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">8. Input your email address on the following screen.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup4" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3P"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;">9. Input a password for your new Microsoft Account and click</span><strong style="font-size: 14px;font-family: sans-serif;"> Next.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup5" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3a"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">10. Microsoft will need information about you. Go ahead and fill the next form out.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup6" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3b"></img></p>
+
+<p><span style="font-family: sans-serif;color: rgb(59, 62, 65);"> </span></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">11. Input a good number to verify it is you. Click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Verify</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> once you receive the code.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup7" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3c"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">12. Input your credit card information on the next step.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">13. Check the agreement box and click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Sign Up.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup8" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3d"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">14. If you get the following message, click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Sign Up</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> not enable the Azure subscription.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup9" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3e"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">15. Choose your payment information.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup10" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3f"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">16. Select </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">No technical support</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> on the next screen unless you wish to have the technical supports offered and click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup11" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3g"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">17. Check the agreement box and click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Sign Up.</strong></p>
+
+<p style="margin-left: 40px;"><img alt="backup12" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3h"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">18. Once the subscription is done setting up you will be logged in to the Azure Portal.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup18" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3i"></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"><u>II. Create a Recovery Services Vault</u></strong></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">1. You will first have to create a </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Recovery Services vault.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">2. log in to your Azure Portal https://portal.azure.com.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">3. Click on </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">All Services.</strong></p>
+
+<p style="margin-left: 40px;"><img alt="backup13" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3j"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">4. Type “recovery” in the search box.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup14" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3k"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">5. Select </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Recovery Services vaults.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup15" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3l"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">6. On the </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Recovery Services</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> menu click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Add.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup16" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3m"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">7. Enter the desired name, subscription, resource group, and location of the recovery services vault.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup17" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3n"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">8. If you do not have a </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Resource group</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> available you can click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Create new</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> to bring up the pop-up window to create one.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup19" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3o"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">9. Click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">OK</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"> on the pop-up window.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">10. Once all required fields are filled go ahead and click </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Create.</strong></p>
+
+<p style="margin-left: 40px;"><img alt="backup20" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3p"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">11. The deployment process will begin. Wait a couple of minutes until it is complete.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup21" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3q"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">12. Once the deployment is complete you will see the newly created recovery vault listed.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup22" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3r"></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"><u>III. Setting Storage Redundancy</u></strong></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">When a new recovery services vault is created it must be configured on how storage is replicated for redundancy. Microsoft currently offers four options: </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">locally redundant storage (LRS), Zone-redundant storage (ZRS), Geo-redundant Storage (GRS), Read-access geo-redundant storage (RA-GRS). By default, when a new recovery services vault is created it is set to Geo-redundant Storage (GRS)</strong><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">. GRS is the second-best redundant option and it is recommended to leave it as is. The price varies depending on the replication option.</span></p>
+
+<p> </p>
+
+<p><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">For more information about storage replication please visit https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy. If you wish to change it you can do the following:</span></p>
+
+<p><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> </span></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">1. Click on </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">All services.</strong></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;"><img alt="backup13" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3s"></img></span></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">2. Type “recovery” in the search box.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;"><img alt="backup14" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3t"></img></span></p>
+
+<p style="margin-left: 40px;"><span style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">3. Select </span><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);">Recovery Services vaults.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><strong><img alt="backup15" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3u"></img></strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Click on your </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Recovery Services Vault</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> that you created in the last section.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup23" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3v"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">5. You will see an overview in regards to the recovery vault.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup24" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3w"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">6. On the middle panel scroll down until you see </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Backup Infrastructure. Click it.</strong></p>
+
+<p style="margin-left: 40px;"><img alt="backup25" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3x"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">7. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Backup Configuration.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup26" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3y"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">8. Select the desired backup configuration.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup27" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG3z"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"><u>IV. Vault Configuration</u></strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Click on </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">All services.</strong></p>
+
+<p style="margin-left: 40px;"><img alt="backup13" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG40"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. Type “recovery” in the search box.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup14" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG41"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;">3. Select </span><strong style="font-family: sans-serif;font-size: 14px;">Recovery Services</strong><span style="font-family: sans-serif;font-size: 14px;"> vaults.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup15" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG42"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Click on your </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Recovery Services Vault</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> that you created in the last section.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup23" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG43"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">5. You will see an overview in regards to the recovery vault.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup24" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG44"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">6. On the middle panel scroll down until you see </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Backup</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">. Click it.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup28" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG45"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">7. A panel will open asking you where you will be running the workload and what you would like to backup.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">8. Select </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">On-premises</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> and </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Files and folders.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup29" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG46"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">9. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Prepare Infrastructure.</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> A new panel will open.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup30" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG47"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">10. Download and save the agent.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup31" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG48"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">11. The agent gets installed on the server, but before then you must download the vault credentials. Check the box and download the vault credentials.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup32" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG49"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">12. Do not open the credentials, and if you accidentally open the credentials let the dialog that attempts to open the vault credentials fail.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">13. If you are not on the server that will be backed up, go ahead and transfer the files downloaded from the previous steps.</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"><u>V. Install and Register the Agent</u></strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Run the MARSagentinstaller.exe that you downloaded from the previous step.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup33" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4A"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. The installer will extract all files and follow up with the wizard.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup34" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4B"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">3. Take the defaults for the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Installation Folder</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> and </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Cache Location</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> unless you wish to change the path to something else.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">5. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> on the Proxy Configuration screen.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup35" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4C"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">6. On the Installation screen make sure that the required software is all green check-marked and click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Install.</strong></p>
+
+<p style="margin-left: 40px;"><img alt="backup36" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4D"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">7. The wizard will now begin the installation.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup37" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4E"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">8. Once completed, it will ask you to go to register the software. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Proceed to Registration</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup38" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4F"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">9. On the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Vault Identification</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> window it will ask for the location of the downloaded vault credentials from the previous section. Browse to where you placed the vault credentials.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup39" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4G"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">10. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">11. On the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Encryption Setting</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> you will be asked to put a passphrase. You can either create a minimum of 16 characters in length or have the wizard generate a passphrase for you.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">12. You will also be asked to save the passphrase somewhere. Your passphrase will be needed if you ever need to recover your data. If you lose this passphrase your data cannot be recovered. Store this passphrase somewhere safe.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup40" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4H"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">13. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Finish.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">14. The wizard will begin the server registration.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup41" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4I"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">15. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Close</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> once it is finished.</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"><u>VI. Create an Azure Backup Policy</u></strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Open the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Microsoft Azure Backup</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> agent.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup42" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4J"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. On the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Actions</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> section, click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Schedule Backup</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> to launch the Schedule Backup Wizard.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup43" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4K"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">3. The backup wizard windows will come up.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup44" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4L"></img></p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">5. On the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Select Items to Backup</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> window select the files and/or folders that you wish to be backed up. We recommend backing up the whole POR directory if possible.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup45" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4M"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">6. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">7. We recommend setting the backup schedule to run once daily at 1:30 AM or anytime when the system is not busy and is not being used.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup46" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4N"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">8. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> once you set the time.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">9. On the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Select Retention Policy (Files and Folders)</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> screen specify the retention policy for the backup. Since we are doing daily for now, we recommend unchecking the weekly, monthly, and yearly retention policy and to set the daily retention to 60 days.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup47" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4O"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">10. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">11. Select </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Automatically over the network</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> on the next screen and click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup48" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4P"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">12. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Finish</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> to confirm the backup settings.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup49" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4Q"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">13. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Close</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> once the modification progress is finished.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup50" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4R"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">14. To ensure that the backup policy is working, click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Back Up Now</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> on the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Actions.</strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup51" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4S"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">15. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> on the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Select Backup Item</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> window.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup52" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4T"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">16. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Back Up</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> to confirm the backup.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup53" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4U"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">17. Once the backup is completed, click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Close</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup55" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4V"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">18. To ensure that the scheduled backup is working as intended, open the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Microsoft Azure Backup</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> UI and verify that you have successful backups on the time the backup is supposed to start.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup56" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4W"></img></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong style="font-size: 14px;font-family: sans-serif;color: rgb(59, 62, 65);"><u>VII. How to Recover Files</u></strong></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">1. Open the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Microsoft Azure Backup</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> agent.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup66" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4X"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">2. On the </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Actions</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> section, click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Recover Data</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> to launch the Schedule Backup Wizard.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup67" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4Y"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">3. The Recover wizard will initiate and will ask you which server you would like to retrieve files from.</span></p>
+
+<p style="margin-left: 40px;"><img alt="backup68" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4Z"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">4. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">5. You can select what type of recovery you want. For this example, we will choose </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Individual files and folders.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup57" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4a"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">6. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Next.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">7. Select the volume you wish to recover.</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup58" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4b"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">8. The wizard will provide details on the backups available. You can choose a different date (if you have backups for that date) to recover from.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup59" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4c"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">9. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Mount</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> and the wizard will begin the process to mount the backup on your computer.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup60" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4d"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">10. Click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Browse</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> to navigate through the files backed up.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup61" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4e"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">11. This will open a file explorer window where you can recover specific files from the date and time the backup took place.</span></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><img alt="backup62" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4f"></img></p>
+
+<p> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">12. Once you are done, click </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Unmount.</strong></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup63" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4g"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">13. And confirm the unmount.</span></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><img alt="backup64" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DH39&amp;feoid=00N0L000006oGFU&amp;refid=0EM0h000001FG4h"></img></p>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 40px;"><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">The </span><strong style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);">Microsoft Azure Backup</strong><span style="font-family: sans-serif;font-size: 14px;color: rgb(59, 62, 65);"> UI will keep track of any backup and recovery attempts for your records.</span></p>
+
+<p> </p>

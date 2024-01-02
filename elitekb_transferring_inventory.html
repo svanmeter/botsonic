@@ -1,0 +1,27 @@
+<h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Transferring Inventory</span></span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b>Overview:</b></p>
+
+<p>To properly use transfers the item keys have to be properly setup. Under Parameters, there is a setting for &quot;Item Key Begins with Store Number&quot;. If this is checked, then the item keys must begin with the store number, for example, 1AER for #1 2AER for store #2, etc. IF this is unchecked, then the item keys must end with a hyphen followed by the store number, for example, AER-1 for store #1, AER-2 for store #2, etc. If the inventory you want to transfer does not have the proper format for the item records at both store., then the system cannot transfer the equipment. NOTE: The inventory cannot be mixed. All the inventory has to be in the same format. If an item is transferred, then an entry will be made in the item&#39;s edit history.</p>
+
+<p>When transferring serialized items, the current location will change to the new store number and the header item will change to the new store&#39;s header item. For example, transferring BOB753#5 to store #2, will change the current location to &quot;002&quot; and the header key will be changed to BOB753-1 (assuming the header is BOB753-1, BOB753-2, etc).</p>
+
+<p>When transferring non-serialized items, the transfer quantity will be deducted from the original store and added to the new store. For example, if you transfer 10 chairs from store #1 to store #2, CHAIR-1&#39;s quantity will be decreased by 10, and CHAIR-2&#39;s quantity will be increased by 10. Note It is important to understand that you must have CHAIR-1 and CHAIR-2 item records to be able to transfer the equipment. If you do not have both item records set correctly, you will not be allowed to transfer.</p>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><b><span style="color: #333333;">There are two recommended methods to transfer equipment from store to store:</span></b></p>
+
+<p style="background: white;"><b>Method 1 <a href="/one/one.app?source=aloha#/sObject/ka00h00000096FGAAY/view" target="_self">Transferring Serial or Bulk Transfer Contract</a></b></p>
+
+<p><b>Method 2<a href="/articles/en_US/Knowledge/Transferring-serialized-and-bulk-items-instantly-1228666953" target="_self"> Transferring Serial or Bulk Items Immediately</a></b></p>
+
+<p> </p>
+
+<p><b>The close item at a location other than the item&#39;s current location</b></p>
+
+<p>If a customer returns equipment to a store other than the original store, the counter person will be asked if they want to transfer the equipment to their store. By answering Yes, the item will be transferred. By answering No, nothing will be done to the item.</p>
+
+<p style="background: white;margin-left: 36pt;text-indent: -18.75pt;"><span style="font-family: &#39;&quot;verdana&quot;, sans-serif&#39;;color: #333333;">•</span><span style="color: #333333;"> <b>Note</b> – You can now change the Due Back Date of an item to set when the item will be available in the receiving store. The duration that has been defined in the Store Transfer Delay will be the default duration, but I can be manually overwritten as well. (See Transfer Delv to set up the delay time).</span></p>

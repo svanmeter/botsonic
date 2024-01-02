@@ -1,0 +1,271 @@
+<p><strong><span style="font-size: 36px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring System Emails</span></span></strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">These are instructions on configuring integrated email within Point of Rental as opposed to using a third-party program such as Windows Live Mail or Microsoft Outlook. There are several store default emails that can be used for different situations. Unique email addresses can also be assigned to each individual operator which is covered in the second part of this article. If you still choose to use the MAPI method, such as Windows Live or another program, there is an explanation in the third part of this article on how it works. <br><br>If you&#39;re using Gmail (Google) and would like to set up Oauth2. Please see our article </span><a href="http://por.force.com/uLearn/s/article/Email-Setup-in-Expert-Elite" target="_blank"><span style="color: #0782c1;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Gmail and Oauth2 Email Setup</span></span></a><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">.</span><br><br><span style="font-size: 16px;"><span style="color: rgb(59, 62, 65);font-family: Arial, Helvetica, sans-serif;"><strong>Important!</strong></span></span><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">While you&#39;re configuring an email address, be sure to also set up a Blind Carbon Copy email to determine and test whether emails were successfully delivered. Point of Rental <strong>DOES NOT</strong> have a report that displays whether an email was successfully delivered. Our report only displays if Point of Rental successfully attempted to send the email. </span></span><br> </p>
+
+<p> </p>
+ 
+
+<p><span style="font-size: 22px;"><span style="color: rgb(59, 62, 65);font-family: Arial, Helvetica, sans-serif;">Topics included in this article</span></span></p>
+ 
+
+<ul><li><a href="#email-hierarch-logic"><span style="font-size: 16px;"><span style="color: #0782c1;"><span style="font-family: Arial,Helvetica,sans-serif;">Email Hierarchy Logic</span></span></span></a></li><li><span style="font-size: 16px;"><a href="#Configuring-our-email"><span style="color: #0782c1;"><span style="font-family: Arial, Helvetica, sans-serif;">Configuring a Store or Global email</span></span></a></span></li><li><span style="font-size: 16px;"><a href="#Configuring-our-email"><span style="color: #0782c1;"><span style="font-family: Arial, Helvetica, sans-serif;">Configuring an email for a specific user</span></span></a><span style="color: #0782c1;">  </span></span></li><li><a href="#send-test-email"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Sent Test Email</span></span></a></li><li><span style="font-size: 16px;"><a href="#how-emaila-work-in-point-of-rental"><span style="color: #0782c1;"><span style="font-family: Arial, Helvetica, sans-serif;">How emails work in Point of Rental</span></span></a><span style="color: #0782c1;"> </span></span></li><li><a href="#Troubleshooting"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Troubleshooting</span></span></a></li><li><a href="#why-are-customers-not-receiving-emails-I-send"><span style="color: #0782c1;"><span style="font-size: 16px;"><span style="font-family: Arial, Helvetica, sans-serif;">Why are customers not receiving emails I send?</span></span></span></a></li></ul>
+
+<p><br> <br>   <br> </p>
+
+<p> </p>
+
+<p><a id="email-hierarch-logic" name="email-hierarch-logic"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;">Email hierarchy logic</span></span></p>
+
+<p><br><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">In this logic list, when the result is true, the program stops processing and uses those email settings to send the email.</span></span></p>
+
+<ol><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Check for employee store specific settings.</span></span></li><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Check for employee global settings.</span></span></li><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Check for company store specific settings.</span></span></li><li><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">Use the company global settings.</span></span></li></ol>
+
+<p><br> </p>
+
+<p><a id="Configuring-our-email" name="Configuring-our-email"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring a Store or Global email</span></span></span></p>
+
+<p><br><span style="font-size: 14px;"><span style="color: rgb(59, 62, 65);font-family: Arial, Helvetica, sans-serif;">To begin, follow the below path in your Point of Rental system.<br><br><strong>Expert</strong>: </span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Configuration &gt; Reports and Notifications &gt; System Email Setup</i></span></p>
+
+<p><span style="font-size: 14px;"><span style="color: rgb(59, 62, 65);font-family: Arial, Helvetica, sans-serif;"><strong>Elite</strong>: </span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Gear icon &gt; App Configurations &gt; Reports and Notifications &gt; System Email Setup</i></span></p>
+
+<div class="ql-indent 0"> </div>
+
+<ol><li class="ql-indent 0"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Gather several pieces of information</strong>. These can be retrieved from your email provider (GoDaddy.com, Google, Microsoft outlook, etc...). </span></span></li></ol>
+
+<p> </p>
+
+<ul><li style="margin-left: 40px;">Email Address______________________________________</li></ul>
+
+<div style="margin-left: 40px;"> </div>
+
+<ul><li style="margin-left: 40px;">Email Password_____________________________________</li></ul>
+
+<div style="margin-left: 40px;"> </div>
+
+<ul><li style="margin-left: 40px;">SMTP Server_______________________________________</li></ul>
+
+<div style="margin-left: 40px;"> </div>
+
+<ul><li style="margin-left: 40px;">SMTP Port_________________________________________</li></ul>
+
+<div style="margin-left: 40px;"> </div>
+
+<ul><li style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Does your email provider use SSL?   □ Yes □ No</span></span></li></ul>
+
+<p><br> </p>
+
+<ol start="2"><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">In this window, <strong>use the drop-down to select a store or type of email to configure or update</strong>. If you are configuring an email shared across all of your locations configure the Global Default Setting.</span></li></ol>
+
+<div style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zXf7" style="width: 317px;height: 196px;"></img></div>
+
+<p style="margin-left: 40px;"> </p>
+
+<p style="margin-left: 80px;"><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">Below are the definitions of each option</span></span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> <br><br><strong>Global Default Setting </strong>- This is the default option, if no other default email settings are set, <u>everyone will use this email address.</u> This one would be a generic email address such as <a href="mailto:info@(businessname).com" target="_blank">info@(businessname).com</a>. The example in Step 3 below is the configuration of this setting.<br><br><strong>Your Specific Store or Stores</strong> - Select this option to configure or update an email for each store. You may use the same email account for each store. If you decide to do so, update displaying phone and fax numbers in the signature (within the Signature area). <br><br><strong>Mass Email Setting</strong> - Select this option to configure or update an email used for invoices and statements. Typically, an accounting email address would be set up for this option in order for your customers to see their invoices sent from an “Accounting” address rather than an operators personal address.<br><br><strong>System Notifications</strong> - Select this option to configure or update emails used to send notifications. Notifications can be sent from Contracts and Salesreps. For information on how to set these notifications see the article for Contract Notifications and Salesmen Notifications.<br><br><strong>Internet Fax Setup</strong> - Select this option to configure or update an email address used to fax contracts, invoices, or statements to your customer. To use this feature you must be licensed for the Mass/Fax/Email module and have the 3rd party software Metrofax. Your server will not need to have a fax modem installed.<br><br><strong>eSign Set Up</strong> - Select this option to configure or update an email address that can be used for a specific store or all stores, allowing for various types of notifications to be sent when an eSign is requested. </span></span></p>
+
+<div class="ql-indent-1"> </div>
+
+<p> </p>
+
+<ol start="3"><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Once you have select which email option to update, click Edit.</span></li></ol>
+
+<div style="margin-left: 40px;"><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zXiV" style="width: 285px;height: 128px;"></img><br> </div>
+
+<ol start="4"><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">A new window will appear. Input the information you retrieved from your email provider from the first step. Below is a properly configured email account. Read through the below definitions for each area and fill in the information. </span></li></ol>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><img alt="Configuring Email 1.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000005Y51M"></img></p>
+
+<p> </p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">Options</span></span><br> </p>
+
+<div style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Drop down menu </strong>-  This option is not immediately applicable and will initially be dimmed to prevent use.<br><br><strong>Use default email settings -</strong> By checking this box, the program will skip these settings and move to the next level in the hierarchy. This option is not available when setting up Global.</span></span></div>
+
+<p class="ql-indent-1" style="margin-left: 80px;"> </p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><br><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">Email Method</span></span></p>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1" style="margin-left: 80px;"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Use MAPI (local email)</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;"> - </span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">No longer supported.  While it can still be used by someone with knowledge of MAPI, we no longer support this method.</span></span></p>
+
+<p class="ql-indent-1" style="margin-left: 80px;"><b style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Use SMTP for email</b><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;"> - </span><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 14px;">This method allows you to set up email server settings directly in the program, eliminating the need for third party email applications.</span></span><br><br><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;"><strong>Register for Oauth2</strong> - This </span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">option is available for Gmail/Office 365 users utilizing the email method SMTP. Use this option to register your email for OAuth2 authentication. When you select this button, it will take you to your Gmail/Office 365 account  (in a web browser) to complete the process. </span></span><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">For more information please see our article </span><a href="http://por.force.com/uLearn/s/article/Email-Setup-in-Expert-Elite" target="_blank"><span style="color: #0782c1;"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Gmail and Oauth2 Email Setup</span></span></a><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">. </span></p>
+
+<p class="ql-indent-1"><br> </p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">SMTP Settings</span></span><br> </p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Use the questions you answered in step one to fill in the information in this area.</span></p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"> </p>
+
+<div style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Email Address</strong> - Enter the email address/account Point of Rental will be using.</span></span></div>
+
+<div style="margin-left: 80px;"> </div>
+
+<div style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Email Password </strong>- Enter the email address password. This is needed so Point of Rental can send emails as the email address your configuring.</span></span></div>
+
+<div style="margin-left: 80px;"> </div>
+
+<div style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>SMTP Server</strong> - Enter the SMTP Server. This will be determined by your email provider.</span></span></div>
+
+<div style="margin-left: 80px;"> </div>
+
+<div style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>SMTP Port</strong> - Enter the SMTP Port. This will be determined by your email provider.</span></span></div>
+
+<div style="margin-left: 80px;"> </div>
+
+<div style="margin-left: 80px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Does your email provider use SSL? </strong> -  Specific if your email provider is using SSL. This will be determined by your email provider.</span></span></div>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Reply to Address</strong> - Enter an email where you want the recipient to reply. If you want it to be the same as the email address you&#39;re configuring, leave it alone. Typically, at this level, Point of Rental users use a tag that gets replaced with the operator’s email address (Tag = {OperatorEmail}).<br><br><strong>Display Name</strong> - This is how the name will display when your customer receives an email. At this level, Point of Rental users typically enter a tag to replace the email address with an operator’s name (Tag = {OperatorName})</span></span><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Blind Carbon Copy</strong> - Use this field to enter a Blind Carbon Copy email. <em><strong>Point of Rental is not an email application and therefore does not have a sent box.</strong></em></span></span><em> </em><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> </span></span></p>
+
+<ul><li class="ql-indent-1" style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">A BCC can be helpful to determine and test whether an email was sent successfully. Point of Rental DOES NOT have a report that displays whether an email was successfully sent. Our report will only display if emails that were attempted to be sent.</span></span></li><li class="ql-indent-1" style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">You may enter multiple emails in this field by separating them with a semicolon and a space. </span></span></li><li class="ql-indent-1" style="margin-left: 40px;"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Additionally, we recommend setting up a secondary generic email box where all email sent from Point of Rental can be sent through this BCC email; this gives management an easy way to see all email activity from Point of Rental. </span></span></li></ul>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Graphic File Name</strong> - Enter the path to the logo here (PORDRIVE:\por\mylogo.jpg). Please note that the drive letter depends on where the Point of Rental program is installed on. The logo will appear below the signature text. Make sure it’s a normal size (1 x 2 inches or so).</span></span></p>
+
+<p><br>   </p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><span style="font-size: 20px;"><span style="font-family: Arial,Helvetica,sans-serif;">Signature </span></span><br><br><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Place your signature here.</span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> The text in this box will be appended to the bottom of the email body. Tags such as &quot;{OperatorName}&quot; should be used here</span></span>. <span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Please note, any special fields used like </span><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">&quot;OperatorName}&quot; </span></span><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">will not appear on emails that have been emailed in mass</span><br><br> </p>
+
+<ol start="4"><li><strong> </strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"><strong>Press Okay </strong>to save your changes.</span></span></li></ol>
+
+<p><br> </p>
+
+<p><a id="configuring-an-email-for-a-specific-user" name="configuring-an-email-for-a-specific-user"><span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Configuring an email for a specific user</span></span></span></a></p>
+
+<p><br><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;"><strong>Expert</strong>:</span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;"> Program Menu &gt; Security &gt; Employee Setup</i></p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;"><strong>Elite</strong>: </span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Gear icon &gt; Security &gt; Employee Setup</i><br> </p>
+
+<p> </p>
+
+<ol start="1"><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Find and select the user for whom you want to set up an email account.</span></li></ol>
+
+<p> </p>
+
+<ol start="2"><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Click Email Setup, found at the top of their record. </span></li></ol>
+
+<p class="ql-indent-1"> </p>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><img alt="Configuring Email 3.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000005Y52F"></img></p>
+
+<p> </p>
+
+<ol start="3"><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">This will bring up a window like the one in Email Setup in Configuration for that specific user.</span><span style="color: rgb(51, 51, 51);"> </span></li></ol>
+
+<p> </p>
+
+<ol start="4"><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">At the top left if you want the user to have a certain store&#39;s default email, you can select it after checking the “Use Default Email Settings” box. Otherwise, you can set them up as an individual account like the one below.</span><br>	 </li></ol>
+
+<p class="ql-indent-1" style="margin-left: 40px;"><img alt="Configuring Email 4.jpg" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000005Y52t"></img><br> </p>
+
+<ol start="5"><li class="ql-indent-1"><span style="font-size: 14px;"><strong>Press OK </strong>to save your changes.</span></li></ol>
+
+<p><br> </p>
+
+<p><img alt="image" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zZ5f"></img><a id="send-test-email" name="send-test-email"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Send Test Email</span></span></span><img alt="image" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zZ5a"></img><br><br><img alt="image.png" src="https://por.file.force.com/servlet/rtaImage?eid=ka04u000000DHBi&amp;feoid=00N0L000006oGFU&amp;refid=0EM4u000007zZBY"></img><br><br><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Using this button <strong>DOES NOT</strong> test the email settings as seen on the screen. <strong>It tests the hierarchy logic outlined in section </strong></span></span><strong><a href="#email-hierarch-logic"><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;">Email Hierarchy Logic</span></span></a> </strong><span style="font-size: 14px;"><span style="font-family: Arial,Helvetica,sans-serif;"> <strong>and tests the program&#39;s email settings for the account selected by the hierarchy logic</strong>. For example, testing within Company Configuration settings, only tests the company settings. It will not test the email logic using operator email settings.</span></span><br><br> </p>
+
+<p><a id="how-emaila-work-in-point-of-rental" name="how-emaila-work-in-point-of-rental"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">How emails work in Point of Rental</span></span> </span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">When you email a document through Point of Rental by using Windows Live or another program, a PDF is created and attached. Point of Rental then checks for the default mail program on the terminal from which you are sending the email. If you do not have an email program (such as Microsoft Outlook or Windows Live) configured on the terminal from which you are trying to email, nothing will send (you will get several error messages if this is the case). Point of Rental will then open up the default email program and send the email.</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p><a id="Troubleshooting" name="Troubleshooting"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Troubleshooting</span></span></span><br><br><span style="font-size: 18px;"><span style="font-family: Arial,Helvetica,sans-serif;">My customer DID NOT Receive the Email. I&#39;m using MAPI as the emailing method.</span></span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Here is what to do if a customer calls claiming they did not get the email you sent them through Point of Rental.</span></p>
+
+<p> </p>
+
+<ol><li class="ql-indent-1"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Go to the terminal from where the email was sent. If they were automatically sent at the end of the day, go to the terminal from where you closed that day.</span></li></ol>
+ 
+
+<ol start="2"><li class="ql-indent-1"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Open up your email (Windows Live or Microsoft Outlook).</span></li></ol>
+ 
+
+<ol start="3"><li class="ql-indent-1"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Go to the folder “Sent Items” and look for the message for that day.</span></li></ol>
+ 
+
+<ol start="4"><li class="ql-indent-1"><span style="font-size: 14px;font-family: Arial, Helvetica, sans-serif;color: rgb(59, 62, 65);">If you do not see the message that means Point of Rental did not generate the email. If you do see the message, however, it means everything worked fine on your end and it is a problem on theirs. If that is the case, please look at the following possibilities in the last section of this article to see what might be the problem.</span></li></ol>
+
+<p> </p>
+
+<p> </p>
+
+<p><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 18px;">My customer DID NOT Receive the Email. I&#39;m using the SMTP emailing method. </span></span></p>
+
+<p> </p>
+
+<p><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Here is what to do if a customer calls claiming they did not get the email you sent them through Point of Rental.</span></p>
+
+<p> </p>
+
+<ol><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Go to </span><i style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Program Menu &gt; Configuration &gt; Reports and Notifications &gt; System Email Setup.</i> </li></ol>
+
+<p> </p>
+
+<ol start="2"><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Select Global Settings.</span> </li></ol>
+
+<p> </p>
+
+<ol start="3"><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Check to make sure SMTP for email is selected at the top of the screen.</span></li></ol>
+
+<p> </p>
+
+<ol start="4"><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">Verify that the Email Address, Email Password, SMTP Server, SMTP Port, and Use SSL are exactly the same as what is set in your email provider.</span></li></ol>
+
+<p> </p>
+
+<ol start="5"><li class="ql-indent-1"><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">To test the email, click on the “Send Test Email” button and enter an email address. If your message went through, you will see “message sent.” If you do not see this message, that means the email was unsuccessful. Please look at the following possibilities below to see what might be the problem.</span></li></ol>
+
+<p> </p>
+
+<p> </p>
+
+<p><a id="why-are-customers-not-receiving-emails-I-send" name="why-are-customers-not-receiving-emails-I-send"></a> <span style="color: #7bb43e;"><span style="font-size: 22px;"><span style="font-family: Arial,Helvetica,sans-serif;">Why are customers not receiving emails I send?</span></span></span></p>
+
+<p> </p>
+
+<ul><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">The default message that Point of Rental generates when sending a contract is, “Your invoice is attached,” and this can be flagged by other people’s email as spam. You can change this in your parameters.</span></li></ul>
+ 
+
+<ul><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">The recipient&#39;s email provider has filtered the mail as spam or junk mail based on the content or the sender&#39;s (your) IP address.</span></li></ul>
+ 
+
+<ul><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">The Junk Mail filter has identified one or more keywords that spammers repeatedly use in their messages.</span></li></ul>
+ 
+
+<ul><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">The recipient has set up &#39;rules&#39; in their mail program that are too generic and therefore tagging your mail as spam.</span></li></ul>
+ 
+
+<ul><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">The recipient has flagged the sender as someone that sends spam.</span></li></ul>
+ 
+
+<ul><li><span style="color: rgb(59, 62, 65);font-size: 14px;font-family: Arial, Helvetica, sans-serif;">You are sending an attachment with your message and you have included wording that is considered to be spam.</span></li></ul>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong><span style="font-size: 22px;">Related articles</span></strong></p>
+
+<p><br><a href="http://por.force.com/uLearn/s/article/Email-Setup-in-Expert-Elite" target="_blank"><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;">Gmail and Oauth2 Email Setup</span></span></a><br><br><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/Employee-Email-Setup-312755540" target="_blank">Employee Email Setup</a> </span></span></p>
+
+<p><span style="font-size: 16px;"><span style="font-family: Arial,Helvetica,sans-serif;"><a href="/articles/en_US/Knowledge/System-Email-Setup-591847263" target="_blank">System Email Setup</a></span></span></p>

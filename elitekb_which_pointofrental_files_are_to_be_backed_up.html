@@ -1,0 +1,99 @@
+<h1><span style="color: #2980b9;"><span style="font-size: 16pt;">Which Point-of-Rental Files are to be Backed Up?</span></span></h1>
+
+<p style="background: white;"> </p>
+
+<p style="background: white;"><span style="color: #333333;">It is critical to back up your Point of Rental data to avoid data loss in the event of a hardware failure, a natural disaster, or a mass misconfiguration by one of your employees. Point of Rental Systems recommends doing a full server backup onsite and a “critical data” offsite backup. Point of Rental files and folders are held within the POR\ directory on the Remote Desktop Server.</span></p>
+
+<p style="background: white;"> </p>
+
+<p><b>Option A: Backup Entire Hard Drive</b></p>
+
+<p>Ideally, the entire hard drive would be backed up so in the case of a hard drive failure or data corruption not only would the Point of Rental data be recoverable but any other data on your server would be recoverable, too.</p>
+
+<p><b>Option B: Backup Entire POR\ Directory</b></p>
+
+<p>The next best thing would be to back up the entire POR\ directory.</p>
+
+<p><b>Option C: Backup Specific Point of Rental Files and Folders</b></p>
+
+<p>Below are the critical Point of Rental files and subfolders. A full hard drive backup is recommended over this option</p>
+
+<p> </p>
+
+<p><span style="font-size: 12pt;color: #4682b4;">Database Files</span></p>
+
+<p>• All .MDB Files are to be backed up</p>
+
+<p>o Two or more .MDB files will be in the root of the POR\ directory. Make sure to back them all up.</p>
+
+<p>Subfolders to Include in Backup</p>
+
+<p>• POR\SQLBACKUP\OFFSITE folder if you have the SQL Module</p>
+
+<p>• POR\AppTasks\ folder contains the tasks initiated by the Point of Rental program.</p>
+
+<p>• POR\Attachments\ folder if you use attachments.</p>
+
+<p>o (Note these are only links, the actual files “attached” would need to be backed up, wherever they are</p>
+
+<p>located)</p>
+
+<p>• POR\Backup\ folder contains many scripts that may be tied to scheduled tasks.</p>
+
+<p>• POR\Contracts\ folder if you are saving PDF versions of contract Modifications.</p>
+
+<p>o (This folder can take a long time to process due to thousands of small files)</p>
+
+<p>• POR\Dash\ folder contains the settings for the Dashboard.</p>
+
+<p>• POR\EmailAttachments\ folder contains any email attachments created by the customer used within Point of Rental.</p>
+
+<p>• POR\EndOfPeriod\ Maintains PDFs of specified reports.</p>
+
+<p>• POR\EndOfMonth\ Maintains PDFs of specified reports.</p>
+
+<p>• POR\Instruct\ folder if you have any Item Instruction Documents.</p>
+
+<p>• POR\Letters\ folder if you have made any Customer Letters, etc.</p>
+
+<p>• POR\Map\ folder if you have the Dispatch Center module.</p>
+
+<p>• POR\Maintenance\ folder if you have made any Maintenance to Do Lists.</p>
+
+<p>• POR\Messages\ folder contains the internal POR messages.</p>
+
+<p>• POR\PcChargeConfigDisk\ folder if you have the Integrated Credit Card option.</p>
+
+<p>• POR\QB\ folder if you export the GL entries import files to it.</p>
+
+<p>• POR\Reports\ folder if you have created any custom Contract Formats.</p>
+
+<p>Last Updated: April 14, 2017</p>
+
+<p>• POR\ReportsCustom\ folder if you have created any custom Crystal Reports.</p>
+
+<p>• POR\Statements\ folder if you want PDF versions of account statements.</p>
+
+<p>• POR\Service\ folder if you are creating Service Schedules</p>
+
+<p>• POR\Web\ folder if you have the Hosted Website option.</p>
+
+<p>• POR\WebContent\ folder if you have Hosted Website option.</p>
+
+<p>• POR\WebTasks\ folder if you have the Mobile WorkForce module.</p>
+
+<p> </p>
+
+<p><b>If you are multi-company then make sure to get all of the above files and folders from the separate POR3\, POR4\, POR5\, etc. directories. If any subfolders listed are not present it means that feature is not being used on your system.</b></p>
+
+<p> </p>
+
+<p><span style="color: #2980b9;"><b style="font-size: 11pt;">Check Your Backup Logs</b></span></p>
+
+<p>POINT OF RENTAL SYSTEMS RECOMMENDS CHECKING BACKUP LOGS DAILY TO VERIFY THEY ARE SUCCESSFULLY RUNNING. IT IS BEST PRACTICE NOT TO HAVE PROGRAMS OR FILES OPEN WHEN BACKING UP. MAKE SURE THE BACKUP METHOD BEING USED CAN BACKUP FILES IN USE. POINT OF RENTAL SYSTEMS IS NOT RESPONSIBLE FOR CHECKING YOUR BACKUP LOGS.</p>
+
+<p>Windows System State Backup – Onsite Backup</p>
+
+<p>Microsoft provides Windows Server Backup with the operating system. Installing a dedicated low-cost SATA hard drive into your system can be one of the simplest ways to ensure you have an automated nightly backup.</p>
+
+<p> </p>
