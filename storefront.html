@@ -9,23 +9,23 @@
 </head>
 <body>
     <div id="por_content" style="width:100% !important;">
-        <iframe src="https://rent-a-moving-box.pointofrentalcloud.com/portal" id="por_content_iframe" width="1" frameborder="0" style="min-width:100% !important;" scrolling="no"></iframe>
-        <script type="text/javascript">
-            window.addEventListener('message',function(e) {
-                if (e.origin !== 'https://rent-a-moving-box.pointofrentalcloud.com' || e.data.event !== 'por_redirect_event') {
-                    return;
-                }
-                var cookieCheckReload = document.cookie.match('(^|[^;]+)\\s*por_iframe_reloaded\\s*=\\s*([^;]+)');
-                var alreadyReloaded = !!cookieCheckReload ? cookieCheckReload.pop() === 'yes' : false;
-                if (!alreadyReloaded) {
-                    document.cookie = "por_iframe_reloaded=yes";
-                    window.location.href = e.data.redirectUrl + encodeURIComponent(top.location);
-                } else {
-                    document.cookie = "por_iframe_reloaded=no;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-                }
-            });
-        </script>
-        <script type="text/javascript" src="https://pointofrentalcloud.com/public/js/iframeResizer.min.js"></script>
-    </div>
+			<iframe src="https://waupaca-rental-center.pointofrentalcloud.com/portal" id="por_content_iframe" width="1" frameborder="0" style="min-width:100% !important;" scrolling="no"></iframe>
+			<script type="text/javascript">
+				window.addEventListener('message',function(e) {
+                    if (e.origin !== 'https://waupaca-rental-center.pointofrentalcloud.com' || e.data.event !== 'por_redirect_event') {
+                        return;
+                    }
+	    		    var cookieCheckReload = document.cookie.match('(^|[^;]+)\\s*por_iframe_reloaded\\s*=\\s*([^;]+)');
+				    var alreadyReloaded = !!cookieCheckReload ? cookieCheckReload.pop() === 'yes' : false;
+				    if (!alreadyReloaded) {
+						document.cookie = "por_iframe_reloaded=yes";
+						window.location.href = e.data.redirectUrl + encodeURIComponent(top.location);
+					} else {
+						document.cookie = "por_iframe_reloaded=no;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+					}
+                });
+			</script>
+			<script type="text/javascript" src="https://pointofrentalcloud.com/public/js/iframeResizer.min.js"></script>
+		</div>
 </body>
 </html>
